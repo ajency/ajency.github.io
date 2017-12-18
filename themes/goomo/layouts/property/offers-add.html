@@ -1,0 +1,575 @@
+{{ define "main" }}
+	<div >
+		<!-- <div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/{{ $.Params.slug }}">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div> -->
+
+		<!-- <h6 class="m-b-20">Bulk Update Inventory</h6> -->
+
+		<div class="row m-t-30 ">
+			<div class="col-sm-12">
+				<p class="text-info bolder">What's the name of your offer?</p>
+				<input type="text" class="form-control fnb-input" id="" placeholder="">
+				<!-- <div class="text-muted">
+					This name is just for your refrence. It won't be displayed to customers browsing Goomo.com
+				</div> -->
+			</div>
+		</div>
+
+		<div class="row m-t-30">
+			<div class="col-sm-12">
+				<p class="text-info bolder">Description</p>
+				<textarea class="form-control fnb-input"></textarea>
+			</div>
+		</div>
+
+
+		<div class="row m-t-40">
+			<div class="col-sm-12">
+				<p class="text-info bolder">What type of offer is it?</p>
+				<ul class="offer-type flex-row m-t-25">
+				    <li>
+				        <input value="11" type="radio" class="radio" name="offerType" data-parsley-multiple="listing_type" data-parsley-required-message="Please select a business type." data-parsley-errors-container="#errorfield" checked="">
+				        <div class="wholesaler option flex-row col-direction">
+				            <div class="offer-icon basic_offer"></div>
+				            <div class="business-label">
+				                Basic Deal
+				            </div>
+				            <div class="text-muted">
+				            	Give your guests a discount - in just a few clicks
+				            </div>
+				        </div>
+				    </li>
+				    <li>
+				        <input value="12" type="radio" class="radio" name="offerType" data-parsley-multiple="listing_type" data-parsley-required-message="Please select a business type." data-parsley-errors-container="#errorfield" >
+				        <div class="retailer option flex-row col-direction">
+				            <div class="offer-icon last_min"></div>
+				            <div class="business-label">
+				                Last Minute
+				            </div>
+				            <div class="text-muted">
+				            	Sell unbooked rooms
+				            </div>
+				        </div>
+				    </li>
+				    <li>
+				        <input value="13" type="radio" class="radio" name="offerType" data-parsley-multiple="listing_type" data-parsley-required-message="Please select a business type." data-parsley-required data-parsley-errors-container="#errorfield">
+				        <div class="manufacturer option flex-row col-direction">
+				            <div class="offer-icon early_book"></div>
+				            <div class="business-label">
+				                Early Bird
+				            </div>
+				            <div class="text-muted">
+				            	Get a head start
+				            </div>
+				        </div>
+				    </li>
+				    <li>
+				        <input value="14" type="radio" class="radio" name="offerType" data-parsley-multiple="listing_type" data-parsley-required-message="Please select a business type." data-parsley-errors-container="#errorfield" >
+				        <div class="wholesaler option flex-row col-direction">
+				            <div class="offer-icon day_deal"></div>
+				            <div class="business-label">
+				                Long Stay
+				            </div>
+				            <div class="text-muted">
+				            	Offer discount for long stay
+				            </div>
+				        </div>
+				    </li>
+				    <li>
+				        <input value="15" type="radio" class="radio" name="offerType" data-parsley-multiple="listing_type" data-parsley-required-message="Please select a business type." data-parsley-errors-container="#errorfield" >
+				        <div class="wholesaler option flex-row col-direction">
+				            <div class="offer-icon free_night"></div>
+				            <div class="business-label">
+				                Free Nights
+				            </div>
+				            <div class="text-muted">
+				            	Offer free nights to fill rooms longer
+				            </div>
+				        </div>
+				    </li>
+				    <li>
+				        <input value="16" type="radio" class="radio" name="offerType" data-parsley-multiple="listing_type" data-parsley-required-message="Please select a business type." data-parsley-errors-container="#errorfield" >
+				        <div class="wholesaler option flex-row col-direction">
+				            <div class="offer-icon group_book"></div>
+				            <div class="business-label">
+				                Group Booking
+				            </div>
+				            <div class="text-muted">
+				            	Sell unbooked rooms
+				            </div>
+				        </div>
+				    </li>
+				    <li>
+				        <input value="17" type="radio" class="radio" name="offerType" data-parsley-multiple="listing_type" data-parsley-required-message="Please select a business type." data-parsley-errors-container="#errorfield" >
+				        <div class="wholesaler option flex-row col-direction">
+				            <div class="offer-icon weekday-end"></div>
+				            <div class="business-label">
+				                Weekday - Weekend offer
+				            </div>
+				            <div class="text-muted">
+				            	Offers for different days of the week
+				            </div>
+				        </div>
+				    </li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row m-t-40">
+			<div class="col-sm-12 offer_types  basic_offer">
+				<p class="text-info bolder">How much of a discount do you want to give?</p>
+				<div class="row">
+					<div class="col-sm-2 col-xs-6">
+						<div class="flex-row">
+							<i class="fa fa-inr m-r-5"></i>
+							<input type="number" class="form-control fnb-input" name="" value="5947">
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<select class="form-control fnb-select border-bottom">
+							<option>Fixed Rate</option>
+							<option>Percentage</option>
+							<option>Flat Rate</option>
+						</select>
+					</div>
+					<div class="col-sm-3 col-xs-12">
+						<select class="form-control fnb-select border-bottom">
+							<option>Per Booking</option>
+							<option>Per Room</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-12 offer_types hidden early_bird">
+				<p class="text-info bolder">How much of a discount do you want to give?</p>
+				<div class="row">
+					<div class="col-sm-2 col-xs-6">
+						<div class="flex-row">
+							<i class="fa fa-inr m-r-5"></i>
+							<input type="number" class="form-control fnb-input" name="" value="5947">
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<select class="form-control fnb-select border-bottom">
+							<option>Fixed Rate</option>
+							<option>Percentage</option>
+							<option>Flat Rate</option>
+						</select>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<select class="form-control fnb-select border-bottom">
+							<option>Per Booking</option>
+							<option>Per Room</option>
+						</select>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<div class="flex-row">
+							<input type="number" class="form-control fnb-input" name="" value="">
+						</div>
+						<div class="text-muted m-t-5">Number Of Days from Check-In (Including check-in date)</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-12 offer_types hidden group_booking">
+				<p class="text-info bolder">How much of a discount do you want to give?</p>
+				<div class="row">
+					<div class="col-sm-2 col-xs-6">
+						<div class="flex-row">
+							<i class="fa fa-inr m-r-5"></i>
+							<input type="number" class="form-control fnb-input" name="" value="5947">
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<select class="form-control fnb-select border-bottom">
+							<option>Fixed Rate</option>
+							<option>Percentage</option>
+							<option>Flat Rate</option>
+						</select>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<select class="form-control fnb-select border-bottom">
+							<option>Per Booking</option>
+							<option>Per Room</option>
+						</select>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<div class="flex-row">
+							<input type="number" class="form-control fnb-input" name="" value="">
+						</div>
+						<div class="text-muted m-t-5">Number Of Total Room Nights</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-12 offer_types hidden long_stay">
+				<p class="text-info bolder">How much of a discount do you want to give?</p>
+				<div class="row">
+					<div class="col-sm-2 col-xs-6">
+						<div class="flex-row">
+							<i class="fa fa-inr m-r-5"></i>
+							<input type="number" class="form-control fnb-input" name="" value="5947">
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<select class="form-control fnb-select border-bottom">
+							<option>Fixed Rate</option>
+							<option>Percentage</option>
+							<option>Flat Rate</option>
+						</select>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<select class="form-control fnb-select border-bottom">
+							<option>Per Booking</option>
+							<option>Per Room</option>
+						</select>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<div class="flex-row">
+							<input type="number" class="form-control fnb-input" name="" value="">
+						</div>
+						<div class="text-muted m-t-5">Length of Stay</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-12 offer_types hidden last_minute">
+				<p class="text-info bolder">How much of a discount do you want to give?</p>
+				<div class="row">
+					<div class="col-sm-2 col-xs-6">
+						<div class="flex-row">
+							<i class="fa fa-inr m-r-5"></i>
+							<input type="number" class="form-control fnb-input" name="" value="5947">
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<select class="form-control fnb-select border-bottom">
+							<option>Fixed Rate</option>
+							<option>Percentage</option>
+							<option>Flat Rate</option>
+						</select>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<select class="form-control fnb-select border-bottom">
+							<option>Per Booking</option>
+							<option>Per Room</option>
+						</select>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<div class="flex-row">
+							<input type="number" class="form-control fnb-input" name="" value="2">
+						</div>
+						<div class="text-muted m-t-5">Number Of Days Before Check-In</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-12 offer_types hidden weekday_weekend">
+				<p class="text-info bolder">How much of a discount do you want to give?</p>
+				<div class="row">
+					<div class="col-sm-3 col-xs-6">
+						<select class="form-control fnb-select border-bottom">
+							<option>Fixed Rate</option>
+							<option>Percentage</option>
+							<option>Flat Rate</option>
+						</select>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<select class="form-control fnb-select border-bottom">
+							<option>Per Booking</option>
+							<option>Per Room</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="row m-t-15">
+					<div class="col-sm-5 m-b-20">
+						<label>Weekday</label>
+						<div class="row">
+							<div class="col-sm-4 col-xs-4">
+								<div class="flex-row">
+									<i class="fa fa-inr m-r-5"></i>
+									<input type="number" class="form-control fnb-input" name="" value="5947">
+								</div>
+							</div>
+							<div class="col-sm-6 col-xs-8">
+								<div class="btn-group small" data-toggle="buttons">
+								  <label class="btn btn-default fnb-btn toggle-btn">
+								    <input type="checkbox" autocomplete="off"> Mon
+								  </label>
+								  <label class="btn btn-default fnb-btn toggle-btn">
+								    <input type="checkbox" autocomplete="off"> Tue
+								  </label>
+								  <label class="btn btn-default fnb-btn toggle-btn">
+								    <input type="checkbox" autocomplete="off"> Wed
+								  </label>
+								  <label class="btn btn-default fnb-btn toggle-btn">
+								    <input type="checkbox" autocomplete="off"> Thu
+								  </label>
+								  </label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-5">
+						<label>Weekend</label>
+						<div class="row">
+							<div class="col-sm-4 col-xs-4">
+								<div class="flex-row">
+									<i class="fa fa-inr m-r-5"></i>
+									<input type="number" class="form-control fnb-input" name="" value="5947">
+								</div>
+							</div>
+							<div class="col-sm-6 col-xs-8">
+								<div class="btn-group small" data-toggle="buttons">
+								  <label class="btn btn-default fnb-btn toggle-btn">
+								    <input type="checkbox" autocomplete="off"> Fri
+								  </label>
+								  <label class="btn btn-default fnb-btn toggle-btn">
+								    <input type="checkbox" autocomplete="off"> Sat
+								  </label>
+								  <label class="btn btn-default fnb-btn toggle-btn">
+								    <input type="checkbox" autocomplete="off"> Sun
+								  </label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-sm-12 offer_types hidden free_nights">
+				<p class="text-info bolder">How much of a discount do you want to give?</p>
+				<div class="row">
+					<div class="col-sm-2 col-xs-6">
+						<div class="flex-row">
+							<i class="fa fa-inr m-r-5"></i>
+							<input type="number" class="form-control fnb-input" name="" value="5947">
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<select class="form-control fnb-select border-bottom">
+							<option>Fixed Rate</option>
+							<option>Percentage</option>
+							<option>Flat Rate</option>
+						</select>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<select class="form-control fnb-select border-bottom">
+							<option>Per Booking</option>
+							<option>Per Room</option>
+						</select>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<div class="flex-row">
+							<div class="m-r-30">
+								<input type="number" class="form-control fnb-input" name="" value="5">
+								<div class="text-muted m-t-5">Number Of Paid Nights</div>
+							</div>
+							<div>
+								<input type="number" class="form-control fnb-input" name="" value="2">
+								<div class="text-muted m-t-5">Number Of Free Nights</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row m-t-40">
+			<div class="col-sm-12">
+				<p class="text-info bolder m-b-5">Which rates?</p>
+				<div class="text-muted">
+					The discount will be deducted from the rate(s) you select here.
+				</div>
+				<div class="row mobile-flex align-top">
+				  <div class="col-xs-12">
+				      <div class="checkbox">
+				        <label>
+				            <input type="checkbox" value="" class="">
+				            Rate Plan 1
+				          </label>
+				      </div>
+				  </div>
+				  <div class="col-xs-12">
+				      <div class="checkbox">
+				        <label>
+				            <input type="checkbox" value="" class="">
+				            Rate Plan 2
+				          </label>
+				      </div>
+				  </div>
+				  <div class="col-xs-12">
+				      <div class="checkbox">
+				        <label>
+				            <input type="checkbox" value="" class="">
+				            Rate Plan 3
+				          </label>
+				      </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row m-t-40">
+			<div class="col-sm-12">
+				<p class="text-info bolder m-b-5">Which rooms?</p>
+				<div class="text-muted">
+					The discount will be applied to the room(s) you select.<br>
+					Make sure you select at least one rate in the section above so the choice of rooms will show.
+				</div>
+				<div class="row mobile-flex align-top">
+				  <div class="col-xs-12">
+				      <div class="checkbox">
+				        <label>
+				            <input type="checkbox" value="" class="">
+				            Deluxe Room
+				          </label>
+				      </div>
+				  </div>
+				  <div class="col-xs-12">
+				      <div class="checkbox">
+				        <label>
+				            <input type="checkbox" value="" class="">
+				            Standard Room
+				          </label>
+				      </div>
+				  </div>
+				  <div class="col-xs-12">
+				      <div class="checkbox">
+				        <label>
+				            <input type="checkbox" value="" class="">
+				            Suite Room
+				          </label>
+				      </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row m-t-40">
+			<div class="col-sm-12">
+				<p class="text-info bolder m-b-5">Select Booking Dates (optional)</p>
+
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="form-group">
+							<input type="text" class="from-date form-control fnb-input m-r-10 sub-dates" placeholder="From Date">
+						</div>
+						<div class="form-group">
+							<input type="text" class="to-date form-control fnb-input m-r-10 sub-dates" placeholder="To Date">
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<p class="text-info bolder m-t-10">Days of Week: <a href="#" class="small text-secondary">Select All</a></p>
+						<div class="btn-group small" data-toggle="buttons">
+						  <label class="btn btn-default fnb-btn toggle-btn">
+						    <input type="checkbox" autocomplete="off"> Mon
+						  </label>
+						  <label class="btn btn-default fnb-btn toggle-btn">
+						    <input type="checkbox" autocomplete="off"> Tue
+						  </label>
+						  <label class="btn btn-default fnb-btn toggle-btn">
+						    <input type="checkbox" autocomplete="off"> Wed
+						  </label>
+						  <label class="btn btn-default fnb-btn toggle-btn">
+						    <input type="checkbox" autocomplete="off"> Thu
+						  </label>
+						  <label class="btn btn-default fnb-btn toggle-btn">
+						    <input type="checkbox" autocomplete="off"> Fri
+						  </label>
+						  <label class="btn btn-default fnb-btn toggle-btn">
+						    <input type="checkbox" autocomplete="off"> Sat
+						  </label>
+						  <label class="btn btn-default fnb-btn toggle-btn">
+						    <input type="checkbox" autocomplete="off"> Sun
+						  </label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row m-t-40">
+			<div class="col-sm-12">
+				<p class="text-info bolder m-b-5">Select Check-in Dates (optional)</p>
+
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="form-group">
+							<input type="text" class="from-date form-control fnb-input m-r-10 sub-dates" placeholder="From Date">
+						</div>
+						<div class="form-group">
+							<input type="text" class="to-date form-control fnb-input m-r-10 sub-dates" placeholder="To Date">
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<p class="text-info bolder m-t-10">Days of Week: <a href="#" class="small text-secondary">Select All</a></p>
+						<div class="btn-group small" data-toggle="buttons">
+						  <label class="btn btn-default fnb-btn toggle-btn">
+						    <input type="checkbox" autocomplete="off"> Mon
+						  </label>
+						  <label class="btn btn-default fnb-btn toggle-btn">
+						    <input type="checkbox" autocomplete="off"> Tue
+						  </label>
+						  <label class="btn btn-default fnb-btn toggle-btn">
+						    <input type="checkbox" autocomplete="off"> Wed
+						  </label>
+						  <label class="btn btn-default fnb-btn toggle-btn">
+						    <input type="checkbox" autocomplete="off"> Thu
+						  </label>
+						  <label class="btn btn-default fnb-btn toggle-btn">
+						    <input type="checkbox" autocomplete="off"> Fri
+						  </label>
+						  <label class="btn btn-default fnb-btn toggle-btn">
+						    <input type="checkbox" autocomplete="off"> Sat
+						  </label>
+						  <label class="btn btn-default fnb-btn toggle-btn">
+						    <input type="checkbox" autocomplete="off"> Sun
+						  </label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row m-t-40">
+			<div class="col-sm-12">
+				<p class="text-info bolder m-b-5">Blackout Dates</p>
+				<div class="text-muted">
+					These dates typically fall on or around major holidays or other peak travel seasons.
+				</div>
+
+				<div class="row m-t-10">
+					<div class="col-sm-2">
+						<input type="text" class="from-date form-control fnb-input m-r-10 sub-dates" placeholder="From Date">
+					</div>
+					<div class="col-sm-2">
+						<input type="text" class="to-date form-control fnb-input m-r-10 sub-dates" placeholder="To Date">
+					</div>
+					<div class="col-sm-4 ">
+						<a href="#"><i class="fa fa-times text-danger"></i></a>
+					</div>
+				</div>
+
+				<h6 class="m-t-20"><a href="#" class="text-secondary">+ Add Blackout</a></h6>
+			</div>
+		</div>
+
+		<div class="text-left">
+			<button class="btn fnb-btn secondary-btn m-t-30">Create Offer</button>
+		</div>
+
+	</div>
+
+{{ end }}

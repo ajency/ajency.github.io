@@ -1,0 +1,23 @@
+<div class="modal fade fnb-modal" id="approveModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content text-center">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-secondary">Approve {{ .Params.property }}</h4>
+      </div>
+      <hr>
+      <div class="modal-body">
+        <p class="p-t-20">
+        	By proceeding, you confirm that you have reviewed the content provided by the property and this section is ready to be published.<br>
+        	Once you proceed, the content on this page will be live on Goomo.com<br><br>
+        	Are you sure you want to proceed?
+        </p>
+      </div>
+      <hr>
+      <div class="modal-footer flex-row justify-center">
+        <button type="button" class="btn fnb-btn outline" data-dismiss="modal">Not yet</button>
+        <button type="button" class="btn fnb-btn primary-btn" data-dismiss="modal">Yes, Approve</button>
+      </div>
+    </div>
+  </div>
+</div>

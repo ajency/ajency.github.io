@@ -1,0 +1,185 @@
+{{ define "main" }}
+	<div class="">
+
+		<div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/{{ $.Params.slug }}">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div>
+
+		<div class="row m-b-30">
+			<div class="col-sm-4 col-xs-12">
+				<div class="filter-search m-b-20">
+					<div class="filter-search__field">
+		              <i class="fa fa-search text-lighter element-title" aria-hidden="true"></i>
+		              <input type="search" class="fnb-input" placeholder="Search" id="propNameSearch">
+		            </div>
+				</div>
+			</div>
+			<div class="col-sm-3 col-xs-12"></div>
+			<div class="col-sm-2 col-xs-6">
+				<p class="text-info bolder">From date:</p>
+				<input type="text" class="from-date form-control fnb-input m-r-10 sub-dates" placeholder="From Date">
+			</div>
+			<div class="col-sm-2 col-xs-6">
+				<p class="text-info bolder">To date:</p>
+				<input type="text" class="to-date form-control fnb-input m-r-10 sub-dates" placeholder="To Date">
+			</div>
+			<div class="col-sm-1 col-xs-12">
+				<button class="btn fnb-btn outline m-t-30">Show</button>
+			</div>
+		</div>
+
+		<ul class="timeline">
+			<li class="audit-log" data-date="26th Oct 2017">
+				<div class="audit-head" data-time="12:16 PM">
+					<span class="text-primary bolder">John Doe</span> updated Inventory
+				</div>
+				<div class="m-t-10 small">
+					<label>Room Type: </label> Premium Room<br>
+					<label>Date Range: </label> 19th-Oct-2017 to 31st-Oct-2017
+				</div>
+				<div class="flex-row audit-updated">
+					<div class="audit-body">
+						<ul>
+							<li><label>Available Inventory: </label> 20</li>
+						</ul>
+					</div>
+
+					<div class="audit-body">
+						<ul>
+							<li><label>Available Inventory: </label> 15</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li class="audit-log" data-date="26th Oct 2017">
+				<div class="audit-head" data-time="10:04 AM">
+					<span class="text-primary bolder">John Doe</span> added Rates
+				</div>
+				<!-- <div class="m-t-10 small">
+					Details as follows:
+				</div> -->
+				<div class="audit-body">
+					<ul>
+						<li><label>Room Type:</label> Casa Room with Pool View</li>
+						<li><label>Rate Plan:</label> Rate Plan 1</li>
+						<li><label>Description:</label> Rate plan for peak season - part1</li>
+						<li><label>Start Date:</label> 12-Oct-2017</li>
+						<li><label>End Date:</label> 15-Oct-2017</li>
+						<li><label>Days of Week:</label> All</li>
+						<li><label>Rates:</label>
+							<ul>
+								<li><sublabel>Web Single Rate:</sublabel> 2345 | <sublabel>Web Double Rate:</sublabel> 3444 | <sublabel>Web Triple Rate:</sublabel> 4000 </li>
+								<li><sublabel>Mobile Single Rate:</sublabel> 2345 |  <sublabel>Mobile Double Rate:</sublabel> 3444 |  <sublabel>Mobile Triple Rate:</sublabel> 4000 </li>
+								<li><sublabel>B2B Single Rate:</sublabel> 2345 |  <sublabel>B2B Double Rate:</sublabel> 3444 | <sublabel>B2B Triple Rate:</sublabel> 4000 </li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="audit-log" data-date="24th Oct 2017">
+				<div class="audit-head" data-time="02:29 PM">
+					<span class="text-primary bolder">John Doe</span> updated Contract &amp; Finance
+				</div>
+				<!-- <div class="m-t-10 small">
+					Details as follows:
+				</div> -->
+				<div class="flex-row audit-updated">
+					<div class="audit-body">
+						<ul>
+							<li><label>Account Number: </label> F********445</li>
+							<li><label>IFSC Code:</label> HDFCC129399</li>
+						</ul>
+					</div>
+
+					<div class="audit-body">
+						<ul>
+							<li><label>Account Number: </label> F********457</li>
+							<li><label>IFSC Code:</label> HDFCC129667</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li class="audit-log" data-date="23rd Oct 2017">
+				<div class="audit-head" data-time="09:18 PM">
+					<span class="text-primary bolder">Vikas Khanna</span> updated Amenities &amp; Services
+				</div>
+				<!-- <div class="m-t-10 small">
+					Details as follows:
+				</div> -->
+				<div class="flex-row audit-updated">
+					<div class="audit-body">
+						<ul>
+							<li><label>Food &amp; Beverages:</label> Yes (Kid-friendly Buffet, Bar, Snack Bar)</li>
+							<li><label>Fitness Spa:</label> No</li>
+						</ul>
+					</div>
+
+					<div class="audit-body">
+						<ul>
+							<li><label>Food &amp; Beverages:</label> Yes (Kid-friendly Buffet, Bar, Snack Bar, Breakfast in the Room)</li>
+							<li><label>Fitness Spa:</label> Yes (Spa, Gym)</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li class="audit-log" data-date="23rd Oct 2017">
+				<div class="audit-head" data-time="08:14 PM">
+					<span class="text-primary bolder">Vikas Khanna</span> updated Property
+				</div>
+				<!-- <div class="m-t-10 small">
+					Details as follows:
+				</div> -->
+				<div class="flex-row audit-updated">
+					<div class="audit-body">
+						<ul>
+							<li><label>Property Highlights:</label> Non-smoking, Airport Transfer, Pets Allowed, Night Club</li>
+						</ul>
+					</div>
+
+					<div class="audit-body">
+						<ul>
+							<li><label>Property Highlights:</label> Smoking Area, Airport Transfer, Pets Allowed, Night Club, Beach Access</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li class="audit-log" data-date="22nd Oct 2017">
+				<div class="audit-head" data-time="09:16 PM">
+					<span class="text-primary bolder">Vikas Khanna</span> added Property
+				</div>
+				<!-- <div class="m-t-10 small">
+					Details as follows:
+				</div> -->
+				<div class="audit-body">
+					<ul>
+						<li><label>Business Name:</label> {{ .Params.property }}</li>
+						<li><label>Display name:</label> {{ .Params.property }}</li>
+						<li><label>Country:</label> India</li>
+						<li><label>State:</label> Goa</li>
+						<li><label>City:</label> Calangute</li>
+						<li><label>Location:</label> North Goa</li>
+						<li><label>Property Type:</label> Resort</li>
+						<li><label>Property Highlights:</label> Non-smoking, Airport Transfer, Pets Allowed, Night Club</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+
+	</div>
+
+	<script type="text/javascript">
+		var existingComments = [
+			{
+				"sectionId": "1",
+				"comments": []
+			}
+		];
+	</script>
+{{ end }}

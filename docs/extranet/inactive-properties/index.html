@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="" class="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Inactive Properties :: Goomo by Ajency</title>
+
+		
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,700" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="http://localhost:1313/goomo_2/css/font-awesome/css/font-awesome.min.css">
+		
+		<link rel="stylesheet" type="text/css" href="http://localhost:1313/goomo_2/js/datatables.net-select-dt/css/select.dataTables.css">
+		
+		<link rel="shortcut icon" href="http://localhost:1313/goomo_2/img/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/jquery.flexdatalist.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/bootstrap-multiselect.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/js/bootstrap-daterangepicker/daterangepicker.css">
+		<link href="http://localhost:1313/goomo_2/css/main.css" rel="stylesheet">
+	</head>
+	<body class="">
+
+		
+<header class="fnb-header">
+	<nav class="navbar navbar-default nav-extranet">
+		<div class="container-fluid">
+			
+			<div class="navbar-header mobile-head mobile-flex">
+				<div class="mobile-head__left mobile-flex">
+					<i class="fa fa-bars sideMenu" aria-hidden="true"></i>
+					<img src="http://localhost:1313/goomo_2/img/goomo_logo.png" class="img-responsive desk-hide" width="80">
+				</div>
+				<div class="mobile-head__right mobile-flex">
+					<a href="" class="login">
+						<i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+					</a>
+				</div>
+			</div>
+			
+			<div class="collapse navbar-collapse m-side-bar" id="bs-example-navbar-collapse-1">
+				<ul class="mobile-top mobile-flex">
+					<li>
+						<p class="mobile-top__text">Sign in to get a personalised feed!</p>
+					</li>
+					<li>
+						<button type="button" class="fnb-btn outline">Login</button>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav ">
+					<li>
+						<h5 class="dash-title">Extranet</h5>
+					</li>
+					<li>
+						
+
+
+
+<ul class="fnb-breadcrums flex-row">
+  <li class="fnb-breadcrums__section"><a href="http://localhost:1313/goomo_2/listing"><p class="fnb-breadcrums__title">Dashboard</p></a></li>
+  <li class="fnb-breadcrums__section">
+  	<p class="fnb-breadcrums__title">></p>
+  </li>
+
+  
+  
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Extranet</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li class="breadcrump_active"><p class="fnb-breadcrums__title">Inactive Properties</p></li>
+  	  
+
+      
+
+      
+
+  
+    
+      
+
+  
+</ul>
+
+
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right side-section">
+
+					<li class="mobile-hide">
+						<div class="dropdown login user-logged">
+							<i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+							<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="drop-trigger">
+								<span class="ellipsis userName">Krish Dsouza</span>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li>Sign Out</li>
+							</ul>
+						</div>
+
+					</li>
+
+				</ul>
+
+				<div class="desk-hide">
+					<div class="">
+
+	<label class="small-label">MAIN</label>
+	<ul class="gs-steps menu-top-level" role="tablist">
+		<li class="">
+			<a href=" # " class=" form-toggle " id=""><i class="fa fa-bars"></i> Dashboard </a>
+		</li>
+		<li class=" active ">
+			<a href="#listingSubMenu" class=" form-toggle " id="" role="button" data-toggle="collapse"><i class="fa fa-list"></i> Properties</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="listingSubMenu" >
+				<li class="">
+					<a href="/goomo_html/extranet/active-properties" class="" id="">Active Properties</a>
+				</li>
+				<li class=" active ">
+					<a href="/goomo_html/extranet/inactive-properties" class="" id="">Inactive Properties</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/inactive-cp-properties" class="sidebar-link-custom" id="" style="display: block">Inactive Properties <br> <span class="text-primary bolder">(Content Pending)</span></a>
+				</li>
+				<li>
+					<a href="#" class="" id="">My Properties</a>
+				</li>
+				<li>
+					<a href="#" class="" id="">Unclaimed Properties </a>
+				</li>
+				<li>
+					<a href="#" class="" id="">Under Review Properties </a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/create" class="" id="">Create New </a>
+				</li>
+			</ul>
+		</li>
+		<li class="">
+			<a href=" # " class=" form-toggle " id=""><i class="fa fa-cog"></i> Configurations </a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="">
+					<a href="/goomo_html/extranet/regions" class="" id="">Regions</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/location/" class="" id="">Location Tags</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/chain/" class="" id="">Chain</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/commission/" class="" id="">Commission</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/tax-rules/" class="" id="">Tax Rules</a>
+				</li>
+				
+				<li class="">
+					<a href="/goomo_html/extranet/meal/" class="" id="">Meal Plans</a>
+				</li>
+			</ul>
+		</li>
+		<li class="">
+			<a href="#" class=" form-toggle " id=""><i class="fa fa-user"></i> Users</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="">
+					<a href="/goomo_html/extranet/internal" class="" id="">Internal Users</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/add-internal" class="" id="">Add Internal Users</a>
+				</li>
+			</ul>
+		</li>
+		<li class="">
+			<a href="#" class=" form-toggle " id=""><i class="fa fa-line-chart"></i> Reports</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="">
+					<a href="/goomo_html/extranet/bookings" class="" id="">Booking Details</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/margin" class="" id="">Margin Report</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/inventory" class="" id="">Inventory Status</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/rates" class="" id="">Rate Report</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	
+</div>
+				</div>
+
+
+			</div>
+			
+		</div>
+		
+	</nav>
+</header>
+
+
+		
+		<div class="container-fluid">
+				<div class="row">
+						<div class="col-xs-12 ">
+
+								<div class=" m-b-10">
+										<div class="row sidebar-row">
+												<div class="col-xs-12 col-sm-3 col-lg-2 dash-sidebar mobile-hide">
+													<div class="">
+
+	<label class="small-label">MAIN</label>
+	<ul class="gs-steps menu-top-level" role="tablist">
+		<li class="">
+			<a href=" # " class=" form-toggle " id=""><i class="fa fa-bars"></i> Dashboard </a>
+		</li>
+		<li class=" active ">
+			<a href="#listingSubMenu" class=" form-toggle " id="" role="button" data-toggle="collapse"><i class="fa fa-list"></i> Properties</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="listingSubMenu" >
+				<li class="">
+					<a href="/goomo_html/extranet/active-properties" class="" id="">Active Properties</a>
+				</li>
+				<li class=" active ">
+					<a href="/goomo_html/extranet/inactive-properties" class="" id="">Inactive Properties</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/inactive-cp-properties" class="sidebar-link-custom" id="" style="display: block">Inactive Properties <br> <span class="text-primary bolder">(Content Pending)</span></a>
+				</li>
+				<li>
+					<a href="#" class="" id="">My Properties</a>
+				</li>
+				<li>
+					<a href="#" class="" id="">Unclaimed Properties </a>
+				</li>
+				<li>
+					<a href="#" class="" id="">Under Review Properties </a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/create" class="" id="">Create New </a>
+				</li>
+			</ul>
+		</li>
+		<li class="">
+			<a href=" # " class=" form-toggle " id=""><i class="fa fa-cog"></i> Configurations </a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="">
+					<a href="/goomo_html/extranet/regions" class="" id="">Regions</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/location/" class="" id="">Location Tags</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/chain/" class="" id="">Chain</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/commission/" class="" id="">Commission</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/tax-rules/" class="" id="">Tax Rules</a>
+				</li>
+				
+				<li class="">
+					<a href="/goomo_html/extranet/meal/" class="" id="">Meal Plans</a>
+				</li>
+			</ul>
+		</li>
+		<li class="">
+			<a href="#" class=" form-toggle " id=""><i class="fa fa-user"></i> Users</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="">
+					<a href="/goomo_html/extranet/internal" class="" id="">Internal Users</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/add-internal" class="" id="">Add Internal Users</a>
+				</li>
+			</ul>
+		</li>
+		<li class="">
+			<a href="#" class=" form-toggle " id=""><i class="fa fa-line-chart"></i> Reports</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="">
+					<a href="/goomo_html/extranet/bookings" class="" id="">Booking Details</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/margin" class="" id="">Margin Report</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/inventory" class="" id="">Inventory Status</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/rates" class="" id="">Rate Report</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	
+</div>
+												</div>
+												<div class="col-xs-12 col-sm-9 col-lg-10">
+
+													<div class="">
+														<div class="">
+															<div class="tab-content p-t-0  ">
+
+																
+	<div class="m-t-25">
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="flex-row space-between">
+					<div class="main-title">
+						<h3 class="no-m-t fly-out-heading-size text-info ">Inactive Properties <a href="/goomo_html/extranet/create/" class="btn fnb-btn secondary-btn btn-sm x-small add-modal add-prop"><span>+ Add property</span></a></h3>
+						<p class="text-muted">Manage in-active properties</p>
+					</div>
+					<div class="section-icon mobile-hide">
+						<img src="http://localhost:1313/goomo_2/img/all-listings.png" class="img-responsive">
+					</div>
+				</div>
+			</div>
+
+      <div class="col-sm-12 desk-hide flex-row space-between"  data-toggle="collapse" data-target="#statsCollapse">
+        <h6>Summary Info</h6>
+        <i class="fa fa-plus"></i>
+      </div>
+
+      <div class="collapse in" id="statsCollapse">
+        
+        <div class="col-sm-12 m-t-50 stats-container all-properties">
+          <div class="stats-row flex-row flex-wrap">
+            <div class="total-listing">
+              <div class="total-listing__count flex-row space-between">
+                <div>
+                  <h5 class="bolder m-b-5 titles">50</h5>
+                  <p class="m-b-0 text-lighter">Total Properties</p>
+                </div>
+                <img src="http://localhost:1313/goomo_2/img/listing-count.png" class="img-responsive" width="35">
+              </div>
+            </div>
+
+            <div class="status-bucket stats-cols dsk-separator">
+              <p class="bolder">Status buckets</p>
+              <div class="flex-row align-reset space-between">
+                <div class="status-bucket__row">
+                  <div class="buckets bucket-1">
+                    <p class="m-b-0 text-muted sub-title">11</p>
+                    <p class="m-b-0 text-muted default-size">In Process</p>
+                  </div>
+                </div>
+                <div class="status-bucket__row">
+                  <div class="buckets bucket-2">
+                    <p class="m-b-0 text-success sub-title">20</p>
+                    <p class="m-b-0 text-success default-size">Pending Review</p>
+                  </div>
+                </div>
+                <div class="status-bucket__row">
+                  <div class="buckets bucket-1">
+                    <p class="m-b-0 text-primary sub-title">15</p>
+                    <p class="m-b-0 text-primary default-size">Info Needed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    <div class="col-sm-12 m-t-20">
+      <div class="flex-row space-between search-row">
+          <div class="filter-search flex-row align-reset">
+            <div class="filter-search__field">
+              <i class="fa fa-search text-lighter element-title" aria-hidden="true"></i>
+              <input type="search" class="fnb-input" placeholder="Search by" id="catNameSearch">
+            </div>
+            <button class="btn fnb-btn transparent bold-btn full flex-row" data-toggle="collapse" data-target="#moreFiltersWrap"><img src="/goomo_html/img/filter-bars.png" class="img-responsive p-r-5" width="30"> <span>Filter</span></button>
+          </div>
+          <button class="btn fnb-btn outline bold-btn flex-row m-r-10 pull-right download-csv"><span>Download CSV</span></button>
+        </div>
+    </div>
+
+    
+      <div class="col-sm-12">
+        <div class="more-filters-wrapper m-t-25 collapse" id="moreFiltersWrap">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-6">
+                <h5 class="mb-3">Filter by</h5>
+                </div>
+                <div class="col-sm-6 text-right">
+                  <button type="button" class="close" data-toggle="collapse" data-target="#moreFiltersWrap">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 col-md-4">
+                  <div class="filter-section mb-4">
+                    <h6 class="sub-title bolder">Location</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="loc-filter">
+                      <div class="m-b-25">
+                        <select class="fnb-select select-variant form-control text-lighter m-b-25 country-select" name="" multiple="">
+                            <option >India</option>
+                            <option>Singapore</option>
+                            <option>China</option>
+                            <option>Russia</option>
+                        </select>
+                      </div>
+
+                      <div class="m-b-25">
+                        <select class="fnb-select select-variant form-control text-lighter m-b-25 state-select" name="" multiple="">
+                            <option>Delhi</option>
+                            <option >Goa</option>
+                            <option>Gujarat</option>
+                            <option>Bangalore</option>
+                        </select>
+                      </div>
+
+                      <div class="m-b-25">
+                        <select class="fnb-select select-variant form-control text-lighter m-b-25 city-select" name="" multiple="">
+                            <option >Panjim</option>
+                            <option>Mapusa</option>
+                            <option>Madgaon</option>
+                            <option>Shivajinagar</option>
+                        </select>
+                      </div>
+
+                      <div class="m-b-25">
+                        <select class="fnb-select select-variant form-control text-lighter m-b-25 location-select" name="" multiple="">
+                            <option >Panjim</option>
+                            <option>Mapusa</option>
+                            <option>Madgaon</option>
+                            <option>Shivajinagar</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                  <div class="filter-section mb-4">
+                    <h6 class="sub-title bolder">Star Rating</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="" checked="">
+                                One Star
+                              </label>
+                          </div>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Two Star
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Three Star
+                              </label>
+                          </div>
+                        </div>
+                      <div class="col-sm-6">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Four Star
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6">
+                        <div class="checkbox">
+                          <label>
+                              <input type="checkbox" value="" class="">
+                              Five Star
+                            </label>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <h6 class="m-t-10 sub-title bolder">Status</h6>
+                    <hr class="m-t-0 m-b-5">
+                   
+                    <div class="row">
+                      <div class="col-sm-6">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="" checked="">
+                                In Process
+                              </label>
+                          </div>
+                        </div>
+                      <div class="col-sm-6">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Pending Review
+                              </label>
+                          </div>
+                      </div>
+                       
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                  <div class="filter-section mb-4">
+                    <h6 class="sub-title bolder">Market Manager</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div >
+                      <input type="text" class="form-control fnb-input payment-add flexdatalist" multiple="multiple" placeholder="Type for suggestions &amp; select" list="locations" value="Sujata Patil">
+                      <datalist id="locations">
+                          <option value="goa">Sujata Patil</option>
+                          <option value="mumbai">Allen Walker</option>
+                          <option value="delhi">Delhi</option>
+                          <option value="gujarat">Gujarat</option>
+                          <option value="bangalore">Bangalore</option>
+                      </datalist>
+                    </div>
+                  </div>
+
+                  <div class="filter-section m-t-50">
+                    <h6 class="sub-title bolder">Content Score</h6>
+                    <hr class="m-t-0 m-b-5">
+                    
+                    <div class="loc-filter">
+                      <select class="fnb-select select-variant form-control text-lighter">
+                        <option value="Yes">10 - 30</option>
+                        <option value="No">30 - 70</option>
+                        <option value="No">70 - 90</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row m-t-20">
+
+
+                <div class="col-sm-12 col-md-4">
+                  <div class="filter-section mb-4">
+                    <h6 class="sub-title bolder">Contract Uploaded</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="loc-filter">
+                      <select class="fnb-select select-variant form-control text-lighter">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                    <h6 class="m-t-10 sub-title bolder">Assigned To</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="row mobile-flex">
+                        <div class="col-sm-6">
+                            <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" value="" class="" checked="">
+                                  Goomo
+                                </label>
+                            </div>
+                          </div>
+                        <div class="col-sm-6">
+                            <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" value="" class="">
+                                  Property
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                    <h6 class="m-t-10 sub-title bolder">QC Status</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="row mobile-flex">
+                        <div class="col-sm-6">
+                            <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" value="" class="" checked="">
+                                  Info Needed
+                                </label>
+                            </div>
+                          </div>
+                        <div class="col-sm-6">
+                            <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" value="" class="">
+                                  Pending Review
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+              </div>
+
+              <div class="row m-t-20">
+                <div class="col">
+                  <div class="pull-right">
+                    <button class="btn outline fnb-btn btn-sm m-r-10">
+                      Reset Filters
+                    </button>
+                    <button class="btn fnb-btn secondary-btn btn-sm" data-toggle="collapse" data-target="#moreFiltersWrap">
+                      Apply Filters
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+			
+	
+
+
+
+
+
+			<div class="col-sm-12 m-t-40 regions-container all-properties">
+				<table id="inactive-table" class="table table-striped dataTable listing-table" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th style="min-width: 5%;" >Name</th>
+              <th class="" style="min-width: 5%;">
+                Country/State/City/Location
+              </th>
+              <th class="no-sort" style="min-width: 10%;">
+                Market manager
+                
+              </th>
+              <th class="" style="min-width: 10%;">
+                General Manager
+              </th>
+              <th class="no-sort" style="min-width: 5%;" rowspan="1">
+                  Status
+                 
+              </th>
+
+              <th class="no-sort" style="min-width: 10%;" rowspan="1">
+                   Star Rating
+              </th>
+              <th class="no-sort text-center" style="min-width: 10%;" rowspan="1">
+                  Contract Uploaded
+                  
+              </th>
+              <th class="no-sort" style="min-width:10%;" rowspan="1">
+                  Assigned To
+                  
+              </th>
+              <th class="checklist-th" style="min-width: 20%;" rowspan="1">
+                Checklist
+              </th>
+               <th class="no-sort" style="min-width: 10%;" rowspan="1">
+                  QC Status
+                  
+              </th>
+              <th style="min-width: 10%;" class="text-center">Content Score</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td><a href="/goomo_html/checklist/casa-bella/" class="text-info bolder" target="_blank">Casa Bella</a></td>
+              <td>Badem, Salvador-Do-Mundo, Bardez, Panaji, India</td>
+              <td>
+                <div class="m-b-5">
+                  Bruce Wayne
+                </div>
+              </td>
+              <td>Bary Allen - <br><a href="tel:+919988446622" class="text-decor links-click">+91 9988446622</a><br><a href="mailto:barryallen@goomo.com" class="text-decor links-click">barryallen@goomo.com</a></td>
+              <td><span class="text-secondary bolder">In process</span></td>
+              <td>2 Stars</td>
+              <td class="text-center">No</td>
+              <td><span class="bolder text-info">Goomo</span></td>
+              <td><a href="/goomo_html/checklist/casa-bella/" target="_blank" class="text-decor links-click">Property Information</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="/goomo_html/details/rooms/casa-bella/" target="_blank" class="text-decor links-click">Rooms</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="/goomo_html/rates-availability/rate-plan/casa-bella/" target="_blank" class="text-decor links-click">Rate Plans</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="/goomo_html/details/cancel/casa-bella/" target="_blank" class="text-decor links-click">Cancellation Policy</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="/goomo_html/details/users/casa-bella/" target="_blank" class="text-decor links-click">Users</a> <i class="fa fa-times text-danger"></i><br>
+              <a href="/goomo_html/details/contract/casa-bella/" target="_blank" class="text-decor links-click">Contract &amp; Finance</a> <i class="fa fa-times text-danger"></i>
+              </td>
+              <td>Pending Review</td>
+              <td class="text-center">50%</td>
+            </tr>
+
+
+            <tr>
+              <td><a href="/goomo_html/checklist/chalston-beach-resort/" class="text-info bolder" target="_blank">Chalston Beach Resort</a></td>
+              <td>Badem, Salvador-Do-Mundo, Bardez, Panaji, India</td>
+              <td>
+                <div class="m-b-5">
+                  Sujata patil
+                </div>
+              </td>
+              <td>Amit Adav - <br><a href="tel:+919988446622" class="text-decor links-click">+91 9988446622</a><br><a href="mailto:amitadav@goomo.com" class="text-decor links-click">amitadav@goomo.com</a></td>
+              <td><span class="text-secondary bolder">In process</span></td>
+              <td>3 Stars</td>
+              <td class="text-center">No</td>
+              <td><span class="bolder text-primary">Property</span></td>
+              <td><a href="/goomo_html/checklist/chalston-beach-resort/" target="_blank" class="text-decor links-click">Property Information</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="/goomo_html/details/rooms/chalston-beach-resort/" target="_blank" class="text-decor links-click">Rooms</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="/goomo_html/rates-availability/rate-plan/chalston-beach-resort/" target="_blank" class="text-decor links-click">Rate Plans</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="/goomo_html/details/cancel/chalston-beach-resort/" target="_blank" class="text-decor links-click">Cancellation Policy</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="/goomo_html/details/users/chalston-beach-resort/" target="_blank" class="text-decor links-click">Users</a> <i class="fa fa-times text-danger"></i><br>
+              <a href="/goomo_html/details/contract/chalston-beach-resort/" target="_blank" class="text-decor links-click">Contract &amp; Finance</a> <i class="fa fa-times text-danger"></i>
+              </td>
+              <td>Info Needed</td>
+              <td class="text-center">50%</td>
+            </tr>
+
+
+
+            <tr>
+              <td><a href="/goomo_html/checklist/casa-amora/" class="text-info bolder" target="_blank">Casa Amora</a></td>
+              <td>Khobra Vaddo, Goa, Calangute, India</td>
+              <td>
+                <div class="m-b-5">
+                  Allen Walker
+                </div>
+              </td>
+              <td>Frank Castle - <br><a href="tel:+919988446622" class="text-decor links-click">+91 9988446622</a><br><a href="mailto:frankcastle@goomo.com" class="text-decor links-click">frankcastle@goomo.com</a></td>
+              <td><span class="text-muted bolder">Pending review</span></td>
+              <td>3 Stars</td>
+              <td class="text-center">Yes</td>
+              <td><span class="bolder text-primary">Property</span></td>
+              <td><a href="/goomo_html/checklist/casa-amora/" target="_blank" class="text-decor links-click">Property Information</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="/goomo_html/details/rooms/casa-amora/" target="_blank" class="text-decor links-click">Rooms</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="/goomo_html/rates-availability/rate-plan/casa-amora/" target="_blank" class="text-decor links-click">Rate Plans</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="/goomo_html/details/cancel/casa-amora/" target="_blank" class="text-decor links-click">Cancellation Policy</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="/goomo_html/details/users/casa-amora/" target="_blank" class="text-decor links-click">Users</a> <i class="fa fa-times text-danger"></i><br>
+              <a href="/goomo_html/details/contract/casa-amora/" target="_blank" class="text-decor links-click">Contract &amp; Finance</a> <i class="fa fa-times text-danger"></i>
+              </td>
+              <td>Pending Review</td>
+              <td class="text-center">90%</td>
+            </tr>
+
+
+            <tr>
+              <td><a href="/goomo_html/checklist/riverfront/" class="text-info bolder" target="_blank">Riverfront</a></td>
+              <td>Khobra Vaddo, Goa, Calangute, India</td>
+              <td>
+                <div class="m-b-5">
+                  Oliver Queen
+                </div>
+              </td>
+              <td>Bary Allen - <br><a href="tel:+919988446622" class="text-decor links-click">+91 9988446622</a><br><a href="mailto:barryallen@goomo.com" class="text-decor links-click">barryallen@goomo.com</a></td>
+              <td><span class="text-muted bolder">Pending review</span></td>
+              <td>2 Stars</td>
+              <td class="text-center">Yes</td>
+              <td><span class="bolder text-primary">Property</span></td>
+              <td><a href="/goomo_html/checklist/riverfront/" target="_blank" class="text-decor links-click">Property Information</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="/goomo_html/details/rooms/riverfront/" target="_blank" class="text-decor links-click">Rooms</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="/goomo_html/rates-availability/rate-plan/riverfront/" target="_blank" class="text-decor links-click">Rate Plans</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="/goomo_html/details/cancel/riverfront/" target="_blank" class="text-decor links-click">Cancellation Policy</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="/goomo_html/details/users/riverfront/" target="_blank" class="text-decor links-click">Users</a> <i class="fa fa-times text-danger"></i><br>
+              <a href="/goomo_html/details/contract/riverfront/" target="_blank" class="text-decor links-click">Contract &amp; Finance</a> <i class="fa fa-times text-danger"></i>
+              </td>
+              <td>Pending Review</td>
+              <td class="text-center">90%</td>
+            </tr>
+
+
+
+
+
+            <tr>
+              <td><a href="" class="text-info bolder" target="_blank">Rivasa Comfort</a></td>
+              <td>India - Goa - Calangute</td>
+              <td>Alka Tar</td>
+              <td>Akhil Desai - <br><a href="tel:+919988446622" class="text-decor links-click">+91 9988446622</a><br><a href="mailto:ak@gmail.com" class="text-decor links-click">ak@gmail.com</a></td>
+              <td><span class="text-secondary bolder">In Process</span></td>
+              <td>5 Stars</td>
+              <td class="text-center">Yes</td>
+              <td><b class="text-info">Goomo</b></td>
+              <td><a href="" target="_blank" class="text-decor links-click">Property Information</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="" target="_blank" class="text-decor links-click">Rooms</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="" target="_blank" class="text-decor links-click">Rate Plans</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="" target="_blank" class="text-decor links-click">Cancellation Policy</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="" target="_blank" class="text-decor links-click">Users</a> <i class="fa fa-times text-danger"></i><br>
+              <a href="" target="_blank" class="text-decor links-click">Contract &amp; Finance</a> <i class="fa fa-times text-danger"></i>
+              </td>
+              <td>Info Needed</td>
+              <td class="text-center">50%</td>
+            </tr>
+
+
+             <tr>
+              <td><a href="" class="text-info bolder" target="_blank">Rustic Village</a></td>
+              <td>India - Goa - Calangute</td>
+              <td>Saee Shaikh</td>
+              <td>Akansha Desai - <br><a href="tel:+919988446622" class="text-decor links-click">+91 9988446622</a><br><a href="mailto:ak@gmail.com" class="text-decor links-click">ak@gmail.com</a></td>
+              <td><span class="text-secondary bolder">In Process</span></td>
+              <td>2 Stars</td>
+              <td class="text-center">Yes</td>
+              <td><b class="text-primary">Property</b></td>
+              <td><a href="" target="_blank" class="text-decor links-click">Property Information</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="" target="_blank" class="text-decor links-click">Rooms</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="" target="_blank" class="text-decor links-click">Rate Plans</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="" target="_blank" class="text-decor links-click">Cancellation Policy</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="" target="_blank" class="text-decor links-click">Users</a> <i class="fa fa-times text-danger"></i><br>
+              <a href="" target="_blank" class="text-decor links-click">Contract &amp; Finance</a> <i class="fa fa-times text-danger"></i>
+              </td>
+              <td>Info Needed</td>
+              <td class="text-center">80%</td>
+            </tr>
+
+
+            <tr>
+              <td><a href="" class="text-info bolder" target="_blank">Palm Resort</a></td>
+              <td>India - Goa - Calangute</td>
+              <td>Saee Shaikh</td>
+              <td>Archana Singh - <br><a href="tel:+919988446622" class="text-decor links-click">+91 9988446622</a><br><a href="mailto:asingh@gmail.com" class="text-decor links-click">asingh@gmail.com</a></td>
+              <td><span class="text-secondary bolder">In Process</span></td>
+              <td>2 Stars</td>
+              <td class="text-center">No</td>
+              <td><b class="text-primary">Property</b></td>
+              <td><a href="" target="_blank" class="text-decor links-click">Property Information</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="" target="_blank" class="text-decor links-click">Rooms</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="" target="_blank" class="text-decor links-click">Rate Plans</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="" target="_blank" class="text-decor links-click">Cancellation Policy</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="" target="_blank" class="text-decor links-click">Users</a> <i class="fa fa-times text-danger"></i><br>
+              <a href="" target="_blank" class="text-decor links-click">Contract &amp; Finance</a> <i class="fa fa-times text-danger"></i>
+              </td>
+              <td>Info Needed</td>
+              <td class="text-center">30%</td>
+            </tr>
+
+            <tr>
+              <td><a href="" class="text-info bolder" target="_blank">Palmarinha Resort</a></td>
+              <td>India - Goa - Calangute</td>
+              <td>Saee Shaikh</td>
+              <td>Akansha Desai - <br><a href="tel:+919988446622" class="text-decor links-click">+91 9988446622</a><br><a href="mailto:ak@gmail.com" class="text-decor links-click">ak@gmail.com</a></td>
+              <td><span class="text-muted bolder">Pending Review</span></td>
+              <td>4 Stars</td>
+              <td class="text-center">Yes</td>
+              <td><b class="text-primary">Property</b></td>
+              <td><a href="" target="_blank" class="text-decor links-click">Property Information</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="" target="_blank" class="text-decor links-click">Rooms</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="" target="_blank" class="text-decor links-click">Rate Plans</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="" target="_blank" class="text-decor links-click">Cancellation Policy</a> <i class="fa fa-check text-success"></i> <br>
+              <a href="" target="_blank" class="text-decor links-click">Users</a> <i class="fa fa-times text-danger"></i><br>
+              <a href="" target="_blank" class="text-decor links-click">Contract &amp; Finance</a> <i class="fa fa-times text-danger"></i>
+              </td>
+              <td>Info Needed</td>
+              <td class="text-center">50%</td>
+            </tr>
+
+
+          </tbody>
+        </table>
+			</div>
+
+
+		</div>
+	</div>
+
+
+															</div>
+														</div>
+													</div>
+
+												</div>
+										</div>
+								</div>
+
+						</div>
+				</div>
+				<div class="site-overlay"></div>
+		</div>
+		
+
+		
+<footer>
+	<div class="container">
+      <div class="goomoIcon">
+      <img src="http://localhost:1313/goomo_2/img/goomo_logo.png" class="img-responsive center-block m-t-10 m-b-20" width="">
+      </div>
+      <div class="footerText">
+        <p class="copyright">
+          Copyright ©
+          
+          2017
+          
+          Goomo Group. All rights reserved.
+          
+        </p>
+      </div>
+    </div>
+</footer>
+
+
+		<script type="text/javascript" src="/goomo_2/js/jquery.min.js"></script>
+		
+		<script type="text/javascript" src="/goomo_2/js/bootstrap.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/datatables.net/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/datatables.net-select/js/dataTables.select.min.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/bootstrap-multiselect.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/moment.min.js"></script>	
+		<script type="text/javascript" src="/goomo_2/js/bootstrap-daterangepicker/daterangepicker.js"></script>	
+		
+
+		
+		<script type="text/javascript" src="/goomo_2/js/flex-datalist/jquery.flexdatalist.min.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/custom.js"></script>
+	</body>
+</html>

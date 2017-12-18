@@ -1,0 +1,77 @@
+<div class="dsk-separator edit-summary-card mobile-hide">
+	<div class="summary-info">
+		<!-- <div class="rating">
+
+				<div class="value" style="width: 60%;"></div>
+		</div>
+			<h5>{{ .Params.property }}</h5> -->
+			<div class="flex-row align-top">
+						<img src="{{"img/hotel_icon.png" | absURL}}" class="img-responsive m-r-5" width="40">
+						<div>
+							<h6 class="m-b-5 bolder property-name m-t-5">
+								{{ .Params.property }}
+							</h6>
+							<p class="text-muted">Britona, Goa, India</p>
+						</div>
+					</div>
+			<div class="listing-status">
+					<div class="label">Property Status</div>
+					<div class="flex-row space-between status-msg">
+							<div class="statusMsg">{{ .Params.status }}
+								<!-- <i class="fa fa-info-circle text-color m-l-5 draft-status" data-toggle="tooltip" data-placement="top" title="" data-original-title="Job will remain in draft status till submitted for review."></i> -->
+							</div>
+							<a href="#" class="review-submit-link"><i class="fa fa-pencil"></i></a>
+					</div>
+			</div>
+	</div>
+</div>
+
+<div class="dsk-separator mobile-hide">
+
+	<!-- <ul class="gs-steps" role="tablist">
+			<li class="">
+					<a href=" # " class=" form-toggle " id=""><i class="fa fa-bars"></i> Dashboard </a>
+			</li>
+		 <li class="">
+					<a href="#" class=" form-toggle " id=""><i class="fa fa-calendar-check-o"></i> Booking</a>
+			</li>
+			<li class="">
+					<a href="#" class=" form-toggle " id=""><i class="fa fa-comments-o"></i> Review </a>
+			</li>
+			<li class="active">
+					<a href="#listingSubMenu" class=" form-toggle " id="" role="button" data-toggle="collapse"><i class="fa fa-list"></i> Property Details</a>
+			</li>
+	</ul>
+
+	<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="listingSubMenu" >
+			<li class="active">
+					<a href="/goomo_html/property/summary/" class="" id="">Summary</a>
+			</li>
+			<li>
+				<a href="/goomo_html/property/services/" class="" id="">Amenities &amp; Services </a>
+			</li>
+			<li>
+				<a href="/goomo_html/property/services/" class="" id="">Contact &amp; Address </a>
+			</li>
+			<li class="">
+					<a href="#" class="" id="">Images </a>
+			</li>
+			<li class="">
+					<a href="#" class="" id="">Rooms </a>
+			</li>
+			<li class="">
+					<a href="#" class="" id="">Policies </a>
+			</li>
+	</ul>
+
+	<ul class="gs-steps" role="tablist">
+			<li class="">
+					<a href=" # " class=" form-toggle " id=""><i class="fa fa-bars"></i> Rates &amp; Availability </a>
+			</li>
+		 <li class="">
+					<a href="#" class=" form-toggle " id=""><i class="fa fa-calendar-check-o"></i> Contract &amp; Finance</a>
+			</li>
+	</ul> -->
+
+	{{ partial "menu.html" .}}
+</div>

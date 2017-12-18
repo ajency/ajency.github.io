@@ -1,0 +1,91 @@
+<div class="">
+
+	<label class="small-label">MAIN</label>
+	<ul class="gs-steps menu-top-level" role="tablist">
+		<li class="">
+			<a href=" # " class=" form-toggle " id=""><i class="fa fa-bars"></i> Dashboard </a>
+		</li>
+		<li class="{{ if $.Params.sideproperty }} active {{ end }}">
+			<a href="#listingSubMenu" class=" form-toggle " id="" role="button" data-toggle="collapse"><i class="fa fa-list"></i> Properties</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="listingSubMenu" >
+				<li class="{{ if $.Params.activeproperty }} active {{ end }}">
+					<a href="/goomo_html/extranet/active-properties" class="" id="">Active Properties</a>
+				</li>
+				<li class="{{ if $.Params.alproperty }} active {{ end }}">
+					<a href="/goomo_html/extranet/inactive-properties" class="" id="">Inactive Properties</a>
+				</li>
+				<li class="{{ if $.Params.cpproperty }} active {{ end }}">
+					<a href="/goomo_html/extranet/inactive-cp-properties" class="sidebar-link-custom" id="" style="display: block">Inactive Properties <br> <span class="text-primary bolder">(Content Pending)</span></a>
+				</li>
+				<li>
+					<a href="#" class="" id="">My Properties</a>
+				</li>
+				<li>
+					<a href="#" class="" id="">Unclaimed Properties </a>
+				</li>
+				<li>
+					<a href="#" class="" id="">Under Review Properties </a>
+				</li>
+				<li class="{{ if $.Params.create }} active {{ end }}">
+					<a href="/goomo_html/extranet/create" class="" id="">Create New </a>
+				</li>
+			</ul>
+		</li>
+		<li class="{{ if $.Params.sideConfig }} active {{ end }}">
+			<a href=" # " class=" form-toggle " id=""><i class="fa fa-cog"></i> Configurations </a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="{{ if $.Params.region }} active {{ end }}">
+					<a href="/goomo_html/extranet/regions" class="" id="">Regions</a>
+				</li>
+				<li class="{{ if $.Params.location }} active {{ end }}">
+					<a href="/goomo_html/extranet/location/" class="" id="">Location Tags</a>
+				</li>
+				<li class="{{ if $.Params.chain }} active {{ end }}">
+					<a href="/goomo_html/extranet/chain/" class="" id="">Chain</a>
+				</li>
+				<li class="{{ if $.Params.commission }} active {{ end }}">
+					<a href="/goomo_html/extranet/commission/" class="" id="">Commission</a>
+				</li>
+				<li class="{{ if $.Params.taxrules }} active {{ end }}">
+					<a href="/goomo_html/extranet/tax-rules/" class="" id="">Tax Rules</a>
+				</li>
+				<!-- <li class="{{ if $.Params.age }} active {{ end }}">
+					<a href="/goomo_html/extranet/age/" class="" id="">Age Groups</a>
+				</li> -->
+				<li class="{{ if $.Params.meal }} active {{ end }}">
+					<a href="/goomo_html/extranet/meal/" class="" id="">Meal Plans</a>
+				</li>
+			</ul>
+		</li>
+		<li class="{{ if $.Params.sideUser }} active {{ end }}">
+			<a href="#" class=" form-toggle " id=""><i class="fa fa-user"></i> Users</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="{{ if $.Params.internal }} active {{ end }}">
+					<a href="/goomo_html/extranet/internal" class="" id="">Internal Users</a>
+				</li>
+				<li class="{{ if $.Params.addInternal }} active {{ end }}">
+					<a href="/goomo_html/extranet/add-internal" class="" id="">Add Internal Users</a>
+				</li>
+			</ul>
+		</li>
+		<li class="{{ if $.Params.sideReports }} active {{ end }}">
+			<a href="#" class=" form-toggle " id=""><i class="fa fa-line-chart"></i> Reports</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="{{ if $.Params.bookings }} active {{ end }}">
+					<a href="/goomo_html/extranet/bookings" class="" id="">Booking Details</a>
+				</li>
+				<li class="{{ if $.Params.margin }} active {{ end }}">
+					<a href="/goomo_html/extranet/margin" class="" id="">Margin Report</a>
+				</li>
+				<li class="{{ if $.Params.inventory }} active {{ end }}">
+					<a href="/goomo_html/extranet/inventory" class="" id="">Inventory Status</a>
+				</li>
+				<li class="{{ if $.Params.rates }} active {{ end }}">
+					<a href="/goomo_html/extranet/rates" class="" id="">Rate Report</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<!-- {{ partial "menu.html" .}} -->
+</div>

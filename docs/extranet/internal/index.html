@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="" class="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Internal Users :: Goomo by Ajency</title>
+
+		
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,700" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="http://localhost:1313/goomo_2/css/font-awesome/css/font-awesome.min.css">
+		
+		<link rel="stylesheet" type="text/css" href="http://localhost:1313/goomo_2/js/datatables.net-select-dt/css/select.dataTables.css">
+		
+		<link rel="shortcut icon" href="http://localhost:1313/goomo_2/img/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/jquery.flexdatalist.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/bootstrap-multiselect.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/js/bootstrap-daterangepicker/daterangepicker.css">
+		<link href="http://localhost:1313/goomo_2/css/main.css" rel="stylesheet">
+	</head>
+	<body class="">
+
+		
+<header class="fnb-header">
+	<nav class="navbar navbar-default nav-extranet">
+		<div class="container-fluid">
+			
+			<div class="navbar-header mobile-head mobile-flex">
+				<div class="mobile-head__left mobile-flex">
+					<i class="fa fa-bars sideMenu" aria-hidden="true"></i>
+					<img src="http://localhost:1313/goomo_2/img/goomo_logo.png" class="img-responsive desk-hide" width="80">
+				</div>
+				<div class="mobile-head__right mobile-flex">
+					<a href="" class="login">
+						<i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+					</a>
+				</div>
+			</div>
+			
+			<div class="collapse navbar-collapse m-side-bar" id="bs-example-navbar-collapse-1">
+				<ul class="mobile-top mobile-flex">
+					<li>
+						<p class="mobile-top__text">Sign in to get a personalised feed!</p>
+					</li>
+					<li>
+						<button type="button" class="fnb-btn outline">Login</button>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav ">
+					<li>
+						<h5 class="dash-title">Extranet</h5>
+					</li>
+					<li>
+						
+
+
+
+<ul class="fnb-breadcrums flex-row">
+  <li class="fnb-breadcrums__section"><a href="http://localhost:1313/goomo_2/listing"><p class="fnb-breadcrums__title">Dashboard</p></a></li>
+  <li class="fnb-breadcrums__section">
+  	<p class="fnb-breadcrums__title">></p>
+  </li>
+
+  
+  
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Extranet</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li class="breadcrump_active"><p class="fnb-breadcrums__title">Internal</p></li>
+  	  
+
+      
+
+      
+
+  
+    
+      
+
+  
+</ul>
+
+
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right side-section">
+
+					<li class="mobile-hide">
+						<div class="dropdown login user-logged">
+							<i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+							<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="drop-trigger">
+								<span class="ellipsis userName">Krish Dsouza</span>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li>Sign Out</li>
+							</ul>
+						</div>
+
+					</li>
+
+				</ul>
+
+				<div class="desk-hide">
+					<div class="">
+
+	<label class="small-label">MAIN</label>
+	<ul class="gs-steps menu-top-level" role="tablist">
+		<li class="">
+			<a href=" # " class=" form-toggle " id=""><i class="fa fa-bars"></i> Dashboard </a>
+		</li>
+		<li class="">
+			<a href="#listingSubMenu" class=" form-toggle " id="" role="button" data-toggle="collapse"><i class="fa fa-list"></i> Properties</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="listingSubMenu" >
+				<li class="">
+					<a href="/goomo_html/extranet/active-properties" class="" id="">Active Properties</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/inactive-properties" class="" id="">Inactive Properties</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/inactive-cp-properties" class="sidebar-link-custom" id="" style="display: block">Inactive Properties <br> <span class="text-primary bolder">(Content Pending)</span></a>
+				</li>
+				<li>
+					<a href="#" class="" id="">My Properties</a>
+				</li>
+				<li>
+					<a href="#" class="" id="">Unclaimed Properties </a>
+				</li>
+				<li>
+					<a href="#" class="" id="">Under Review Properties </a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/create" class="" id="">Create New </a>
+				</li>
+			</ul>
+		</li>
+		<li class="">
+			<a href=" # " class=" form-toggle " id=""><i class="fa fa-cog"></i> Configurations </a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="">
+					<a href="/goomo_html/extranet/regions" class="" id="">Regions</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/location/" class="" id="">Location Tags</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/chain/" class="" id="">Chain</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/commission/" class="" id="">Commission</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/tax-rules/" class="" id="">Tax Rules</a>
+				</li>
+				
+				<li class="">
+					<a href="/goomo_html/extranet/meal/" class="" id="">Meal Plans</a>
+				</li>
+			</ul>
+		</li>
+		<li class=" active ">
+			<a href="#" class=" form-toggle " id=""><i class="fa fa-user"></i> Users</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class=" active ">
+					<a href="/goomo_html/extranet/internal" class="" id="">Internal Users</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/add-internal" class="" id="">Add Internal Users</a>
+				</li>
+			</ul>
+		</li>
+		<li class="">
+			<a href="#" class=" form-toggle " id=""><i class="fa fa-line-chart"></i> Reports</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="">
+					<a href="/goomo_html/extranet/bookings" class="" id="">Booking Details</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/margin" class="" id="">Margin Report</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/inventory" class="" id="">Inventory Status</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/rates" class="" id="">Rate Report</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	
+</div>
+				</div>
+
+
+			</div>
+			
+		</div>
+		
+	</nav>
+</header>
+
+
+		
+		<div class="container-fluid">
+				<div class="row">
+						<div class="col-xs-12 ">
+
+								<div class=" m-b-10">
+										<div class="row sidebar-row">
+												<div class="col-xs-12 col-sm-3 col-lg-2 dash-sidebar mobile-hide">
+													<div class="">
+
+	<label class="small-label">MAIN</label>
+	<ul class="gs-steps menu-top-level" role="tablist">
+		<li class="">
+			<a href=" # " class=" form-toggle " id=""><i class="fa fa-bars"></i> Dashboard </a>
+		</li>
+		<li class="">
+			<a href="#listingSubMenu" class=" form-toggle " id="" role="button" data-toggle="collapse"><i class="fa fa-list"></i> Properties</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="listingSubMenu" >
+				<li class="">
+					<a href="/goomo_html/extranet/active-properties" class="" id="">Active Properties</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/inactive-properties" class="" id="">Inactive Properties</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/inactive-cp-properties" class="sidebar-link-custom" id="" style="display: block">Inactive Properties <br> <span class="text-primary bolder">(Content Pending)</span></a>
+				</li>
+				<li>
+					<a href="#" class="" id="">My Properties</a>
+				</li>
+				<li>
+					<a href="#" class="" id="">Unclaimed Properties </a>
+				</li>
+				<li>
+					<a href="#" class="" id="">Under Review Properties </a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/create" class="" id="">Create New </a>
+				</li>
+			</ul>
+		</li>
+		<li class="">
+			<a href=" # " class=" form-toggle " id=""><i class="fa fa-cog"></i> Configurations </a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="">
+					<a href="/goomo_html/extranet/regions" class="" id="">Regions</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/location/" class="" id="">Location Tags</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/chain/" class="" id="">Chain</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/commission/" class="" id="">Commission</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/tax-rules/" class="" id="">Tax Rules</a>
+				</li>
+				
+				<li class="">
+					<a href="/goomo_html/extranet/meal/" class="" id="">Meal Plans</a>
+				</li>
+			</ul>
+		</li>
+		<li class=" active ">
+			<a href="#" class=" form-toggle " id=""><i class="fa fa-user"></i> Users</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class=" active ">
+					<a href="/goomo_html/extranet/internal" class="" id="">Internal Users</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/add-internal" class="" id="">Add Internal Users</a>
+				</li>
+			</ul>
+		</li>
+		<li class="">
+			<a href="#" class=" form-toggle " id=""><i class="fa fa-line-chart"></i> Reports</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="">
+					<a href="/goomo_html/extranet/bookings" class="" id="">Booking Details</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/margin" class="" id="">Margin Report</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/inventory" class="" id="">Inventory Status</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/rates" class="" id="">Rate Report</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	
+</div>
+												</div>
+												<div class="col-xs-12 col-sm-9 col-lg-10">
+
+													<div class="">
+														<div class="">
+															<div class="tab-content p-t-0  ">
+
+																
+	<div class="m-t-25">
+
+		<div class="row">
+
+      <div class="col-sm-12">
+        <div class="page-title">
+          <div class="title_left">
+          <h3 class="no-m-t fly-out-heading-size text-info">Internal Users <a href="/goomo_html/extranet/add-internal" class="btn fnb-btn secondary-btn btn-sm x-small add-modal">+ Add New User</a> <button class="btn btn-link text-decor">Reset All Filters</button></h3>
+          </div>
+        </div>
+      </div>
+
+			<div class="col-sm-12 m-t-40 regions-container">
+				    <table id="internal-table" class="table table-striped  no-wrap internal-table" cellspacing="0" width="100%">
+                  <thead>
+                    <tr>
+                      <th class="text-center" rowspan="2" >Name</th>
+                      <th rowspan="2" class="text-center" data-col="2">Email
+                      </th>
+                      <th class="text-center no-sort" rowspan="2">Roles
+                        <select multiple class="form-control multi-dd">
+                          <option value="yes">Contact Team</option>
+                          <option value="yes">Loading Team</option>
+                          <option value="yes">Business Manager</option>
+                          <option value="no">Finance/Legal</option>
+                        </select>
+                      </th>
+                      <th class="text-center mainTitle" colspan="7">Can access the following listings(limited based on)</th>
+                      <th rowspan="2" class="text-center" data-col="3">Last Login</th>
+                      <th class="no-sort text-center" rowspan="2" class="no-sort" data-col="6" style="min-width: 70px;">
+                        Status
+                        <select multiple class="form-control multi-dd">
+                          <option value="">Active</option>
+                          <option value="">Inactive</option>
+                        </select>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th class="text-center no-sort" style="min-width: 70px;">Chain Name
+                        <select multiple class="form-control multi-dd">
+                          <option value="yes">All</option>
+                          <option value="yes">Taj Hotels</option>
+                          <option value="yes">Hilton Group</option>
+                          <option value="yes">The Park</option>
+                          <option value="yes">The Leela Group</option>
+                        </select>
+                      </th>
+                       <th class="text-center no-sort" style="min-width: 70px;">Country
+                        <select multiple class="form-control multi-dd">
+                          <option value="yes">India</option>
+                          <option value="no">Russia</option>
+                          <option value="no">USA</option>
+                        </select>
+                      </th>
+                       <th class="text-center no-sort" style="min-width: 70px;">State
+                        <select multiple class="form-control multi-dd">
+                          <option value="yes">Goa</option>
+                          <option value="no">Maharashtra</option>
+                        </select>
+                      </th>
+                       <th class="text-center no-sort" style="min-width: 70px;">City
+                        <select multiple class="form-control multi-dd">
+                          <option value="yes">All</option>
+                          <option value="yes">Panjim</option>
+                          <option value="no">Mapusa</option>
+                        </select>
+                      </th>
+                       <th class="text-center no-sort" style="min-width: 70px;">Location Tags
+                        <select multiple class="form-control multi-dd">
+                          <option value="yes">North Goa</option>
+                          <option value="yes">All</option>
+                        </select>
+                      </th>
+                       <th class="text-center no-sort" style="min-width: 70px;">Booking Value
+                        <select multiple class="form-control multi-dd">
+                          <option value="yes">All</option>
+                          <option value="yes">Per Night &lt; 2k</option>
+                          <option value="no">Per Night &lt; 5k</option>
+                        </select>
+                      </th>
+                       <th class="text-center no-sort" style="min-width: 70px;">Star Rating
+                        <select multiple class="form-control multi-dd">
+                          <option value="yes">1 Star</option>
+                          <option value="no">2 Stars</option>
+                          <option value="no">3 Stars</option>
+                          <option value="no">4 Stars</option>
+                          <option value="no">5 Stars</option>
+                        </select>
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Karishma Sinha</td>
+                      <td class="text-center">karishma.sinha@goomo.com</td>
+                      <td class="text-center">Business Manager/Market Manager</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">India</td>
+                      <td class="text-center">Goa</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">Per Night &lt; 2k <br> per night &lt; 5k</td>
+                      <td class="text-center">3 star <br> 5 star</td>
+                      <td class="text-center">15/9/2017 <br> 10:23:15</td>
+                      <td class="text-center">Active 
+                      <div class="dropdown active-dropdown">
+                          <button class="btn primary-btn fnb-btn dropdown-toggle btn-sm active-drop" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Action
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="/goomo_html/extranet/add-internal">Edit User</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#" data-toggle="modal" data-target="#add_location_modal">Reset Password</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Kiran More</td>
+                      <td class="text-center">kiran.more@goomo.com</td>
+                      <td class="text-center">Business Manager/Market Manager</td>
+                      <td class="text-center">Taj</td>
+                      <td class="text-center">India</td>
+                      <td class="text-center">Goa</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">15/9/2017 <br> 10:23:15</td>
+                      <td class="text-center">Active 
+                      <div class="dropdown active-dropdown">
+                          <button class="btn primary-btn fnb-btn dropdown-toggle btn-sm active-drop" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Action
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="/goomo_html/extranet/add-internal">Edit User</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#" data-toggle="modal" data-target="#add_location_modal">Reset Password</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Irfan Shaikh</td>
+                      <td class="text-center">irfan.shaikh@goomo.com</td>
+                      <td class="text-center">Loading Team</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">India</td>
+                      <td class="text-center">Goa, Karnataka</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">North Goa</td>
+                      <td class="text-center">Per Night &lt; 2k <br> per night &lt; 5k</td>
+                      <td class="text-center">3 star <br> 5 star</td>
+                      <td class="text-center">15/9/2017 <br> 10:23:15</td>
+                      <td class="text-center">Inactive 
+                      <div class="dropdown active-dropdown">
+                          <button class="btn primary-btn fnb-btn dropdown-toggle btn-sm active-drop" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Action
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="/goomo_html/extranet/add-internal">Edit User</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#" data-toggle="modal" data-target="#add_location_modal">Reset Password</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Roushni Khan</td>
+                      <td class="text-center">rouishni.khan@goomo.com</td>
+                      <td class="text-center">Finance/Legal</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">India</td>
+                      <td class="text-center">Goa</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">Per Night &lt; 2k <br> per night &lt; 5k</td>
+                      <td class="text-center">3 star <br> 5 star</td>
+                      <td class="text-center">15/9/2017 <br> 10:23:15</td>
+                      <td class="text-center">Active 
+                      <div class="dropdown active-dropdown">
+                          <button class="btn primary-btn fnb-btn dropdown-toggle btn-sm active-drop" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Action
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="/goomo_html/extranet/add-internal">Edit User</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#" data-toggle="modal" data-target="#add_location_modal">Reset Password</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Keval Tanna</td>
+                      <td class="text-center">keval.tanna@goomo.com</td>
+                      <td class="text-center">Business Manager/Market Manager</td>
+                      <td class="text-center">Taj</td>
+                      <td class="text-center">India</td>
+                      <td class="text-center">Madhya Pradesh</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">15/9/2017 <br> 10:23:15</td>
+                      <td class="text-center">Inactive 
+                      <div class="dropdown active-dropdown">
+                          <button class="btn primary-btn fnb-btn dropdown-toggle btn-sm active-drop" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Action
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="/goomo_html/extranet/add-internal">Edit User</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#" data-toggle="modal" data-target="#add_location_modal">Reset Password</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Divya Caculo</td>
+                      <td class="text-center">divya.caculo@goomo.com</td>
+                      <td class="text-center">Contact Team</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">India</td>
+                      <td class="text-center">Delhi</td>
+                      <td class="text-center">All</td>
+                      <td class="text-center">North Goa</td>
+                      <td class="text-center">Per Night &lt; 2k <br> per night &lt; 5k</td>
+                      <td class="text-center">3 star <br> 5 star</td>
+                      <td class="text-center">15/9/2017 <br> 10:23:15</td>
+                      <td class="text-center">Inactive 
+                      <div class="dropdown active-dropdown">
+                          <button class="btn primary-btn fnb-btn dropdown-toggle btn-sm active-drop" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Action
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="/goomo_html/extranet/add-internal">Edit User</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#" data-toggle="modal" data-target="#add_location_modal">Reset Password</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+			</div>
+
+
+		</div>
+	</div>
+
+  <div class="modal fade region-add-modal modal-center" id="add_location_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h6 class="modal-title">Reset Password</h6>
+          </div>
+          <div class="modal-body">
+
+
+            <div class="form-group m-b-20">
+              <label>Old Password  <span class="text-danger">*</span></label>
+               <input type="text" class="form-control fnb-input" name="" value="" placeholder="Enter Old Password">
+            </div>
+
+            <div class="form-group m-b-20">
+              <label>New Password  <span class="text-danger">*</span></label>
+               <input type="text" class="form-control fnb-input" name="" value="" placeholder="Enter New Password">
+            </div>
+
+            <div class="form-group m-b-20">
+              <label>Confirm Password  <span class="text-danger">*</span></label>
+               <input type="text" class="form-control fnb-input" name="" value="" placeholder="Confirm Password">
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn fnb-btn outline no-border" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn primary-btn fnb-btn no-radius">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+															</div>
+														</div>
+													</div>
+
+												</div>
+										</div>
+								</div>
+
+						</div>
+				</div>
+				<div class="site-overlay"></div>
+		</div>
+		
+
+		
+<footer>
+	<div class="container">
+      <div class="goomoIcon">
+      <img src="http://localhost:1313/goomo_2/img/goomo_logo.png" class="img-responsive center-block m-t-10 m-b-20" width="">
+      </div>
+      <div class="footerText">
+        <p class="copyright">
+          Copyright ©
+          
+          2017
+          
+          Goomo Group. All rights reserved.
+          
+        </p>
+      </div>
+    </div>
+</footer>
+
+
+		<script type="text/javascript" src="/goomo_2/js/jquery.min.js"></script>
+		
+		<script type="text/javascript" src="/goomo_2/js/bootstrap.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/datatables.net/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/datatables.net-select/js/dataTables.select.min.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/bootstrap-multiselect.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/moment.min.js"></script>	
+		<script type="text/javascript" src="/goomo_2/js/bootstrap-daterangepicker/daterangepicker.js"></script>	
+		
+
+		
+		<script type="text/javascript" src="/goomo_2/js/flex-datalist/jquery.flexdatalist.min.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/custom.js"></script>
+	</body>
+</html>

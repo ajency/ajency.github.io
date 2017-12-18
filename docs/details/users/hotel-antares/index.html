@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="" class="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Users :: Goomo by Ajency</title>
+
+		
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,700" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="http://localhost:1313/goomo_2/css/font-awesome/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="http://localhost:1313/goomo_2/img/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/jquery.flexdatalist.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/js/bootstrap-daterangepicker/daterangepicker.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/side-comments.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/default-theme.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/tooltipster.bundle.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/tooltipster-sideTip-borderless.min.css">
+		<link href="http://localhost:1313/goomo_2/css/main.css" rel="stylesheet">
+
+		<script type="text/javascript">
+			var currentUser;
+			var existingComments;
+		</script>
+	</head>
+	<body class="overflow-section">
+		<div class="page-shifter animate-row">
+
+			
+<header class="fnb-header">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			
+			<div class="navbar-header mobile-head mobile-flex">
+				<div class="mobile-head__left mobile-flex">
+					<i class="fa fa-bars sideMenu" aria-hidden="true"></i>
+					
+					<ul class="desk-hide">
+						<li>
+							<select class="form-control fnb-select white-select">
+								<option>--Change Resort--</option>
+								<option selected="">Hotel Antares</option>
+								<option>Casa Amora</option>
+								<option>Casa Bella</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			
+			<div class="collapse navbar-collapse m-side-bar" id="bs-example-navbar-collapse-1">
+				<ul class="mobile-top mobile-flex">
+					<li>
+						<p class="mobile-top__text">Welcome!</p>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav city-select">
+					<li>
+						<img src="http://localhost:1313/goomo_2/img/goomo_logo.png" class="img-responsive mobile-hide m-t-5" width="100">
+					</li>
+					<li>
+						<select class="form-control fnb-select white-select mobile-hide">
+							<option>--Change Resort--</option>
+							<option selected="">Hotel Antares</option>
+							<option>Casa Amora</option>
+							<option>Casa Bella</option>
+						</select>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right side-section">
+					
+
+					<li class="notification mobile-hide">
+						<a tabindex="0" role="button" data-toggle="popover" data-title="Notifications" data-trigger="focus" data-placement="bottom">
+							<i class="fa fa-bell" aria-hidden="true">
+								<span class="badge">3</span>
+							</i>
+						</a>
+						<div class="popoverContent hidden">
+							<ul>
+								<li class="flex-row space-between even">
+									<div>Notification 1</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+								<li class="flex-row space-between odd">
+									<div>Notification 2</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+								<li class="flex-row space-between even">
+									<div>Notification 3</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li class="mobile-hide">
+						<div class="dropdown login user-logged">
+							<i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+							<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="drop-trigger">
+								<span class="ellipsis userName">Krish Dsouza</span>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li>
+									<a href="/goomo_html/extranet/properties/">View Dashboard</a>
+								</li>
+							</ul>
+						</div>
+
+					</li>
+
+				</ul>
+
+				<div class="desk-hide">
+					
+
+
+
+<ul class="gs-steps" role="tablist">
+  <li class="">
+    <a href="/goomo_html/dashboard/hotel-antares/"><i class="fa fa-bars"></i> <span>Dashboard</span></a>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-bookingSubMenuMobile" role="button">
+      <i class="fa fa-calendar-check-o"></i> <span>Bookings</span></a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-bookingSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/bookings/all/hotel-antares/">All Bookings</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/bookings/transactions/hotel-antares/">Transactions</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle" data-toggle="collapse"  href="#property-ratesSubMenuMobile" role="button"><i class="fa fa-money"></i> <span>Rates &amp; Availability</span></a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-ratesSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/rates-availability/calendar/hotel-antares/">Calendar</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/inventory/hotel-antares/">Add Inventory</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rates/hotel-antares/">Add Rates</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rate-plan/hotel-antares/">Rate Plans</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/config/hotel-antares/">Channel Configuration</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-offersSubMenuMobile" role="button">
+      <i class="fa fa-certificate"></i> <span>Offers</span>
+    </a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-offersSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/offers/add/hotel-antares/">Add Offer</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/all/hotel-antares/">All Offers</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal/hotel-antares/">Add Secret Deal</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal-all/hotel-antares/">All Secret Deal</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a href="/goomo_html/checklist/hotel-antares/"><i class="fa fa-list"></i> <span>Property Checklist</span></a>
+  </li>
+  <li class="sub-menu active">
+    <a class=" " data-toggle="collapse" href="#property-detailsSubMenuMobile" id="" role="button"><i class="fa fa-file-text-o"></i> <span>Property Details</span> <span class="menu-arrow arrow_carrot-right"></span></a>
+    <ul class="gs-steps collapse in edit-mode sub-steps" id="property-detailsSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/details/amenities/hotel-antares/">Amenities &amp; Services</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/address/hotel-antares/">Address &amp; Contact</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/images/hotel-antares/">Images</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/rooms/hotel-antares/">Rooms</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/policies/hotel-antares/">Policies</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/contract/hotel-antares/">Contract &amp; Finance</a>
+      </li>
+      <li class="active">
+        <a href="/goomo_html/details/users/hotel-antares/">Users</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/cancel/hotel-antares/">Cancellation Policy</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/commission/hotel-antares/">Goomo Commission</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/audit/hotel-antares/">Audit Logs</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+				</div>
+
+			</div>
+			
+		</div>
+		
+	</nav>
+</header>
+
+<div class="profile-stats breadcrums-row no-shadow">
+  <div class="container">
+	  <div class="row p-t-30 p-b-30 jobs-listing edit-mode preview-holder ">
+		  <div class="col-sm-8 flex-col">
+		  	<div class="desk-hide text-center">
+		  		
+
+
+
+<ul class="fnb-breadcrums flex-row">
+  <li class="fnb-breadcrums__section"><a href="http://localhost:1313/goomo_2/listing"><p class="fnb-breadcrums__title">Dashboard</p></a></li>
+  <li class="fnb-breadcrums__section">
+  	<p class="fnb-breadcrums__title">></p>
+  </li>
+
+  
+  
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Details</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Users</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li class="breadcrump_active"><p class="fnb-breadcrums__title">Hotel Antares</p></li>
+  	  
+
+      
+
+      
+
+  
+    
+      
+
+  
+</ul>
+
+
+		  		<h5 class="nno-m-t main-heading  white m-t-0 margin-btm">Users</h5>
+		  		<a href="https://www.goomo.com/hotels/detail/Hotel-Windsor-Bay-389069?checkin_date=2017-09-28&checkout_date=2017-09-29&hotel_id=389069&locality_id&location_id=12550&place_name=Goa%2C%20India&rooms=%5B%7B%22adults_count%22%3A1%2C%22children_age%22%3A%5B%5D%7D%5D" target="_blank" class="preview-header__link white btn fnb-btn white-border mini"> View Property on Goomo.com</a>
+		  	</div>
+		  </div>
+		  <div class="col-sm-4 flex-col text-right mobile-hide">
+			  
+		  </div>
+	  </div>
+  </div>
+</div>
+
+
+			
+			<div class="container-fluid jobs-container commentable-container" id="commentable-area">
+					<div class="row">
+							<div class="col-xs-12 content-wrapper edit-mode ">
+
+									<div class="m-t-20 m-b-10">
+											<div class="row">
+													<div class="col-xs-12 col-sm-3 col-lg-2">
+
+														<div class="dsk-separator edit-summary-card mobile-hide">
+	<div class="summary-info">
+		
+			<div class="flex-row align-top">
+						<img src="http://localhost:1313/goomo_2/img/hotel_icon.png" class="img-responsive m-r-5" width="40">
+						<div>
+							<h6 class="m-b-5 bolder property-name m-t-5">
+								Hotel Antares
+							</h6>
+							<p class="text-muted">Britona, Goa, India</p>
+						</div>
+					</div>
+			<div class="listing-status">
+					<div class="label">Property Status</div>
+					<div class="flex-row space-between status-msg">
+							<div class="statusMsg">Active (Pending Review)
+								
+							</div>
+							<a href="#" class="review-submit-link"><i class="fa fa-pencil"></i></a>
+					</div>
+			</div>
+	</div>
+</div>
+
+<div class="dsk-separator mobile-hide">
+
+	
+
+	
+
+
+<ul class="gs-steps" role="tablist">
+  <li class="">
+    <a href="/goomo_html/dashboard/hotel-antares/"><i class="fa fa-bars"></i> <span>Dashboard</span></a>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-bookingSubMenu" role="button">
+      <i class="fa fa-calendar-check-o"></i> <span>Bookings</span></a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-bookingSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/bookings/all/hotel-antares/">All Bookings</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/bookings/transactions/hotel-antares/">Transactions</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-ratesSubMenu" role="button">
+      <i class="fa fa-money"></i>
+      <span>Rates &amp; Availability</span>
+    </a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-ratesSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/rates-availability/calendar/hotel-antares/">Calendar</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/inventory/hotel-antares/">Add Inventory</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rates/hotel-antares/">Add Rates</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rate-plan/hotel-antares/">Rate Plans</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/config/hotel-antares/">Channel Config</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-offersSubMenu" role="button">
+      <i class="fa fa-certificate"></i> <span>Offers</span>
+    </a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-offersSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/offers/add/hotel-antares/">Add Offer</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/all/hotel-antares/">All Offers</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal/hotel-antares/">Add Secret Deal</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal-all/hotel-antares/">All Secret Deals</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a href="/goomo_html/checklist/hotel-antares/"><i class="fa fa-list"></i> <span>Property Checklist</span></a>
+  </li>
+
+  <li class="sub-menu active">
+    <a class=" form-toggle " data-toggle="collapse" href="#property-detailsSubMenu" id="" role="button"><i class="fa fa-file-text-o"></i> <span>Property Details</span> <span class="menu-arrow arrow_carrot-right"></span></a>
+    <ul class="gs-steps collapse in edit-mode sub-steps" id="property-detailsSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/details/amenities/hotel-antares/">Amenities &amp; Services</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/address/hotel-antares/">Address &amp; Contact</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/images/hotel-antares/">Images</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/rooms/hotel-antares/">Rooms</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/policies/hotel-antares/">Policies</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/contract/hotel-antares/">Contract &amp; Finance</a>
+      </li>
+      <li class="active">
+        <a href="/goomo_html/details/users/hotel-antares/">Users</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/cancel/hotel-antares/">Cancellation Policy</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/commission/hotel-antares/">Goomo Commission</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/audit/hotel-antares/">Audit Logs</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+</div>
+
+													</div>
+													<div class="col-xs-12 col-sm-9 col-lg-10">
+
+														<div class="">
+															<div class="">
+																<div class="preview-header text-color desk-hide"> Do you want to see a preview of your listing? <a href="" class="secondary-link preview-header__link">Preview</a>
+																</div>
+																<div class="gs-form tab-content p-t-0  ">
+
+																	<div class="flex-row space-between align-top mobile-hide">
+																		<div class="business-info tab-pane fade in active" id="">
+																			
+
+																			
+
+
+
+<ul class="fnb-breadcrums flex-row">
+  <li class="fnb-breadcrums__section"><a href="http://localhost:1313/goomo_2/listing"><p class="fnb-breadcrums__title">Dashboard</p></a></li>
+  <li class="fnb-breadcrums__section">
+  	<p class="fnb-breadcrums__title">></p>
+  </li>
+
+  
+  
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Details</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Users</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li class="breadcrump_active"><p class="fnb-breadcrums__title">Hotel Antares</p></li>
+  	  
+
+      
+
+      
+
+  
+    
+      
+
+  
+</ul>
+
+
+
+
+																			
+																			<h5 class="nno-m-t main-heading  white m-t-0 margin-btm">Users</h5>
+																		</div>
+
+																		<a href="https://www.goomo.com/hotels/detail/Hotel-Windsor-Bay-389069?checkin_date=2017-09-28&checkout_date=2017-09-29&hotel_id=389069&locality_id&location_id=12550&place_name=Goa%2C%20India&rooms=%5B%7B%22adults_count%22%3A1%2C%22children_age%22%3A%5B%5D%7D%5D" class="preview-header__link white btn fnb-btn white-border mini mobile-hide" target="_blank"> View Property on Goomo.com</a>
+																	</div>
+
+																	<div class="commentable-section" data-section-id="1">
+																	
+	<div class="c-gap">
+
+		<div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/hotel-antares/">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+
+				
+
+
+				
+
+				<div class="user-cols gm flex-row m-t-20">
+					<i class="fa fa-user p-r-15" aria-hidden="true"></i>
+					<div>
+						<h5 class="bolder">General Manager</h5>
+						<p class="m-b-0 text-lighter">This user will have full access to manage the property. This user can add and remove other users and also control the access each of the other users get.</p>
+					</div>
+				</div>
+
+				<div class="user-col-table m-t-30">
+					<table id="listings-table" class="table table-striped dataTable listing-table" cellspacing="0" width="100%">
+			          <thead>
+			            <tr>
+			              <th class="text-left" style="min-width: 10%;" >Name</th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Designation
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Email
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Mobile
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Landline
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Logged in
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Status
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Action
+			              </th>
+			            </tr>
+			          </thead>
+
+			          <tbody>
+
+			            <tr>
+			              <td class="text-left"><b>Mr. Manoj Rajput</b></td>
+			              <td class="text-center">General Manager</td>
+			              <td class="text-center"><a href="mailto:manojwe@gmail.com" class="secondary-link bolder text-decor" target="_blank">manojwe@gmail.com</a></td>
+			              <td class="text-center"><a href="tel:+918439234607" class="dark-link bolder" target="_blank">+918439234607</a></td>
+			              <td class="text-center"><a href="tel:+918322274123" class="dark-link bolder" target="_blank">+918322274123</a></td>
+			              <td class="text-center">Wed, 26 Oct 2016 at 01:34 pm IST</td>
+			              <td class="text-center"><b class="text-primary">Active</b></td>
+			              <td class="text-center relative">
+			              	<button type="button" class="btn btn-default no-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus"><b><i class="fa fa-ellipsis-v" aria-hidden="true"></i></b></button>
+				              <div class="content-pop hidden">
+				              	<ul>
+				              		<li><a href="#" class="text-color open-sidebar form-toggle"><i class="fa fa-pencil p-r-5" aria-hidden="true"></i> Edit User</a></li>
+				              		<li><a href="#" class="text-color" data-toggle="modal" data-target="#reset-password"><i class="fa fa-repeat p-r-5" aria-hidden="true"></i> Reset Password</a></li>
+				              		<li><a href="#" class="text-danger"><i class="fa fa-times-circle-o p-r-5" aria-hidden="true"></i> Remove</a></li>
+				              	</ul>
+				              </div>
+			              </td>
+			            </tr>
+
+			          </tbody>
+        			</table>
+        		</div>
+
+
+			
+
+				<br clear="mobile-hide">
+
+				<div class="user-cols gm flex-row m-t-40">
+					<i class="fa fa-user p-r-15" aria-hidden="true"></i>
+					<div>
+						<h5 class="bolder">Sales &amp; Marketing</h5>
+						<p class="m-b-0 text-lighter">These users will have access to all sections of the Extranet.</p>
+					</div>
+				</div>
+
+				<div class="user-col-table m-t-30">
+					<table id="listings-table" class="table table-striped dataTable listing-table" cellspacing="0" width="100%">
+			          <thead>
+			            <tr>
+			              <th class="text-left" style="min-width: 10%;" >Name</th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Designation
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Email
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Mobile
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Landline
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Logged in
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Status
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Action
+			              </th>
+			            </tr>
+			          </thead>
+
+			          <tbody>
+
+			            <tr>
+			              <td class="text-left"><b>Mr. Manoj Rajput</b></td>
+			              <td class="text-center">General Manager</td>
+			              <td class="text-center"><a href="mailto:manojwe@gmail.com" class="secondary-link bolder text-decor" target="_blank">manojwe@gmail.com</a></td>
+			              <td class="text-center"><a href="tel:+918439234607" class="dark-link bolder" target="_blank">+918439234607</a></td>
+			              <td class="text-center"><a href="tel:+918322274123" class="dark-link bolder" target="_blank">+918322274123</a></td>
+			              <td class="text-center">Wed, 26 Oct 2016 at 01:34 pm IST</td>
+			              <td class="text-center"><b class="text-danger">Inactive</b></td>
+			              <td class="text-center relative">
+			              	<button type="button" class="btn btn-default no-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus"><b><i class="fa fa-ellipsis-v" aria-hidden="true"></i></b></button>
+				              <div class="content-pop hidden">
+				              	<ul>
+				              		<li><a href="#" class="text-color open-sidebar form-toggle"><i class="fa fa-pencil p-r-5" aria-hidden="true"></i> Edit User</a></li>
+				              		<li><a href="#" class="text-color"><i class="fa fa-repeat p-r-5" aria-hidden="true"></i> Send Activation</a></li>
+				              		<li><a href="#" class="text-danger"><i class="fa fa-times-circle-o p-r-5" aria-hidden="true"></i> Remove</a></li>
+				              	</ul>
+				              </div>
+			              </td>
+			            </tr>
+
+			          </tbody>
+        			</table>
+        		</div>
+
+
+				
+
+				<br clear="mobile-hide">
+
+        		<div class="user-cols gm flex-row space-between m-t-40 add-user-col">
+        			<div class="flex-row">
+						<i class="fa fa-user p-r-15" aria-hidden="true"></i>
+						<div>
+							<h5 class="bolder">Revenue Manager</h5>
+							<p class="m-b-0 text-lighter">These users will have access to Rate Plans, Bookings, Rates and Availability and Cancellation Policy</p>
+						</div>
+					</div>
+					<button class="btn fnb-btn s-outline bold-btn full open-sidebar form-toggle"><span>Add User</span></button>
+				</div>
+
+				<div class="user-col-table m-t-30">
+					<table id="listings-table" class="table table-striped dataTable listing-table" cellspacing="0" width="100%">
+			          <thead>
+			            <tr>
+			              <th class="text-left" style="min-width: 10%;" >Name</th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Designation
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Email
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Mobile
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Landline
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Logged in
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Status
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Action
+			              </th>
+			            </tr>
+			          </thead>
+
+			          <tbody>
+
+			            <tr>
+			              <td class="text-left"><b>Mr. Dharmendra Rajput</b></td>
+			              <td class="text-center">Front Office Manager</td>
+			              <td class="text-center"><a href="mailto:dharam@gmail.com" class="secondary-link bolder text-decor" target="_blank">dharam@gmail.com</a></td>
+			              <td class="text-center"><a href="tel:+918439234607" class="dark-link bolder" target="_blank">+918439234607</a></td>
+			              <td class="text-center"><a href="tel:+918322274123" class="dark-link bolder" target="_blank">+918322274123</a></td>
+			              <td class="text-center">Wed, 26 Oct 2016 at 01:34 pm IST</td>
+			              <td class="text-center"><b class="text-primary">Active</b></td>
+			              <td class="text-center relative">
+			              	<button type="button" class="btn btn-default no-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus"><b><i class="fa fa-ellipsis-v" aria-hidden="true"></i></b></button>
+				              <div class="content-pop hidden">
+				              	<ul>
+				              		<li><a href="#" class="text-color open-sidebar form-toggle"><i class="fa fa-pencil p-r-5" aria-hidden="true"></i> Edit User</a></li>
+				              		<li><a href="#" class="text-color" data-toggle="modal" data-target="#reset-password"><i class="fa fa-repeat p-r-5" aria-hidden="true"></i> Reset Password</a></li>
+				              		<li><a href="#" class="text-danger"><i class="fa fa-times-circle-o p-r-5" aria-hidden="true"></i> Remove</a></li>
+				              	</ul>
+				              </div>
+			              </td>
+			            </tr>
+			            <tr>
+			              <td class="text-left"><b>Mr. Manoj Rajput</b></td>
+			              <td class="text-center">General Manager</td>
+			              <td class="text-center"><a href="mailto:manojwe@gmail.com" class="secondary-link bolder text-decor" target="_blank">manojwe@gmail.com</a></td>
+			              <td class="text-center"><a href="tel:+918439234607" class="dark-link bolder" target="_blank">+918439234607</a></td>
+			              <td class="text-center"><a href="tel:+918322274123" class="dark-link bolder" target="_blank">+918322274123</a></td>
+			              <td class="text-center">Wed, 26 Oct 2016 at 01:34 pm IST</td>
+			              <td class="text-center"><b class="text-primary">Active</b></td>
+			              <td class="text-center"><b><i class="fa fa-ellipsis-v" aria-hidden="true"></i></b></td>
+			            </tr>
+
+			          </tbody>
+        			</table>
+        		</div>
+
+
+
+				
+
+
+				<br clear="mobile-hide">
+
+        		<div class="user-cols gm flex-row space-between m-t-40 add-user-col">
+        			<div class="flex-row">
+						<i class="fa fa-user p-r-15" aria-hidden="true"></i>
+						<div>
+							<h5 class="bolder">Reservations</h5>
+							<p class="m-b-0 text-lighter">These users will have access to Bookings and Rates and Availability sections only.</p>
+						</div>
+					</div>
+					<button class="btn fnb-btn s-outline bold-btn full open-sidebar form-toggle"><span>Add User</span></button>
+				</div>
+
+				<div class="user-col-table m-t-30">
+					<div class="no-data text-center">
+						<i class="fa fa-frown-o text-lighter" aria-hidden="true"></i>
+						<p class="text-lighter">No information is available</p>
+					</div>
+        		</div>
+
+
+
+				
+
+				<br clear="mobile-hide">
+
+        		<div class="user-cols gm flex-row space-between m-t-40 add-user-col">
+        			<div class="flex-row">
+						<i class="fa fa-user p-r-15" aria-hidden="true"></i>
+						<div>
+							<h5 class="bolder">Finance / Accounts</h5>
+							<p class="m-b-0 text-lighter">These users will have access to Contract &amp; Finance section only.</p>
+						</div>
+					</div>
+					<button class="btn fnb-btn s-outline bold-btn full open-sidebar form-toggle"><span>Add User</span></button>
+				</div>
+
+				<div class="user-col-table m-t-30">
+					<table id="listings-table" class="table table-striped dataTable listing-table" cellspacing="0" width="100%">
+			          <thead>
+			            <tr>
+			              <th class="text-left" style="min-width: 10%;" >Name</th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Designation
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Email
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Mobile
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Landline
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Logged in
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Status
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Action
+			              </th>
+			            </tr>
+			          </thead>
+
+			          <tbody>
+
+			            <tr>
+			              <td class="text-left"><b>Mr. Aashish Malik</b></td>
+			              <td class="text-center">Executive</td>
+			              <td class="text-center"><a href="mailto:aashish@gmail.com" class="secondary-link bolder text-decor" target="_blank">Aashish@gmail.com</a></td>
+			              <td class="text-center"><a href="tel:+918439234607" class="dark-link bolder" target="_blank">+918439234607</a></td>
+			              <td class="text-center"><a href="tel:+918322274123" class="dark-link bolder" target="_blank">+918322274123</a></td>
+			              <td class="text-center">Wed, 26 Oct 2016 at 01:34 pm IST</td>
+			              <td class="text-center"><b class="text-primary">Active</b></td>
+			              <td class="text-center relative">
+			              	<button type="button" class="btn btn-default no-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus"><b><i class="fa fa-ellipsis-v" aria-hidden="true"></i></b></button>
+				              <div class="content-pop hidden">
+				              	<ul>
+				              		<li><a href="#" class="text-color open-sidebar form-toggle"><i class="fa fa-pencil p-r-5" aria-hidden="true"></i> Edit User</a></li>
+				              		<li><a href="#" class="text-color" data-toggle="modal" data-target="#reset-password"><i class="fa fa-repeat p-r-5" aria-hidden="true"></i> Reset Password</a></li>
+				              		<li><a href="#" class="text-danger"><i class="fa fa-times-circle-o p-r-5" aria-hidden="true"></i> Remove</a></li>
+				              	</ul>
+				              </div>
+			              </td>
+			            </tr>
+
+			          </tbody>
+        			</table>
+        		</div>
+
+
+
+			
+
+				<br clear="mobile-hide">
+
+        		<div class="user-cols gm flex-row space-between m-t-40 add-user-col">
+        			<div class="flex-row">
+						<i class="fa fa-user p-r-15" aria-hidden="true"></i>
+						<div>
+							<h5 class="bolder">Photo &amp; Description</h5>
+							<p class="m-b-0 text-lighter">These users will be able to edit and/or update Amenities &amp; Services, Images, Description and what's Nearby (Address &amp; Contract) sections.</p>
+						</div>
+					</div>
+					<button class="btn fnb-btn s-outline bold-btn full open-sidebar form-toggle"><span>Add User</span></button>
+				</div>
+
+				<div class="user-col-table m-t-30">
+					<table id="listings-table" class="table table-striped dataTable listing-table" cellspacing="0" width="100%">
+			          <thead>
+			            <tr>
+			              <th class="text-left" style="min-width: 10%;" >Name</th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Designation
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Email
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Mobile
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Landline
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Logged in
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Status
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Action
+			              </th>
+			            </tr>
+			          </thead>
+
+			          <tbody>
+
+			            <tr>
+			              <td class="text-left"><b>Mr. Aashish Malik</b></td>
+			              <td class="text-center">Executive</td>
+			              <td class="text-center"><a href="mailto:aashish@gmail.com" class="secondary-link bolder text-decor" target="_blank">Aashish@gmail.com</a></td>
+			              <td class="text-center"><a href="tel:+918439234607" class="dark-link bolder" target="_blank">+918439234607</a></td>
+			              <td class="text-center"><a href="tel:+918322274123" class="dark-link bolder" target="_blank">+918322274123</a></td>
+			              <td class="text-center">Wed, 26 Oct 2016 at 01:34 pm IST</td>
+			              <td class="text-center"><b class="text-primary">Active</b></td>
+			              <td class="text-center relative">
+			              	<button type="button" class="btn btn-default no-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus"><b><i class="fa fa-ellipsis-v" aria-hidden="true"></i></b></button>
+				              <div class="content-pop hidden">
+				              	<ul>
+				              		<li><a href="#" class="text-color open-sidebar form-toggle"><i class="fa fa-pencil p-r-5" aria-hidden="true"></i> Edit User</a></li>
+				              		<li><a href="#" class="text-color" data-toggle="modal" data-target="#reset-password"><i class="fa fa-repeat p-r-5" aria-hidden="true"></i> Reset Password</a></li>
+				              		<li><a href="#" class="text-danger"><i class="fa fa-times-circle-o p-r-5" aria-hidden="true"></i> Remove</a></li>
+				              	</ul>
+				              </div>
+			              </td>
+			            </tr>
+
+			          </tbody>
+        			</table>
+        		</div>
+
+
+
+			</div>
+
+		</div>
+	</div>
+
+  <div class="modal fade region-add-modal modal-center" id="reset-password" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h6 class="modal-title">Reset Password</h6>
+          </div>
+          <div class="modal-body">
+
+
+            <div class="form-group m-b-20">
+              <label>Old Password  <span class="text-danger">*</span></label>
+               <input type="text" class="form-control fnb-input" name="" value="" placeholder="Enter Old Password">
+            </div>
+
+            <div class="form-group m-b-20">
+              <label>New Password  <span class="text-danger">*</span></label>
+               <input type="text" class="form-control fnb-input" name="" value="" placeholder="Enter New Password">
+            </div>
+
+            <div class="form-group m-b-20">
+              <label>Confirm Password  <span class="text-danger">*</span></label>
+               <input type="text" class="form-control fnb-input" name="" value="" placeholder="Confirm Password">
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn fnb-btn text-color no-border" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn secondary-btn fnb-btn no-radius">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  	<script type="text/javascript">
+		var existingComments = [
+		  {
+		    "sectionId": "1",
+		    "comments": [
+		      {
+		        "comment": "<ul><li>List of all inactive or inactive users. This is basically the users related to the property</li> <li>Only Admin user or Goomo Team will have the right to add or remove users</li> <li>Incase a user is Active, reset password option will be available</li><li>If a user is added but status is inactive, then an activation link can be sent to this user</li></ul>"
+		      }
+		    ]
+		  }
+		];
+	</script>
+
+
+
+																	</div>
+
+
+																</div>
+															</div>
+														</div>
+
+													</div>
+											</div>
+									</div>
+
+							</div>
+					</div>
+					<div class="site-overlay"></div>
+			</div>
+			
+
+		
+<div class="pos-fixed fly-out side-toggle">
+    <div class="mobile-back desk-hide mobile-flex">
+        <div class="left mobile-flex">
+            <i class="fa fa-arrow-left text-primary back-icon" aria-hidden="true"></i>
+            <p class="element-title heavier m-b-0">Back</p>
+        </div>
+        <div class="right">
+            
+        </div>
+    </div>
+    <div class="fly-out__content">
+        <div class="sidebar-updates page-sidebar">
+
+        
+
+           <div class="page-sidebar__header flex-row space-between mobile-hide">
+                <div class="backLink flex-row">
+                    <a href="" class="primary-link p-r-10 element-title article-back"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                    <div class="sub-title bolder">Add User</div>
+                </div>
+                
+            </div>
+
+            <div class="page-sidebar__body">
+                <div class="update-sec sidebar-article user-overflow">
+                   <h5 class="bolder m-t-35 prop-title">Reservations</h5>
+                   <p>These users will have access to Bookings and Rates and Availability sections only.</p>
+
+                    <div class="row field-gap c-gap">
+                        <div class="col-sm-12 form-group m-b-20">
+                            <label class="text-info required">Name </label>
+                            <div class="flex-row">
+                                <select class="fnb-select select-variant form-control text-lighter p-l-0 m-r-10 code-box" name="">
+                                    <option value="">Mr</option>
+                                    <option>Mrs</option>
+                                </select>
+                                <input type="text" class="form-control fnb-input" placeholder="Name of User">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 c-gap form-group m-b-20">
+                            <label class="text-info required">Designation </label>
+                            <select class="fnb-select select-variant form-control text-lighter p-l-0" name="">
+                                <option value="">Select Designation</option>
+                                <option>General Manager</option>
+                                <option>Revenue Manager</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6 c-gap form-group m-b-20">
+                            <label class="text-info required">Email </label>
+                            <input type="email" class="form-control fnb-input" placeholder="eg. xyz@gmail.com">
+                        </div>
+                        <div class="col-sm-12 c-gap form-group m-b-20">
+                            <label class="text-info required">Mobile Number </label>
+                            <div class="flex-row">
+                                <select class="fnb-select select-variant form-control text-lighter p-l-0 m-r-10 code-box" name="">
+                                    <option value="">+91</option>
+                                    <option>+94</option>
+                                </select>
+                                <input type="tel" class="form-control fnb-input" placeholder="eg. 9988776655">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 c-gap form-group m-b-20">
+                            <label class="text-info required">Landline Number </label>
+                            <div class="flex-row">
+                                <select class="fnb-select select-variant form-control text-lighter p-l-0 m-r-10 code-box" name="">
+                                    <option value="">0831</option>
+                                    <option>+94</option>
+                                </select>
+                                <input type="tel" class="form-control fnb-input" placeholder="eg. 9988776655">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 c-gap form-group">
+                            <label class="text-info required">Password </label>
+                            <input type="password" class="form-control fnb-input" placeholder="">
+                        </div>
+                        <div class="col-sm-6 c-gap form-group">
+                            <label class="text-info required">Confirm Password </label>
+                            <input type="email" class="form-control fnb-input" placeholder="">
+                        </div>
+                        <div class="col-sm-12 c-gap form-group">
+                            <span class="text-danger">Note: </span>
+                            <p class="flex-row">Use a strong password of at least 6 characters, preferably an alphanumeric combination.</p>
+                        </div>
+                        <div class="col-sm-12 c-gap form-group flex-row users-row">
+                            <button class="btn fnb-btn secondary-btn full">Save</button>
+                            <button class="btn fnb-btn grey  full">Cancel</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        
+
+        </div>
+    </div>
+</div>
+
+		
+<footer>
+	<div class="container">
+      <div class="goomoIcon">
+      <img src="http://localhost:1313/goomo_2/img/goomo_logo.png" class="img-responsive center-block m-t-10 m-b-20" width="">
+      </div>
+      <div class="footerText">
+        <p class="copyright">
+          Copyright ©
+          
+          2017
+          
+          Goomo Group. All rights reserved.
+          
+        </p>
+      </div>
+    </div>
+</footer>
+
+
+		</div>
+
+		<script type="text/javascript" src="/goomo_2/js/jquery.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/bootstrap.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/datatables.net/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/bootstrap-multiselect.js"></script>
+
+
+		<script type="text/javascript" src="/goomo_2/js/moment.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/flex-datalist/jquery.flexdatalist.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/readmore.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/side-comments.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/tooltipster.bundle.min.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/custom.js"></script>
+	</body>
+</html>

@@ -1,0 +1,414 @@
+{{ define "main" }}
+	<div class="">
+	<!-- 	<div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/{{ $.Params.slug }}">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div> -->
+
+		<div class="row">
+			<div class="col-sm-6 col-xs-6">
+				<!-- <h6 class="text-muted bolder">These are your active offers</h6> -->
+      </div>
+      <div class="col-sm-6 col-xs-12">
+        <button class="btn fnb-btn transparent bold-btn flex-row collapsed pull-right" data-toggle="collapse" data-target="#moreFiltersWrap" aria-expanded="false"><img src="/goomo_html/img/filter-bars.png" class="img-responsive p-r-5" width="30"> <span>Filter</span></button>
+			</div>
+      <!-- filters -->
+      <div class="col-sm-12 col-xs-12">
+        <div class="more-filters-wrapper m-t-25 collapse" id="moreFiltersWrap">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-6 col-xs-6">
+                <h5 class="mb-3">Filter by</h5>
+                </div>
+                <div class="col-sm-6 text-right col-xs-6">
+                  <button type="button" class="close" data-toggle="collapse" data-target="#moreFiltersWrap">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 col-md-4">
+                  <div class="filter-section ">
+                    <h6 class="sub-title bolder">Offer Type</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Basic Deal
+                              </label>
+                          </div>
+                      </div>
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Group Booking
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Last Minute
+                              </label>
+                          </div>
+                      </div>
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Deal of the day
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Early Bird
+                              </label>
+                          </div>
+                      </div>
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Weekday - Weekend offer
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="filter-section m-t-20">
+                    <h6 class="sub-title bolder">Rate Plans</h6>
+                    <hr class="m-t-0 m-b-15">
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Rate Plan 1
+                              </label>
+                          </div>
+                      </div>
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Rate Plan 2
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Rate Plan 3
+                              </label>
+                          </div>
+                      </div>
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Rate Plan 4
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Rate Plan 5
+                              </label>
+                          </div>
+                      </div>
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Rate Plan 6
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                  <div class="filter-section mb-4">
+                    <h6 class="sub-title bolder">Rooms</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="row">
+                      <div class="col-sm-12 col-xs-6">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Casa Favourite Room
+                              </label>
+                          </div>
+                      </div>
+                      <div class="col-sm-12 col-xs-6">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Casa Deluxe
+                              </label>
+                          </div>
+                      </div>
+                      <div class="col-sm-12 col-xs-6">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Casa Premium
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="filter-section m-t-40">
+                    <h6 class="sub-title bolder">Booking Dates</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="form-group">
+                     <div class="row">
+                       <div class="col-sm-6">
+                        <input type="text" class="from-date form-control fnb-input m-r-10 sub-dates" placeholder="From Date">
+                       </div>
+                       <div class="col-sm-6">
+                        <input type="text" class="to-date form-control fnb-input m-r-10 sub-dates" placeholder="To Date">
+                       </div>
+                     </div>
+                    </div>
+                  </div>
+
+                  <div class="filter-section m-t-40">
+                    <h6 class="sub-title bolder">Check in Dates</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="form-group">
+                     <div class="row">
+                       <div class="col-sm-6">
+                        <input type="text" class="from-date form-control fnb-input m-r-10 sub-dates" placeholder="From Date">
+                       </div>
+                       <div class="col-sm-6">
+                        <input type="text" class="to-date form-control fnb-input m-r-10 sub-dates" placeholder="To Date">
+                       </div>
+                     </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                  <div class="filter-section">
+                    <h6 class="sub-title bolder">Offer Status</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="row mobile-flex">
+                      <div class="col-sm-12 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Active
+                              </label>
+                          </div>
+                      </div>
+                      <div class="col-sm-12 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Inactive
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-section m-t-50">
+                    <h6 class="sub-title bolder">Offer Search</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="form-group">
+                     <input type="text" class="form-control fnb-input" id="" placeholder="Search by name">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+
+              <div class="row m-t-20">
+                <div class="col">
+                  <div class="pull-right">
+                    <button class="btn outline fnb-btn btn-sm m-r-10">
+                      Reset Filters
+                    </button>
+                    <button class="btn fnb-btn secondary-btn btn-sm" data-toggle="collapse" data-target="#moreFiltersWrap">
+                      Apply Filters
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+		</div>
+
+
+		<div class="row m-t-40">
+				<div class="col-md-12">
+					<table id="location-table" class="table dataTable listing-table offers-table" cellspacing="0" width="100%" style="min-width: 1000px">
+            <thead>
+              <tr>
+                <th class="text-left" style="">
+                  Name
+                </th>
+                <th class="text-left" style="">
+                  Discount
+                </th>
+                <th class="text-left no-sort" style="">
+                  Offer Type
+                </th>
+                <th class="text-left" >
+                  Rooms &amp; Rates
+                </th>
+                <th class="text-left no-sort" style="">
+                  Booking Dates
+                </th>
+                <th class="text-left no-sort" style="min-width: 115px;">
+                  Check in Dates
+                </th>
+                <th class="text-left no-sort" style="">
+                  Status
+                </th>
+                <th class="no-sort">
+                  Action
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td class="text-left">
+                  <div class="flex-row">
+                    <img src="/goomo_html/img/offer_icon1.png" class="img-responsive m-r-10">
+                    <div>
+                      <b>Get 15% off on online booking</b><br><sm class="text-muted">Created on Wed, 01 Oct 2017</sm>
+                    </div>
+                  </div>
+                </td>
+                <td class="text-left"><b>15% off</b><br>Standard Rate</td>
+                <td class="text-left"><b>Basic Deal</b></td>
+                <td class="text-left"><b>Casa Favourite Room</b><br><sm class="text-muted">Rate Plan 1</sm></td>
+                <td class="text-left"><b>06 - 09 Oct 2017</b><br><small>Exclude these dates:</small><br>12/10/2016</td>
+                <td class="text-left"><b>06 - 30 Oct 2017</b></td>
+                <td class="text-left"><span class="text-primary"> Active</span> </td>
+                <td >
+                  <i class="fa fa-ellipsis-v text-center action-panel center-block" aria-hidden="true"></i>
+                  <div class="my-popover-content">
+                    <a href="#" class="text-muted"> <b> Deactivate Offer</b></a><br><br>
+                    <a href="#" class="text-muted"> <b> Edit Offer</b></a>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="text-left">
+                  <div class="flex-row">
+                    <img src="/goomo_html/img/offer_icon2.png" class="img-responsive m-r-10">
+                    <div>
+                      <b>Get Rs.400 off on last minute booking</b><br><sm class="text-muted">Created on Wed, 01 Oct 2017</sm>
+                    </div>
+                  </div>
+                </td>
+                <td class="text-left"><b>400 off</b><br>Fixed Rate</td>
+                <td class="text-left"><b>Last Minute Deal</b></td>
+                <td class="text-left"><b>Casa Favourite Room</b><br><sm class="text-muted">Rate Plan 1</sm></td>
+                <td class="text-left"><b>06 - 09 Oct 2017</b><br><small>Exclude these dates:</small><br>12/10/2016</td>
+                <td class="text-left"><b>06 - 30 Oct 2017</b></td>
+                <td class="text-left"><span class="text-primary"> Active</span> </td>
+                <td >
+                  <i class="fa fa-ellipsis-v text-center action-panel center-block" aria-hidden="true"></i>
+                  <div class="my-popover-content">
+                    <a href="#" class="text-muted"> <b> Deactivate Offer</b></a><br><br>
+                    <a href="#" class="text-muted"> <b> Edit Offer</b></a>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="text-left">
+                  <div class="flex-row">
+                    <img src="/goomo_html/img/offer_icon1.png" class="img-responsive m-r-10">
+                    <div>
+                      <b>Get 15% off on online booking</b><br><sm class="text-muted">Created on Wed, 01 Oct 2017</sm>
+                    </div>
+                  </div>
+                </td>
+                <td class="text-left"><b>15% off</b><br>Standard Rate</td>
+                <td class="text-left"><b>Basic Deal</b></td>
+                <td class="text-left"><b>Casa Favourite Room</b><br><sm class="text-muted">Rate Plan 1</sm></td>
+                <td class="text-left"><b>06 - 09 Oct 2017</b><br><small>Exclude these dates:</small><br>12/10/2016</td>
+                <td class="text-left"><b>06 - 30 Oct 2017</b></td>
+                <td class="text-left"><span class="text-primary"> Active</span> </td>
+                <td >
+                  <i class="fa fa-ellipsis-v text-center action-panel center-block" aria-hidden="true"></i>
+                  <div class="my-popover-content">
+                    <a href="#" class="text-muted"> <b> Deactivate Offer</b></a><br><br>
+                    <a href="#" class="text-muted"> <b> Edit Offer</b></a>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="text-left">
+                  <div class="flex-row">
+                    <img src="/goomo_html/img/offer_icon1.png" class="img-responsive m-r-10">
+                    <div>
+                      <b>Get 15% off on online booking</b><br><sm class="text-muted">Created on Wed, 01 Oct 2017</sm>
+                    </div>
+                  </div>
+                </td>
+                <td class="text-left"><b>15% off</b><br>Standard Rate</td>
+                <td class="text-left"><b>Basic Deal</b></td>
+                <td class="text-left"><b>Casa Favourite Room</b><br><sm class="text-muted">Rate Plan 1</sm></td>
+                <td class="text-left"><b>06 - 09 Oct 2017</b><br><small>Exclude these dates:</small><br>12/10/2016</td>
+                <td class="text-left"><b>06 - 30 Oct 2017</b></td>
+                <td class="text-left"><span class="text-primary"> Active</span> </td>
+                <td >
+                  <i class="fa fa-ellipsis-v text-center action-panel center-block" aria-hidden="true"></i>
+                  <div class="my-popover-content">
+                    <a href="#" class="text-muted"> <b> Deactivate Offer</b></a><br><br>
+                    <a href="#" class="text-muted"> <b> Edit Offer</b></a>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+				</div>
+		</div>
+	</div>
+
+{{ end }}

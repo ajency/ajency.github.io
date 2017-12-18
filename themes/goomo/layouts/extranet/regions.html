@@ -1,0 +1,345 @@
+{{ define "main" }}
+	<div class="m-t-25">
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="page-title">
+          <div class="title_left">
+          <h3 class="no-m-t fly-out-heading-size text-info">{{ .Title }} <button class="btn fnb-btn secondary-btn btn-sm x-small add-modal" data-toggle="modal" data-target="#add_category_modal">+ Add a Region</button> <button class="btn btn-link text-decor">Reset All Filters</button></h3>
+          </div>
+        </div>
+			</div>
+
+			<div class="col-sm-12 m-t-40 regions-container">
+				<table id="region-table" class="table table-striped dataTable region-table" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th class="" style="min-width: 5%;" >Name</th>
+              <th class="no-sort text-center" style="min-width: 10%;white-space: nowrap;">
+                IsCountry
+                <select multiple class="form-control multi-dd">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </th>
+              <th class="no-sort text-center" style="min-width: 10%;white-space: nowrap;">
+                IsState
+                <select multiple class="form-control multi-dd">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </th>
+              <th class="no-sort text-center" style="min-width: 10%;white-space: nowrap;">
+               IsCity
+               <select multiple class="form-control multi-dd">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </th>
+              <th class="no-sort text-center" style="min-width: 10%;white-space: nowrap;" rowspan="1">
+                Country
+                <select multiple class="form-control multi-dd">
+                  <option value="Yes">India</option>
+                  <option value="Yes">Sri Lanka</option>
+                  <option value="Yes">Pakistan</option>
+                  <option value="Yes">China</option>
+                  <option value="No">Nepal</option>
+                </select>
+              </th>
+              <th class="no-sort text-center" style="min-width: 10%;" rowspan="1">
+                State
+                <select multiple class="form-control multi-dd">
+                  <option value="Yes">Goa</option>
+                  <option value="Yes">Maharashtra</option>
+                  <option value="Yes">Karnataka</option>
+                  <option value="No">Kerala</option>
+                </select>
+              </th>
+              <th class="text-center" style="min-width: 10%;white-space: nowrap;" rowspan="1">
+                Sort Order
+              </th>
+              <th class="text-left" style="min-width: 10%;" rowspan="1">
+                Published On
+              </th>
+              <th class="text-left" style="min-width: 15%;" rowspan="1">
+                Last Updated On
+              </th>
+              <th class="no-sort text-left" style="min-width: 10%;" rowspan="1">
+                Status
+                <select multiple class="form-control multi-dd">
+                  <option value="Yes">Published</option>
+                  <option value="No">Inactive</option>
+                  <option value="No">Draft</option>
+                </select>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+
+            <tr>
+              <td class=""><a href="{{ $.Params.casabella.url }}" class="text-info bolder" target="_blank">Panjim</a></td>
+              <td class="text-center"><i class="fa fa-times text-danger"></i></td>
+              <td class="text-center"><i class="fa fa-times text-danger"></i></td>
+              <td class="text-center"><i class="fa fa-check text-success"></i></td>
+              <td class="text-center">India</td>
+              <td class="text-center">Goa</td>
+              <td class="text-center">1</td>
+              <td class="text-left">15/9/2016<br>10:23:15</td>
+              <td class="text-left">15/9/2016<br>10:23:15</td>
+              <td class="text-left">Published <i class="fa fa-pencil text-decor p-l-5 text-secondary" data-toggle="modal" data-target="#edit_category_modal"></i></td>
+            </tr>
+
+            <tr>
+              <td class=""><a href="{{ $.Params.casabella.url }}" class="text-info bolder" target="_blank">Goa</a></td>
+              <td class="text-center"><i class="fa fa-times text-danger"></i></td>
+              <td class="text-center"><i class="fa fa-check text-success"></i></td>
+              <td class="text-center"><i class="fa fa-times text-danger"></i></td>
+              <td class="text-center">India</td>
+              <td class="text-center">---</td>
+              <td class="text-center">2</td>
+              <td class="text-left">15/9/2016<br>10:23:15</td>
+              <td class="text-left">15/9/2016<br>10:23:15</td>
+              <td class="text-left">Published <i class="fa fa-pencil text-decor p-l-5 text-secondary" data-toggle="modal" data-target="#edit_category_modal"></i></td>
+            </tr>
+
+            <tr>
+              <td class=""><a href="{{ $.Params.casabella.url }}" class="text-info bolder" target="_blank">Calangute</a></td>
+              <td class="text-center"><i class="fa fa-times text-danger"></i></td>
+              <td class="text-center"><i class="fa fa-times text-danger"></i></td>
+              <td class="text-center"><i class="fa fa-check text-success"></i></td>
+              <td class="text-center">India</td>
+              <td class="text-center">Goa</td>
+              <td class="text-center">3</td>
+              <td class="text-left">15/9/2016<br>10:23:15</td>
+              <td class="text-left">15/9/2016<br>10:23:15</td>
+              <td class="text-left">Published <i class="fa fa-pencil text-secondary p-l-5 text-decor" data-toggle="modal" data-target="#edit_category_modal"></i></td>
+            </tr>
+
+
+            <tr>
+              <td class=""><a href="{{ $.Params.casabella.url }}" class="text-info bolder" target="_blank">Margao</a></td>
+              <td class="text-center"><i class="fa fa-times text-danger"></i></td>
+              <td class="text-center"><i class="fa fa-times text-danger"></i></td>
+              <td class="text-center"><i class="fa fa-check text-success"></i></td>
+              <td class="text-center">India</td>
+              <td class="text-center">Goa</td>
+              <td class="text-center">1</td>
+              <td class="text-left">15/9/2016<br>10:23:15</td>
+              <td class="text-left">15/9/2016<br>10:23:15</td>
+              <td class="text-left">Published <i class="fa fa-pencil text-decor p-l-5 text-secondary" data-toggle="modal" data-target="#edit_category_modal"></i></td>
+            </tr>
+
+
+            <tr>
+              <td class=""><a href="{{ $.Params.casabella.url }}" class="text-info bolder" target="_blank">Maharashtra</a></td>
+              <td class="text-center"><i class="fa fa-times text-danger"></i></td>
+              <td class="text-center"><i class="fa fa-check text-success"></i></td>
+              <td class="text-center"><i class="fa fa-times text-danger"></i></td>
+              <td class="text-center">India</td>
+              <td class="text-center">---</td>
+              <td class="text-center">1</td>
+              <td class="text-left">15/9/2016<br>10:23:15</td>
+              <td class="text-left">15/9/2016<br>10:23:15</td>
+              <td class="text-left">Published <i class="fa fa-pencil text-decor p-l-5 text-secondary" data-toggle="modal" data-target="#edit_category_modal"></i></td>
+            </tr>
+
+            <tr>
+              <td class=""><a href="{{ $.Params.casabella.url }}" class="text-info bolder" target="_blank">Mumbai</a></td>
+              <td class="text-center"><i class="fa fa-times text-danger"></i></td>
+              <td class="text-center"><i class="fa fa-times text-danger"></i></td>
+              <td class="text-center"><i class="fa fa-check text-success"></i></td>
+              <td class="text-center">India</td>
+              <td class="text-center">Maharashtra</td>
+              <td class="text-center">2</td>
+              <td class="text-left">15/9/2016<br>10:23:15</td>
+              <td class="text-left">15/9/2016<br>10:23:15</td>
+              <td class="text-left">Published <i class="fa fa-pencil text-decor p-l-5 text-secondary" data-toggle="modal" data-target="#edit_category_modal"></i></td>
+            </tr>
+
+
+          </tbody>
+        </table>
+			</div>
+
+
+		</div>
+	</div>
+
+
+
+  <div class="modal fade region-add-modal" id="add_category_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h6 class="modal-title">Add New Region</h6>
+          </div>
+          <div class="modal-body">
+            <label>Type of Region <span class="text-danger">*</span></label>
+            <div class="form-group flex flex-space-between m-b-20 m-t-5">
+              <label class="radio-inline m-r-20">
+                <input type="radio" name="categoryType" id="parent_cat" value="parent_cat" class="fnb-radio" checked> <span class="p-l-5">Country</span>
+              </label>
+              <label class="radio-inline m-r-20">
+                <input type="radio" name="categoryType" id="branch_cat" value="branch_cat" class="fnb-radio"> <span class="p-l-5">State</span>
+              </label>
+              <label class="radio-inline m-r-20">
+                <input type="radio" name="categoryType" id="node_cat" value="node_cat" class="fnb-radio"> <span class="p-l-5">City</span>
+              </label>
+            </div>
+
+            <div class="row m-b-5 select-parent-cat hidden">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Select Country  <span class="text-danger">*</span></label>
+                   <select class="form-control fnb-select border-bottom">
+                      <option selected="">India</option>
+                      <option>Russia</option>
+                      <option>Germany</option>
+                    </select>
+                </div>
+              </div>
+              <div class="col-sm-6 select-branch-cat">
+                <div class="form-group">
+                <label>Select State </label>
+                <select class="form-control fnb-select border-bottom">
+                    <option selected="">Goa</option>
+                    <option>Maharashtra</option>
+                </select>
+              </div>
+              </div>
+            </div>
+
+
+            <div class="form-group m-b-20">
+              <label>Region Name  <span class="text-danger">*</span></label>
+               <input type="text" class="form-control fnb-input" name="" placeholder="Enter Region Name">
+            </div>
+
+            <div class="form-group m-b-20">
+              <label>Region Slug  <span class="text-danger">*</span></label>
+               <input type="text" class="form-control fnb-input" name="" placeholder="Enter Region Slug">
+            </div>
+
+
+            <div class="row m-b-10">
+              <div class="col-sm-6">
+                <div class="form-group m-b-0">
+                  <label>Sort Order  <span class="text-danger">*</span></label>
+                  <input type="number" class="form-control fnb-input" name="" value="1" min="1" placeholder="Enter a Sort value">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group m-b-0">
+                  <label>Status <span class="text-danger">*</span></label>
+                  <select class="form-control fnb-select border-bottom">
+                    <option value="">Published</option>
+                    <option value="">Draft</option>
+                    <option value="">Archived</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn fnb-btn outline no-border" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn primary-btn fnb-btn no-radius">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade region-add-modal" id="edit_category_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h6 class="modal-title">Edit Region</h6>
+          </div>
+          <div class="modal-body">
+            <label>Type of Region <span class="text-danger">*</span></label>
+            <div class="form-group flex flex-space-between m-b-20 m-t-5">
+              <label class="radio-inline m-r-20">
+                <input type="radio" name="categoryType" id="parent_cat" value="parent_cat" class="fnb-radio" checked> <span class="p-l-5">Country</span>
+              </label>
+              <label class="radio-inline m-r-20">
+                <input type="radio" name="categoryType" id="branch_cat" value="branch_cat" class="fnb-radio"> <span class="p-l-5">State</span>
+              </label>
+              <label class="radio-inline m-r-20">
+                <input type="radio" name="categoryType" id="node_cat" value="node_cat" class="fnb-radio"> <span class="p-l-5">City</span>
+              </label>
+            </div>
+
+            <div class="row m-b-5 select-parent-cat hidden">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Select Country  <span class="text-danger">*</span></label>
+                   <select class="form-control fnb-select border-bottom">
+                      <option selected="">India</option>
+                      <option>Russia</option>
+                      <option>Germany</option>
+                    </select>
+                </div>
+              </div>
+              <div class="col-sm-6 select-branch-cat">
+                <div class="form-group">
+                <label>Select State </label>
+                <select class="form-control fnb-select border-bottom">
+                    <option selected="">Goa</option>
+                    <option>Maharashtra</option>
+                </select>
+              </div>
+              </div>
+            </div>
+
+
+            <div class="form-group m-b-20">
+              <label>Region Name  <span class="text-danger">*</span></label>
+               <input type="text" class="form-control fnb-input" name="" value="India" placeholder="Enter Region Name">
+            </div>
+
+            <div class="form-group m-b-20">
+              <label>Region Slug  <span class="text-danger">*</span></label>
+               <input type="text" class="form-control fnb-input" name="" value="India" placeholder="Enter Region Slug">
+            </div>
+
+
+            <div class="row m-b-10">
+              <div class="col-sm-6">
+                <div class="form-group m-b-0">
+                  <label>Sort Order  <span class="text-danger">*</span></label>
+                  <input type="number" class="form-control fnb-input" name="" value="3" min="1" placeholder="Enter a Sort value">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group m-b-0">
+                  <label>Status <span class="text-danger">*</span></label>
+                  <select class="form-control fnb-select border-bottom">
+                    <option value="" selected="">Published</option>
+                    <option value="">Draft</option>
+                    <option value="">Archived</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn fnb-btn outline no-border" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn primary-btn fnb-btn no-radius">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+{{ end }}

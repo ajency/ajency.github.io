@@ -1,0 +1,199 @@
+{{ define "main" }}
+	<div class="c-gap">
+
+		<div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/{{ $.Params.slug }}">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-9">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="text-muted">
+							Guest name:
+						</div>
+						<h5 class="m-t-0 m-b-5 bolder">
+							Arvind Bargur
+						</h5>
+						<div>
+							Booked on: Wed, 01 Oct 2017
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="text-right">
+							<div class="text-muted">
+								Booking Reference number:
+							</div>
+							<h6 class="text-primary m-t-0">
+								AR0000DXL4
+							</h6>
+						</div>
+					</div>
+				</div>
+
+				<div class="row m-t-30">
+					<div class="col-sm-3">
+						<div class="text-muted">
+							Check In
+						</div>
+						<h6 class="bolder m-t-0">
+							Tue, 05 Oct 2017
+						</h6>
+					</div>
+					<div class="col-sm-3">
+						<div class="text-muted">
+							Check Out
+						</div>
+						<h6 class="bolder m-t-0">
+							Tue, 06 Oct 2017
+						</h6>
+					</div>
+					<div class="col-sm-3">
+						<div class="text-muted">
+							Total Rooms
+						</div>
+						<h6 class="bolder m-t-0">
+							1 Room
+						</h6>
+					</div>
+					<div class="col-sm-3">
+						<div class="text-muted">
+							Total Guests
+						</div>
+						<h6 class="bolder m-t-0">
+							2 Guest
+						</h6>
+					</div>
+				</div>
+
+				<div class="row m-t-30 m-b-30">
+					<div class="col-sm-3">
+						<div class="text-muted">
+							Property Receivable
+						</div>
+						<h6 class="bolder m-t-0">
+							<i class="fa fa-inr"></i> 5040
+						</h6>
+					</div>
+					<div class="col-sm-3">
+						<div class="text-muted">
+							Goomo Commission
+						</div>
+						<h6 class="bolder m-t-0">
+							<i class="fa fa-inr"></i> 907.20
+						</h6>
+					</div>
+					<div class="col-sm-3">
+						<div class="text-muted">
+							Selling Price
+						</div>
+						<h6 class="bolder m-t-0">
+							<i class="fa fa-inr"></i> 5947
+						</h6>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="row m-t-40 m-b-20">
+					<div class="col-sm-9">
+						<div class="text-muted">
+							Offer used:
+						</div>
+						<div>
+							Use voucher code ASD321 for first time booking to avail 20% discount.
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="text-muted">
+							Rate Plan:
+						</div>
+						<h6 class="m-t-0">Rate Plan 1</h6>
+					</div>
+				</div>
+
+				<img src="/goomo_html/img/book_details.png" class="img-responsive" width="">
+
+				<h5 class="m-t-0 m-b-15 bolder">
+					Policy
+				</h5>
+				<label class="m-b-10">Cancellation</label>
+				<ul>
+					<li>
+						The guest can cancel free of charge until 3 days before arrival.
+					</li>
+					<li>
+						The guest will be charged the total price if they cancel in the 3 days before arrival.
+					</li>
+				</ul>
+
+				<label class="m-b-10 m-t-40">Children and Extra Bed Policy</label>
+				<ul>
+					<li>
+						All children are welcome.
+					</li>
+					<li>
+						One child under 6 years stays free of charge when using existing beds.
+					</li>
+					<li>
+						One child from 6 to 12 years is charged INR 1100 per person per night in an extra bed.
+					</li>
+					<li>
+						One older child or adult is charged INR 1500 per person per night in an extra bed.
+					</li>
+					<li>
+						The maximum number of extra beds in a room is 1.
+					</li>
+					<li>
+						There is no capacity for cribs in the room.
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-sm-3">
+				<a href="/goomo_html/bookings/all/{{ $.Params.slug }}" class="gray-border flex-row justify-center p-t-15 p-b-15 text-darker">
+					<i class="fa fa-chevron-left m-r-10"></i> Back to All Bookings
+				</a>
+
+				<div class="alert alert-success text-center m-t-20" style="background-color: #eaf6f3;">
+					<div class="text-darker">
+						Booking Status
+					</div>
+
+					<h6 class="bolder text-primary">Confirmed</h6>
+
+					<div class="text-darker m-t-20">
+						Payment Status
+					</div>
+					<div class="flex-row justify-center m-t-10">
+						<img src="/goomo_html/img/pay_status3.png" class="img-responsive" width="">
+					</div>
+
+					<!-- <div class="flex-row justify-center m-t-20">
+						<button class="btn grey bold-btn fnb-btn">Customer Booking Voucher</button>
+					</div> -->
+					<div class="flex-row justify-center m-t-10">
+						<button class="btn primary-btn bold-btn fnb-btn">Hotel Voucher <i class="fa fa-download text-secondary"></i></button>
+					</div>
+					<div class="flex-row justify-center m-t-10">
+						<button class="btn primary-btn bold-btn fnb-btn">Goomo Commission Invoice <i class="fa fa-download text-secondary"></i></button>
+					</div>
+				</div>
+
+				<h6>
+					<a href="#" class="flex-row justify-center p-t-5 p-b-15 text-darker">
+						<i class="fa fa-print m-r-10"></i> Print this page
+					</a>
+				</h6>
+
+			</div>
+		</div>
+	</div>
+{{ end }}

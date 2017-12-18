@@ -1,0 +1,164 @@
+// ---------------------------
+// Accordion STYLES -----------
+// ---------------------------
+
+
+.panel-default>.panel-heading{
+	background-color: transparent;
+	border-color: transparent;
+	.fly-out-heading-size{
+		margin: 0;
+		font-weight: 600;
+		overflow: hidden;
+	}
+	a{
+		color: #000;
+		text-decoration: none;
+		display: block;
+		margin-top: 20px;
+		white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+		&:before{
+			position: absolute;
+			top: 10px;
+			left: -90px;
+			content: attr(data-step-of);
+			border: 2px solid @accent-primary;
+			border-radius: 50%;
+			text-align: center;
+			width: 80px;
+			height: 80px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: white;
+			font-size: 0.6em;
+			font-weight: normal;
+			color: #4a4a4a;
+		}
+		&.collapsed{
+			margin-top: 10px;
+			font-size: 0.6em;
+			font-weight: normal;
+			color: #adadad;
+			&:before{
+				content: attr(data-step);
+				top: 15px;
+				left: -65px;
+				border: 2px solid #adadad;
+				width: 30px;
+				height: 30px;
+				font-size: 0.9em;
+				color: #adadad;
+			}
+		}
+
+		&.done{
+			font-size: 0.6em;
+			margin-top: 10px;
+			&:before{
+				content: url(/goomo_html/img/green-check-circle.png);
+			}
+			@media(max-width: 767px){
+				font-size: 0.9em;
+			}
+		}
+
+		&.na{
+			font-size: 0.6em;
+			margin-top: 10px;
+			&:before{
+				content: "\f111";
+				font-family: FontAwesome;
+				border-color: #adadad;
+				color: #adadad;
+				font-size: 1em;
+			}
+			@media(max-width: 767px){
+				font-size: 0.9em;
+			}
+			&.collapsed{
+				&:before{
+					font-size: 0.6em;
+				}
+			}
+		}
+
+		&.pending{
+			&:before{
+				content: "\f00d";
+				font-family: FontAwesome;
+				border-color: #de0f00;
+				color: #de0f00;
+			}
+		}
+	}
+
+	button{
+		&.collapsed{
+			.fa-chevron-up{
+				transform: rotate(180deg);
+				color: #bdbdbd;
+			}
+		}
+	}
+
+	@media(max-width: 767px){
+		a{
+			white-space: normal;
+		}
+	}
+}
+
+.panel-group .panel-heading+.panel-collapse>.list-group, .panel-group .panel-heading+.panel-collapse>.panel-body{
+	border: none;
+}
+
+.panel-group{
+	padding-left: 80px;
+	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		border-left: 2px solid #adadad;
+		// top: -25px;
+		top: 15px;
+		left: 30px;
+		height: 100%;
+	}
+	.panel{
+		border: none;
+		box-shadow: none;
+		border-bottom: 1px solid #e4e4e4;
+		padding-bottom: 10px;
+	}
+	.panel-heading{
+		position: relative;
+	}
+
+	&.disabled{
+		&:after{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background-image: url(/goomo_html/img/repeating-bg.png);
+			content: '';
+			opacity: 0.4;
+		}
+	}
+}
+
+[data-target="#statsCollapse"]{
+	&[aria-expanded="true"]{
+		.fa-plus{
+			&:before{
+				content: "\f068";
+			}
+		}
+	}
+}

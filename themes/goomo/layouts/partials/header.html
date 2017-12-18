@@ -1,0 +1,128 @@
+<!-- header -->
+<header class="fnb-header">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header mobile-head mobile-flex">
+				<div class="mobile-head__left mobile-flex">
+					<i class="fa fa-bars sideMenu" aria-hidden="true"></i>
+					<!-- <img src="{{"img/goomo_logo.png" | absURL}}" class="img-responsive desk-hide" width="80"> -->
+					<ul class="desk-hide">
+						<li>
+							<select class="form-control fnb-select white-select">
+								<option>--Change Resort--</option>
+								<option selected="">{{ .Params.property }}</option>
+								<option>Casa Amora</option>
+								<option>Casa Bella</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+				<!-- <div class="mobile-head__right mobile-flex">
+					<button class="btn fnb-btn outline mini quote-btn half-border">Preview</button>
+					<a href="" class="login">
+						<i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+					</a>
+				</div> -->
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse m-side-bar" id="bs-example-navbar-collapse-1">
+				<ul class="mobile-top mobile-flex">
+					<li>
+						<p class="mobile-top__text">Welcome!</p>
+					</li><!--
+					<li>
+						<button type="button" class="fnb-btn outline">Login</button>
+					</li> -->
+				</ul>
+				<ul class="nav navbar-nav city-select">
+					<li>
+						<img src="{{"img/goomo_logo.png" | absURL}}" class="img-responsive mobile-hide m-t-5" width="100">
+					</li>
+					<li>
+						<select class="form-control fnb-select white-select mobile-hide">
+							<option>--Change Resort--</option>
+							<option selected="">{{ .Params.property }}</option>
+							<option>Casa Amora</option>
+							<option>Casa Bella</option>
+						</select>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right side-section">
+					{{ if $.Params.viewdash }}
+					<li>
+						<a href="/goomo_html/extranet/properties/" class="white btn fnb-btn white-border mini viewDashboard"> View Dashboard</a>
+					</li>
+					{{ end }}
+
+					<li class="notification mobile-hide">
+						<a tabindex="0" role="button" data-toggle="popover" data-title="Notifications" data-trigger="focus" data-placement="bottom">
+							<i class="fa fa-bell" aria-hidden="true">
+								<span class="badge">3</span>
+							</i>
+						</a>
+						<div class="popoverContent hidden">
+							<ul>
+								<li class="flex-row space-between even">
+									<div>Notification 1</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+								<li class="flex-row space-between odd">
+									<div>Notification 2</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+								<li class="flex-row space-between even">
+									<div>Notification 3</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li class="mobile-hide">
+						<div class="dropdown login user-logged">
+							<i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+							<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="drop-trigger">
+								<span class="ellipsis userName">Krish Dsouza</span>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li>
+									<a href="/goomo_html/extranet/properties/">View Dashboard</a>
+								</li>
+							</ul>
+						</div>
+
+					</li>
+
+				</ul>
+
+				<div class="desk-hide">
+					{{ partial "menu_mobile.html" .}}
+				</div>
+
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+</header>
+
+<div class="profile-stats breadcrums-row no-shadow">
+  <div class="container">
+	  <div class="row p-t-30 p-b-30 jobs-listing edit-mode preview-holder ">
+		  <div class="col-sm-8 flex-col">
+		  	<div class="desk-hide text-center">
+		  		{{ partial "breadcrumb.html" .}}
+		  		<h5 class="nno-m-t main-heading  white m-t-0 margin-btm">{{ .Title }}</h5>
+		  		<a href="https://www.goomo.com/hotels/detail/Hotel-Windsor-Bay-389069?checkin_date=2017-09-28&checkout_date=2017-09-29&hotel_id=389069&locality_id&location_id=12550&place_name=Goa%2C%20India&rooms=%5B%7B%22adults_count%22%3A1%2C%22children_age%22%3A%5B%5D%7D%5D" target="_blank" class="preview-header__link white btn fnb-btn white-border mini"> View Property on Goomo.com</a>
+		  	</div>
+		  </div>
+		  <div class="col-sm-4 flex-col text-right mobile-hide">
+			  <!-- <a href="#" class="preview-header__link white btn fnb-btn white-border mini"> View Listing on Goomo</a> -->
+		  </div>
+	  </div>
+  </div>
+</div>
+<!-- header ends -->

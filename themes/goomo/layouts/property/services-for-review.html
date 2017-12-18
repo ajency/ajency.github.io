@@ -1,0 +1,436 @@
+{{ define "main" }}
+	<div class="c-gap">
+		<!-- <div class="flex-row property-status-box">
+			<div class="status-info flex-row">
+				<div>
+					Now that you have filled in the Amenities &amp; Services details, please submit your property for review. You can do so from the <a href="/goomo_html/property/summary-for-review/">Property Summary page</a>.
+				</div>
+			</div>
+			<div class="check-status">
+				Checklist Status:<br>
+				<img src="{{"img/green-check-circle.png" | absURL}}" class="img-responsive m-t-15 center-block" width="">
+			</div>
+			<div class="qc-status">
+				QC Status:<br>
+				<p class="bat-color m-t-10">To be submitted for review on <a href="/goomo_html/property/summary-for-review/">Summary page</a></p>
+			</div>
+		</div> -->
+
+		<div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/{{ $.Params.slug }}">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-9">
+
+
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				  	<div class="panel panel-default">
+					    <div class="panel-heading flex-row space-between" role="tab" id="headingOne">
+					      <h3 class=" no-m-t fly-out-heading-size">
+					        <a class="collapsed done" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" data-step="1" data-step-of="1 of 8">
+					          Total Restaurants: <span class="bat-color">1</span>
+					        </a>
+					      </h3>
+					      <button type="button" class="btn collapsed btn-link fnb-btn no-border text-primary bolder" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="fa fa-chevron-up"></i></button>
+					    </div>
+					    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+					      	<div class="panel-body">
+
+						        <div class="row">
+						        	<div class="col-sm-5">
+						        		<div class="m-b-40">
+							        		<label class="radio-inline">
+							        		  <input type="radio" name="haveRestaurants" id="haveRestaurantsYes" value="yes" class="fnb-radio" checked=""> Yes
+							        		</label>
+							        		<label class="radio-inline">
+							        		  <input type="radio" name="haveRestaurants" id="haveRestaurantsNo" value="yes" class="fnb-radio"> No
+							        		</label>
+						        		</div>
+
+						        		<div class="m-b-30">
+							        		<label class="fnb-label">How many restaurants do you have?</label>
+									        <select class="form-control fnb-select border-bottom">
+									        	<option>One</option>
+									        	<option>Two</option>
+									        	<option>Three</option>
+									        </select>
+						        		</div>
+
+								        <button class="btn fnb-btn secondary-btn bold-btn full" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo">Continue</button>
+						        	</div>
+						        </div>
+
+					      	</div>
+					    </div>
+				  	</div>
+
+				  	<div class="panel panel-default">
+					    <div class="panel-heading flex-row space-between" role="tab" id="headingTwo">
+					      <h3 class="no-m-t fly-out-heading-size">
+					        <a class="collapsed done" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" data-step="2" data-step-of="2 of 8">
+					          Food &amp; Beverages: <span class="bat-color">Kid-friendly Buffet, Snack Bar,  Breakfast in the Room, Bar</span>
+					        </a>
+					      </h3>
+					      <button type="button" class="btn collapsed btn-link fnb-btn no-border text-primary bolder" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i class="fa fa-chevron-up"></i></button>
+					    </div>
+					    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					      	<div class="panel-body">
+				                <div class="row">
+				                	<div class="col-sm-12">
+				                		<div class="m-b-40">
+				        	        		<label class="radio-inline">
+				        	        		  <input type="radio" name="haveFnB" id="haveFnBYes" value="yes" class="fnb-radio" checked=""> Yes
+				        	        		</label>
+				        	        		<label class="radio-inline">
+				        	        		  <input type="radio" name="haveFnB" id="haveFnBNo" value="yes" class="fnb-radio"> No
+				        	        		</label>
+				                		</div>
+
+				                		<div class="m-b-30">
+				        	        		<div class="gray-border p-t-20 p-l-15 p-r-15 p-b-20 fnb-services">
+				        	        			<div class="checkbox">
+					        	        			<label>
+					        	        			    <input type="checkbox" value="" class="">
+					        	        			    Select All
+				        	        			  	</label>
+			        	        			  	</div>
+			        	        			  	<div>
+			        	        			  		<div class="row">
+			        	        			  			<div class="col-sm-4">
+			        	        			  				<div class="checkbox">
+			  					        	        			<label>
+			  					        	        			    <input type="checkbox" value="" class="" checked="">
+			  					        	        			    Kid-friendly Buffet
+			  				        	        			  	</label>
+			        	        			  				</div>
+			        	        			  				<div class="checkbox">
+			  					        	        			<label>
+			  					        	        			    <input type="checkbox" value="" class="">
+			  					        	        			    Restaurant with veg food
+			  				        	        			  	</label>
+			        	        			  				</div>
+			        	        			  				<div class="checkbox">
+			  					        	        			<label>
+			  					        	        			    <input type="checkbox" value="" class="">
+			  					        	        			    Grocery Deliveries
+			  				        	        			  	</label>
+			        	        			  				</div>
+			        	        			  				<div class="checkbox">
+			  					        	        			<label>
+			  					        	        			    <input type="checkbox" value="" class="">
+			  					        	        			    Vending Machine
+			  				        	        			  	</label>
+			        	        			  				</div>
+			        	        			  				<div class="checkbox">
+			  					        	        			<label>
+			  					        	        			    <input type="checkbox" value="" class="">
+			  					        	        			    Join Meals
+			  				        	        			  	</label>
+			        	        			  				</div>
+			        	        			  			</div>
+			        	        			  			<div class="col-sm-4">
+			        	        			  				<div class="checkbox">
+			  					        	        			<label>
+			  					        	        			    <input type="checkbox" value="" class="">
+			  					        	        			    Coffee Shop
+			  				        	        			  	</label>
+			        	        			  				</div>
+			        	        			  				<div class="checkbox">
+			  					        	        			<label>
+			  					        	        			    <input type="checkbox" value="" class="" checked="">
+			  					        	        			    Bar
+			  				        	        			  	</label>
+			        	        			  				</div>
+			        	        			  				<div class="checkbox">
+			  					        	        			<label>
+			  					        	        			    <input type="checkbox" value="" class="">
+			  					        	        			    Packed Lunches
+			  				        	        			  	</label>
+			        	        			  				</div>
+			        	        			  				<div class="checkbox">
+			  					        	        			<label>
+			  					        	        			    <input type="checkbox" value="" class="">
+			  					        	        			    Vending Machine
+			  				        	        			  	</label>
+			        	        			  				</div>
+			        	        			  				<div class="checkbox">
+			  					        	        			<label>
+			  					        	        			    <input type="checkbox" value="" class="">
+			  					        	        			    Halal Food
+			  				        	        			  	</label>
+			        	        			  				</div>
+			        	        			  			</div>
+			        	        			  			<div class="col-sm-4">
+			        	        			  				<div class="checkbox">
+			  					        	        			<label>
+			  					        	        			    <input type="checkbox" value="" class="">
+			  					        	        			    Coffee Shop 24 hrs
+			  				        	        			  	</label>
+			        	        			  				</div>
+			        	        			  				<div class="checkbox">
+			  					        	        			<label>
+			  					        	        			    <input type="checkbox" value="" class="" checked="">
+			  					        	        			    Snack Bar
+			  				        	        			  	</label>
+			        	        			  				</div>
+			        	        			  				<div class="checkbox">
+			  					        	        			<label>
+			  					        	        			    <input type="checkbox" value="" class="">
+			  					        	        			    BBQ Facilities
+			  				        	        			  	</label>
+			        	        			  				</div>
+			        	        			  				<div class="checkbox">
+			  					        	        			<label>
+			  					        	        			    <input type="checkbox" value="" class="" checked="">
+			  					        	        			    Breakfast in the Room
+			  				        	        			  	</label>
+			        	        			  				</div>
+			        	        			  				<div class="checkbox">
+			  					        	        			<label>
+			  					        	        			    <input type="checkbox" value="" class="">
+			  					        	        			    24hrs Room Service
+			  				        	        			  	</label>
+			        	        			  				</div>
+			        	        			  			</div>
+			        	        			  		</div>
+			        	        			  	</div>
+				        	        		</div>
+				                		</div>
+
+				        		        <button class="btn fnb-btn secondary-btn bold-btn full" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree">Continue</button>
+				                	</div>
+				                </div>
+					      	</div>
+					    </div>
+				  	</div>
+
+				  	<div class="panel panel-default">
+					    <div class="panel-heading flex-row space-between" role="tab" id="headingThree">
+					      <h3 class="no-m-t fly-out-heading-size">
+					        <a class="collapsed done" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" data-step="3" data-step-of="3 of 8">
+					          Fitness &amp; spa: <span class="bat-color">Yes</span>
+					        </a>
+					      </h3>
+					      <button type="button" class="btn collapsed btn-link fnb-btn no-border text-primary bolder" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><i class="fa fa-chevron-up"></i></button>
+					    </div>
+					    <div id="collapseThree" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingThree">
+					      	<div class="panel-body">
+		    	                <div class="row">
+		    	                	<div class="col-sm-12">
+		    	                		<div class="m-b-40">
+		    	        	        		<label class="radio-inline">
+		    	        	        		  <input type="radio" name="haveSpa" id="haveSpaYes" value="yes" class="fnb-radio" checked=""> Yes
+		    	        	        		</label>
+		    	        	        		<label class="radio-inline">
+		    	        	        		  <input type="radio" name="haveSpa" id="haveSpaNo" value="yes" class="fnb-radio"> No
+		    	        	        		</label>
+		    	                		</div>
+
+		    	        		        <button class="btn fnb-btn secondary-btn bold-btn full" data-toggle="collapse" data-parent="#accordion" data-target="#collapseFour">Continue</button>
+		    	                	</div>
+		    	                </div>
+					      	</div>
+					    </div>
+				  	</div>
+
+				  	<div class="panel panel-default">
+					    <div class="panel-heading flex-row space-between" role="tab" id="headingFour">
+					      <h3 class="no-m-t fly-out-heading-size">
+					        <a class="done collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" data-step="4" data-step-of="4 of 8">
+					          Entertainment facilities: <span class="bat-color">Games Room</span>
+					        </a>
+					      </h3>
+					      <button type="button" class="btn collapsed btn-link fnb-btn no-border text-primary bolder" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><i class="fa fa-chevron-up"></i></button>
+					    </div>
+					    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+					      	<div class="panel-body">
+		    	                <div class="row">
+		    	                	<div class="col-sm-12">
+		    	                		<div class="m-b-40">
+		    	        	        		<label class="radio-inline">
+		    	        	        		  <input type="radio" name="haveEntertainment" id="haveEntertainmentYes" value="yes" class="fnb-radio" checked=""> Yes
+		    	        	        		</label>
+		    	        	        		<label class="radio-inline">
+		    	        	        		  <input type="radio" name="haveEntertainment" id="haveEntertainmentNo" value="yes" class="fnb-radio"> No
+		    	        	        		</label>
+		    	                		</div>
+
+		    	        		        <button class="btn fnb-btn secondary-btn bold-btn full" data-toggle="collapse" data-parent="#accordion" data-target="#collapseFive">Continue</button>
+		    	                	</div>
+		    	                </div>
+					      	</div>
+					    </div>
+				  	</div>
+
+				  	<div class="panel panel-default">
+					    <div class="panel-heading flex-row space-between" role="tab" id="headingFive">
+					      <h3 class="no-m-t fly-out-heading-size">
+					        <a class="collapsed done" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive" data-step="5" data-step-of="5 of 8">
+					          Business services: <span class="bat-color">Executive Lounge Access, Executive Meeting Room</span>
+					        </a>
+					      </h3>
+					      <button type="button" class="btn collapsed btn-link fnb-btn no-border text-primary bolder" data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><i class="fa fa-chevron-up"></i></button>
+					    </div>
+					    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+					      	<div class="panel-body">
+		    	                <div class="row">
+		    	                	<div class="col-sm-12">
+		    	                		<div class="m-b-40">
+		    	        	        		<label class="radio-inline">
+		    	        	        		  <input type="radio" name="haveBusiness" id="haveBusinessYes" value="yes" class="fnb-radio" checked=""> Yes
+		    	        	        		</label>
+		    	        	        		<label class="radio-inline">
+		    	        	        		  <input type="radio" name="haveBusiness" id="haveBusinessNo" value="yes" class="fnb-radio"> No
+		    	        	        		</label>
+		    	                		</div>
+
+		    	        		        <button class="btn fnb-btn secondary-btn bold-btn full" data-toggle="collapse" data-parent="#accordion" data-target="#collapseSix">Continue</button>
+		    	                	</div>
+		    	                </div>
+					      	</div>
+					    </div>
+				  	</div>
+
+				  	<div class="panel panel-default">
+					    <div class="panel-heading flex-row space-between" role="tab" id="headingSix">
+					      <h3 class="no-m-t fly-out-heading-size">
+					        <a class="collapsed done" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix" data-step="6" data-step-of="6 of 8">
+					          Miscellaneous: <span class="bat-color">Airport Pickup</span>
+					        </a>
+					      </h3>
+					      <button type="button" class="btn collapsed btn-link fnb-btn no-border text-primary bolder" data-toggle="collapse" data-parent="#accordion" href="#collapseSix"><i class="fa fa-chevron-up"></i></button>
+					    </div>
+					    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+					      	<div class="panel-body">
+		    	                <div class="row">
+		    	                	<div class="col-sm-12">
+		    	                		<div class="m-b-40">
+		    	        	        		<label class="radio-inline">
+		    	        	        		  <input type="radio" name="haveMisc" id="haveMiscYes" value="yes" class="fnb-radio"> Yes
+		    	        	        		</label>
+		    	        	        		<label class="radio-inline">
+		    	        	        		  <input type="radio" name="haveMisc" id="haveMiscNo" value="yes" class="fnb-radio" checked=""> No
+		    	        	        		</label>
+		    	                		</div>
+
+		    	        		        <button class="btn fnb-btn secondary-btn bold-btn full" data-toggle="collapse" data-parent="#accordion" data-target="#collapseSeven">Continue</button>
+		    	                	</div>
+		    	                </div>
+					      	</div>
+					    </div>
+				  	</div>
+
+				  	<div class="panel panel-default">
+					    <div class="panel-heading flex-row space-between" role="tab" id="headingSeven">
+					      <h3 class="no-m-t fly-out-heading-size">
+					        <a class="collapsed done" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" data-step="7" data-step-of="7 of 8">
+					          Complimentary services: <span class="bat-color">Free Newspaper</span>
+					        </a>
+					      </h3>
+					      <button type="button" class="btn collapsed btn-link fnb-btn no-border text-primary bolder" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven"><i class="fa fa-chevron-up"></i></button>
+					    </div>
+					    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+					      	<div class="panel-body">
+		    	                <div class="row">
+		    	                	<div class="col-sm-12">
+		    	                		<div class="m-b-40">
+		    	        	        		<label class="radio-inline">
+		    	        	        		  <input type="radio" name="haveCompliment" id="haveComplimentYes" value="yes" class="fnb-radio" checked=""> Yes
+		    	        	        		</label>
+		    	        	        		<label class="radio-inline">
+		    	        	        		  <input type="radio" name="haveCompliment" id="haveComplimentNo" value="yes" class="fnb-radio"> No
+		    	        	        		</label>
+		    	                		</div>
+
+		    	        		        <button class="btn fnb-btn secondary-btn bold-btn full" data-toggle="collapse" data-parent="#accordion" data-target="#collapseEight">Continue</button>
+		    	                	</div>
+		    	                </div>
+					      	</div>
+					    </div>
+				  	</div>
+
+				  	<div class="panel panel-default">
+					    <div class="panel-heading flex-row space-between" role="tab" id="headingEight">
+					      <h3 class="no-m-t fly-out-heading-size">
+					        <a class="collapsed done" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight" data-step="8" data-step-of="8 of 8">
+					          Recreation facilities: <span class="bat-color">Swimming Pool</span>
+					        </a>
+					      </h3>
+					      <button type="button" class="btn collapsed btn-link fnb-btn no-border text-primary bolder" data-toggle="collapse" data-parent="#accordion" href="#collapseEight"><i class="fa fa-chevron-up"></i></button>
+					    </div>
+					    <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+					      	<div class="panel-body">
+		    	                <div class="row">
+		    	                	<div class="col-sm-12">
+		    	                		<div class="m-b-40">
+		    	        	        		<label class="radio-inline">
+		    	        	        		  <input type="radio" name="haveRecreation" id="haveRecreationYes" value="yes" class="fnb-radio" checked=""> Yes
+		    	        	        		</label>
+		    	        	        		<label class="radio-inline">
+		    	        	        		  <input type="radio" name="haveRecreation" id="haveRecreationNo" value="yes" class="fnb-radio"> No
+		    	        	        		</label>
+		    	                		</div>
+
+		    	        		        <button class="btn fnb-btn secondary-btn bold-btn full" data-toggle="collapse" data-parent="#accordion" data-target="#collapseEight">Done</button>
+		    	                	</div>
+		    	                </div>
+					      	</div>
+					    </div>
+				  	</div>
+				</div>
+
+
+			</div>
+
+			<div class="col-sm-3">
+				<div class="logs-block">
+					<div class="flex-row space-between">
+						<h6 class="bolder">Audit Logs</h6>
+						<a href="/goomo_html/details/audit/{{ $.Params.slug }}" class="bolder text-secondary">View All</a>
+					</div>
+					<div class="single-log">
+						<div class="flex-row space-between align-top">
+							<div class="bolder">
+								John Doe <small>(Owner)</small>
+							</div>
+							<span class="text-muted small">2 days ago</span>
+						</div>
+						<p class="small">
+							Updated inventory for Premium Room from 19-Oct-17 to 31-Oct-17
+						</p>
+					</div>
+					<div class="single-log">
+						<div class="flex-row space-between align-top">
+							<div class="bolder">
+								Vikas Khanna <small>(Market Manager)</small>
+							</div>
+							<span class="text-muted small text-right" style="min-width: 60px">3 days ago</span>
+						</div>
+						<p class="small">
+							Updated Food &amp; Beverages and Fitness Spa
+						</p>
+					</div>
+					<div class="single-log">
+						<div class="flex-row space-between align-top">
+							<div class="bolder">
+								Vikas Khanna <small>(Market Manager)</small>
+							</div>
+							<span class="text-muted small text-right" style="min-width: 60px">4 days ago</span>
+						</div>
+						<p class="small">
+							Updated Property Highlights
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{{ end }}

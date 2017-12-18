@@ -1,0 +1,35 @@
+<!-- breadcrumb -->
+
+{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+{{ $.Scratch.Add "path" .Site.BaseURL }}
+<ul class="fnb-breadcrums flex-row">
+  <li class="fnb-breadcrums__section"><a href="{{ .Site.BaseURL }}listing"><p class="fnb-breadcrums__title">Dashboard</p></a></li>
+  <li class="fnb-breadcrums__section">
+  	<p class="fnb-breadcrums__title">></p>
+  </li>
+
+  {{ $len := (len (split $url "/")) }}
+  {{ $last_index := sub $len 2 }}
+
+  {{ range $index, $element := split $url "/" }}
+    {{ $.Scratch.Add "path" $element }}
+      {{ if ne $element "" }}
+      {{ $title := title ( replace . "-" " ") }}
+
+      {{ if lt $index $last_index }}
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">{{ $title }}</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      {{ else }}
+      	<li class="breadcrump_active"><p class="fnb-breadcrums__title">{{ $title }}</p></li>
+  	  {{ end }}
+
+      {{ $.Scratch.Add "path" "/" }}
+
+      {{ end }}
+
+  {{ end }}
+</ul>
+
+<!-- breadcrumb ends -->

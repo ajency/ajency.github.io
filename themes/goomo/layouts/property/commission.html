@@ -1,0 +1,57 @@
+{{ define "main" }}
+	<div class="">
+
+		<div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/{{ $.Params.slug }}">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div>
+
+		<div>
+			<h6>You can increase the percentage of commission to Goomo to rank higher on Goomo.com</h6>
+		</div>
+
+		<div class="row m-t-30">
+			<div class="col-sm-3">
+			  	<label class="label-size text-info">Web</label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <input type="text" class="form-control " value="20" id="inlineFormInputGroupUsername2" placeholder="10" >
+                    <div class="input-group-addon">%</div>
+                </div>
+			</div>
+			<div class="col-sm-3">
+			  	<label class="label-size text-info">Mobile</label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <input type="text" class="form-control " value="20" id="inlineFormInputGroupUsername2" placeholder="10" >
+                    <div class="input-group-addon">%</div>
+                </div>
+			</div>
+			<div class="col-sm-3">
+				<label class="label-size text-info">FPH</label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <input type="text" class="form-control " value="20" id="inlineFormInputGroupUsername2" placeholder="10" >
+                    <div class="input-group-addon">%</div>
+                </div>
+			</div>
+			<div class="col-sm-3">
+			  	<label class="label-size text-info">B2B</label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <input type="text" class="form-control " value="20" id="inlineFormInputGroupUsername2" placeholder="10" >
+                	<div class="input-group-addon">%</div>
+                </div>
+			</div>
+
+			<div class="col-sm-12 m-t-30">
+				<button class="btn fnb-btn secondary-btn btn-lg " >Update</button>
+			</div>
+
+		</div>
+
+	</div>
+
+{{ end }}

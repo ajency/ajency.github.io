@@ -1,0 +1,474 @@
+{{ define "main" }}
+	<div class="c-gap">
+
+		<div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/{{ $.Params.slug }}">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+
+				<!-- <div class="listing-details">
+					<div class="flex-row property-status-box">
+						<div class="status-info flex-row">
+							<span>All done! The Users section is now approved.</span>
+						</div>
+						<div class="check-status">
+							Checklist Status:<br>
+							<img src="{{"img/green-check-circle.png" | absURL}}" class="img-responsive m-t-15 center-block" width="">
+						</div>
+						<div class="qc-status">
+							QC Status:<br>
+							<h6 class="text-success">Approved</h6>
+						</div>
+					</div>
+				</div> -->
+
+
+				<!-- GM -->
+
+				<div class="user-cols gm flex-row m-t-20">
+					<i class="fa fa-user p-r-15" aria-hidden="true"></i>
+					<div>
+						<h5 class="bolder">General Manager</h5>
+						<p class="m-b-0 text-lighter">This user will have full access to manage the property. This user can add and remove other users and also control the access each of the other users get.</p>
+					</div>
+				</div>
+
+				<div class="user-col-table m-t-30">
+					<table id="listings-table" class="table table-striped dataTable listing-table" cellspacing="0" width="100%">
+			          <thead>
+			            <tr>
+			              <th class="text-left" style="min-width: 10%;" >Name</th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Designation
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Email
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Mobile
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Landline
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Logged in
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Status
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Action
+			              </th>
+			            </tr>
+			          </thead>
+
+			          <tbody>
+
+			            <tr>
+			              <td class="text-left"><b>Mr. Manoj Rajput</b></td>
+			              <td class="text-center">General Manager</td>
+			              <td class="text-center"><a href="mailto:manojwe@gmail.com" class="secondary-link bolder text-decor" target="_blank">manojwe@gmail.com</a></td>
+			              <td class="text-center"><a href="tel:+918439234607" class="dark-link bolder" target="_blank">+918439234607</a></td>
+			              <td class="text-center"><a href="tel:+918322274123" class="dark-link bolder" target="_blank">+918322274123</a></td>
+			              <td class="text-center">Wed, 26 Oct 2016 at 01:34 pm IST</td>
+			              <td class="text-center"><b class="text-primary">Active</b></td>
+			              <td class="text-center relative">
+			              	<button type="button" class="btn btn-default no-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus"><b><i class="fa fa-ellipsis-v" aria-hidden="true"></i></b></button>
+				              <div class="content-pop hidden">
+				              	<ul>
+				              		<li><a href="#" class="text-color open-sidebar form-toggle"><i class="fa fa-pencil p-r-5" aria-hidden="true"></i> Edit User</a></li>
+				              		<li><a href="#" class="text-color" data-toggle="modal" data-target="#reset-password"><i class="fa fa-repeat p-r-5" aria-hidden="true"></i> Reset Password</a></li>
+				              		<li><a href="#" class="text-danger"><i class="fa fa-times-circle-o p-r-5" aria-hidden="true"></i> Remove</a></li>
+				              	</ul>
+				              </div>
+			              </td>
+			            </tr>
+
+			          </tbody>
+        			</table>
+        		</div>
+
+
+			<!-- Sales -->
+
+				<br clear="mobile-hide">
+
+				<div class="user-cols gm flex-row m-t-40">
+					<i class="fa fa-user p-r-15" aria-hidden="true"></i>
+					<div>
+						<h5 class="bolder">Sales &amp; Marketing</h5>
+						<p class="m-b-0 text-lighter">These users will have access to all sections of the Extranet.</p>
+					</div>
+				</div>
+
+				<div class="user-col-table m-t-30">
+					<table id="listings-table" class="table table-striped dataTable listing-table" cellspacing="0" width="100%">
+			          <thead>
+			            <tr>
+			              <th class="text-left" style="min-width: 10%;" >Name</th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Designation
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Email
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Mobile
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Landline
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Logged in
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Status
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Action
+			              </th>
+			            </tr>
+			          </thead>
+
+			          <tbody>
+
+			            <tr>
+			              <td class="text-left"><b>Mr. Manoj Rajput</b></td>
+			              <td class="text-center">General Manager</td>
+			              <td class="text-center"><a href="mailto:manojwe@gmail.com" class="secondary-link bolder text-decor" target="_blank">manojwe@gmail.com</a></td>
+			              <td class="text-center"><a href="tel:+918439234607" class="dark-link bolder" target="_blank">+918439234607</a></td>
+			              <td class="text-center"><a href="tel:+918322274123" class="dark-link bolder" target="_blank">+918322274123</a></td>
+			              <td class="text-center">Wed, 26 Oct 2016 at 01:34 pm IST</td>
+			              <td class="text-center"><b class="text-danger">Inactive</b></td>
+			              <td class="text-center relative">
+			              	<button type="button" class="btn btn-default no-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus"><b><i class="fa fa-ellipsis-v" aria-hidden="true"></i></b></button>
+				              <div class="content-pop hidden">
+				              	<ul>
+				              		<li><a href="#" class="text-color open-sidebar form-toggle"><i class="fa fa-pencil p-r-5" aria-hidden="true"></i> Edit User</a></li>
+				              		<li><a href="#" class="text-color"><i class="fa fa-repeat p-r-5" aria-hidden="true"></i> Send Activation</a></li>
+				              		<li><a href="#" class="text-danger"><i class="fa fa-times-circle-o p-r-5" aria-hidden="true"></i> Remove</a></li>
+				              	</ul>
+				              </div>
+			              </td>
+			            </tr>
+
+			          </tbody>
+        			</table>
+        		</div>
+
+
+				<!-- Revenue -->
+
+				<br clear="mobile-hide">
+
+        		<div class="user-cols gm flex-row space-between m-t-40 add-user-col">
+        			<div class="flex-row">
+						<i class="fa fa-user p-r-15" aria-hidden="true"></i>
+						<div>
+							<h5 class="bolder">Revenue Manager</h5>
+							<p class="m-b-0 text-lighter">These users will have access to Rate Plans, Bookings, Rates and Availability and Cancellation Policy</p>
+						</div>
+					</div>
+					<button class="btn fnb-btn s-outline bold-btn full open-sidebar form-toggle"><span>Add User</span></button>
+				</div>
+
+				<div class="user-col-table m-t-30">
+					<table id="listings-table" class="table table-striped dataTable listing-table" cellspacing="0" width="100%">
+			          <thead>
+			            <tr>
+			              <th class="text-left" style="min-width: 10%;" >Name</th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Designation
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Email
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Mobile
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Landline
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Logged in
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Status
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Action
+			              </th>
+			            </tr>
+			          </thead>
+
+			          <tbody>
+
+			            <tr>
+			              <td class="text-left"><b>Mr. Dharmendra Rajput</b></td>
+			              <td class="text-center">Front Office Manager</td>
+			              <td class="text-center"><a href="mailto:dharam@gmail.com" class="secondary-link bolder text-decor" target="_blank">dharam@gmail.com</a></td>
+			              <td class="text-center"><a href="tel:+918439234607" class="dark-link bolder" target="_blank">+918439234607</a></td>
+			              <td class="text-center"><a href="tel:+918322274123" class="dark-link bolder" target="_blank">+918322274123</a></td>
+			              <td class="text-center">Wed, 26 Oct 2016 at 01:34 pm IST</td>
+			              <td class="text-center"><b class="text-primary">Active</b></td>
+			              <td class="text-center relative">
+			              	<button type="button" class="btn btn-default no-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus"><b><i class="fa fa-ellipsis-v" aria-hidden="true"></i></b></button>
+				              <div class="content-pop hidden">
+				              	<ul>
+				              		<li><a href="#" class="text-color open-sidebar form-toggle"><i class="fa fa-pencil p-r-5" aria-hidden="true"></i> Edit User</a></li>
+				              		<li><a href="#" class="text-color" data-toggle="modal" data-target="#reset-password"><i class="fa fa-repeat p-r-5" aria-hidden="true"></i> Reset Password</a></li>
+				              		<li><a href="#" class="text-danger"><i class="fa fa-times-circle-o p-r-5" aria-hidden="true"></i> Remove</a></li>
+				              	</ul>
+				              </div>
+			              </td>
+			            </tr>
+			            <tr>
+			              <td class="text-left"><b>Mr. Manoj Rajput</b></td>
+			              <td class="text-center">General Manager</td>
+			              <td class="text-center"><a href="mailto:manojwe@gmail.com" class="secondary-link bolder text-decor" target="_blank">manojwe@gmail.com</a></td>
+			              <td class="text-center"><a href="tel:+918439234607" class="dark-link bolder" target="_blank">+918439234607</a></td>
+			              <td class="text-center"><a href="tel:+918322274123" class="dark-link bolder" target="_blank">+918322274123</a></td>
+			              <td class="text-center">Wed, 26 Oct 2016 at 01:34 pm IST</td>
+			              <td class="text-center"><b class="text-primary">Active</b></td>
+			              <td class="text-center"><b><i class="fa fa-ellipsis-v" aria-hidden="true"></i></b></td>
+			            </tr>
+
+			          </tbody>
+        			</table>
+        		</div>
+
+
+
+				<!-- Reservations -->
+
+
+				<br clear="mobile-hide">
+
+        		<div class="user-cols gm flex-row space-between m-t-40 add-user-col">
+        			<div class="flex-row">
+						<i class="fa fa-user p-r-15" aria-hidden="true"></i>
+						<div>
+							<h5 class="bolder">Reservations</h5>
+							<p class="m-b-0 text-lighter">These users will have access to Bookings and Rates and Availability sections only.</p>
+						</div>
+					</div>
+					<button class="btn fnb-btn s-outline bold-btn full open-sidebar form-toggle"><span>Add User</span></button>
+				</div>
+
+				<div class="user-col-table m-t-30">
+					<div class="no-data text-center">
+						<i class="fa fa-frown-o text-lighter" aria-hidden="true"></i>
+						<p class="text-lighter">No information is available</p>
+					</div>
+        		</div>
+
+
+
+				<!-- Finance -->
+
+				<br clear="mobile-hide">
+
+        		<div class="user-cols gm flex-row space-between m-t-40 add-user-col">
+        			<div class="flex-row">
+						<i class="fa fa-user p-r-15" aria-hidden="true"></i>
+						<div>
+							<h5 class="bolder">Finance / Accounts</h5>
+							<p class="m-b-0 text-lighter">These users will have access to Contract &amp; Finance section only.</p>
+						</div>
+					</div>
+					<button class="btn fnb-btn s-outline bold-btn full open-sidebar form-toggle"><span>Add User</span></button>
+				</div>
+
+				<div class="user-col-table m-t-30">
+					<table id="listings-table" class="table table-striped dataTable listing-table" cellspacing="0" width="100%">
+			          <thead>
+			            <tr>
+			              <th class="text-left" style="min-width: 10%;" >Name</th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Designation
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Email
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Mobile
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Landline
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Logged in
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Status
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Action
+			              </th>
+			            </tr>
+			          </thead>
+
+			          <tbody>
+
+			            <tr>
+			              <td class="text-left"><b>Mr. Aashish Malik</b></td>
+			              <td class="text-center">Executive</td>
+			              <td class="text-center"><a href="mailto:aashish@gmail.com" class="secondary-link bolder text-decor" target="_blank">Aashish@gmail.com</a></td>
+			              <td class="text-center"><a href="tel:+918439234607" class="dark-link bolder" target="_blank">+918439234607</a></td>
+			              <td class="text-center"><a href="tel:+918322274123" class="dark-link bolder" target="_blank">+918322274123</a></td>
+			              <td class="text-center">Wed, 26 Oct 2016 at 01:34 pm IST</td>
+			              <td class="text-center"><b class="text-primary">Active</b></td>
+			              <td class="text-center relative">
+			              	<button type="button" class="btn btn-default no-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus"><b><i class="fa fa-ellipsis-v" aria-hidden="true"></i></b></button>
+				              <div class="content-pop hidden">
+				              	<ul>
+				              		<li><a href="#" class="text-color open-sidebar form-toggle"><i class="fa fa-pencil p-r-5" aria-hidden="true"></i> Edit User</a></li>
+				              		<li><a href="#" class="text-color" data-toggle="modal" data-target="#reset-password"><i class="fa fa-repeat p-r-5" aria-hidden="true"></i> Reset Password</a></li>
+				              		<li><a href="#" class="text-danger"><i class="fa fa-times-circle-o p-r-5" aria-hidden="true"></i> Remove</a></li>
+				              	</ul>
+				              </div>
+			              </td>
+			            </tr>
+
+			          </tbody>
+        			</table>
+        		</div>
+
+
+
+			<!-- Photo -->
+
+				<br clear="mobile-hide">
+
+        		<div class="user-cols gm flex-row space-between m-t-40 add-user-col">
+        			<div class="flex-row">
+						<i class="fa fa-user p-r-15" aria-hidden="true"></i>
+						<div>
+							<h5 class="bolder">Photo &amp; Description</h5>
+							<p class="m-b-0 text-lighter">These users will be able to edit and/or update Amenities &amp; Services, Images, Description and what's Nearby (Address &amp; Contract) sections.</p>
+						</div>
+					</div>
+					<button class="btn fnb-btn s-outline bold-btn full open-sidebar form-toggle"><span>Add User</span></button>
+				</div>
+
+				<div class="user-col-table m-t-30">
+					<table id="listings-table" class="table table-striped dataTable listing-table" cellspacing="0" width="100%">
+			          <thead>
+			            <tr>
+			              <th class="text-left" style="min-width: 10%;" >Name</th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Designation
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Email
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Mobile
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Landline
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Logged in
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Status
+			              </th>
+			              <th class="text-center" style="min-width: 10%;" rowspan="1">
+			                Action
+			              </th>
+			            </tr>
+			          </thead>
+
+			          <tbody>
+
+			            <tr>
+			              <td class="text-left"><b>Mr. Aashish Malik</b></td>
+			              <td class="text-center">Executive</td>
+			              <td class="text-center"><a href="mailto:aashish@gmail.com" class="secondary-link bolder text-decor" target="_blank">Aashish@gmail.com</a></td>
+			              <td class="text-center"><a href="tel:+918439234607" class="dark-link bolder" target="_blank">+918439234607</a></td>
+			              <td class="text-center"><a href="tel:+918322274123" class="dark-link bolder" target="_blank">+918322274123</a></td>
+			              <td class="text-center">Wed, 26 Oct 2016 at 01:34 pm IST</td>
+			              <td class="text-center"><b class="text-primary">Active</b></td>
+			              <td class="text-center relative">
+			              	<button type="button" class="btn btn-default no-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus"><b><i class="fa fa-ellipsis-v" aria-hidden="true"></i></b></button>
+				              <div class="content-pop hidden">
+				              	<ul>
+				              		<li><a href="#" class="text-color open-sidebar form-toggle"><i class="fa fa-pencil p-r-5" aria-hidden="true"></i> Edit User</a></li>
+				              		<li><a href="#" class="text-color" data-toggle="modal" data-target="#reset-password"><i class="fa fa-repeat p-r-5" aria-hidden="true"></i> Reset Password</a></li>
+				              		<li><a href="#" class="text-danger"><i class="fa fa-times-circle-o p-r-5" aria-hidden="true"></i> Remove</a></li>
+				              	</ul>
+				              </div>
+			              </td>
+			            </tr>
+
+			          </tbody>
+        			</table>
+        		</div>
+
+
+
+			</div>
+
+		</div>
+	</div>
+
+  <div class="modal fade region-add-modal modal-center" id="reset-password" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h6 class="modal-title">Reset Password</h6>
+          </div>
+          <div class="modal-body">
+
+
+            <div class="form-group m-b-20">
+              <label>Old Password  <span class="text-danger">*</span></label>
+               <input type="text" class="form-control fnb-input" name="" value="" placeholder="Enter Old Password">
+            </div>
+
+            <div class="form-group m-b-20">
+              <label>New Password  <span class="text-danger">*</span></label>
+               <input type="text" class="form-control fnb-input" name="" value="" placeholder="Enter New Password">
+            </div>
+
+            <div class="form-group m-b-20">
+              <label>Confirm Password  <span class="text-danger">*</span></label>
+               <input type="text" class="form-control fnb-input" name="" value="" placeholder="Confirm Password">
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn fnb-btn text-color no-border" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn secondary-btn fnb-btn no-radius">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  	<script type="text/javascript">
+		var existingComments = [
+		  {
+		    "sectionId": "1",
+		    "comments": [
+		      {
+		        "comment": "<ul><li>List of all inactive or inactive users. This is basically the users related to the property</li> <li>Only Admin user or Goomo Team will have the right to add or remove users</li> <li>Incase a user is Active, reset password option will be available</li><li>If a user is added but status is inactive, then an activation link can be sent to this user</li></ul>"
+		      }
+		    ]
+		  }
+		];
+	</script>
+
+{{ end }}

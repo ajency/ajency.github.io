@@ -1,0 +1,235 @@
+{{ define "main" }}
+	<div class="">
+
+		<!-- <div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/{{ $.Params.slug }}">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div> -->
+
+		<!-- <div class="listing-details m-t-50">
+			<div class="flex-row property-status-box">
+
+				<div class="status-info flex-row">
+					Now that you have filled in all your room details, please submit your listing for review. Once our QC team approves it, your listing will be Approved.
+				</div>
+				<div class="check-status">
+					Checklist Status:<br>
+					<img src="{{"img/green-check-circle.png" | absURL}}" class="img-responsive m-t-15 center-block" width="">
+				</div>
+				<div class="qc-status">
+					QC Status:<br>
+					<button class="btn btn-white outline fnb-btn m-t-15">Submit for Review</button>
+				</div>
+			</div>
+		</div> -->
+
+
+		<div class="row ">
+			<div class="col-sm-9">
+
+			<div class="row">
+				<div class="col-sm-12 text-right m-t-15">
+					<a href="#" class="btn fnb-btn secondary-btn btn-sm open-sidebar p-l-15 p-r-15 no-radius form-toggle">Add Rate Plan</a>
+				</div>
+
+				<div class="col-sm-12">
+					<h5 class="text-primary m-b-0">Premier Room</h5>
+				</div>
+				<div class="col-sm-12">
+					<div class="rooms-section dsk-separator m-t-20 flex-row">
+						<div class="room-left rooms-col">
+							<div class="room-detail">
+								<h6 class="bolder m-t-0 m-b-5">Premier - Breakfast Plan</h6>
+								<!-- <p class="text-lighter">Room Types: <span class="text-color">Premier, Grand Deluxe</span></p> -->
+							</div>
+							<div class="flex-row align-top">
+								<div class="m-r-30">
+									<p class="text-lighter m-b-5">Inclusions:</p>
+									<p class="text-color m-b-0">Breakfast</p>
+								</div>
+								<div class="m-r-30">
+									<p class="text-lighter m-b-5">Validity:</p>
+									<p class="text-color m-b-0">15/10/17 - 24/12/17</p>
+								</div>
+								<div>
+									<p class="text-lighter m-b-5">Channels:</p>
+									<p class="text-color m-b-0">Web, Mobile, B2B</p>
+								</div>
+							</div>
+						</div>
+						<div class="room-right rooms-col toggle-work">
+							 <div class="verified-toggle mobile-flex text-center">
+	                            <div class="toggle center-block">
+	                                <input name="primary_email" type="checkbox" class="toggle__check"  >
+	                                <b class="switch"></b>
+	                                <b class="track"></b>
+	                            </div>
+	                            <p class="m-b-0 toggle-state m-t-10 bolder">Inactive</p>
+	                        </div>
+	                        <a href="#" class="secondary-link text-center"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Plan</a>
+						</div>
+					</div>
+					<div class="rooms-section dsk-separator m-t-30 flex-row">
+						<div class="room-left rooms-col">
+							<div class="room-detail">
+								<h6 class="bolder m-t-0 m-b-5">Premier - All Meals Plan</h6>
+								<!-- <p class="text-lighter">Room Types: <span class="text-color">Premier, Grand Deluxe</span></p> -->
+							</div>
+
+							<div class="flex-row align-top">
+								<div class="m-r-30">
+									<p class="text-lighter m-b-5">Inclusions:</p>
+									<p class="text-color m-b-0">All Meals</p>
+								</div>
+								<div class="m-r-30">
+									<p class="text-lighter m-b-5">Validity:</p>
+									<p class="text-color m-b-0">10/10/17 - 10/12/17</p>
+								</div>
+								<div>
+									<p class="text-lighter m-b-5">Channels:</p>
+									<p class="text-color m-b-0">B2B</p>
+								</div>
+							</div>
+						</div>
+						<div class="room-right rooms-col toggle-work">
+							 <div class="verified-toggle mobile-flex text-center">
+	                            <div class="toggle center-block">
+	                                <input name="primary_email" type="checkbox" class="toggle__check">
+	                                <b class="switch"></b>
+	                                <b class="track"></b>
+	                            </div>
+	                            <p class="m-b-0 toggle-state m-t-10 bolder">Inactive</p>
+	                        </div>
+	                        <a href="#" class="secondary-link text-center"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Plan</a>
+						</div>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="col-sm-12">
+					<h5 class="text-primary m-b-0 m-t-50">Grand Deluxe Room</h5>
+				</div>
+				<div class="col-sm-12">
+					<div class="rooms-section dsk-separator m-t-20 flex-row">
+						<div class="room-left rooms-col">
+							<div class="room-detail">
+								<h6 class="bolder m-t-0 m-b-5">Grand Deluxe - Breakfast Plan</h6>
+								<!-- <p class="text-lighter">Room Types: <span class="text-color">Premier, Grand Deluxe</span></p> -->
+							</div>
+							<div class="flex-row align-top">
+								<div class="m-r-30">
+									<p class="text-lighter m-b-5">Inclusions:</p>
+									<p class="text-color m-b-0">Breakfast</p>
+								</div>
+								<div class="m-r-30">
+									<p class="text-lighter m-b-5">Validity:</p>
+									<p class="text-color m-b-0">15/10/17 - 24/12/17</p>
+								</div>
+								<div>
+									<p class="text-lighter m-b-5">Channels:</p>
+									<p class="text-color m-b-0">Web, Mobile, B2B</p>
+								</div>
+							</div>
+						</div>
+						<div class="room-right rooms-col toggle-work">
+							 <div class="verified-toggle mobile-flex text-center">
+	                            <div class="toggle center-block">
+	                                <input name="primary_email" type="checkbox" class="toggle__check"  >
+	                                <b class="switch"></b>
+	                                <b class="track"></b>
+	                            </div>
+	                            <p class="m-b-0 toggle-state m-t-10 bolder">Inactive</p>
+	                        </div>
+	                        <a href="#" class="secondary-link text-center"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Plan</a>
+						</div>
+					</div>
+					<div class="rooms-section dsk-separator m-t-30 flex-row">
+						<div class="room-left rooms-col">
+							<div class="room-detail">
+								<h6 class="bolder m-t-0 m-b-5">Grand Deluxe - All Meals Plan</h6>
+								<!-- <p class="text-lighter">Room Types: <span class="text-color">Premier, Grand Deluxe</span></p> -->
+							</div>
+
+							<div class="flex-row align-top">
+								<div class="m-r-30">
+									<p class="text-lighter m-b-5">Inclusions:</p>
+									<p class="text-color m-b-0">All Meals</p>
+								</div>
+								<div class="m-r-30">
+									<p class="text-lighter m-b-5">Validity:</p>
+									<p class="text-color m-b-0">10/10/17 - 10/12/17</p>
+								</div>
+								<div>
+									<p class="text-lighter m-b-5">Channels:</p>
+									<p class="text-color m-b-0">B2B</p>
+								</div>
+							</div>
+						</div>
+						<div class="room-right rooms-col toggle-work">
+							 <div class="verified-toggle mobile-flex text-center">
+	                            <div class="toggle center-block">
+	                                <input name="primary_email" type="checkbox" class="toggle__check">
+	                                <b class="switch"></b>
+	                                <b class="track"></b>
+	                            </div>
+	                            <p class="m-b-0 toggle-state m-t-10 bolder">Inactive</p>
+	                        </div>
+	                        <a href="#" class="secondary-link text-center"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Plan</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			</div>
+			<div class="col-sm-3 right-sidebar">
+				<div class="logs-block">
+					<div class="flex-row space-between">
+						<h6 class="bolder">Audit Logs</h6>
+						<a href="/goomo_html/details/audit/{{ $.Params.slug }}" class="bolder text-secondary">View All</a>
+					</div>
+					<div class="single-log">
+						<div class="flex-row space-between align-top">
+							<div class="bolder">
+								John Doe <small>(Owner)</small>
+							</div>
+							<span class="text-muted small">2 days ago</span>
+						</div>
+						<p class="small">
+							Updated inventory for Premium Room from 19-Oct-17 to 31-Oct-17
+						</p>
+					</div>
+					<div class="single-log">
+						<div class="flex-row space-between align-top">
+							<div class="bolder">
+								Vikas Khanna <small>(Market Manager)</small>
+							</div>
+							<span class="text-muted small text-right" style="min-width: 60px">3 days ago</span>
+						</div>
+						<p class="small">
+							Updated Food &amp; Beverages and Fitness Spa
+						</p>
+					</div>
+					<div class="single-log">
+						<div class="flex-row space-between align-top">
+							<div class="bolder">
+								Vikas Khanna <small>(Market Manager)</small>
+							</div>
+							<span class="text-muted small text-right" style="min-width: 60px">4 days ago</span>
+						</div>
+						<p class="small">
+							Updated Property Highlights
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{{ end }}

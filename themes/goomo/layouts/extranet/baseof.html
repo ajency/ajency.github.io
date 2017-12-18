@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="" class="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>{{ .Title }} :: {{ .Site.Title }}</title>
+
+		<!-- Google font cdn -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,700" rel="stylesheet">
+		<!-- Font awesome -->
+		<link rel="stylesheet" type="text/css" href="{{"css/font-awesome/css/font-awesome.min.css" | absURL}}">
+		<!-- <link rel="stylesheet" type="text/css" href="{{"js/datatables/media/css/jquery.dataTables.min.css" | absURL}}"> -->
+		<link rel="stylesheet" type="text/css" href="{{"js/datatables.net-select-dt/css/select.dataTables.css" | absURL}}">
+		<!-- <link rel="stylesheet" type="text/css" href="{{"js/datatables.net-bs/css/dataTables.bootstrap.min.css" | absURL}}"> -->
+		<link rel="shortcut icon" href="{{"img/favicon.png" | absURL}}" type="image/x-icon" />
+		<link rel="stylesheet" href="{{"css/bootstrap.min.css" | absURL}}">
+		<link rel="stylesheet" href="{{"css/jquery.flexdatalist.min.css" | absURL}}">
+		<link rel="stylesheet" href="{{"css/bootstrap-multiselect.min.css" | absURL}}">
+		<link rel="stylesheet" href="{{"js/bootstrap-daterangepicker/daterangepicker.css" | absURL}}">
+		<link href="{{"css/main.css" | absURL}}" rel="stylesheet">
+	</head>
+	<body class="{{ $.Params.overlay }}" >
+
+		{{ partial "header_extranet.html" .}}
+
+		<!-- content -->
+		<div class="container min-height {{ $.Params.overlayre }}">
+				
+				{{ block "main" . }}
+					<!-- The part of the page that begins to differ between templates -->
+				{{ end }}
+				<div class="site-overlay"></div>
+		</div>
+		<!-- content ends -->
+
+		{{ partial "footer.html" .}}
+
+		<script type="text/javascript" src="{{"js/jquery.min.js" | relURL}}"></script>
+		<!-- BS Script -->
+		<script type="text/javascript" src="{{"js/bootstrap.min.js" | relURL}}"></script>
+
+		<!-- Datatables -->
+		<script type="text/javascript" src="{{"js/datatables.net/js/jquery.dataTables.min.js" | relURL}}"></script>
+		<script type="text/javascript" src="{{"js/datatables.net-bs/js/dataTables.bootstrap.min.js" | relURL}}"></script>
+		<script type="text/javascript" src="{{"js/datatables.net-select/js/dataTables.select.min.js" | relURL}}"></script>
+
+		<script type="text/javascript" src="{{"js/bootstrap-multiselect.js" | relURL}}"></script>
+
+		<script type="text/javascript" src="{{"js/moment.min.js" | relURL}}"></script>	
+		<script type="text/javascript" src="{{"js/bootstrap-daterangepicker/daterangepicker.js" | relURL}}"></script>	
+		
+
+		<!-- Flexdatalist -->
+		<script type="text/javascript" src="{{"js/flex-datalist/jquery.flexdatalist.min.js" | relURL}}"></script>
+
+		<script type="text/javascript" src="{{"js/custom.js" | relURL}}"></script>
+	</body>
+</html>

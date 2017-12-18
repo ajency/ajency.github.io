@@ -1,0 +1,219 @@
+{{ define "main" }}
+	<div class="">
+
+		<div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/{{ $.Params.slug }}">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div>
+
+		<h6 class="">Choose which options you want for your policy. Once it's been created, you'll be able to assign it to the rooms it applies to.</h6>
+
+		<div class=" text-right m-b-20 m-t-15">
+			<a href="#" class="btn fnb-btn secondary-btn btn-sm p-l-15 p-r-15 no-radius add-policy-btn ">Add Policy</a>
+		</div>
+
+		<div class="add-policy-wrap hidden">
+			<div class="row m-t-30">
+				<div class="col-sm-3">
+					<p class="text-info bolder">Policy level associated with:</p>
+					<div class="btn-group" data-toggle="buttons" role="group" aria-label="...">
+				  		<label class="btn btn-default fnb-btn toggle-btn active">
+				            <input type="radio" name="policy" id="hotel" checked=""> Hotel
+				        </label>
+				        <label class="btn btn-default fnb-btn toggle-btn">
+				            <input type="radio" name="policy" id="rateplan" value="rateplan"> Rate plan
+				        </label>
+					</div>
+				</div>
+				<div class="col-sm-3 rateplan-wrap hidden">
+					<p class="text-info bolder">Rate Plan:</p>
+					<select class="fnb-select select-variant form-control  p-l-0" name="">
+					    <option value="">Select Rate Plan</option>
+					    <option selected="">Rate Plan 1</option>
+					    <option>Rate Plan 2</option>
+					</select>
+				</div>
+				<div class="col-sm-3">
+					<p class="text-info bolder">From date:</p>
+					<input type="text" class="from-date form-control fnb-input m-r-10 sub-dates" placeholder="From Date">
+				</div>
+				<div class="col-sm-3">
+					<p class="text-info bolder">To date:</p>
+					<input type="text" class="to-date form-control fnb-input m-r-10 sub-dates" placeholder="To Date">
+				</div>
+			</div>
+
+			<h6 class="text-info bolder m-t-50">Existing Standard Cancellation Policy (select only one)</h6>
+
+			<ul class="business-type flex-row m-t-25">
+			    <li>
+			        <input value="11" type="radio" class="radio" name="policy_type" data-parsley-multiple="listing_type" data-parsley-required-message="Please select a business type." data-parsley-errors-container="#errorfield">
+			        <div class="wholesaler option flex-row col-direction">
+			            <div>
+			                <i class="fa fa-check"></i>
+			            </div>
+			            <div class="business-label">
+			                Free Cancellation upto 24 hours
+			            </div>
+			        </div>
+			    </li>
+			    <li>
+			        <input value="12" type="radio" class="radio" name="policy_type" data-parsley-multiple="listing_type" data-parsley-required-message="Please select a business type." data-parsley-errors-container="#errorfield" checked="">
+			        <div class="retailer option flex-row col-direction">
+			            <div>
+			                <i class="fa fa-check"></i>
+			            </div>
+			            <div class="business-label">
+			                If cancelled 48hrs before check-in full refund
+			            </div>
+			        </div>
+			    </li>
+			    <li>
+			        <input value="13" type="radio" class="radio" name="policy_type" data-parsley-multiple="listing_type" data-parsley-required-message="Please select a business type." data-parsley-required data-parsley-errors-container="#errorfield">
+			        <div class="manufacturer option flex-row col-direction">
+			            <div>
+			                <i class="fa fa-check"></i>
+			            </div>
+			            <div class="business-label">
+			                No show: No refund
+			            </div>
+			        </div>
+			    </li>
+			    <li>
+			        <input value="14" type="radio" class="radio" name="policy_type" data-parsley-multiple="listing_type" data-parsley-required-message="Please select a business type." data-parsley-errors-container="#errorfield" >
+			        <div class="wholesaler option flex-row col-direction">
+			            <div>
+			                <span class="fnb-icons business-icon wholesaler importer">+</span>
+			                <i class="fa fa-check"></i>
+			            </div>
+			            <div class="business-label">
+			                Create your own
+			            </div>
+			        </div>
+			    </li>
+			</ul>
+
+			<div class="alert alert-aqua create-own-policy hidden">
+				<label>Free Cancellation on or before</label> <input type="number" class="cancel-days blue-bot-bor fnb-input" name="" min="0" value="10"> <label>days</label>
+				<br>
+				<div class="radio-group m-t-15">
+				    <label for="norefund" class="m-r-15">
+				        <input value="" type="radio" class="fnb-radio bg-aqua" name="cancellation" id="norefund">
+				        <span class="p-l-5 text-medium">No refund if cancelled between 10 days prior to check-in and check-in date.</span>
+				    </label>
+				    <br>
+				    <label for="create" class="m-t-10">
+				        <input value="" type="radio" class="fnb-radio bg-aqua" name="cancellation" id="create" checked="">
+				        <span class="p-l-5 text-medium">Create cancellation charges</span>
+				    </label>
+				</div>
+
+				<div class="flex-row flex-wrap m-t-10">
+					<input type="number" class="blue-bot-bor fnb-input m-r-10" name="" min="0" value="" placeholder="Digits Only">
+					<div class="btn-group m-r-10 small" data-toggle="buttons" role="group" aria-label="...">
+						<label class="btn btn-default fnb-btn toggle-btn active">
+				            <input type="radio" name="options1" id="fixed" checked=""> Fixed
+				        </label>
+				        <label class="btn btn-default fnb-btn toggle-btn">
+				            <input type="radio" name="options1" id="option2"> Percentage
+				        </label>
+					</div>
+					 charges applicable on No-Show
+				</div>
+
+				<div class="flex-row flex-wrap m-t-10">
+					<input type="number" class="blue-bot-bor fnb-input m-r-10" name="" min="0" value="" placeholder="Digits Only">
+					<div class="btn-group m-r-10 small" data-toggle="buttons" role="group" aria-label="...">
+						<label class="btn btn-default fnb-btn toggle-btn active">
+				            <input type="radio" name="options1" id="fixed" checked=""> Fixed
+				        </label>
+				        <label class="btn btn-default fnb-btn toggle-btn">
+				            <input type="radio" name="options1" id="option2"> Percentage
+				        </label>
+					</div>
+					 charges applicable if cancelled from <input type="number" class="cancel-days blue-bot-bor fnb-input" name="" min="0" value="24"> to <input type="number" class="cancel-days blue-bot-bor fnb-input" name="" min="0" value="172"> hours from check-in date
+					 <a href="#"><i class="fa fa-plus-square text-secondary m-l-10"></i></a>
+				</div>
+
+				<div class="users-row m-t-40">
+				    <button class="btn fnb-btn secondary-btn full">Save</button>
+				    <button class="btn fnb-btn grey  full cancel-wrap">Cancel</button>
+				</div>
+			</div>
+
+
+			<div class="alert alert-aqua set-policy">
+				<div class="row flex-row flex-wrap align-end">
+					<div class="col-sm-9">
+						<h6 class="bolder">Create Policy</h6>
+						<p>
+							A booking cancelled 48 hours before check-in will be under free cancellation.
+							In case of a no-show or booking gets cancelled within 48 hours, charges will be 100%.
+						</p>
+					</div>
+					<div class="col-sm-3">
+						<div class="users-row">
+						    <button class="pull-right btn fnb-btn grey  full cancel-wrap">Cancel</button>
+						    <button class="pull-right btn fnb-btn secondary-btn full">Create</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="rooms-section dsk-separator m-t-20 flex-row">
+			<div class="room-left">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="room-detail">
+							<label class="text-lighter text-normal m-b-0">Associated with</label>
+							<p class="bolder">Hotel</p>
+						</div>
+						<div class="">
+							<label class="text-lighter text-normal m-b-0">Check in - Check out</label>
+							<p class="bolder">11 Oct 2017 - 22 Oct 2017</p>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<label class="text-lighter text-normal m-b-0">Cancellation Policy</label>
+						<ul class="cancel-list">
+							<li>If you cancel your hotel booking within 72 hrs prior to checkin, cancellation charges will be non-refundable</li>
+							<li>If you cancel your hotel booking before 72 hrs i.e. before 3 days of checkin, cancellation charges will not be applicable i.e. FREE cancellation.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="room-right rooms-col toggle-work">
+				 <div class="verified-toggle mobile-flex text-center">
+                    <div class="toggle center-block">
+                        <input name="primary_email" type="checkbox" class="toggle__check" checked="" >
+                        <b class="switch"></b>
+                        <b class="track"></b>
+                    </div>
+                    <p class="m-b-0 toggle-state active-state m-t-10 bolder">Active</p>
+                </div>
+                <a href="#" class="secondary-link text-center"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Policy</a>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var existingComments = [
+		  {
+		    "sectionId": "1",
+		    "comments": [
+		      {
+		        "comment": "<ul><li>Cancellation policy can be associated at the Hotel level or at the Rate Plan level</li><li>Selection can be made from the existing Standard Cancellation Policy or there is an option to “Create your own”</li><li>If “Create your own” option is selected, the following details should be set:<br> The number of days i.e: Free Cancellation on or before *number of days” days. Only once this value is entered, the 2 options will be displayed to be selected. Anyone of the two should be selected. “No refund if cancelled between *number of days* days prior to check-in and check-in date” or “Create cancellation charges”</li><li>If “Create cancellation charges” is selected, then the charges can be set. Either fixed/percentage. This can be further charged on basis of time from check-in date and also if no show.</li></ul>"
+		      }
+		    ]
+		  }
+		];
+	</script>
+
+{{ end }}

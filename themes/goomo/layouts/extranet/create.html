@@ -1,0 +1,251 @@
+{{ define "main" }}
+	<div class="m-t-25">
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="flex-row space-between">
+					<div class="main-title">
+						<h3 class="no-m-t fly-out-heading-size text-info ">{{ .Title }}</h3>
+						<p class="text-muted">Please complete the fields below. All fields are required</p>
+					</div>
+					<div class="section-icon mobile-hide">
+						<img src="{{"img/create-listing.png" | absURL}}" class="img-responsive">
+					</div>
+				</div>
+			</div>
+			<!-- Form elements -->
+			<div class="col-sm-12">
+				<h5 class="bolder m-t-35 prop-title">Property Information</h5>
+				<div class="row field-gap c-gap">
+		            <div class="col-sm-6">
+		                <label class="label-size text-info">Business Name <i class="fa fa-question-circle p-l-5 text-info" aria-hidden="true"></i></label>
+		                <input type="text" class="form-control fnb-input" placeholder="Name of Business Entity">
+		            </div>
+		            <div class="col-sm-6 c-gap">
+		                <label class="label-size text-info">Display Name <i class="fa fa-question-circle p-l-5 text-info" aria-hidden="true"></i></label>
+		                <input type="text" class="form-control fnb-input" placeholder="Property Name to be displayed">
+		            </div>
+		        </div>
+		        <div class="row listing-fields">
+		        	<div class="col-sm-9">
+		        		<div class="row field-gap">
+			        		<div class="col-sm-4 c-gap">
+				                <label class="label-size text-info">Country</label>
+				                <select class="fnb-select select-variant form-control text-lighter" name="">
+				                    <option value="">--Select--</option>
+				                    <option selected="">India</option>
+				                    <option>Singapore</option>
+				                    <option>China</option>
+				                    <option>Russia</option>
+				                </select>
+				            </div>
+				            <div class="col-sm-4 c-gap">
+				                <label class="label-size text-info">State</label>
+				                <select class="fnb-select select-variant form-control text-lighter" name="">
+				                    <option value="">--Select--</option>
+				                    <option>Delhi</option>
+				                    <option selected="">Goa</option>
+				                    <option>Gujarat</option>
+				                    <option>Bangalore</option>
+				                </select>
+				            </div>
+				            <div class="col-sm-4 c-gap">
+				                <label class="label-size text-info">City</label>
+				                <select class="fnb-select select-variant form-control text-lighter" name="">
+				                    <option value="">--Select--</option>
+				                    <option selected="">Panjim</option>
+				                    <option>Mapusa</option>
+				                    <option>Madgaon</option>
+				                    <option>Shivajinagar</option>
+				                </select>
+				            </div>
+				        </div>
+				        <div class="row field-gap">
+				            <div class="col-sm-12 location-row c-gap">
+				                <label class="label-size text-info">Location</label>
+				                 <input type="text" class="form-control fnb-input payment-add flexdatalist" multiple="multiple" placeholder="Type for suggestions &amp; select" list="locations" value="">
+						        <datalist id="locations">
+						            <option value="goa">Goa</option>
+						            <option value="mumbai">Mumbai</option>
+						            <option value="delhi">Delhi</option>
+						            <option value="gujarat">Gujarat</option>
+						            <option value="bangalore">Bangalore</option>
+						        </datalist>
+				            </div>
+				        </div>
+				        <div class="row flex-row flex-wrap field-gap">
+				            <div class="col-sm-4 c-gap">
+				                <label class="label-size text-info">Chain Name</label>
+				                <select class="fnb-select select-variant form-control text-lighter" name="">
+				                    <option value="">--Select--</option>
+				                    <option selected="">Taj Hotels</option>
+				                    <option>Oberoi Hotels</option>
+				                    <option>Le Meridien</option>
+				                    <option>Hilton Group</option>
+				                    <option>Trident Hotels</option>
+				                    <option>The Park</option>
+				                    <option>Lalit Group of Hotels</option>
+				                    <option>The Leela Group</option>
+				                </select>
+				            </div>
+				            <div class="col-sm-4 c-gap">
+				                <label class="label-size text-info">Property Type</label>
+				                <select class="fnb-select select-variant form-control text-lighter" name="">
+				                    <option value="add-internal.html">--Select--</option>
+				                    <option selected="">Guesthouse/bed and breakfast</option>
+				                    <option>Hotel</option>
+				                    <option>Resort</option>
+				                    <option>Resort Villa</option>
+				                    <option>Private Villa</option>
+				                    <option>Bungalow</option>
+				                    <option>Private VillaHoliday Park/Caravan Park</option>
+				                    <option>House</option>
+				                    <option>Apartment</option>
+				                    <option>Hostel</option>
+				                    <option>Serviced Apartments</option>
+				                    <option>Villa</option>
+				                    <option>Tent</option>
+				                    <option>Capsule Hotel</option>
+				                    <option>Motel</option>
+				                    <option>Boat/Cruise</option>
+				                    <option>Love Hotel</option>
+				                </select>
+				            </div>
+				            <div class="col-sm-4 c-gap">
+				                <label class="label-size text-info">Property Highlights</label>
+				                <select multiple="multiple" class="form-control prop-theme" name="">
+				                    <option value="swimming-pool">Swimming Pool</option>
+				                    <option value="internet">Internet</option>
+				                    <option value="gym">Gym/Fitness</option>
+				                    <option value="car">Car Park</option>
+				                    <option value="spa">Spa/Sauna</option>
+				                    <option value="bus-fac">Business Facilities</option>
+				                    <option value="family">Family/Child Friendly</option>
+				                    <option value="restuarant">Restaurants</option>
+				                    <option value="no-smoking">Non-smoking</option>
+				                    <option value="smoking">Smoking Area</option>
+				                    <option value="airport">Airport Transfer</option>
+				                    <option value="pets">Pets Allowed</option>
+				                    <option value="facility">Facilities For Disabled Guests</option>
+				                    <option value="golf">Golf Course (on-site)</option>
+				                    <option value="night">Night Club</option>
+				                    <option value="beach">Beach Access</option>
+				                </select>
+				            </div>
+				            <div class="col-sm-4 c-gap field-gap">
+				                <label class="label-size text-info">Star Rating</label>
+				                <select class="fnb-select select-variant form-control text-lighter" name="">
+				                    <option value="">--Select--</option>
+				                    <option>1 Star</option>
+				                    <option>2 Stars</option>
+				                    <option selected="">3 Stars</option>
+				                    <option>4 Stars</option>
+				                    <option>5 Stars</option>
+				                    <option>Unrated</option>
+				                </select>
+				            </div>
+				        </div>
+		        	</div>
+		            <div class="col-sm-3 c-gap">
+		            	<div class="contract text-center">
+		            		<img src="{{"img/contract.png" | absURL}}" class="img-responsive center-block">
+		            		<h6>Contract with all property details?</h6>
+		            		<div class="radio-group m-t-15 m-b-15">
+		            			<label for="yes" class="m-r-15">
+		            				<input value="" type="radio" class="fnb-radio" name="contract" id="yes"
+		            				checked="">
+		            				<span class="p-l-5 text-medium">Yes</span>
+		            			</label>
+		            			<label for="no">
+		            				<input value="" type="radio" class="fnb-radio" name="contract" id="no">
+		            				<span class="p-l-5 text-medium">No</span>
+		            			</label>
+		            		</div>
+		            		<!-- <p class="text-muted">Upload a picture of the signed page</p> -->
+		            		<button class="btn fnb-btn s-outline bold-btn full m-t-10"><i class="fa fa-camera p-r-5" aria-hidden="true"></i> <span>Upload</span></button>
+		            	</div>
+		            </div>
+		        </div>
+			</div>
+			<!-- Assign Manager -->
+			<div class="col-sm-12 m-t-40 listing-fields">
+				<h5 class="bolder m-t-35 prop-title">Assign a Market Manager <i class="fa fa-question-circle p-l-5 text-info" aria-hidden="true"></i></h5>
+				<div class="row field-gap flex-row flex-wrap">
+		            <div class="col-sm-4 c-gap">
+		                <label class="label-size text-info">Market Manager</label>
+		                <select class="fnb-select select-variant form-control text-lighter" name="">
+		                    <option value="">None</option>
+		                    <option selected="">Vikas Khanna</option>
+		                </select>
+		            </div>
+		            <div class="col-sm-4 c-gap flex-row">
+		                <img src="{{"img/bulb.png" | absURL}}" class="img-responsive">
+		                <p class="m-b-0 text-muted p-l-5">The property you are about to create will be associated with the selected Market Manager</p>
+		            </div>
+		        </div>
+		        <!-- <div class="row m-t-15 c-gap">
+		        	<div class="col-sm-4 mobile-center">
+		            	<button class="btn fnb-btn s-outline bold-btn full m-t-10"><span>Continue</span></button>
+		            </div>
+		        </div> -->
+			</div>
+			<!-- Add a user -->
+			<div class="col-sm-12 m-t-40 listing-fields m-b-50">
+				<img src="{{"img/user.png" | absURL}}" class="img-responsive user-icon">
+				<div class="add-user">
+					<h5 class="bolder m-t-25 prop-title">Add a User</h5>
+					<div class="row field-gap">
+			            <div class="col-sm-6 c-gap">
+			                <input type="text" class="form-control fnb-input no-label" placeholder="First Name">
+			            </div>
+			            <div class="col-sm-6 c-gap">
+			                <input type="text" class="form-control fnb-input no-label" placeholder="Last Name">
+			            </div>
+			            <div class="col-sm-6 c-gap field-gap">
+			                <input type="email" class="form-control fnb-input no-label" placeholder="Email Address">
+			            </div>
+			            <div class="col-sm-6 c-gap field-gap">
+			                <input type="tel" class="form-control fnb-input no-label" placeholder="Contact Number">
+			            </div>
+			        </div>
+			        <div class="row field-gap">
+			            <div class="col-sm-4 c-gap">
+			            	<label class="label-size text-info">Role</label>
+			                <select class="fnb-select select-variant form-control text-lighter" name="">
+			                    <option value="">None</option>
+			                    <option selected="">General Manager</option>
+			                </select>
+			            </div>
+			            <div class="col-sm-8 c-gap">
+			                <p class="m-b-0 text-color m-r-40 m-t-10"><span class="text-danger">Note:</span> This user will have full access to manage the property he/she can edit the information for this property. This user can add and remove other user and also control the access each of the other users get.</p>
+			            </div>
+			        </div>
+			        <div class="row field-gap">
+			            <div class="col-sm-6 c-gap">
+			            	<div class="radio-group m-t-10 custom-radio">
+		            			<label for="wel" class="m-b-25">
+		            				<input value="" type="checkbox" class="fnb-checkbox" name="contract" id="wel"
+		            				checked="">
+		            				<span class="p-l-5 text-medium text-color default-size">Send Welcome Mail</span>
+		            			</label>
+		            			<br>
+		            			<label for="act">
+		            				<input value="" type="checkbox" class="fnb-checkbox" name="contract" id="act">
+		            				<span class="p-l-5 text-medium text-color default-size">Assign to loading team, do not send activation mail</span>
+		            			</label>
+		            		</div>
+			            </div>
+			        </div>
+				</div>
+				<div class="row m-t-30">
+				    <div class="col-sm-12">
+		            	<div class="text-center listing-create-btn">
+		            		<a href="{{ $.Params.summary.url }}" class="btn fnb-btn secondary-btn bold-btn border-btn full">Create Property</a>
+		            	</div>
+		            </div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+{{ end }}

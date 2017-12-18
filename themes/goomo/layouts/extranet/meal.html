@@ -1,0 +1,89 @@
+{{ define "main" }}
+	<div class="m-t-25">
+
+		<div class="row">
+
+      <div class="col-sm-12">
+        <div class="page-title">
+          <div class="title_left">
+          <h3 class="no-m-t fly-out-heading-size text-info">
+            {{ .Title }}
+            <button class="btn fnb-btn secondary-btn btn-sm x-small add-modal" data-toggle="modal" data-target="#meal_plan_modal">+ Add a Plan</button>
+          </h3>
+          <span>Set meal plans for Rate Plans </span>
+          </div>
+        </div>
+      </div>
+
+			<div class="col-sm-12 m-t-40">
+        <table class="table table-condensed">
+          <thead>
+            <tr>
+              <th>Plan Name</th>
+              <th>Description</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                All Meals
+              </td>
+              <td>
+                Includes Breakfast, Lunch and Dinner
+              </td>
+              <td>
+                <a href="#" class="text-info m-r-20" data-toggle="modal" data-target="#meal_plan_modal">Edit</a>
+                <a href="#" class="text-danger">Delete</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Breakfast Only
+              </td>
+              <td>
+                Includes Breakfast only
+              </td>
+              <td>
+                <a href="#" class="text-info m-r-20" data-toggle="modal" data-target="#meal_plan_modal">Edit</a>
+                <a href="#" class="text-danger">Delete</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+			</div>
+
+		</div>
+
+    <div class="modal fade" id="meal_plan_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h6 class="modal-title">Add/Edit Meal Plan</h6>
+            </div>
+            <div class="modal-body">
+
+
+              <div class="form-group m-b-20">
+                <label>Plan Name <span class="text-danger">*</span></label>
+                 <input type="test" class="form-control fnb-input" name="" placeholder="Enter Plan Name">
+              </div>
+              <div class="form-group m-b-20">
+                <label>Description <span class="text-danger">*</span></label>
+                <textarea class="form-control fnb-input" placeholder="Enter Plan Description"></textarea>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn fnb-btn outline no-border" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn primary-btn fnb-btn no-radius">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+	</div>
+
+{{ end }}

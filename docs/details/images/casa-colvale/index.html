@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="" class="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Images :: Goomo by Ajency</title>
+
+		
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,700" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="http://localhost:1313/goomo_2/css/font-awesome/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="http://localhost:1313/goomo_2/img/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/jquery.flexdatalist.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/js/bootstrap-daterangepicker/daterangepicker.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/side-comments.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/default-theme.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/tooltipster.bundle.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/tooltipster-sideTip-borderless.min.css">
+		<link href="http://localhost:1313/goomo_2/css/main.css" rel="stylesheet">
+
+		<script type="text/javascript">
+			var currentUser;
+			var existingComments;
+		</script>
+	</head>
+	<body class="overflow-section">
+		<div class="page-shifter animate-row">
+
+			
+<header class="fnb-header">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			
+			<div class="navbar-header mobile-head mobile-flex">
+				<div class="mobile-head__left mobile-flex">
+					<i class="fa fa-bars sideMenu" aria-hidden="true"></i>
+					
+					<ul class="desk-hide">
+						<li>
+							<select class="form-control fnb-select white-select">
+								<option>--Change Resort--</option>
+								<option selected="">Casa Colvale</option>
+								<option>Casa Amora</option>
+								<option>Casa Bella</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			
+			<div class="collapse navbar-collapse m-side-bar" id="bs-example-navbar-collapse-1">
+				<ul class="mobile-top mobile-flex">
+					<li>
+						<p class="mobile-top__text">Welcome!</p>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav city-select">
+					<li>
+						<img src="http://localhost:1313/goomo_2/img/goomo_logo.png" class="img-responsive mobile-hide m-t-5" width="100">
+					</li>
+					<li>
+						<select class="form-control fnb-select white-select mobile-hide">
+							<option>--Change Resort--</option>
+							<option selected="">Casa Colvale</option>
+							<option>Casa Amora</option>
+							<option>Casa Bella</option>
+						</select>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right side-section">
+					
+
+					<li class="notification mobile-hide">
+						<a tabindex="0" role="button" data-toggle="popover" data-title="Notifications" data-trigger="focus" data-placement="bottom">
+							<i class="fa fa-bell" aria-hidden="true">
+								<span class="badge">3</span>
+							</i>
+						</a>
+						<div class="popoverContent hidden">
+							<ul>
+								<li class="flex-row space-between even">
+									<div>Notification 1</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+								<li class="flex-row space-between odd">
+									<div>Notification 2</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+								<li class="flex-row space-between even">
+									<div>Notification 3</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li class="mobile-hide">
+						<div class="dropdown login user-logged">
+							<i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+							<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="drop-trigger">
+								<span class="ellipsis userName">Krish Dsouza</span>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li>
+									<a href="/goomo_html/extranet/properties/">View Dashboard</a>
+								</li>
+							</ul>
+						</div>
+
+					</li>
+
+				</ul>
+
+				<div class="desk-hide">
+					
+
+
+
+<ul class="gs-steps" role="tablist">
+  <li class="">
+    <a href="/goomo_html/dashboard/casa-colvale/"><i class="fa fa-bars"></i> <span>Dashboard</span></a>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-bookingSubMenuMobile" role="button">
+      <i class="fa fa-calendar-check-o"></i> <span>Bookings</span></a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-bookingSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/bookings/all/casa-colvale/">All Bookings</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/bookings/transactions/casa-colvale/">Transactions</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle" data-toggle="collapse"  href="#property-ratesSubMenuMobile" role="button"><i class="fa fa-money"></i> <span>Rates &amp; Availability</span></a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-ratesSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/rates-availability/calendar/casa-colvale/">Calendar</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/inventory/casa-colvale/">Add Inventory</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rates/casa-colvale/">Add Rates</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rate-plan/casa-colvale/">Rate Plans</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/config/casa-colvale/">Channel Configuration</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-offersSubMenuMobile" role="button">
+      <i class="fa fa-certificate"></i> <span>Offers</span>
+    </a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-offersSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/offers/add/casa-colvale/">Add Offer</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/all/casa-colvale/">All Offers</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal/casa-colvale/">Add Secret Deal</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal-all/casa-colvale/">All Secret Deal</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a href="/goomo_html/checklist/casa-colvale/"><i class="fa fa-list"></i> <span>Property Checklist</span></a>
+  </li>
+  <li class="sub-menu active">
+    <a class=" " data-toggle="collapse" href="#property-detailsSubMenuMobile" id="" role="button"><i class="fa fa-file-text-o"></i> <span>Property Details</span> <span class="menu-arrow arrow_carrot-right"></span></a>
+    <ul class="gs-steps collapse in edit-mode sub-steps" id="property-detailsSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/details/amenities/casa-colvale/">Amenities &amp; Services</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/address/casa-colvale/">Address &amp; Contact</a>
+      </li>
+      <li class="active">
+        <a href="/goomo_html/details/images/casa-colvale/">Images</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/rooms/casa-colvale/">Rooms</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/policies/casa-colvale/">Policies</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/contract/casa-colvale/">Contract &amp; Finance</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/users/casa-colvale/">Users</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/cancel/casa-colvale/">Cancellation Policy</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/commission/casa-colvale/">Goomo Commission</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/audit/casa-colvale/">Audit Logs</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+				</div>
+
+			</div>
+			
+		</div>
+		
+	</nav>
+</header>
+
+<div class="profile-stats breadcrums-row no-shadow">
+  <div class="container">
+	  <div class="row p-t-30 p-b-30 jobs-listing edit-mode preview-holder ">
+		  <div class="col-sm-8 flex-col">
+		  	<div class="desk-hide text-center">
+		  		
+
+
+
+<ul class="fnb-breadcrums flex-row">
+  <li class="fnb-breadcrums__section"><a href="http://localhost:1313/goomo_2/listing"><p class="fnb-breadcrums__title">Dashboard</p></a></li>
+  <li class="fnb-breadcrums__section">
+  	<p class="fnb-breadcrums__title">></p>
+  </li>
+
+  
+  
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Details</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Images</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li class="breadcrump_active"><p class="fnb-breadcrums__title">Casa Colvale</p></li>
+  	  
+
+      
+
+      
+
+  
+    
+      
+
+  
+</ul>
+
+
+		  		<h5 class="nno-m-t main-heading  white m-t-0 margin-btm">Images</h5>
+		  		<a href="https://www.goomo.com/hotels/detail/Hotel-Windsor-Bay-389069?checkin_date=2017-09-28&checkout_date=2017-09-29&hotel_id=389069&locality_id&location_id=12550&place_name=Goa%2C%20India&rooms=%5B%7B%22adults_count%22%3A1%2C%22children_age%22%3A%5B%5D%7D%5D" target="_blank" class="preview-header__link white btn fnb-btn white-border mini"> View Property on Goomo.com</a>
+		  	</div>
+		  </div>
+		  <div class="col-sm-4 flex-col text-right mobile-hide">
+			  
+		  </div>
+	  </div>
+  </div>
+</div>
+
+
+			
+			<div class="container-fluid jobs-container commentable-container" id="commentable-area">
+					<div class="row">
+							<div class="col-xs-12 content-wrapper edit-mode ">
+
+									<div class="m-t-20 m-b-10">
+											<div class="row">
+													<div class="col-xs-12 col-sm-3 col-lg-2">
+
+														<div class="dsk-separator edit-summary-card mobile-hide">
+	<div class="summary-info">
+		
+			<div class="flex-row align-top">
+						<img src="http://localhost:1313/goomo_2/img/hotel_icon.png" class="img-responsive m-r-5" width="40">
+						<div>
+							<h6 class="m-b-5 bolder property-name m-t-5">
+								Casa Colvale
+							</h6>
+							<p class="text-muted">Britona, Goa, India</p>
+						</div>
+					</div>
+			<div class="listing-status">
+					<div class="label">Property Status</div>
+					<div class="flex-row space-between status-msg">
+							<div class="statusMsg">
+								
+							</div>
+							<a href="#" class="review-submit-link"><i class="fa fa-pencil"></i></a>
+					</div>
+			</div>
+	</div>
+</div>
+
+<div class="dsk-separator mobile-hide">
+
+	
+
+	
+
+
+<ul class="gs-steps" role="tablist">
+  <li class="">
+    <a href="/goomo_html/dashboard/casa-colvale/"><i class="fa fa-bars"></i> <span>Dashboard</span></a>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-bookingSubMenu" role="button">
+      <i class="fa fa-calendar-check-o"></i> <span>Bookings</span></a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-bookingSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/bookings/all/casa-colvale/">All Bookings</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/bookings/transactions/casa-colvale/">Transactions</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-ratesSubMenu" role="button">
+      <i class="fa fa-money"></i>
+      <span>Rates &amp; Availability</span>
+    </a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-ratesSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/rates-availability/calendar/casa-colvale/">Calendar</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/inventory/casa-colvale/">Add Inventory</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rates/casa-colvale/">Add Rates</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rate-plan/casa-colvale/">Rate Plans</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/config/casa-colvale/">Channel Config</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-offersSubMenu" role="button">
+      <i class="fa fa-certificate"></i> <span>Offers</span>
+    </a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-offersSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/offers/add/casa-colvale/">Add Offer</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/all/casa-colvale/">All Offers</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal/casa-colvale/">Add Secret Deal</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal-all/casa-colvale/">All Secret Deals</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a href="/goomo_html/checklist/casa-colvale/"><i class="fa fa-list"></i> <span>Property Checklist</span></a>
+  </li>
+
+  <li class="sub-menu active">
+    <a class=" form-toggle " data-toggle="collapse" href="#property-detailsSubMenu" id="" role="button"><i class="fa fa-file-text-o"></i> <span>Property Details</span> <span class="menu-arrow arrow_carrot-right"></span></a>
+    <ul class="gs-steps collapse in edit-mode sub-steps" id="property-detailsSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/details/amenities/casa-colvale/">Amenities &amp; Services</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/address/casa-colvale/">Address &amp; Contact</a>
+      </li>
+      <li class="active">
+        <a href="/goomo_html/details/images/casa-colvale/">Images</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/rooms/casa-colvale/">Rooms</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/policies/casa-colvale/">Policies</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/contract/casa-colvale/">Contract &amp; Finance</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/users/casa-colvale/">Users</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/cancel/casa-colvale/">Cancellation Policy</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/commission/casa-colvale/">Goomo Commission</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/audit/casa-colvale/">Audit Logs</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+</div>
+
+													</div>
+													<div class="col-xs-12 col-sm-9 col-lg-10">
+
+														<div class="">
+															<div class="">
+																<div class="preview-header text-color desk-hide"> Do you want to see a preview of your listing? <a href="" class="secondary-link preview-header__link">Preview</a>
+																</div>
+																<div class="gs-form tab-content p-t-0  ">
+
+																	<div class="flex-row space-between align-top mobile-hide">
+																		<div class="business-info tab-pane fade in active" id="">
+																			
+
+																			
+
+
+
+<ul class="fnb-breadcrums flex-row">
+  <li class="fnb-breadcrums__section"><a href="http://localhost:1313/goomo_2/listing"><p class="fnb-breadcrums__title">Dashboard</p></a></li>
+  <li class="fnb-breadcrums__section">
+  	<p class="fnb-breadcrums__title">></p>
+  </li>
+
+  
+  
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Details</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Images</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li class="breadcrump_active"><p class="fnb-breadcrums__title">Casa Colvale</p></li>
+  	  
+
+      
+
+      
+
+  
+    
+      
+
+  
+</ul>
+
+
+
+
+																			
+																			<h5 class="nno-m-t main-heading  white m-t-0 margin-btm">Images</h5>
+																		</div>
+
+																		<a href="https://www.goomo.com/hotels/detail/Hotel-Windsor-Bay-389069?checkin_date=2017-09-28&checkout_date=2017-09-29&hotel_id=389069&locality_id&location_id=12550&place_name=Goa%2C%20India&rooms=%5B%7B%22adults_count%22%3A1%2C%22children_age%22%3A%5B%5D%7D%5D" class="preview-header__link white btn fnb-btn white-border mini mobile-hide" target="_blank"> View Property on Goomo.com</a>
+																	</div>
+
+																	<div class="commentable-section" data-section-id="1">
+																	
+	<div class="">
+
+		<div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/casa-colvale/">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div>
+
+		<div class="row m-t-20">
+			<div class="col-sm-12">
+				<h6 class="no-m-t fly-out-heading-size bat-color bolder m-b-20">Summary</h6>
+				<div class="gallery-stat flex-row">
+					<div class="property-image gallery-stat__row">
+						<h5 class="number bolder">30 <i class="fa fa-picture-o x-small p-l-5" aria-hidden="true"></i></h5>
+						<p class="m-b-0 lighter">Property Images</p>
+					</div>
+					<div class="room-bar subRow gallery-stat__row">
+						<h5 class="number flex-row space-between bolder">00 <a href="#" class="secondary-link"><i class="fa fa-external-link x-small" aria-hidden="true"></i></a></h5>
+						<p class="m-b-0">Premier Room + BAR</p>
+					</div>
+					<div class="delux-room subRow gallery-stat__row">
+						<h5 class="number flex-row space-between bolder">00 <a href="#" class="secondary-link"><i class="fa fa-external-link x-small" aria-hidden="true"></i></a></h5>
+						<p class="m-b-0">Grand Deluxe Room</p>
+					</div>
+				</div>
+
+				<div class="actions-wrapper ">
+					<div class="alert alert-info m-b-0 m-t-25 flex-row">
+						<i class="fa fa-info-circle p-r-10 text-info" aria-hidden="true"></i>
+						<span>Once you upload images, you can click and drag to reorder them.</span>
+					</div>
+
+					<div class="property-image m-t-10 p-t-20">
+						<div class="flex-row space-between titleRow">
+							<div class="flex-row subrow">
+								<h6 class="no-m-t fly-out-heading-size bat-color bolder m-b-15 flex-row">
+									Property Images
+								</h6>
+								<div class="flex-row">
+									<select class="fnb-select select-variant form-control text-lighter">
+					                    <option value="">-Select Room-</option>
+					                    <option value="">Deluxe Room</option>
+					                </select>
+					                <button class="fnb-btn check-btn">
+					                	<i class="fa fa-check" aria-hidden="true"></i>
+					                </button>
+					                <button class="fnb-btn delete-btn">
+					                	<i class="fa fa-trash" aria-hidden="true"></i>
+					                </button>
+								</div>
+							</div>
+							<button class="btn fnb-btn s-outline border-btn bold-btn full m-t-10 flex-row add-pic" data-toggle="modal" data-target="#add-photos"><i class="fa fa-picture-o p-r-10" aria-hidden="true"></i> Add Images</button>
+						</div>
+						<div class="flex-row flex-wrap m-t-15">
+							<div class="property-pics external-pic pic-1" data-toggle="modal" data-target="#edit-photos">
+								<div style="background-image: url(http://localhost:1313/goomo_2/img/hotel-1.PNG)">
+								</div>
+								<img src="http://localhost:1313/goomo_2/img/image-edit.png" class="img-responsive edit-img">
+							</div>
+							<div class="property-pics external-pic pic-2" data-toggle="modal" data-target="#edit-photos">
+								<div style="background-image: url(http://localhost:1313/goomo_2/img/hotel-2.PNG)">
+								</div>
+								<img src="http://localhost:1313/goomo_2/img/image-edit.png" class="img-responsive edit-img">
+							</div>
+							<div class="property-pics external-pic pic-3" data-toggle="modal" data-target="#edit-photos">
+								<div style="background-image: url(http://localhost:1313/goomo_2/img/hotel-3.png)">
+								</div>
+								<img src="http://localhost:1313/goomo_2/img/image-edit.png" class="img-responsive edit-img">
+							</div>
+							<div class="property-pics external-pic pic-4" data-toggle="modal" data-target="#edit-photos">
+								<div style="background-image: url(http://localhost:1313/goomo_2/img/hotel-4.jpg)">
+								</div>
+								<img src="http://localhost:1313/goomo_2/img/image-edit.png" class="img-responsive edit-img">
+							</div>
+							<div class="property-pics external-pic pic-2" data-toggle="modal" data-target="#edit-photos">
+								<div style="background-image: url(http://localhost:1313/goomo_2/img/hotel-2.PNG)">
+								</div>
+								<img src="http://localhost:1313/goomo_2/img/image-edit.png" class="img-responsive edit-img">
+							</div>
+						</div>
+					</div>
+
+					<div class="property-image premier-room m-t-40 p-t-20">
+						<div class="flex-row space-between titleRow">
+							<div class="flex-row">
+								<h6 class="no-m-t fly-out-heading-size bat-color bolder m-b-5 flex-row">
+									Premier Room + BAR
+								</h6>
+							</div>
+							<button class="btn fnb-btn s-outline border-btn bold-btn full m-t-10 flex-row add-pic" data-toggle="modal" data-target="#add-photos"><i class="fa fa-picture-o p-r-10" aria-hidden="true"></i> Add Photos</button>
+						</div>
+						<div class="warning-bar flex-row">
+							<i class="fa fa-info-circle p-r-10 text-secondary" aria-hidden="true"></i>
+							<span>You have not uploaded any images for this room yet. Add atleast <span class="text-secondary"> 5 images </span> or assign images from property images gallery above.</span>
+						</div>
+						<div class="flex-row flex-wrap m-t-15">
+							<div class="property-pics">
+								<a href="#">
+									<img src="http://localhost:1313/goomo_2/img/placeholder.png" class="img-responsive">
+								</a>
+							</div>
+							<div class="property-pics">
+								<a href="#">
+									<img src="http://localhost:1313/goomo_2/img/placeholder.png" class="img-responsive">
+								</a>
+							</div>
+							<div class="property-pics">
+								<a href="#">
+									<img src="http://localhost:1313/goomo_2/img/placeholder.png" class="img-responsive">
+								</a>
+							</div>
+							<div class="property-pics">
+								<a href="#">
+									<img src="http://localhost:1313/goomo_2/img/placeholder.png" class="img-responsive">
+								</a>
+							</div>
+							<div class="property-pics">
+								<a href="#">
+									<img src="http://localhost:1313/goomo_2/img/placeholder.png" class="img-responsive">
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="property-image premier-room m-t-40 p-t-20">
+						<div class="flex-row space-between titleRow">
+							<div class="flex-row">
+								<h6 class="no-m-t fly-out-heading-size bat-color bolder m-b-5 flex-row">
+									Grand Deluxe Room
+								</h6>
+							</div>
+							<button class="btn fnb-btn s-outline border-btn bold-btn full m-t-10 flex-row add-pic" data-toggle="modal" data-target="#add-photos"><i class="fa fa-picture-o p-r-10" aria-hidden="true"></i> Add Photos</button>
+						</div>
+						<div class="warning-bar flex-row">
+							<i class="fa fa-info-circle p-r-10 text-secondary" aria-hidden="true"></i>
+							<span>You have not uploaded any images for this room yet. Add atleast <span class="text-secondary"> 5 images </span> or assign images from the property images gallery above.</span>
+						</div>
+						<div class="flex-row flex-wrap m-t-15">
+							<div class="property-pics">
+								<a href="#">
+									<img src="http://localhost:1313/goomo_2/img/placeholder.png" class="img-responsive">
+								</a>
+							</div>
+							<div class="property-pics">
+								<a href="#">
+									<img src="http://localhost:1313/goomo_2/img/placeholder.png" class="img-responsive">
+								</a>
+							</div>
+							<div class="property-pics">
+								<a href="#">
+									<img src="http://localhost:1313/goomo_2/img/placeholder.png" class="img-responsive">
+								</a>
+							</div>
+							<div class="property-pics">
+								<a href="#">
+									<img src="http://localhost:1313/goomo_2/img/placeholder.png" class="img-responsive">
+								</a>
+							</div>
+							<div class="property-pics">
+								<a href="#">
+									<img src="http://localhost:1313/goomo_2/img/placeholder.png" class="img-responsive">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="modal fnb-modal  modal-center fade" id="add-photos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" modal-type="email">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close g-close" data-dismiss="modal" aria-label="Close">&#10005;</button>
+            </div>
+            <div class="modal-body">
+                <img src="http://localhost:1313/goomo_2/img/upload-pic.png" class="img-responsive">
+    
+                <div class="text-center m-t-30">
+                    <button class="btn fnb-btn primary-btn border-btn center-block bold-btn full m-t-10 flex-row add-pic">Select Files</button>
+                    <p class="m-b-0 x-small m-t-10">Please only upload photos that <span class="text-primary">you own the rights to.</span></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+	
+	<div class="modal fnb-modal edit-photos modal-center fade" id="edit-photos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" modal-type="email">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close g-close" data-dismiss="modal" aria-label="Close">&#10005;</button>
+            </div>
+            <div class="modal-body">
+                <div class="edit-gallery flex-row align-reset">
+                    <div class="tags">
+                        <div class="m-t-20">
+                            <h6 class="bolder">Tag this photo</h6>
+                            <span>Tell us what's in this photo by adding tags - tags helps us assist guest with their search &amp; connect them to your property.</span>
+                        </div>
+                        <button class="m-t-20 m-b-20 btn fnb-btn secondary-btn border-btn bold-btn m-t-10 flex-row space-between add-pic"><span><i class="fa fa-tag p-r-10" aria-hidden="true"></i> Swimming Pool</span> <span class="p-l-5">&#10005;</span></button>
+                     
+
+                        <input type="text" class="form-control fnb-input payment-add flexdatalist" multiple="multiple" placeholder="+Add Tags" list="locations" value="Deluxe Room">
+                            <datalist id="locations">
+                                <option value="premier">Premier Room</option>
+                                <option value="deluxe">Deluxe Room</option>
+                            </datalist>
+
+                        <div class="m-t-20">
+                            <p class="label-size">Indicate if this is a Rooms photo:</p>
+                            <div class="radio-group m-t-15">
+                                <label for="yes" class="m-r-15">
+                                    <input value="" type="radio" class="fnb-radio" name="contract" id="yes"
+                                    checked="">
+                                    <span class="p-l-5 text-medium">Premier Room + BAR</span>
+                                </label>
+                                <label for="no" class="m-t-10">
+                                    <input value="" type="radio" class="fnb-radio" name="contract" id="no">
+                                    <span class="p-l-5 text-medium">Grand Deluxe Room</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-gal">
+                        <img src="http://localhost:1313/goomo_2/img/edit-gallery.png" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+	
+	<div class="modal fade fnb-modal" id="approveModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content text-center">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-secondary">Approve Casa Colvale</h4>
+      </div>
+      <hr>
+      <div class="modal-body">
+        <p class="p-t-20">
+        	By proceeding, you confirm that you have reviewed the content provided by the property and this section is ready to be published.<br>
+        	Once you proceed, the content on this page will be live on Goomo.com<br><br>
+        	Are you sure you want to proceed?
+        </p>
+      </div>
+      <hr>
+      <div class="modal-footer flex-row justify-center">
+        <button type="button" class="btn fnb-btn outline" data-dismiss="modal">Not yet</button>
+        <button type="button" class="btn fnb-btn primary-btn" data-dismiss="modal">Yes, Approve</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<script type="text/javascript">
+		var existingComments = [
+		  {
+		    "sectionId": "1",
+		    "comments": [
+		      {
+		        "comment": "<ul><li>Images can be added at property level and room level</li> <li>The rooms should be configured first to add images</li> <li>The images at the property level can also be assigned to the room</li> <li>Once the images are added they can be dragged to reorder</li> <li>Tags can be added to the images</li></ul> "
+		      }
+		    ]
+		  }
+		];
+	</script>
+
+
+
+
+																	</div>
+
+
+																</div>
+															</div>
+														</div>
+
+													</div>
+											</div>
+									</div>
+
+							</div>
+					</div>
+					<div class="site-overlay"></div>
+			</div>
+			
+
+		
+<div class="pos-fixed fly-out side-toggle">
+    <div class="mobile-back desk-hide mobile-flex">
+        <div class="left mobile-flex">
+            <i class="fa fa-arrow-left text-primary back-icon" aria-hidden="true"></i>
+            <p class="element-title heavier m-b-0">Back</p>
+        </div>
+        <div class="right">
+            
+        </div>
+    </div>
+    <div class="fly-out__content">
+        <div class="sidebar-updates page-sidebar">
+
+        
+
+            <div class="page-sidebar__header flex-row space-between mobile-hide">
+                <div class="backLink flex-row">
+                    <a href="" class="primary-link p-r-10 element-title article-back"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                    <div class="sub-title bolder">Back</div>
+                </div>
+            </div>
+            <div class="page-sidebar__body">
+                <div class="update-sec sidebar-article">
+                    <div class="update-sec__body update-space">
+                        <img src="http://localhost:1313/goomo_2/img/comment-pic.png" class="img-responsive center-block">
+                    </div>
+
+                    
+                        
+                        <div class="post-comment m-t-40">
+                            <div class="form-group m-b-30">
+                                <label class="label-size text-info">Comments by QC</label>
+                                <textarea class="form-control fnb-input" placeholder="Leave a comment"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn fnb-btn secondary-btn bold-btn full">Post</button>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+
+        
+
+        </div>
+    </div>
+</div>
+
+		
+<footer>
+	<div class="container">
+      <div class="goomoIcon">
+      <img src="http://localhost:1313/goomo_2/img/goomo_logo.png" class="img-responsive center-block m-t-10 m-b-20" width="">
+      </div>
+      <div class="footerText">
+        <p class="copyright">
+          Copyright ©
+          
+          2017
+          
+          Goomo Group. All rights reserved.
+          
+        </p>
+      </div>
+    </div>
+</footer>
+
+
+		</div>
+
+		<script type="text/javascript" src="/goomo_2/js/jquery.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/bootstrap.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/datatables.net/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/bootstrap-multiselect.js"></script>
+
+
+		<script type="text/javascript" src="/goomo_2/js/moment.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/flex-datalist/jquery.flexdatalist.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/readmore.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/side-comments.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/tooltipster.bundle.min.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/custom.js"></script>
+	</body>
+</html>

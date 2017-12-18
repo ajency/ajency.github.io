@@ -1,0 +1,5 @@
+publishDir = "docs"
+baseURL = "http://localhost:1313/goomo_2/"
+languageCode = "en-us"
+title = "Goomo by Ajency"
+theme = "goomo"

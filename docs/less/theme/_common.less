@@ -1,0 +1,50 @@
+.card-dialog{
+	position: relative;
+	.close{
+		position: absolute;
+	    right: 5px;
+	    top: 0px;
+	    color: @accent-secondary;
+	    opacity: 9;
+	}
+	.input-group-addon{
+	    background: none;
+	    border-top: 0px;
+	    border-right: 0px;
+	}
+	@media screen and (max-width: @mobile){
+ 	.col-xs-6{
+ 		margin-bottom:5px;
+ 	}
+}
+}
+.add-more{
+	    font-size: 25px;
+	    margin-top: 10px;
+	    color: @accent-secondary;
+}
+.my-popover-content {
+    display:none;
+}
+.listing-table{
+	.popover{
+		right:20px;
+		padding:10px;
+	}
+}
+.booking-bucket{
+	    box-shadow: none;
+   		border-left: 1px solid #eee;
+   		@media screen and (max-width: @mobile){
+		    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+   			border-left: 0px;
+   			.buckets{
+   			height:80px;
+   			}
+	}
+}
+@media screen and (max-width: @mobile){
+	.commentable-section {
+    	padding-right:0px;
+	}
+}

@@ -1,0 +1,73 @@
+<!-- header -->
+<header class="fnb-header">
+	<nav class="navbar navbar-default nav-extranet">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header mobile-head mobile-flex">
+				<div class="mobile-head__left mobile-flex">
+					<i class="fa fa-bars sideMenu" aria-hidden="true"></i>
+					<img src="{{"img/goomo_logo.png" | absURL}}" class="img-responsive desk-hide" width="80">
+				</div>
+				<div class="mobile-head__right mobile-flex">
+					<a href="" class="login">
+						<i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+					</a>
+				</div>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse m-side-bar" id="bs-example-navbar-collapse-1">
+				<ul class="mobile-top mobile-flex">
+					<li>
+						<p class="mobile-top__text">Sign in to get a personalised feed!</p>
+					</li>
+					<li>
+						<button type="button" class="fnb-btn outline">Login</button>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav ">
+					<li>
+						<h5 class="dash-title">
+							<img src="{{"img/ajency-logo.png" | absURL}}" class="img-responsive" width="90">
+						</h5>
+					</li>
+					<li>
+						<p class="flex-row default-size text-lighter">Powered by <img src="{{"img/mobiz.png" | absURL}}" class="img-responsive"></p>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right side-section p-t-0">
+					<li><a href="#" class="text-uppercase x-small">Home</a></li>
+					<li><a href="#" class="text-uppercase x-small">Approve</a></li>
+					<li><a href="#" class="text-uppercase x-small">Bookings</a></li>
+					<li><a href="#" class="text-uppercase x-small">Flights</a></li>
+					<li><a href="#" class="text-uppercase x-small">Hotels</a></li>
+					<li class="mobile-hide">
+						<div class="dropdown login user-logged align-top m-t-5">
+							<i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+							<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="drop-trigger">
+								<span class="ellipsis userName">Krish Dsouza<br>
+								    <span class="text-lighter">UI Designer</span>
+								</span>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li>Sign Out</li>
+							</ul>
+						</div>
+
+					</li>
+
+				</ul>
+
+				<div class="desk-hide">
+					{{ partial "sidebar_extranet.html" .}}
+				</div>
+
+
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+</header>
+<!-- header ends -->

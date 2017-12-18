@@ -1,0 +1,43 @@
+
+input[type=radio].fnb-radio {
+    margin-right: 8px;
+    position: relative;
+    &:before {
+        content: "\f058";
+        font-family: 'FontAwesome';
+        background-color: #fff;
+        padding: 0;
+        position: absolute;
+        top: -6px;
+        left: -1px;
+        color: #dcdcdc;
+        font-size: 1.8em;
+        cursor: pointer;
+    }
+    &:checked {
+        &:before {
+            // content: "\f058";
+            color: @accent-secondary;
+        }
+    }
+    &.disabled{
+        pointer-events: none;
+        &:before{
+            content: '\f10c';
+            color: #ccc;
+        }
+    }
+
+    &.bg-aqua{
+        &:before{
+            background-color: #ecf6f5;
+            color: #bdbdbd;
+        }
+        &:checked {
+            &:before {
+                // content: "\f058";
+                color: @accent-secondary;
+            }
+        }
+    }
+}

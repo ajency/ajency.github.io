@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="" class="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Create New Property :: Goomo by Ajency</title>
+
+		
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,700" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="http://localhost:1313/goomo_2/css/font-awesome/css/font-awesome.min.css">
+		
+		<link rel="stylesheet" type="text/css" href="http://localhost:1313/goomo_2/js/datatables.net-select-dt/css/select.dataTables.css">
+		
+		<link rel="shortcut icon" href="http://localhost:1313/goomo_2/img/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/jquery.flexdatalist.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/bootstrap-multiselect.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/js/bootstrap-daterangepicker/daterangepicker.css">
+		<link href="http://localhost:1313/goomo_2/css/main.css" rel="stylesheet">
+	</head>
+	<body class="">
+
+		
+<header class="fnb-header">
+	<nav class="navbar navbar-default nav-extranet">
+		<div class="container-fluid">
+			
+			<div class="navbar-header mobile-head mobile-flex">
+				<div class="mobile-head__left mobile-flex">
+					<i class="fa fa-bars sideMenu" aria-hidden="true"></i>
+					<img src="http://localhost:1313/goomo_2/img/goomo_logo.png" class="img-responsive desk-hide" width="80">
+				</div>
+				<div class="mobile-head__right mobile-flex">
+					<a href="" class="login">
+						<i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+					</a>
+				</div>
+			</div>
+			
+			<div class="collapse navbar-collapse m-side-bar" id="bs-example-navbar-collapse-1">
+				<ul class="mobile-top mobile-flex">
+					<li>
+						<p class="mobile-top__text">Sign in to get a personalised feed!</p>
+					</li>
+					<li>
+						<button type="button" class="fnb-btn outline">Login</button>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav ">
+					<li>
+						<h5 class="dash-title">Extranet</h5>
+					</li>
+					<li>
+						
+
+
+
+<ul class="fnb-breadcrums flex-row">
+  <li class="fnb-breadcrums__section"><a href="http://localhost:1313/goomo_2/listing"><p class="fnb-breadcrums__title">Dashboard</p></a></li>
+  <li class="fnb-breadcrums__section">
+  	<p class="fnb-breadcrums__title">></p>
+  </li>
+
+  
+  
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Extranet</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li class="breadcrump_active"><p class="fnb-breadcrums__title">Create</p></li>
+  	  
+
+      
+
+      
+
+  
+    
+      
+
+  
+</ul>
+
+
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right side-section">
+
+					<li class="mobile-hide">
+						<div class="dropdown login user-logged">
+							<i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+							<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="drop-trigger">
+								<span class="ellipsis userName">Krish Dsouza</span>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li>Sign Out</li>
+							</ul>
+						</div>
+
+					</li>
+
+				</ul>
+
+				<div class="desk-hide">
+					<div class="">
+
+	<label class="small-label">MAIN</label>
+	<ul class="gs-steps menu-top-level" role="tablist">
+		<li class="">
+			<a href=" # " class=" form-toggle " id=""><i class="fa fa-bars"></i> Dashboard </a>
+		</li>
+		<li class=" active ">
+			<a href="#listingSubMenu" class=" form-toggle " id="" role="button" data-toggle="collapse"><i class="fa fa-list"></i> Properties</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="listingSubMenu" >
+				<li class="">
+					<a href="/goomo_html/extranet/active-properties" class="" id="">Active Properties</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/inactive-properties" class="" id="">Inactive Properties</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/inactive-cp-properties" class="sidebar-link-custom" id="" style="display: block">Inactive Properties <br> <span class="text-primary bolder">(Content Pending)</span></a>
+				</li>
+				<li>
+					<a href="#" class="" id="">My Properties</a>
+				</li>
+				<li>
+					<a href="#" class="" id="">Unclaimed Properties </a>
+				</li>
+				<li>
+					<a href="#" class="" id="">Under Review Properties </a>
+				</li>
+				<li class=" active ">
+					<a href="/goomo_html/extranet/create" class="" id="">Create New </a>
+				</li>
+			</ul>
+		</li>
+		<li class="">
+			<a href=" # " class=" form-toggle " id=""><i class="fa fa-cog"></i> Configurations </a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="">
+					<a href="/goomo_html/extranet/regions" class="" id="">Regions</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/location/" class="" id="">Location Tags</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/chain/" class="" id="">Chain</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/commission/" class="" id="">Commission</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/tax-rules/" class="" id="">Tax Rules</a>
+				</li>
+				
+				<li class="">
+					<a href="/goomo_html/extranet/meal/" class="" id="">Meal Plans</a>
+				</li>
+			</ul>
+		</li>
+		<li class="">
+			<a href="#" class=" form-toggle " id=""><i class="fa fa-user"></i> Users</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="">
+					<a href="/goomo_html/extranet/internal" class="" id="">Internal Users</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/add-internal" class="" id="">Add Internal Users</a>
+				</li>
+			</ul>
+		</li>
+		<li class="">
+			<a href="#" class=" form-toggle " id=""><i class="fa fa-line-chart"></i> Reports</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="">
+					<a href="/goomo_html/extranet/bookings" class="" id="">Booking Details</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/margin" class="" id="">Margin Report</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/inventory" class="" id="">Inventory Status</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/rates" class="" id="">Rate Report</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	
+</div>
+				</div>
+
+
+			</div>
+			
+		</div>
+		
+	</nav>
+</header>
+
+
+		
+		<div class="container-fluid">
+				<div class="row">
+						<div class="col-xs-12 ">
+
+								<div class=" m-b-10">
+										<div class="row sidebar-row">
+												<div class="col-xs-12 col-sm-3 col-lg-2 dash-sidebar mobile-hide">
+													<div class="">
+
+	<label class="small-label">MAIN</label>
+	<ul class="gs-steps menu-top-level" role="tablist">
+		<li class="">
+			<a href=" # " class=" form-toggle " id=""><i class="fa fa-bars"></i> Dashboard </a>
+		</li>
+		<li class=" active ">
+			<a href="#listingSubMenu" class=" form-toggle " id="" role="button" data-toggle="collapse"><i class="fa fa-list"></i> Properties</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="listingSubMenu" >
+				<li class="">
+					<a href="/goomo_html/extranet/active-properties" class="" id="">Active Properties</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/inactive-properties" class="" id="">Inactive Properties</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/inactive-cp-properties" class="sidebar-link-custom" id="" style="display: block">Inactive Properties <br> <span class="text-primary bolder">(Content Pending)</span></a>
+				</li>
+				<li>
+					<a href="#" class="" id="">My Properties</a>
+				</li>
+				<li>
+					<a href="#" class="" id="">Unclaimed Properties </a>
+				</li>
+				<li>
+					<a href="#" class="" id="">Under Review Properties </a>
+				</li>
+				<li class=" active ">
+					<a href="/goomo_html/extranet/create" class="" id="">Create New </a>
+				</li>
+			</ul>
+		</li>
+		<li class="">
+			<a href=" # " class=" form-toggle " id=""><i class="fa fa-cog"></i> Configurations </a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="">
+					<a href="/goomo_html/extranet/regions" class="" id="">Regions</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/location/" class="" id="">Location Tags</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/chain/" class="" id="">Chain</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/commission/" class="" id="">Commission</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/tax-rules/" class="" id="">Tax Rules</a>
+				</li>
+				
+				<li class="">
+					<a href="/goomo_html/extranet/meal/" class="" id="">Meal Plans</a>
+				</li>
+			</ul>
+		</li>
+		<li class="">
+			<a href="#" class=" form-toggle " id=""><i class="fa fa-user"></i> Users</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="">
+					<a href="/goomo_html/extranet/internal" class="" id="">Internal Users</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/add-internal" class="" id="">Add Internal Users</a>
+				</li>
+			</ul>
+		</li>
+		<li class="">
+			<a href="#" class=" form-toggle " id=""><i class="fa fa-line-chart"></i> Reports</a>
+			<ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="" >
+				<li class="">
+					<a href="/goomo_html/extranet/bookings" class="" id="">Booking Details</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/margin" class="" id="">Margin Report</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/inventory" class="" id="">Inventory Status</a>
+				</li>
+				<li class="">
+					<a href="/goomo_html/extranet/rates" class="" id="">Rate Report</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	
+</div>
+												</div>
+												<div class="col-xs-12 col-sm-9 col-lg-10">
+
+													<div class="">
+														<div class="">
+															<div class="tab-content p-t-0  ">
+
+																
+	<div class="m-t-25">
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="flex-row space-between">
+					<div class="main-title">
+						<h3 class="no-m-t fly-out-heading-size text-info ">Create New Property</h3>
+						<p class="text-muted">Please complete the fields below. All fields are required</p>
+					</div>
+					<div class="section-icon mobile-hide">
+						<img src="http://localhost:1313/goomo_2/img/create-listing.png" class="img-responsive">
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-12">
+				<h5 class="bolder m-t-35 prop-title">Property Information</h5>
+				<div class="row field-gap c-gap">
+		            <div class="col-sm-6">
+		                <label class="label-size text-info">Business Name <i class="fa fa-question-circle p-l-5 text-info" aria-hidden="true"></i></label>
+		                <input type="text" class="form-control fnb-input" placeholder="Name of Business Entity">
+		            </div>
+		            <div class="col-sm-6 c-gap">
+		                <label class="label-size text-info">Display Name <i class="fa fa-question-circle p-l-5 text-info" aria-hidden="true"></i></label>
+		                <input type="text" class="form-control fnb-input" placeholder="Property Name to be displayed">
+		            </div>
+		        </div>
+		        <div class="row listing-fields">
+		        	<div class="col-sm-9">
+		        		<div class="row field-gap">
+			        		<div class="col-sm-4 c-gap">
+				                <label class="label-size text-info">Country</label>
+				                <select class="fnb-select select-variant form-control text-lighter" name="">
+				                    <option value="">--Select--</option>
+				                    <option selected="">India</option>
+				                    <option>Singapore</option>
+				                    <option>China</option>
+				                    <option>Russia</option>
+				                </select>
+				            </div>
+				            <div class="col-sm-4 c-gap">
+				                <label class="label-size text-info">State</label>
+				                <select class="fnb-select select-variant form-control text-lighter" name="">
+				                    <option value="">--Select--</option>
+				                    <option>Delhi</option>
+				                    <option selected="">Goa</option>
+				                    <option>Gujarat</option>
+				                    <option>Bangalore</option>
+				                </select>
+				            </div>
+				            <div class="col-sm-4 c-gap">
+				                <label class="label-size text-info">City</label>
+				                <select class="fnb-select select-variant form-control text-lighter" name="">
+				                    <option value="">--Select--</option>
+				                    <option selected="">Panjim</option>
+				                    <option>Mapusa</option>
+				                    <option>Madgaon</option>
+				                    <option>Shivajinagar</option>
+				                </select>
+				            </div>
+				        </div>
+				        <div class="row field-gap">
+				            <div class="col-sm-12 location-row c-gap">
+				                <label class="label-size text-info">Location</label>
+				                 <input type="text" class="form-control fnb-input payment-add flexdatalist" multiple="multiple" placeholder="Type for suggestions &amp; select" list="locations" value="">
+						        <datalist id="locations">
+						            <option value="goa">Goa</option>
+						            <option value="mumbai">Mumbai</option>
+						            <option value="delhi">Delhi</option>
+						            <option value="gujarat">Gujarat</option>
+						            <option value="bangalore">Bangalore</option>
+						        </datalist>
+				            </div>
+				        </div>
+				        <div class="row flex-row flex-wrap field-gap">
+				            <div class="col-sm-4 c-gap">
+				                <label class="label-size text-info">Chain Name</label>
+				                <select class="fnb-select select-variant form-control text-lighter" name="">
+				                    <option value="">--Select--</option>
+				                    <option selected="">Taj Hotels</option>
+				                    <option>Oberoi Hotels</option>
+				                    <option>Le Meridien</option>
+				                    <option>Hilton Group</option>
+				                    <option>Trident Hotels</option>
+				                    <option>The Park</option>
+				                    <option>Lalit Group of Hotels</option>
+				                    <option>The Leela Group</option>
+				                </select>
+				            </div>
+				            <div class="col-sm-4 c-gap">
+				                <label class="label-size text-info">Property Type</label>
+				                <select class="fnb-select select-variant form-control text-lighter" name="">
+				                    <option value="add-internal.html">--Select--</option>
+				                    <option selected="">Guesthouse/bed and breakfast</option>
+				                    <option>Hotel</option>
+				                    <option>Resort</option>
+				                    <option>Resort Villa</option>
+				                    <option>Private Villa</option>
+				                    <option>Bungalow</option>
+				                    <option>Private VillaHoliday Park/Caravan Park</option>
+				                    <option>House</option>
+				                    <option>Apartment</option>
+				                    <option>Hostel</option>
+				                    <option>Serviced Apartments</option>
+				                    <option>Villa</option>
+				                    <option>Tent</option>
+				                    <option>Capsule Hotel</option>
+				                    <option>Motel</option>
+				                    <option>Boat/Cruise</option>
+				                    <option>Love Hotel</option>
+				                </select>
+				            </div>
+				            <div class="col-sm-4 c-gap">
+				                <label class="label-size text-info">Property Highlights</label>
+				                <select multiple="multiple" class="form-control prop-theme" name="">
+				                    <option value="swimming-pool">Swimming Pool</option>
+				                    <option value="internet">Internet</option>
+				                    <option value="gym">Gym/Fitness</option>
+				                    <option value="car">Car Park</option>
+				                    <option value="spa">Spa/Sauna</option>
+				                    <option value="bus-fac">Business Facilities</option>
+				                    <option value="family">Family/Child Friendly</option>
+				                    <option value="restuarant">Restaurants</option>
+				                    <option value="no-smoking">Non-smoking</option>
+				                    <option value="smoking">Smoking Area</option>
+				                    <option value="airport">Airport Transfer</option>
+				                    <option value="pets">Pets Allowed</option>
+				                    <option value="facility">Facilities For Disabled Guests</option>
+				                    <option value="golf">Golf Course (on-site)</option>
+				                    <option value="night">Night Club</option>
+				                    <option value="beach">Beach Access</option>
+				                </select>
+				            </div>
+				            <div class="col-sm-4 c-gap field-gap">
+				                <label class="label-size text-info">Star Rating</label>
+				                <select class="fnb-select select-variant form-control text-lighter" name="">
+				                    <option value="">--Select--</option>
+				                    <option>1 Star</option>
+				                    <option>2 Stars</option>
+				                    <option selected="">3 Stars</option>
+				                    <option>4 Stars</option>
+				                    <option>5 Stars</option>
+				                    <option>Unrated</option>
+				                </select>
+				            </div>
+				        </div>
+		        	</div>
+		            <div class="col-sm-3 c-gap">
+		            	<div class="contract text-center">
+		            		<img src="http://localhost:1313/goomo_2/img/contract.png" class="img-responsive center-block">
+		            		<h6>Contract with all property details?</h6>
+		            		<div class="radio-group m-t-15 m-b-15">
+		            			<label for="yes" class="m-r-15">
+		            				<input value="" type="radio" class="fnb-radio" name="contract" id="yes"
+		            				checked="">
+		            				<span class="p-l-5 text-medium">Yes</span>
+		            			</label>
+		            			<label for="no">
+		            				<input value="" type="radio" class="fnb-radio" name="contract" id="no">
+		            				<span class="p-l-5 text-medium">No</span>
+		            			</label>
+		            		</div>
+		            		
+		            		<button class="btn fnb-btn s-outline bold-btn full m-t-10"><i class="fa fa-camera p-r-5" aria-hidden="true"></i> <span>Upload</span></button>
+		            	</div>
+		            </div>
+		        </div>
+			</div>
+			
+			<div class="col-sm-12 m-t-40 listing-fields">
+				<h5 class="bolder m-t-35 prop-title">Assign a Market Manager <i class="fa fa-question-circle p-l-5 text-info" aria-hidden="true"></i></h5>
+				<div class="row field-gap flex-row flex-wrap">
+		            <div class="col-sm-4 c-gap">
+		                <label class="label-size text-info">Market Manager</label>
+		                <select class="fnb-select select-variant form-control text-lighter" name="">
+		                    <option value="">None</option>
+		                    <option selected="">Vikas Khanna</option>
+		                </select>
+		            </div>
+		            <div class="col-sm-4 c-gap flex-row">
+		                <img src="http://localhost:1313/goomo_2/img/bulb.png" class="img-responsive">
+		                <p class="m-b-0 text-muted p-l-5">The property you are about to create will be associated with the selected Market Manager</p>
+		            </div>
+		        </div>
+		        
+			</div>
+			
+			<div class="col-sm-12 m-t-40 listing-fields m-b-50">
+				<img src="http://localhost:1313/goomo_2/img/user.png" class="img-responsive user-icon">
+				<div class="add-user">
+					<h5 class="bolder m-t-25 prop-title">Add a User</h5>
+					<div class="row field-gap">
+			            <div class="col-sm-6 c-gap">
+			                <input type="text" class="form-control fnb-input no-label" placeholder="First Name">
+			            </div>
+			            <div class="col-sm-6 c-gap">
+			                <input type="text" class="form-control fnb-input no-label" placeholder="Last Name">
+			            </div>
+			            <div class="col-sm-6 c-gap field-gap">
+			                <input type="email" class="form-control fnb-input no-label" placeholder="Email Address">
+			            </div>
+			            <div class="col-sm-6 c-gap field-gap">
+			                <input type="tel" class="form-control fnb-input no-label" placeholder="Contact Number">
+			            </div>
+			        </div>
+			        <div class="row field-gap">
+			            <div class="col-sm-4 c-gap">
+			            	<label class="label-size text-info">Role</label>
+			                <select class="fnb-select select-variant form-control text-lighter" name="">
+			                    <option value="">None</option>
+			                    <option selected="">General Manager</option>
+			                </select>
+			            </div>
+			            <div class="col-sm-8 c-gap">
+			                <p class="m-b-0 text-color m-r-40 m-t-10"><span class="text-danger">Note:</span> This user will have full access to manage the property he/she can edit the information for this property. This user can add and remove other user and also control the access each of the other users get.</p>
+			            </div>
+			        </div>
+			        <div class="row field-gap">
+			            <div class="col-sm-6 c-gap">
+			            	<div class="radio-group m-t-10 custom-radio">
+		            			<label for="wel" class="m-b-25">
+		            				<input value="" type="checkbox" class="fnb-checkbox" name="contract" id="wel"
+		            				checked="">
+		            				<span class="p-l-5 text-medium text-color default-size">Send Welcome Mail</span>
+		            			</label>
+		            			<br>
+		            			<label for="act">
+		            				<input value="" type="checkbox" class="fnb-checkbox" name="contract" id="act">
+		            				<span class="p-l-5 text-medium text-color default-size">Assign to loading team, do not send activation mail</span>
+		            			</label>
+		            		</div>
+			            </div>
+			        </div>
+				</div>
+				<div class="row m-t-30">
+				    <div class="col-sm-12">
+		            	<div class="text-center listing-create-btn">
+		            		<a href="/goomo_html/checklist/casa-bella/" class="btn fnb-btn secondary-btn bold-btn border-btn full">Create Property</a>
+		            	</div>
+		            </div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+															</div>
+														</div>
+													</div>
+
+												</div>
+										</div>
+								</div>
+
+						</div>
+				</div>
+				<div class="site-overlay"></div>
+		</div>
+		
+
+		
+<footer>
+	<div class="container">
+      <div class="goomoIcon">
+      <img src="http://localhost:1313/goomo_2/img/goomo_logo.png" class="img-responsive center-block m-t-10 m-b-20" width="">
+      </div>
+      <div class="footerText">
+        <p class="copyright">
+          Copyright ©
+          
+          2017
+          
+          Goomo Group. All rights reserved.
+          
+        </p>
+      </div>
+    </div>
+</footer>
+
+
+		<script type="text/javascript" src="/goomo_2/js/jquery.min.js"></script>
+		
+		<script type="text/javascript" src="/goomo_2/js/bootstrap.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/datatables.net/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/datatables.net-select/js/dataTables.select.min.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/bootstrap-multiselect.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/moment.min.js"></script>	
+		<script type="text/javascript" src="/goomo_2/js/bootstrap-daterangepicker/daterangepicker.js"></script>	
+		
+
+		
+		<script type="text/javascript" src="/goomo_2/js/flex-datalist/jquery.flexdatalist.min.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/custom.js"></script>
+	</body>
+</html>

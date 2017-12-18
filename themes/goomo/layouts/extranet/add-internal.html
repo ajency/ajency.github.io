@@ -1,0 +1,182 @@
+{{ define "main" }}
+	<div class="m-t-25">
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="flex-row space-between">
+					<div class="main-title">
+						<h3 class="no-m-t fly-out-heading-size text-info ">{{ .Title }}</h3>
+						<!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+					</div>
+					<div class="section-icon mobile-hide">
+						<img src="{{"img/add-internal.png" | absURL}}" class="img-responsive">
+					</div>
+				</div>
+			</div>
+			<!-- Form elements -->
+			<div class="col-sm-12">
+				<!-- <h5 class="bolder m-t-35 prop-title">Property Information</h5> -->
+				<div class="row field-gap c-gap">
+		            <div class="col-sm-6">
+		                <label class="label-size text-info">Name </label>
+		                <input type="text" class="form-control fnb-input" placeholder="Enter Name" value="Rajaram Sharma">
+		            </div>
+		            <div class="col-sm-6 c-gap">
+		                <label class="label-size text-info">Email </label>
+		                <input type="Email" class="form-control fnb-input" placeholder="Enter Email" value="rajaramsharma@gmail.com">
+		            </div>
+		            <div class="col-sm-6 c-gap m-t-30">
+		            	<label class="label-size text-info">Roles </label>
+		                <div class="radio-group m-t-10 custom-radio roles-box">
+	            			<label for="wel" class="">
+	            				<input value="" type="checkbox" class="fnb-checkbox" name="contract" id="wel"
+	            				checked="">
+	            				<span class="p-l-5 text-medium text-color default-size">Business Manager/Market Manager</span>
+	            			</label>
+	            			<label for="act">
+	            				<input value="" type="checkbox" class="fnb-checkbox" name="contract" id="act">
+	            				<span class="p-l-5 text-medium text-color default-size">Loading Team</span>
+	            			</label>
+	            			<label for="well" class="">
+	            				<input value="" type="checkbox" class="fnb-checkbox" name="contract" id="well">
+	            				<span class="p-l-5 text-medium text-color default-size">Finance/Legal</span>
+	            			</label>
+	            			<label for="weld" class="">
+	            				<input value="" type="checkbox" class="fnb-checkbox" name="contract" id="weld">
+	            				<span class="p-l-5 text-medium text-color default-size">Content Team</span>
+	            			</label>
+	            		</div>
+		            </div>
+		            <div class="col-sm-6 c-gap m-t-30">
+		                <label class="label-size text-info">Status </label>
+		                <select class="fnb-select select-variant form-control text-lighter p-l-0 status-label" name="">
+		                    <option value="">--Select--</option>
+		                    <option>Active</option>
+		                    <option>Draft</option>
+		                </select>
+		            </div>
+		        </div>
+		        <br clear="mobile-hide">
+		        <h5 class="bolder m-t-45 prop-title userTitle">User has access to the following listings (limited based on)</h5>
+		        <div class="row listing-fields access-fields m-t-30 flex-row flex-wrap">
+		        	<div class="col-sm-6 form-group c-gap flex-list">
+		        		<label class="label-size text-info required">Chain Name </label>
+		        		<div class="relative limited-tag simple-tag">
+		        			<input type="Email" class="form-control fnb-input" placeholder="" value="">
+		        			<label class="limited-tag__label">All</label>
+		        			<a href="#" class="secondary-link text-decor limited">Limited</a>
+		        		</div>
+		        		<div class="relative limited-tag flex-tag-row hidden">
+		        			<input type="Email" class="form-control fnb-input flexdatalist" multiple="multiple" list="chain-name" value="Taj Hotels" placeholder="Type for suggestions & hit enter">
+		        			<datalist id="chain-name">
+                            	<option value="booking">Taj Hotels</option>
+                            	<option value="test">Oberoi Hotels</option>
+                            	<option value="test">Hilton Group</option>
+                        	</datalist>
+                        	<a href="#" class="secondary-link text-decor restricted">Restricted</a>
+                        </div>
+		        	</div>
+		        	<div class="col-sm-6 form-group c-gap flex-list">
+		        		<label class="label-size text-info required">Country </label>
+		        		<div class="relative limited-tag simple-tag">
+		        			<input type="Email" class="form-control fnb-input" placeholder="" value="">
+		        			<label class="limited-tag__label">All</label>
+		        			<a href="#" class="secondary-link text-decor limited">Limited</a>
+		        		</div>
+		        		<div class="relative limited-tag flex-tag-row hidden">
+		        			<input type="Email" class="form-control fnb-input flexdatalist" multiple="multiple" list="country" value="India" placeholder="Type for suggestions & hit enter">
+		        			<datalist id="country">
+                            	<option value="india">India</option>
+                            	<option value="russia">Russia</option>
+                        	</datalist>
+                        	<a href="#" class="secondary-link text-decor restricted">Restricted</a>
+                        </div>
+		        	</div>
+		        	<div class="col-sm-6 form-group c-gap flex-list">
+		        		<label class="label-size text-info required">State </label>
+		        		<div class="relative limited-tag simple-tag hidden">
+		        			<input type="Email" class="form-control fnb-input" placeholder="" value="">
+		        			<label class="limited-tag__label">All</label>
+		        			<a href="#" class="secondary-link text-decor limited">Limited</a>
+		        		</div>
+		        		<div class="relative limited-tag flex-tag-row">
+		        			<input type="Email" class="form-control fnb-input flexdatalist" multiple="multiple" list="state" value="Goa" placeholder="Type for suggestions & hit enter">
+		        			<datalist id="state">
+                            	<option value="premier">Goa</option>
+                            	<option value="deluxe">Maharashtra</option>
+                        	</datalist>
+                        	<a href="#" class="secondary-link text-decor restricted">Restricted</a>
+                        </div>
+		        	</div>
+		        	<div class="col-sm-6 form-group c-gap flex-list">
+		        		<label class="label-size text-info required">City </label>
+		        		<div class="relative limited-tag simple-tag">
+		        			<input type="Email" class="form-control fnb-input" placeholder="" value="">
+		        			<label class="limited-tag__label">All</label>
+		        			<a href="#" class="secondary-link text-decor limited">Limited</a>
+		        		</div>
+		        		<div class="relative limited-tag flex-tag-row hidden">
+		        			<input type="Email" class="form-control fnb-input flexdatalist" multiple="multiple" list="city" value="Panjim" placeholder="Type for suggestions & hit enter">
+		        			<datalist id="city">
+                            	<option value="panjim">Panjim</option>
+                            	<option value="mapusa">Mapusa</option>
+                        	</datalist>
+                        	<a href="#" class="secondary-link text-decor restricted">Restricted</a>
+                        </div>
+		        	</div>
+		        	<div class="col-sm-6 form-group c-gap flex-list">
+		        		<label class="label-size text-info required">Location </label>
+		        		<div class="relative limited-tag">
+		        			<input type="Email" class="form-control fnb-input" placeholder="" value="">
+		        			<label class="limited-tag__label">All</label>
+		        			<a href="#" class="secondary-link text-decor">Limited</a>
+		        		</div>
+		        	</div>
+		        	<div class="col-sm-6 form-group c-gap">
+		        		<label class="label-size text-info required">Booking Value </label>
+		        		<div class="relative limited-tag">
+		        			<input type="Email" class="form-control fnb-input" placeholder="" value="">
+		        			<label class="limited-tag__label">All</label>
+		        			<a href="#" class="secondary-link text-decor">Limited</a>
+		        		</div>
+		        	</div>
+		        	<div class="col-sm-6 form-group c-gap flex-list">
+		        		<label class="label-size text-info required">Star Rating </label>
+		        		<div class="relative limited-tag">
+		        			<input type="Email" class="form-control fnb-input flexdatalist" multiple="multiple" list="star" value="Three Star" placeholder="Type for suggestions & hit enter">
+		        			<datalist id="star">
+                            	<option value="premier">Four Star</option>
+                            	<option value="deluxe">Five Star</option>
+                        	</datalist>
+                        	<a href="#" class="secondary-link text-decor">Restricted</a>
+                        </div>
+		        	</div>
+		        </div>
+			</div>
+
+			<!-- Set password -->
+			<div class="col-sm-12 m-t-40 listing-fields m-b-50">
+				<div class="add-user">
+					<h5 class="bolder m-t-25 prop-title">Set a password for this user</h5>
+					<div class="row field-gap">
+			            <div class="col-sm-6 c-gap">
+			                <input type="text" class="form-control fnb-input no-label" placeholder="Password">
+			            </div>
+			            <div class="col-sm-6 c-gap">
+			                <input type="text" class="form-control fnb-input no-label" placeholder="Confirm Password">
+			            </div>
+			        </div>
+				</div>
+				<div class="row m-t-30">
+				    <div class="col-sm-12">
+		            	<div class="text-center listing-create-btn">
+		            		<!-- <a href="" class="btn fnb-btn secondary-btn bold-btn border-btn full">Cancel</a> -->
+		            		<a href="/goomo_html/extranet/internal" class="btn fnb-btn secondary-btn bold-btn border-btn full">Create</a>
+		            	</div>
+		            </div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+{{ end }}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="" class="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>{{ .Title }} :: {{ .Site.Title }}</title>
+
+		<!-- Google font cdn -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+		<!-- Font awesome -->
+		<link rel="stylesheet" type="text/css" href="{{"css/font-awesome/css/font-awesome.min.css" | absURL}}">
+		<link rel="shortcut icon" href="{{"img/favicon.ico" | absURL}}" type="image/x-icon" />
+		<link rel="stylesheet" href="{{"css/bootstrap.min.css" | absURL}}">
+		<link href="{{"css/main.css" | absURL}}" rel="stylesheet">
+	</head>
+	<body class="overflow-section">
+		<div class="page-shifter animate-row">
+
+			{{ partial "header.html" .}}
+
+		<!-- content -->
+		<div class="container-fluid jobs-container">
+				<div class="row">
+						<div class="col-xs-12 content-wrapper edit-mode ">
+
+								<div class="m-t-20 m-b-10">
+										<div class="row">
+											<div class="col-xs-12 col-sm-3 col-lg-2">
+
+												{{ partial "sidebar.html" .}}
+													
+												<div class="logs-block p-t-20">
+													<div class="flex-row space-between">
+														<h6 class="bolder">Audit Logs</h6>
+														<!-- <a href="#" class="bolder text-secondary">View All</a> -->
+													</div>
+													<div class="single-log">
+														<div class="flex-row space-between">
+															<div class="bolder">
+																<i class="fa fa-user-o"></i>
+																Sain Dsouza (Owner)
+															</div>
+															<span class="text-muted small">2 days ago</span>
+														</div>
+														<p class="small x-small text-lighter">
+															20 Jun 2017 at 1:00 pm
+														</p>
+													</div>
+													<div class="single-log">
+														<div class="flex-row space-between">
+															<div class="bolder">
+																<i class="fa fa-user-o"></i>
+																Sain Dsouza (Owner)
+															</div>
+															<span class="text-muted small">2 days ago</span>
+														</div>
+														<p class="small x-small text-lighter">
+															20 Jun 2017 at 1:00 pm
+														</p>
+													</div>
+													<div class="single-log">
+														<div class="flex-row space-between">
+															<div class="bolder">
+																<i class="fa fa-user-o"></i>
+																Sain Dsouza (Owner)
+															</div>
+															<span class="text-muted small">2 days ago</span>
+														</div>
+														<p class="small x-small text-lighter">
+															20 Jun 2017 at 1:00 pm
+														</p>
+													</div>
+												</div>
+												</div>
+												<div class="col-xs-12 col-sm-9 col-lg-10">
+
+													<div class="">
+														<div class="">
+															<div class="preview-header text-color desk-hide"> Do you want to see a preview of your listing? <a href="" class="secondary-link preview-header__link">Preview</a>
+															</div>
+															<div class="gs-form tab-content p-t-0  ">
+
+																<div class="flex-row space-between align-top mobile-hide">
+																	<div class="business-info tab-pane fade in active" id="">
+																		<!-- <ul class="fnb-breadcrums flex-row">
+																			<li class="fnb-breadcrums__section">
+																				<a href="">
+																					<p class="fnb-breadcrums__title">Dashboard</p>
+																				</a>
+																			</li>
+																			<li class="fnb-breadcrums__section">
+																				<p class="fnb-breadcrums__title">></p>
+																			</li>
+																			<li class="fnb-breadcrums__section">
+																				<a href="#">
+																					<p class="fnb-breadcrums__title">{{ .Title }}</p>																			</a>
+																			</li>
+																			<li class="fnb-breadcrums__section">
+																				<p class="fnb-breadcrums__title">></p>
+																			</li>
+																			<li class="fnb-breadcrums__section">
+																				<a href="#">
+																					<p class="fnb-breadcrums__title">{{ .Title }}</p>
+																				</a>
+																			</li>
+																		</ul> -->
+
+																		{{ partial "breadcrumb.html" .}}
+
+
+																		<!-- <h5 class="no-m-t fly-out-heading-size main-heading white m-t-0 margin-btm ">Job Information</h5> -->
+																		<h5 class="nno-m-t main-heading  white m-t-0 margin-btm">{{ .Title }}</h5>
+																	</div>
+
+																	<a href="#" class="preview-header__link white btn fnb-btn white-border mini mobile-hide"> View Property on Goomo.com</a>
+																</div>
+
+																{{ block "main" . }}
+																	<!-- The part of the page that begins to differ between templates -->
+																{{ end }}
+
+
+															</div>
+														</div>
+													</div>
+
+												</div>
+										</div>
+								</div>
+
+						</div>
+				</div>
+				<div class="site-overlay"></div>
+		</div>
+		<!-- content ends -->
+		
+
+		{{ partial "finance-flyout.html" .}}
+
+
+		{{ partial "footer.html" .}}
+		
+		</div>
+
+		<script type="text/javascript" src="{{"js/jquery.min.js" | relURL}}"></script>
+		<!-- BS Script -->
+		<script type="text/javascript" src="{{"js/bootstrap.min.js" | relURL}}"></script>
+		
+		<!-- Datatables -->
+		<script type="text/javascript" src="{{"js/datatables.net/js/jquery.dataTables.min.js" | relURL}}"></script>
+
+		<script type="text/javascript" src="{{"js/datatables.net-bs/js/dataTables.bootstrap.min.js" | relURL}}"></script>
+
+		<script type="text/javascript" src="{{"js/custom.js" | relURL}}"></script>
+	</body>
+</html>

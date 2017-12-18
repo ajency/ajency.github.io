@@ -1,0 +1,352 @@
+{{ define "main" }}
+	<div class="">
+		<div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/{{ $.Params.slug }}">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-2 col-xs-4">
+				<input type="text" class="from-date form-control fnb-input m-r-10 sub-dates" placeholder="From Date">
+			</div>
+			<div class="col-sm-2 col-xs-4">
+				<input type="text" class="to-date form-control fnb-input m-r-10 sub-dates" placeholder="To Date">
+			</div>
+      <div class="col-sm-1 col-xs-4">
+        <button class="btn fnb-btn  primary-btn">Show</button>
+      </div>
+      <div class="col-sm-7 col-xs-12">
+        <div class="flex-row" style="justify-content: flex-end;">
+          <div class="calender-legend text-right">
+            <div class="flex-row small">
+              <div class="m-r-20">
+                <i class="fa fa-circle text-warning" style="color: #f38530;"></i> Property Amount
+              </div>
+              <div class="m-r-20">
+                <i class="fa fa-circle text-success" style="color: #368e9d;"></i> Goomo Commission
+              </div>
+              <div class="m-r-20">
+                <i class="fa fa-circle text-muted"></i> Refunded
+              </div>
+            </div>
+          </div>
+
+          <button class="btn fnb-btn outline bold-btn flex-row m-r-10"><span>Download CSV</span></button>
+
+          <button class="btn fnb-btn transparent bold-btn flex-row collapsed" data-toggle="collapse" data-target="#moreFiltersWrap" aria-expanded="false"><img src="/goomo_html/img/filter-bars.png" class="img-responsive p-r-5" width="30"> <span>Filter</span></button>
+
+        </div>
+			</div>
+      <!-- filters -->
+      <div class="col-sm-12 col-xs-12">
+        <div class="more-filters-wrapper m-t-25 collapse" id="moreFiltersWrap">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-6 col-xs-6">
+                <h5 class="mb-3">Filter by</h5>
+                </div>
+                <div class="col-sm-6 text-right col-xs-6">
+                  <button type="button" class="close" data-toggle="collapse" data-target="#moreFiltersWrap">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 col-md-4">
+                  <div class="filter-section ">
+                    <h6 class="sub-title bolder">Booking Details</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="form-group">
+                     <input type="text" class="form-control fnb-input" id="" placeholder="Search Booking ID">
+                    </div>
+                    <div class="form-group">
+                     <input type="text" class="form-control fnb-input" id="" placeholder="Search by Guest Name">
+                    </div>
+                  </div>
+
+                  <div class="filter-section m-t-40">
+                    <h6 class="sub-title bolder">Price Range</h6>
+                    <hr class="m-t-0 m-b-15">
+                    <img src="/goomo_html/img/sell_price.png" class="img-responsive">
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                  <div class="filter-section mb-4">
+                    <h6 class="sub-title bolder">Booking Status</h6>
+                    <hr class="m-t-0 m-b-5">
+
+                    <div class="row mobile-flex">
+                      <div class="col-sm-12 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                               Pending Re-confirmation
+                              </label>
+                          </div>
+                        </div>
+                      <div class="col-sm-12 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Pending Payment
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row mobile-flex">
+                      <div class="col-sm-12 col-xs-12">
+                        <div class="checkbox">
+                          <label>
+                              <input type="checkbox" value="" class="">
+                              Modified
+                            </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-xs-12">
+                        <div class="checkbox">
+                          <label>
+                              <input type="checkbox" value="" class="">
+                              Re-confirmed
+                            </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-xs-12">
+                        <div class="checkbox">
+                          <label>
+                              <input type="checkbox" value="" class="">
+                              Cancelled
+                            </label>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                  <div class="filter-section">
+                    <h6 class="sub-title bolder">Payment Status</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="row mobile-flex">
+                      <!-- <div class="col-sm-12 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                               Payment to Goomo
+                              </label>
+                          </div>
+                        </div> -->
+                      <div class="col-sm-12 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Payment to Hotel
+                              </label>
+                          </div>
+                      </div>
+                      <div class="col-sm-12 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Refund to Guest
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-section m-t-40">
+                    <h6 class="sub-title bolder">Payment Mode</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="row mobile-flex">
+                      <div class="col-sm-12 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                               Postpaid
+                              </label>
+                          </div>
+                        </div>
+                      <div class="col-sm-12 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Prepaid
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+
+              <div class="row m-t-20">
+                <div class="col">
+                  <div class="pull-right">
+                    <button class="btn outline fnb-btn btn-sm m-r-10">
+                      Reset Filters
+                    </button>
+                    <button class="btn fnb-btn secondary-btn btn-sm" data-toggle="collapse" data-target="#moreFiltersWrap">
+                      Apply Filters
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+		</div>
+
+
+		<div class="row m-t-40">
+				<div class="col-md-12">
+					<table id="location-table" class="table dataTable listing-table transaction-table" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th class="text-left" style="">
+                  Booking ID
+                </th>
+                <th class="text-left" style="">
+                  Guest Name
+                </th>
+                <th class="text-left" style="">
+                  Check In - Out
+                </th>
+                <th class="text-left no-sort" >
+                  Occupancy
+                </th>
+                <th class="text-left no-sort" style="">
+                 Price
+                </th>
+                <th class="text-left" style="">
+                  Payment Mode
+                </th>
+                <th class="text-left" style="">
+                  Booking<br>Status
+                </th>
+                <th class="text-left" style="">
+                  Payment<br>Status
+                </th>
+                <th class="no-sort">
+                  Action
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td class="text-left"><b><a href="/goomo_html/bookings/booking-details/{{ $.Params.slug }}" target="_blank">ARK00000DXL4</a></b><br><sm class="text-muted">Booked on</sm><br><sm class="text-muted">Wed, 01 Oct 2017 <br>at 12:15 PM</sm></td>
+                <td class="text-left"><b>Aravind Bargur</b></td>
+                <td class="text-left">05 Oct - 06 Oct 2017<br><sm class="text-muted">1 night</sm></td>
+                <td class="text-left"><b>5 guests</b><br><sm class="text-muted">in 2 rooms</sm></td>
+                <td class="text-left">
+                  <div>
+                    <img src="/goomo_html/img/amount1.png" class="img-responsive">
+                  </div>
+                </td>
+                <td class="text-left"><b>Prepaid</b></td>
+                <td class="text-left"><span class="text-primary"> Confirmed</span> </td>
+                <td class="text-left">
+                  <img src="/goomo_html/img/pay_status1.png" class="img-responsive">
+                </td>
+                <td >
+                  <i class="fa fa-ellipsis-v text-center action-panel center-block" aria-hidden="true"></i>
+                  <div class="my-popover-content">
+                    <a href="#" class="text-muted"> <b> Hotel Voucher</b></a><br><br>
+                    <a href="#" class="text-muted"> <b> Goomo Commission Invoice</b></a>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="text-left"><b><a href="/goomo_html/bookings/booking-details/{{ $.Params.slug }}" target="_blank">ARK00000DXL4</a></b><br><sm class="text-muted">Booked on</sm><br><sm class="text-muted">Wed, 01 Oct 2017 <br>at 12:15 PM</sm></td>
+                <td class="text-left"><b>Aravind Bargur</b></td>
+                <td class="text-left">05 Oct - 06 Oct 2017<br><sm class="text-muted">1 night</sm></td>
+                <td class="text-left"><b>5 guests</b><br><sm class="text-muted">in 2 rooms</sm></td>
+                <td class="text-left">
+                  <img src="/goomo_html/img/amount2.png" class="img-responsive">
+                </td>
+                <td class="text-left"><b>Prepaid</b></td>
+                <td class="text-left"><span class="text-danger"> Cancelled</span> </td>
+                <td class="text-left">
+                  <img src="/goomo_html/img/pay_status2.png" class="img-responsive">
+                </td>
+                <td >
+                  <i class="fa fa-ellipsis-v text-center action-panel center-block" aria-hidden="true"></i>
+                  <div class="my-popover-content">
+                    <a href="#" class="text-muted"> <b> Hotel Voucher</b></a><br><br>
+                    <a href="#" class="text-muted"> <b> Goomo Commission Invoice</b></a>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="text-left"><b><a href="/goomo_html/bookings/booking-details/{{ $.Params.slug }}" target="_blank">ARK00000DXL4</a></b><br><sm class="text-muted">Booked on</sm><br><sm class="text-muted">Wed, 01 Oct 2017 <br>at 12:15 PM</sm></td>
+                <td class="text-left"><b>Aravind Bargur</b></td>
+                <td class="text-left">05 Oct - 06 Oct 2017<br><sm class="text-muted">1 night</sm></td>
+                <td class="text-left"><b>5 guests</b><br><sm class="text-muted">in 2 rooms</sm></td>
+                <td class="text-left">
+                  <div>
+                    <img src="/goomo_html/img/amount1.png" class="img-responsive">
+                  </div>
+                </td>
+                <td class="text-left"><b>Prepaid</b></td>
+                <td class="text-left"><span class="text-primary"> Confirmed</span> </td>
+                <td class="text-left">
+                  <img src="/goomo_html/img/pay_status1.png" class="img-responsive">
+                </td>
+                <td >
+                  <i class="fa fa-ellipsis-v text-center action-panel center-block" aria-hidden="true"></i>
+                  <div class="my-popover-content">
+                    <a href="#" class="text-muted"> <b> Hotel Voucher</b></a><br><br>
+                    <a href="#" class="text-muted"> <b> Goomo Commission Invoice</b></a>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="text-left"><b><a href="/goomo_html/bookings/booking-details/{{ $.Params.slug }}" target="_blank">ARK00000DXL4</a></b><br><sm class="text-muted">Booked on</sm><br><sm class="text-muted">Wed, 01 Oct 2017 <br>at 12:15 PM</sm></td>
+                <td class="text-left"><b>Aravind Bargur</b></td>
+                <td class="text-left">05 Oct - 06 Oct 2017<br><sm class="text-muted">1 night</sm></td>
+                <td class="text-left"><b>5 guests</b><br><sm class="text-muted">in 2 rooms</sm></td>
+                <td class="text-left">
+                  <img src="/goomo_html/img/amount2.png" class="img-responsive">
+                </td>
+                <td class="text-left"><b>Prepaid</b></td>
+                <td class="text-left"><span class="text-danger"> Cancelled</span> </td>
+                <td class="text-left">
+                  <img src="/goomo_html/img/pay_status2.png" class="img-responsive">
+                </td>
+                <td >
+                  <i class="fa fa-ellipsis-v text-center action-panel center-block" aria-hidden="true"></i>
+                  <div class="my-popover-content">
+                 		<a href="#" class="text-muted"> <b> Hotel Voucher</b></a><br><br>
+                 		<a href="#" class="text-muted"> <b> Goomo Commission Invoice</b></a>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+				</div>
+		</div>
+	</div>
+
+{{ end }}

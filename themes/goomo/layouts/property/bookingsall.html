@@ -1,0 +1,400 @@
+{{ define "main" }}
+	<div class="">
+	<!-- 	<div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/{{ $.Params.slug }}">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div> -->
+		<div class="row">
+			<div class="col-sm-2 m-b-20">
+				<select  class="fnb-select select-variant form-control text-lighter">
+				 	<option value="Yes">Date of</option>
+          <option value="Yes">Booking Date</option>
+          <option value="No">Check In Date</option>
+          <option value="No">Check Out Date</option>
+        </select>
+			</div>
+			<div class="col-sm-2 col-xs-4">
+				<input type="text" class="from-date form-control fnb-input m-r-10 sub-dates" placeholder="From Date">
+			</div>
+			<div class="col-sm-2 col-xs-4">
+				<input type="text" class="to-date form-control fnb-input m-r-10 sub-dates" placeholder="To Date">
+			</div>
+			<div class="col-sm-2 col-xs-4">
+				<button class="btn fnb-btn outline">Show</button>
+			</div>
+			<div class="col-sm-4 col-xs-12">
+        <div class="pull-right">
+  				<div class="flex-row">
+            <button class="btn fnb-btn outline bold-btn flex-row m-r-10"><span>Download CSV</span></button>
+    				<button class="btn fnb-btn transparent bold-btn full flex-row collapsed" data-toggle="collapse" data-target="#moreFiltersWrap" aria-expanded="false"><img src="/goomo_html/img/filter-bars.png" class="img-responsive p-r-5" width="30"> <span>Filter</span></button>
+          </div>
+				</div>
+			</div>
+  <!-- filters -->
+      <div class="col-sm-12">
+        <div class="more-filters-wrapper m-t-25 collapse" id="moreFiltersWrap">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-6 col-xs-6">
+                <h5 class="mb-3">Filter by</h5>
+                </div>
+                <div class="col-sm-6 text-right col-xs-6">
+                  <button type="button" class="close" data-toggle="collapse" data-target="#moreFiltersWrap">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 col-md-4">
+                  <div class="filter-section mb-4">
+                    <h6 class="sub-title bolder">Rooms</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="loc-filter">
+                      <div class="m-b-25">
+                       <div >
+                      <input type="text" class="form-control fnb-input payment-add flexdatalist" multiple="multiple" placeholder="Type for suggestions &amp; select" list="locations" value="Casa Room">
+                      <datalist id="locations">
+                          <option value="goa">Casa Room</option>
+                          <option value="mumbai">Casa Bella</option>
+                          <option value="delhi">Casa Delux Room</option>
+                          <option value="gujarat">Premium Room</option>
+
+                      </datalist>
+                    </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+
+                  <div class="filter-section m-t-20">
+                    <h6 class="sub-title bolder">Express Checkin</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="m-t-20">
+                      <label class="radio-inline">
+                        <input type="radio" name="expressCheck" id="expressCheckYes" value="yes" class="fnb-radio"> Yes
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="expressCheck" id="expressCheckNo" value="no" class="fnb-radio"> No
+                      </label>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                  <div class="filter-section mb-4">
+                    <h6 class="sub-title bolder">Status</h6>
+                    <hr class="m-t-0 m-b-5">
+
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                               Confirmed
+                              </label>
+                          </div>
+                        </div>
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Re-Confirmed
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6 col-xs-12">
+                        <div class="checkbox">
+                          <label>
+                              <input type="checkbox" value="" class="">
+                              Cancelled
+                            </label>
+                        </div>
+                      </div>
+                            <div class="col-sm-6 col-xs-12">
+                        <div class="checkbox">
+                          <label>
+                              <input type="checkbox" value="" class="">
+                              Arrival next 3 days
+                            </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="filter-section mb-4 m-t-30">
+                    <h6 class="sub-title bolder">Channel</h6>
+                    <hr class="m-t-0 m-b-5">
+
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                               Web
+                              </label>
+                          </div>
+                        </div>
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Mobile
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6 col-xs-12">
+                        <div class="checkbox">
+                          <label>
+                              <input type="checkbox" value="" class="">
+                              B2B
+                            </label>
+                        </div>
+                      </div>
+                            <div class="col-sm-6 col-xs-12">
+                        <div class="checkbox">
+                          <label>
+                              <input type="checkbox" value="" class="">
+                              Corporate
+                            </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+
+
+                  <div class="filter-section ">
+                    <h6 class="sub-title bolder">Booking </h6>
+                    <hr class="m-t-0 m-b-5">
+                      <div class="col-sm-12 ">
+ 						<input type="text" class="form-control fnb-input" id="inlineFormInputGroupUsername2" placeholder="Booking ID">
+	                </div>
+	                 <div class="col-sm-12 ">
+	                 	<input type="text" class="form-control fnb-input" id="inlineFormInputGroupUsername2" placeholder="Promocode">
+	                </div>
+	                 <div class="col-sm-12 ">
+                       <input type="text" class="form-control fnb-input" id="inlineFormInputGroupUsername2" placeholder="By Guest Name">
+	                </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+
+
+              <div class="row m-t-20">
+                <div class="col">
+                  <div class="pull-right">
+                    <button class="btn outline fnb-btn btn-sm m-r-10">
+                      Reset Filters
+                    </button>
+                    <button class="btn fnb-btn secondary-btn btn-sm" data-toggle="collapse" data-target="#moreFiltersWrap">
+                      Apply Filters
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12 m-t-50 stats-container">
+          <div class="stats-row flex-row flex-wrap">
+            <div class="total-listing">
+              <div class="total-listing__count flex-row space-between col-xs-6 col-md-12">
+                <div>
+                  <h5 class="bolder m-b-5 titles">23</h5>
+                  <p class="m-b-0 text-lighter">Total Booking</p>
+                </div>
+
+              </div>
+              <div class="total-listing__count unclaimed flex-row space-between col-xs-6 col-md-12">
+                <div>
+                  <h5 class="bolder m-b-5 titles">20,688</h5>
+                  <p class="m-b-0 text-lighter">Pending Payment</p>
+                </div>
+
+              </div>
+            </div>
+
+
+            <div class="star-bucket status-bucket stats-cols  dsk-separator booking-bucket">
+              <p class="bolder">Status buckets</p>
+              <div class="flex-row align-reset space-between">
+                <div class="status-bucket__row">
+                  <div class="buckets bucket-1">
+                    <b class="m-b-0 text sub-title">10</b>
+                    <p class="m-b-0 text default-size text-info">New Booking</p>
+                  </div>
+                  <div class="buckets bucket-2">
+                    <b class="m-b-0 te sub-title">03</b>
+                    <p class="m-b-0 te default-size text-danger">Cancelled</p>
+                  </div>
+                </div>
+                <div class="status-bucket__row">
+                  <div class="buckets bucket-1">
+                    <b class="m-b-0 sub-title">10</b>
+                    <p class="m-b-0 default-size text-primary">Confirmed</p>
+                  </div>
+                  <div class="buckets bucket-2">
+                    <b class="m-b-0 t sub-title">-</b>
+                    <p class="m-b-0 t default-size text-secondary">Arrival next 3 days
+</p>
+                  </div>
+                </div>
+                <div class="status-bucket__row">
+                  <div class="buckets bucket-1">
+                    <b class="m-b-0 te sub-title">-</b>
+                    <p class="m-b-0 te default-size text-lighter">Re-Confirmed</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+		</div>
+
+		<div class="row m-t-40">
+				<div class="col-md-12">
+					<table id="location-table" class="table table-striped dataTable listing-table" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th class="text-left" style="" rowspan="1">
+                  Booking ID
+                </th>
+                <th class="text-left" style="" rowspan="1">
+                 Booked By
+                </th>
+                <th class="text-left" style="" rowspan="1">
+                  Room Name
+                </th>
+                <th class="text-left "  rowspan="1">
+
+                  Arrival
+                </th>
+                <th class="text-left" style="" rowspan="1">
+                  Departure
+                </th>
+                 <th class="text-left" style="" rowspan="1">
+                 Price
+                </th>
+                <th class="text-left" style="" rowspan="1">
+                 Status
+                </th>
+                <th class="text-left no-sort" style="" rowspan="1">
+                 Channel
+                </th>
+                <th class="text-left no-sort" style="" rowspan="1">
+                 Express<br>Checkin
+                </th>
+                <th class="no-sort" rowspan="1">
+                  Action
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td class="text-left"><b><a href="/goomo_html/bookings/booking-details/{{ $.Params.slug }}" target="_blank">ARK00000DXL4</a></b></td>
+                <td class="text-left"><b>Aravind Bargur</b><br><sm class="text-muted">on Wed, 01 Oct 2017<br>at 12:15 PM</sm></td>
+                <td class="text-left"><b>Casa Room</b><br><sm class="text-muted">2 Guest - 1 Rooms</sm></td>
+                <td class="text-left"><b>05 October 2017</b></td>
+                <td class="text-left"><b>08 October 2017</b></td>
+                <td class="text-left"><b>₹ 2,400</b></td>
+                <td class="text-left"><span class="text-primary"> Confirmed</span> </td>
+                <td class="text-left">Web</td>
+                <td class="text-left">Yes</td>
+                <td >
+
+                  <i class="fa fa-ellipsis-v text-center action-panel center-block" aria-hidden="true"></i>
+                   <div class="my-popover-content">
+                   		<a href="#" class="text-primary"> <b><i class="fa fa-refresh" aria-hidden="true"></i> Re-Confirm</b></a><br><br>
+                   		<a href="#" class="text-muted"> <b><i class="fa fa-envelope" aria-hidden="true"></i> Email Customer Voucher</b></a>
+                   </div>
+
+                </td>
+              </tr>
+            <tr>
+                <td class="text-left"><b><a href="/goomo_html/bookings/booking-details/{{ $.Params.slug }}" target="_blank">ARK00000DXL4</a></b></td>
+                <td class="text-left"><b>Aravind Bargur</b><br><sm class="text-muted">on Wed, 01 Oct 2017<br>at 12:15 PM</sm></td>
+                <td class="text-left"><b>Casa Room</b><br><sm class="text-muted">2 Guest - 1 Rooms</sm></td>
+                <td class="text-left"><b>05 October 2017</b></td>
+                <td class="text-left"><b>08 October 2017</b></td>
+                <td class="text-left"><b>₹ 2,400</b></td>
+                <td class="text-left"><span class="text-secondary"> Arrival next <br>3 days</span> </td>
+                <td class="text-left">B2B</td>
+                <td class="text-left">No</td>
+                <td>
+                 <i class="fa fa-ellipsis-v text-center action-panel center-block" aria-hidden="true"></i>
+                    <div class="my-popover-content">
+                   		<a href="#" class="text-muted"> <b><i class="fa fa-envelope" aria-hidden="true"></i> Email Customer Voucher</b></a>
+                   </div>
+                </td>
+              </tr>
+            	 <tr>
+                <td class="text-left"><b><a href="/goomo_html/bookings/booking-details/{{ $.Params.slug }}" target="_blank">ARK00000DXL4</a></b></td>
+                <td class="text-left"><b>Aravind Bargur</b><br><sm class="text-muted">on Wed, 01 Oct 2017<br>at 12:15 PM</sm></td>
+                <td class="text-left"><b>Casa Room</b><br><sm class="text-muted">2 Guest - 1 Rooms</sm></td>
+                <td class="text-left"><b>05 October 2017</b></td>
+                <td class="text-left"><b>08 October 2017</b></td>
+                <td class="text-left"><b>₹ 2,400</b></td>
+                <td class="text-left"><span class="text-primary"> Confirmed</span> </td>
+                <td class="text-left">Web</td>
+                <td class="text-left">No</td>
+                <td>
+                  <i class="fa fa-ellipsis-v text-center action-panel center-block" aria-hidden="true"></i>
+                      <div class="my-popover-content">
+                   		<a href="#" class="text-primary"> <b><i class="fa fa-refresh" aria-hidden="true"></i> Re-Confirm</b></a><br><br>
+                   		<a href="#" class="text-muted"> <b><i class="fa fa-envelope" aria-hidden="true"></i> Email Customer Voucher</b></a>
+                   </div>
+                </td>
+              </tr>
+            <tr>
+                <td class="text-left"><b><a href="/goomo_html/bookings/booking-details/{{ $.Params.slug }}" target="_blank">ARK00000DXL4</a></b></td>
+                <td class="text-left"><b>Aravind Bargur</b><br><sm class="text-muted">on Wed, 01 Oct 2017<br>at 12:15 PM</sm></td>
+                <td class="text-left"><b>Casa Room</b><br><sm class="text-muted">2 Guest - 1 Rooms</sm></td>
+                <td class="text-left"><b>05 October 2017</b></td>
+                <td class="text-left"><b>08 October 2017</b></td>
+                <td class="text-left"><b>₹ 2,400</b></td>
+                <td class="text-left"><span class="text-secondary"> Arrival next <br>3 days</span> </td>
+                <td class="text-left">Mobile</td>
+                <td class="text-left">No</td>
+                <td>
+                 <i class="fa fa-ellipsis-v text-center action-panel center-block" aria-hidden="true"></i>
+                      <div class="my-popover-content">
+
+                   		<a href="#" class="text-muted"> <b><i class="fa fa-envelope" aria-hidden="true"></i> Email Customer Voucher</b></a>
+                   </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+				</div>
+		</div>
+	</div>
+
+{{ end }}

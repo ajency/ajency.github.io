@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="" class="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Address &amp; Contact Info :: Goomo by Ajency</title>
+
+		
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,700" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="http://localhost:1313/goomo_2/css/font-awesome/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="http://localhost:1313/goomo_2/img/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/jquery.flexdatalist.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/js/bootstrap-daterangepicker/daterangepicker.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/side-comments.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/default-theme.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/tooltipster.bundle.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/tooltipster-sideTip-borderless.min.css">
+		<link href="http://localhost:1313/goomo_2/css/main.css" rel="stylesheet">
+
+		<script type="text/javascript">
+			var currentUser;
+			var existingComments;
+		</script>
+	</head>
+	<body class="overflow-section">
+		<div class="page-shifter animate-row">
+
+			
+<header class="fnb-header">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			
+			<div class="navbar-header mobile-head mobile-flex">
+				<div class="mobile-head__left mobile-flex">
+					<i class="fa fa-bars sideMenu" aria-hidden="true"></i>
+					
+					<ul class="desk-hide">
+						<li>
+							<select class="form-control fnb-select white-select">
+								<option>--Change Resort--</option>
+								<option selected="">Casa Anjuna</option>
+								<option>Casa Amora</option>
+								<option>Casa Bella</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			
+			<div class="collapse navbar-collapse m-side-bar" id="bs-example-navbar-collapse-1">
+				<ul class="mobile-top mobile-flex">
+					<li>
+						<p class="mobile-top__text">Welcome!</p>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav city-select">
+					<li>
+						<img src="http://localhost:1313/goomo_2/img/goomo_logo.png" class="img-responsive mobile-hide m-t-5" width="100">
+					</li>
+					<li>
+						<select class="form-control fnb-select white-select mobile-hide">
+							<option>--Change Resort--</option>
+							<option selected="">Casa Anjuna</option>
+							<option>Casa Amora</option>
+							<option>Casa Bella</option>
+						</select>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right side-section">
+					
+
+					<li class="notification mobile-hide">
+						<a tabindex="0" role="button" data-toggle="popover" data-title="Notifications" data-trigger="focus" data-placement="bottom">
+							<i class="fa fa-bell" aria-hidden="true">
+								<span class="badge">3</span>
+							</i>
+						</a>
+						<div class="popoverContent hidden">
+							<ul>
+								<li class="flex-row space-between even">
+									<div>Notification 1</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+								<li class="flex-row space-between odd">
+									<div>Notification 2</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+								<li class="flex-row space-between even">
+									<div>Notification 3</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li class="mobile-hide">
+						<div class="dropdown login user-logged">
+							<i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+							<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="drop-trigger">
+								<span class="ellipsis userName">Krish Dsouza</span>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li>
+									<a href="/goomo_html/extranet/properties/">View Dashboard</a>
+								</li>
+							</ul>
+						</div>
+
+					</li>
+
+				</ul>
+
+				<div class="desk-hide">
+					
+
+
+
+<ul class="gs-steps" role="tablist">
+  <li class="">
+    <a href="/goomo_html/dashboard/casa-anjuna/"><i class="fa fa-bars"></i> <span>Dashboard</span></a>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-bookingSubMenuMobile" role="button">
+      <i class="fa fa-calendar-check-o"></i> <span>Bookings</span></a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-bookingSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/bookings/all/casa-anjuna/">All Bookings</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/bookings/transactions/casa-anjuna/">Transactions</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle" data-toggle="collapse"  href="#property-ratesSubMenuMobile" role="button"><i class="fa fa-money"></i> <span>Rates &amp; Availability</span></a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-ratesSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/rates-availability/calendar/casa-anjuna/">Calendar</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/inventory/casa-anjuna/">Add Inventory</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rates/casa-anjuna/">Add Rates</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rate-plan/casa-anjuna/">Rate Plans</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/config/casa-anjuna/">Channel Configuration</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-offersSubMenuMobile" role="button">
+      <i class="fa fa-certificate"></i> <span>Offers</span>
+    </a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-offersSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/offers/add/casa-anjuna/">Add Offer</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/all/casa-anjuna/">All Offers</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal/casa-anjuna/">Add Secret Deal</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal-all/casa-anjuna/">All Secret Deal</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a href="/goomo_html/checklist/casa-anjuna/"><i class="fa fa-list"></i> <span>Property Checklist</span></a>
+  </li>
+  <li class="sub-menu active">
+    <a class=" " data-toggle="collapse" href="#property-detailsSubMenuMobile" id="" role="button"><i class="fa fa-file-text-o"></i> <span>Property Details</span> <span class="menu-arrow arrow_carrot-right"></span></a>
+    <ul class="gs-steps collapse in edit-mode sub-steps" id="property-detailsSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/details/amenities/casa-anjuna/">Amenities &amp; Services</a>
+      </li>
+      <li class="active">
+        <a href="/goomo_html/details/address/casa-anjuna/">Address &amp; Contact</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/images/casa-anjuna/">Images</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/rooms/casa-anjuna/">Rooms</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/policies/casa-anjuna/">Policies</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/contract/casa-anjuna/">Contract &amp; Finance</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/users/casa-anjuna/">Users</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/cancel/casa-anjuna/">Cancellation Policy</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/commission/casa-anjuna/">Goomo Commission</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/audit/casa-anjuna/">Audit Logs</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+				</div>
+
+			</div>
+			
+		</div>
+		
+	</nav>
+</header>
+
+<div class="profile-stats breadcrums-row no-shadow">
+  <div class="container">
+	  <div class="row p-t-30 p-b-30 jobs-listing edit-mode preview-holder ">
+		  <div class="col-sm-8 flex-col">
+		  	<div class="desk-hide text-center">
+		  		
+
+
+
+<ul class="fnb-breadcrums flex-row">
+  <li class="fnb-breadcrums__section"><a href="http://localhost:1313/goomo_2/listing"><p class="fnb-breadcrums__title">Dashboard</p></a></li>
+  <li class="fnb-breadcrums__section">
+  	<p class="fnb-breadcrums__title">></p>
+  </li>
+
+  
+  
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Details</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Address</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li class="breadcrump_active"><p class="fnb-breadcrums__title">Casa Anjuna</p></li>
+  	  
+
+      
+
+      
+
+  
+    
+      
+
+  
+</ul>
+
+
+		  		<h5 class="nno-m-t main-heading  white m-t-0 margin-btm">Address &amp; Contact Info</h5>
+		  		<a href="https://www.goomo.com/hotels/detail/Hotel-Windsor-Bay-389069?checkin_date=2017-09-28&checkout_date=2017-09-29&hotel_id=389069&locality_id&location_id=12550&place_name=Goa%2C%20India&rooms=%5B%7B%22adults_count%22%3A1%2C%22children_age%22%3A%5B%5D%7D%5D" target="_blank" class="preview-header__link white btn fnb-btn white-border mini"> View Property on Goomo.com</a>
+		  	</div>
+		  </div>
+		  <div class="col-sm-4 flex-col text-right mobile-hide">
+			  
+		  </div>
+	  </div>
+  </div>
+</div>
+
+
+			
+			<div class="container-fluid jobs-container commentable-container" id="commentable-area">
+					<div class="row">
+							<div class="col-xs-12 content-wrapper edit-mode ">
+
+									<div class="m-t-20 m-b-10">
+											<div class="row">
+													<div class="col-xs-12 col-sm-3 col-lg-2">
+
+														<div class="dsk-separator edit-summary-card mobile-hide">
+	<div class="summary-info">
+		
+			<div class="flex-row align-top">
+						<img src="http://localhost:1313/goomo_2/img/hotel_icon.png" class="img-responsive m-r-5" width="40">
+						<div>
+							<h6 class="m-b-5 bolder property-name m-t-5">
+								Casa Anjuna
+							</h6>
+							<p class="text-muted">Britona, Goa, India</p>
+						</div>
+					</div>
+			<div class="listing-status">
+					<div class="label">Property Status</div>
+					<div class="flex-row space-between status-msg">
+							<div class="statusMsg">In Process
+								
+							</div>
+							<a href="#" class="review-submit-link"><i class="fa fa-pencil"></i></a>
+					</div>
+			</div>
+	</div>
+</div>
+
+<div class="dsk-separator mobile-hide">
+
+	
+
+	
+
+
+<ul class="gs-steps" role="tablist">
+  <li class="">
+    <a href="/goomo_html/dashboard/casa-anjuna/"><i class="fa fa-bars"></i> <span>Dashboard</span></a>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-bookingSubMenu" role="button">
+      <i class="fa fa-calendar-check-o"></i> <span>Bookings</span></a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-bookingSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/bookings/all/casa-anjuna/">All Bookings</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/bookings/transactions/casa-anjuna/">Transactions</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-ratesSubMenu" role="button">
+      <i class="fa fa-money"></i>
+      <span>Rates &amp; Availability</span>
+    </a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-ratesSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/rates-availability/calendar/casa-anjuna/">Calendar</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/inventory/casa-anjuna/">Add Inventory</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rates/casa-anjuna/">Add Rates</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rate-plan/casa-anjuna/">Rate Plans</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/config/casa-anjuna/">Channel Config</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-offersSubMenu" role="button">
+      <i class="fa fa-certificate"></i> <span>Offers</span>
+    </a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-offersSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/offers/add/casa-anjuna/">Add Offer</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/all/casa-anjuna/">All Offers</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal/casa-anjuna/">Add Secret Deal</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal-all/casa-anjuna/">All Secret Deals</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a href="/goomo_html/checklist/casa-anjuna/"><i class="fa fa-list"></i> <span>Property Checklist</span></a>
+  </li>
+
+  <li class="sub-menu active">
+    <a class=" form-toggle " data-toggle="collapse" href="#property-detailsSubMenu" id="" role="button"><i class="fa fa-file-text-o"></i> <span>Property Details</span> <span class="menu-arrow arrow_carrot-right"></span></a>
+    <ul class="gs-steps collapse in edit-mode sub-steps" id="property-detailsSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/details/amenities/casa-anjuna/">Amenities &amp; Services</a>
+      </li>
+      <li class="active">
+        <a href="/goomo_html/details/address/casa-anjuna/">Address &amp; Contact</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/images/casa-anjuna/">Images</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/rooms/casa-anjuna/">Rooms</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/policies/casa-anjuna/">Policies</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/contract/casa-anjuna/">Contract &amp; Finance</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/users/casa-anjuna/">Users</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/cancel/casa-anjuna/">Cancellation Policy</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/commission/casa-anjuna/">Goomo Commission</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/audit/casa-anjuna/">Audit Logs</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+</div>
+
+													</div>
+													<div class="col-xs-12 col-sm-9 col-lg-10">
+
+														<div class="">
+															<div class="">
+																<div class="preview-header text-color desk-hide"> Do you want to see a preview of your listing? <a href="" class="secondary-link preview-header__link">Preview</a>
+																</div>
+																<div class="gs-form tab-content p-t-0  ">
+
+																	<div class="flex-row space-between align-top mobile-hide">
+																		<div class="business-info tab-pane fade in active" id="">
+																			
+
+																			
+
+
+
+<ul class="fnb-breadcrums flex-row">
+  <li class="fnb-breadcrums__section"><a href="http://localhost:1313/goomo_2/listing"><p class="fnb-breadcrums__title">Dashboard</p></a></li>
+  <li class="fnb-breadcrums__section">
+  	<p class="fnb-breadcrums__title">></p>
+  </li>
+
+  
+  
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Details</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Address</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li class="breadcrump_active"><p class="fnb-breadcrums__title">Casa Anjuna</p></li>
+  	  
+
+      
+
+      
+
+  
+    
+      
+
+  
+</ul>
+
+
+
+
+																			
+																			<h5 class="nno-m-t main-heading  white m-t-0 margin-btm">Address &amp; Contact Info</h5>
+																		</div>
+
+																		<a href="https://www.goomo.com/hotels/detail/Hotel-Windsor-Bay-389069?checkin_date=2017-09-28&checkout_date=2017-09-29&hotel_id=389069&locality_id&location_id=12550&place_name=Goa%2C%20India&rooms=%5B%7B%22adults_count%22%3A1%2C%22children_age%22%3A%5B%5D%7D%5D" class="preview-header__link white btn fnb-btn white-border mini mobile-hide" target="_blank"> View Property on Goomo.com</a>
+																	</div>
+
+																	<div class="commentable-section" data-section-id="1">
+																	
+	<div class="">
+
+		<div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/casa-anjuna/">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-9">
+
+			<h5 class="bolder m-t-20 prop-title">Address</h5>
+
+			<div class="row field-gap c-gap">
+	            <div class="col-sm-12 form-group m-b-30">
+	                <label class="label-size text-info required">Registered Address </label>
+	                <input type="text" class="form-control fnb-input" placeholder="eg: Candolim, Goa, India">
+	            </div>
+	            <div class="col-sm-12 c-gap form-group m-b-30">
+	                <label class="label-size text-info required">Property Address </label>
+	                <input type="text" class="form-control fnb-input" placeholder="eg: Candolim, Goa, India">
+	            </div>
+
+				<div class="col-sm-12 c-gap form-group m-b-30">
+				 
+				    <div class="">
+				         <label class="label-size text-info required">Please provide the google map address for your property</label>
+
+				        <div class="text-lighter">
+				            Note: You can drag the pin on the map to point the address
+				        </div>
+				    </div>
+
+
+				    <div class="m-t-20 c-gap">
+				    	<input id="mapadd" type="text" class="form-control fnb-input location-val m-b-10" name="interview_location" placeholder="Ex: Shop no 4, Aarey Milk Colony, Mumbai" value="">
+
+	                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15380.091383021922!2d73.81245283848914!3d15.483203277923609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc0a93361ccd9%3A0xdd98120b24e5be61!2sPanjim%2C+Goa!5e0!3m2!1sen!2sin!4v1498804405360" width="600" height="400" frameborder="0" style="border:0;width:100%;" allowfullscreen></iframe>
+
+				    </div>
+
+				</div>
+
+				<div class="col-sm-6 form-group m-b-30">
+	                <label class="label-size text-info">Latitude </label>
+	                <input type="text" class="form-control fnb-input" placeholder="19.0990962367374">
+	            </div>
+	            <div class="col-sm-6 c-gap form-group m-b-30">
+	                <label class="label-size text-info">Longitude </label>
+	                <input type="text" class="form-control fnb-input" placeholder="19.0990962367374">
+	            </div>
+
+	        </div>
+
+
+			<h5 class="bolder m-t-35 prop-title">Contact</h5>
+
+	        <div class="m-t-40 business-phone business-contact contact-info contact-info-phone" contact-type="mobile">
+	                <div class="flex-row space-between mobile-sp-row">
+	                    <label class="label-size text-info required">Hotel Email</label>
+	                    <a href="#" class="dark-link text-medium add-another">+ Add another email</a>
+	                </div>
+	                        <div class="contact-row m-t-5  contact-container">
+	                    <div class="row phone-row get-val ">
+	                        <div class="col-sm-5">
+                            	<div class="flex-row">
+                            		<input type="email" class="form-control fnb-input p-l-5 contact-input" value="" placeholder="xyz@gmail.com">
+                            	</div>
+	                        </div>
+	                        <div class="col-sm-3 col-xs-4">
+	                            <div class="verified flex-row">
+	                            </div>
+	                        </div>
+	                        <div class="col-sm-4 col-xs-8">
+	                            <div class="verified-toggle no-m-t flex-row">
+	                                <div class="toggle m-l-10 m-r-10">
+	                                    <input type="checkbox" class="toggle__check" name="visible_contact" data-parsley-multiple="contacts" data-parsley-errors-container="#toggleError">
+	                                    <b class="switch"></b>
+	                                    <b class="track"></b>
+	                                     <input type="hidden" class="contact-visible" name="visible_mobile_contact[]" value="0">
+	                                </div>
+	                                <p class="m-b-0 text-color toggle-state">Not visible on the property</p>
+	                            </div>
+	                            <div id="toggleError"></div>
+	                        </div>
+	                    </div>
+	                </div>
+
+	                <div class="contact-row m-t-5 contact-container contact-group hidden">
+	                    <div class="row no-m-b get-val phone-row ">
+	                        <div class="col-sm-5">
+    	                    	<div class="flex-row">
+    	                    		<input type="email" class="form-control fnb-input p-l-5 contact-input" value="" placeholder="xyz@gmail.com">
+    	                    	</div>
+	                        </div>
+	                        <div class="col-sm-3 col-xs-4">
+	                            <div class="verified flex-row">
+	                            </div>
+	                        </div>
+	                        <div class="col-sm-4 col-xs-8">
+	                            <div class="flex-row close-section">
+	                                <div class="verified-toggle flex-row">
+	                                    <div class="toggle m-l-10 m-r-10">
+	                                        <input type="checkbox" class="toggle__check" name="visible_contact" data-parsley-multiple="contacts" data-parsley-errors-container="#toggleError">
+	                                        <b class="switch"></b>
+	                                        <b class="track"></b>
+	                                        <input type="hidden" class="contact-visible" name="visible_mobile_contact[]" value="0">
+	                                    </div>
+	                                    <p class="m-b-0 text-color toggle-state">Not visible on the property</p>
+	                                </div>
+	                                <i class="fa fa-times removeRow"></i>
+	                            </div>
+	                            <div id="toggleError"></div>
+	                        </div>
+	                    </div>
+	                </div>
+
+	        </div>
+
+	        <div class="m-t-40 business-phone business-contact contact-info contact-info-phone" contact-type="mobile">
+	                <div class="flex-row space-between mobile-sp-row">
+	                    <label class="label-size text-info required">Hotel Mobile</label>
+	                    <a href="#" class="dark-link text-medium add-another">+ Add another mobile</a>
+	                </div>
+	                        <div class="contact-row m-t-5  contact-container">
+	                    <div class="row phone-row get-val ">
+	                        <div class="col-sm-5">
+                            	<div class="flex-row">
+                            		<select class="fnb-select select-variant form-control text-lighter small-select" name="">
+        		                    	<option value="">+91</option>
+        		                    	<option>+1245</option>
+        		                    	<option>+97</option>
+        			                </select>
+                            		<input type="tel" class="form-control fnb-input p-l-5 contact-input" style="" placeholder="9798999987" >
+                            	</div>
+	                        </div>
+	                        <div class="col-sm-3 col-xs-4">
+	                            <div class="verified flex-row">
+	                            </div>
+	                        </div>
+	                        <div class="col-sm-4 col-xs-8">
+	                            <div class="verified-toggle no-m-t flex-row">
+	                                <div class="toggle m-l-10 m-r-10">
+	                                    <input type="checkbox" class="toggle__check" name="visible_contact" data-parsley-multiple="contacts" data-parsley-errors-container="#toggleError">
+	                                    <b class="switch"></b>
+	                                    <b class="track"></b>
+	                                     <input type="hidden" class="contact-visible" name="visible_mobile_contact[]" value="0">
+	                                </div>
+	                                <p class="m-b-0 text-color toggle-state">Not visible on the property</p>
+	                            </div>
+	                            <div id="toggleError"></div>
+	                        </div>
+	                    </div>
+	                </div>
+
+	                <div class="contact-row m-t-5 contact-container contact-group hidden">
+	                    <div class="row no-m-b get-val phone-row ">
+	                        <div class="col-sm-5">
+    	                    	<div class="flex-row">
+    	                    		<select class="fnb-select select-variant form-control text-lighter small-select" name="">
+    			                    	<option value="">+91</option>
+    			                    	<option>+1245</option>
+    			                    	<option>+97</option>
+    				                </select>
+    	                    		<input type="tel" class="form-control fnb-input p-l-5 contact-input" placeholder="9798999987" >
+    	                    	</div>
+	                        </div>
+	                        <div class="col-sm-3 col-xs-4">
+	                            <div class="verified flex-row">
+	                            </div>
+	                        </div>
+	                        <div class="col-sm-4 col-xs-8">
+	                            <div class="flex-row close-section">
+	                                <div class="verified-toggle flex-row">
+	                                    <div class="toggle m-l-10 m-r-10">
+	                                        <input type="checkbox" class="toggle__check" name="visible_contact" data-parsley-multiple="contacts" data-parsley-errors-container="#toggleError">
+	                                        <b class="switch"></b>
+	                                        <b class="track"></b>
+	                                        <input type="hidden" class="contact-visible" name="visible_mobile_contact[]" value="0">
+	                                    </div>
+	                                    <p class="m-b-0 text-color toggle-state">Not visible on the property</p>
+	                                </div>
+	                                <i class="fa fa-times removeRow"></i>
+	                            </div>
+	                            <div id="toggleError"></div>
+	                        </div>
+	                    </div>
+	                </div>
+
+	        </div>
+
+	        <div class="m-t-40 business-phone business-contact contact-info contact-info-phone" contact-type="mobile">
+	                <div class="flex-row space-between mobile-sp-row">
+	                    <label class="label-size text-info required">Hotel Phone</label>
+	                    <a href="#" class="dark-link text-medium add-another">+ Add another phone</a>
+	                </div>
+	                        <div class="contact-row m-t-5  contact-container">
+	                    <div class="row phone-row get-val ">
+	                        <div class="col-sm-5">
+                            	<div class="flex-row">
+                            		<input type="tel" class="form-control fnb-input p-l-5 contact-input" style="" placeholder="0234 8794568" >
+                            	</div>
+	                        </div>
+	                        <div class="col-sm-3 col-xs-4">
+	                            <div class="verified flex-row">
+	                            </div>
+	                        </div>
+	                        <div class="col-sm-4 col-xs-8">
+	                            <div class="verified-toggle no-m-t flex-row">
+	                                <div class="toggle m-l-10 m-r-10">
+	                                    <input type="checkbox" class="toggle__check" name="visible_contact" data-parsley-multiple="contacts" data-parsley-errors-container="#toggleError">
+	                                    <b class="switch"></b>
+	                                    <b class="track"></b>
+	                                     <input type="hidden" class="contact-visible" name="visible_mobile_contact[]" value="0">
+	                                </div>
+	                                <p class="m-b-0 text-color toggle-state">Not visible on the property</p>
+	                            </div>
+	                            <div id="toggleError"></div>
+	                        </div>
+	                    </div>
+	                </div>
+
+	                <div class="contact-row m-t-5 contact-container contact-group hidden">
+	                    <div class="row no-m-b get-val phone-row ">
+	                        <div class="col-sm-5">
+    	                    	<div class="flex-row">
+    	                    		<input type="tel" class="form-control fnb-input p-l-5 contact-input" placeholder="0234 8794568" >
+    	                    	</div>
+	                        </div>
+	                        <div class="col-sm-3 col-xs-4">
+	                            <div class="verified flex-row">
+	                            </div>
+	                        </div>
+	                        <div class="col-sm-4 col-xs-8">
+	                            <div class="flex-row close-section">
+	                                <div class="verified-toggle flex-row">
+	                                    <div class="toggle m-l-10 m-r-10">
+	                                        <input type="checkbox" class="toggle__check" name="visible_contact" data-parsley-multiple="contacts" data-parsley-errors-container="#toggleError">
+	                                        <b class="switch"></b>
+	                                        <b class="track"></b>
+	                                        <input type="hidden" class="contact-visible" name="visible_mobile_contact[]" value="0">
+	                                    </div>
+	                                    <p class="m-b-0 text-color toggle-state">Not visible on the property</p>
+	                                </div>
+	                                <i class="fa fa-times removeRow"></i>
+	                            </div>
+	                            <div id="toggleError"></div>
+	                        </div>
+	                    </div>
+	                </div>
+
+	        </div>
+
+
+			<div class="row m-t-40">
+				<div class="col-sm-6 form-group m-b-30">
+	            	<label class="label-size text-info">Website </label>
+	            	<input type="text" class="form-control fnb-input" placeholder="eg: www.xyz.com">
+		           </div>
+			</div>
+
+
+			<h5 class="bolder m-t-35 prop-title">What's Nearby</h5>
+
+
+			<div class="flex-list field-gap c-gap nearby">
+				<input type="Email" class="form-control fnb-input flexdatalist" multiple="multiple" list="chain-name" value="Cafe Coffe Day" placeholder="Type for suggestions & hit enter">
+				<datalist id="chain-name">
+	            	<option value="booking">Cafe Coffe Day</option>
+	            	<option value="booking">Hospital</option>
+	            	<option value="booking">ATM</option>
+	        	</datalist>
+	        </div>
+
+	        <button type="submit" class="btn secondary-btn fnb-btn bolder mini m-t-40">Save</button>
+
+
+
+			</div>
+			<div class="col-sm-3 right-sidebar">
+				<div class="logs-block">
+					<div class="flex-row space-between">
+						<h6 class="bolder">Audit Logs</h6>
+						<a href="/goomo_html/details/audit/casa-anjuna/" class="bolder text-secondary">View All</a>
+					</div>
+					<div class="single-log">
+						<div class="flex-row space-between align-top">
+							<div class="bolder">
+								John Doe <small>(Owner)</small>
+							</div>
+							<span class="text-muted small">2 days ago</span>
+						</div>
+						<p class="small">
+							Updated inventory for Premium Room from 19-Oct-17 to 31-Oct-17
+						</p>
+					</div>
+					<div class="single-log">
+						<div class="flex-row space-between align-top">
+							<div class="bolder">
+								Vikas Khanna <small>(Market Manager)</small>
+							</div>
+							<span class="text-muted small text-right" style="min-width: 60px">3 days ago</span>
+						</div>
+						<p class="small">
+							Updated Food &amp; Beverages and Fitness Spa
+						</p>
+					</div>
+					<div class="single-log">
+						<div class="flex-row space-between align-top">
+							<div class="bolder">
+								Vikas Khanna <small>(Market Manager)</small>
+							</div>
+							<span class="text-muted small text-right" style="min-width: 60px">4 days ago</span>
+						</div>
+						<p class="small">
+							Updated Property Highlights
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+																	</div>
+
+
+																</div>
+															</div>
+														</div>
+
+													</div>
+											</div>
+									</div>
+
+							</div>
+					</div>
+					<div class="site-overlay"></div>
+			</div>
+			
+
+		
+<div class="pos-fixed fly-out side-toggle">
+    <div class="mobile-back desk-hide mobile-flex">
+        <div class="left mobile-flex">
+            <i class="fa fa-arrow-left text-primary back-icon" aria-hidden="true"></i>
+            <p class="element-title heavier m-b-0">Back</p>
+        </div>
+        <div class="right">
+            
+        </div>
+    </div>
+    <div class="fly-out__content">
+        <div class="sidebar-updates page-sidebar">
+
+        
+
+            <div class="page-sidebar__header flex-row space-between mobile-hide">
+                <div class="backLink flex-row">
+                    <a href="" class="primary-link p-r-10 element-title article-back"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                    <div class="sub-title bolder">Back</div>
+                </div>
+            </div>
+            <div class="page-sidebar__body">
+                <div class="update-sec sidebar-article">
+                    <div class="update-sec__body update-space">
+                        <img src="http://localhost:1313/goomo_2/img/comment-pic.png" class="img-responsive center-block">
+                    </div>
+
+                    
+                        
+                        <div class="post-comment m-t-40">
+                            <div class="form-group m-b-30">
+                                <label class="label-size text-info">Comments by QC</label>
+                                <textarea class="form-control fnb-input" placeholder="Leave a comment"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn fnb-btn secondary-btn bold-btn full">Post</button>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+
+        
+
+        </div>
+    </div>
+</div>
+
+		
+<footer>
+	<div class="container">
+      <div class="goomoIcon">
+      <img src="http://localhost:1313/goomo_2/img/goomo_logo.png" class="img-responsive center-block m-t-10 m-b-20" width="">
+      </div>
+      <div class="footerText">
+        <p class="copyright">
+          Copyright ©
+          
+          2017
+          
+          Goomo Group. All rights reserved.
+          
+        </p>
+      </div>
+    </div>
+</footer>
+
+
+		</div>
+
+		<script type="text/javascript" src="/goomo_2/js/jquery.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/bootstrap.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/datatables.net/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/bootstrap-multiselect.js"></script>
+
+
+		<script type="text/javascript" src="/goomo_2/js/moment.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/flex-datalist/jquery.flexdatalist.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/readmore.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/side-comments.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/tooltipster.bundle.min.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/custom.js"></script>
+	</body>
+</html>

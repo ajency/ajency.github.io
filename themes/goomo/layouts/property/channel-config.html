@@ -1,0 +1,67 @@
+{{ define "main" }}
+	<div class="">
+
+		<!-- <div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/{{ $.Params.slug }}">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div> -->
+
+		<div class="row">
+			<div class="col-sm-12">
+				<!-- <h4>Link Rates</h4> -->
+				<p class="text-muted">Feature that will simplify setting of rates across various channels. Set the rates manually for only one channel and the rest will be automatically calculated based on the percentage set</p>
+			</div>
+		</div>
+		<div class="row m-t-20">
+			<div class="col-sm-12 m-b-20">
+				<h6 class="">Linked rates are calculated based on <span class="text-secondary bolder">web rates</span>. Set how much lower each channel should be compared to web rates.</h6>
+			</div>
+			<div class="col-sm-3">
+			  	<label class="label-size text-info">Mobile</label>
+              	<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="10">
+                    <div class="input-group-addon">%</div>
+              	</div>
+			</div>
+			<div class="col-sm-3">
+			  	<label class="label-size text-info">FPH</label>
+              	<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                	<input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="10">
+                  	<div class="input-group-addon">%</div>
+             	</div>
+			</div>
+			<div class="col-sm-3">
+			  	<label class="label-size text-info">B2B</label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+
+                    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="10">
+                    <div class="input-group-addon">%</div>
+                </div>
+			</div>
+			<div class="col-sm-12 m-t-30">
+				<button class="btn fnb-btn secondary-btn btn-lg " >Save</button>
+			</div>
+		</div>
+		<br>
+
+	</div>
+
+	<script type="text/javascript">
+		var existingComments = [
+		  {
+		    "sectionId": "1",
+		    "comments": [
+		      {
+		        "comment": "<ul><li>Configuration for the rates to be automatically calculated for other channels (Mobile, FPH, B2B) on the basis of the channel whose rates for Single, Double, Triple and Extras are manually configured.</li><li>A percentage value will be set for each of these fields</li></ul>"
+		      }
+		    ]
+		  }
+		];
+	</script>
+{{ end }}

@@ -1,0 +1,283 @@
+{{ define "main" }}
+  <div class="m-t-25">
+
+    <div class="row">
+      <div class="col-sm-6 col-xs-12">
+        <div class="page-title">
+          <div class="title_left">
+          <h3 class="no-m-t fly-out-heading-size text-info">{{ .Title }} </h3>
+          <!-- <span>Set Goomo commission for the services rendered</span> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-xs-12">
+        <button class="btn fnb-btn transparent bold-btn full flex-row  pull-right m-t-15"  data-toggle="collapse" data-target="#moreFiltersWrap"><img src="{{"img/filter-bars.png" | absURL}}" class="img-responsive p-r-5" width="30"> <span>Filter</span></button>
+         <button class="btn fnb-btn outline bold-btn flex-row m-r-10 pull-right m-t-15"><span>Download CSV</span></button>
+      </div>
+
+      <div class="col-sm-12 col-xs-12">
+        <div class="more-filters-wrapper m-t-25 collapse" id="moreFiltersWrap">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-6 col-xs-6">
+                <h5 class="mb-3">Filter by</h5>
+                </div>
+                <div class="col-sm-6 text-right col-xs-6">
+                  <button type="button" class="close" data-toggle="collapse" data-target="#moreFiltersWrap">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 col-md-4">
+
+                  <div class="filter-section mb-4">
+                    <h6 class="sub-title bolder">Location</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div class="loc-filter">
+                      <div class="m-b-25">
+                        <select class="fnb-select select-variant form-control text-lighter m-b-25 country-select" name="" multiple="">
+                            <option >India</option>
+                            <option>Singapore</option>
+                            <option>China</option>
+                            <option>Russia</option>
+                        </select>
+                      </div>
+
+                      <div class="m-b-25">
+                        <select class="fnb-select select-variant form-control text-lighter m-b-25 state-select" name="" multiple="">
+                            <option>Delhi</option>
+                            <option >Goa</option>
+                            <option>Gujarat</option>
+                            <option>Bangalore</option>
+                        </select>
+                      </div>
+
+                      <div class="m-b-25">
+                        <select class="fnb-select select-variant form-control text-lighter m-b-25 city-select" name="" multiple="">
+                            <option >Panjim</option>
+                            <option>Mapusa</option>
+                            <option>Madgaon</option>
+                            <option>Shivajinagar</option>
+                        </select>
+                      </div>
+
+                      <div class="m-b-25">
+                        <select class="fnb-select select-variant form-control text-lighter m-b-25 location-select" name="" multiple="">
+                            <option >Panjim</option>
+                            <option>Mapusa</option>
+                            <option>Madgaon</option>
+                            <option>Shivajinagar</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+
+                  <div class="filter-section mb-4">
+                    <h6 class="sub-title bolder">Channel</h6>
+                    <hr class="m-t-0 m-b-5">
+
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                               Web
+                              </label>
+                          </div>
+                        </div>
+                      <div class="col-sm-6 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" class="">
+                                Mobile
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6 col-xs-12">
+                        <div class="checkbox">
+                          <label>
+                              <input type="checkbox" value="" class="">
+                              B2B
+                            </label>
+                        </div>
+                      </div>
+                            <div class="col-sm-6 col-xs-12">
+                        <div class="checkbox">
+                          <label>
+                              <input type="checkbox" value="" class="">
+                              Corporate
+                            </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6 col-xs-12">
+                        <div class="checkbox">
+                          <label>
+                              <input type="checkbox" value="" class="">
+                              FPH
+                            </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-xs-12">
+                        <div class="checkbox">
+                          <label>
+                              <input type="checkbox" value="" class="">
+                              Trade Fair
+                            </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mobile-flex">
+                      <div class="col-sm-6 col-xs-12">
+                        <div class="checkbox">
+                          <label>
+                              <input type="checkbox" value="" class="">
+                              Last Minute
+                            </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+
+                  <div class="filter-section mb-4">
+                    <h6 class="sub-title bolder">Market Manager</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div >
+                      <input type="text" class="form-control fnb-input payment-add flexdatalist" multiple="multiple" placeholder="Type for suggestions &amp; select" list="locations" value="Sujata Patil">
+                      <datalist id="locations">
+                          <option value="goa">Sujata Patil</option>
+                          <option value="mumbai">Allen Walker</option>
+                          <option value="delhi">Delhi</option>
+                          <option value="gujarat">Gujarat</option>
+                          <option value="bangalore">Bangalore</option>
+                      </datalist>
+                    </div>
+                  </div>
+
+                  <div class="filter-section mb-4 m-t-40">
+                    <h6 class="sub-title bolder">Hotel Name</h6>
+                    <hr class="m-t-0 m-b-5">
+                    <div >
+                      <input type="text" class="form-control fnb-input payment-add flexdatalist" multiple="multiple" placeholder="Type for suggestions &amp; select" list="locations" value="Casa Anjuna">
+                      <datalist id="hotelname">
+                          <option value="goa">Casa Anjuna</option>
+                          <option value="mumbai">Casa Vagator</option>
+                          <option value="delhi">Casa Baga</option>
+                          <option value="gujarat">Chalston Beach Resort</option>
+                          <option value="bangalore">Casa Goa</option>
+                      </datalist>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <div class="row m-t-20">
+                <div class="col">
+                  <div class="pull-right">
+                    <button class="btn outline fnb-btn btn-sm m-r-10">
+                      Reset Filters
+                    </button>
+                    <button class="btn fnb-btn secondary-btn btn-sm" data-toggle="collapse" data-target="#moreFiltersWrap">
+                      Apply Filters
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row m-t-20">
+      <div class="col-md-12">
+        <table id="location-table" class="table table-striped dataTable listing-table" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th class="text-left" style="" rowspan="1">
+                Hotel ID
+              </th>
+              <th class="text-left" style="" rowspan="1">
+                Hotel Name
+              </th>
+              <th class="" style="min-width: 25%;">
+                Country/State/ City/Location
+              </th>
+              <th class="text-left "  rowspan="1">
+                Rate Plan
+              </th>
+              <th class="text-left "  rowspan="1">
+                Market Manager
+              </th>
+              <th class="no-sort" rowspan="1">
+                Margin (%)
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="text-left small"><b>DFGS5642</b></td>
+              <td class="text-left"><b>Casa Colvale</b></td>
+              <td>India - Goa - Panjim</td>
+              <td class="text-left"><b>Bed &amp; Breakfast</b><br><sm class="text-muted small">Valid till Wed, 01 Oct 2017</sm></td>
+              <td>Sujata Patil</td>
+              <td class="text-left small">
+                <ul>
+                  <li><label>Web:</label> 10</li>
+                  <li><label>Mobile:</label> 15</li>
+                  <li><label>B2B:</label> 20</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-left small"><b>DFGS8642</b></td>
+              <td class="text-left"><b>Casa Goa</b></td>
+              <td>India - Goa - Panjim</td>
+              <td class="text-left"><b>Bed &amp; Breakfast</b><br><sm class="text-muted small">Valid till Wed, 01 Oct 2017</sm></td>
+              <td>Sujata Patil</td>
+              <td class="text-left small">
+                <ul>
+                  <li><label>Web:</label> 20</li>
+                  <li><label>FPH:</label> 25</li>
+                  <li><label>B2B:</label> 20</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-left small"><b>DFGS6671</b></td>
+              <td class="text-left"><b>Casa Vagator</b></td>
+              <td>India - Goa - Panjim</td>
+              <td class="text-left"><b>Room Only</b><br><sm class="text-muted small">Valid till Wed, 01 Oct 2017</sm></td>
+              <td>Alan Walker</td>
+              <td class="text-left small">
+                <ul>
+                  <li><label>Web:</label> 20</li>
+                  <li><label>Mobile:</label> 15</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+{{ end }}

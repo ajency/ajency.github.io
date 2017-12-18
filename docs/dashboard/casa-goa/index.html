@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="" class="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Dashboard :: Goomo by Ajency</title>
+
+		
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,700" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="http://localhost:1313/goomo_2/css/font-awesome/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="http://localhost:1313/goomo_2/img/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/jquery.flexdatalist.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/js/bootstrap-daterangepicker/daterangepicker.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/side-comments.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/default-theme.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/tooltipster.bundle.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/tooltipster-sideTip-borderless.min.css">
+		<link href="http://localhost:1313/goomo_2/css/main.css" rel="stylesheet">
+
+		<script type="text/javascript">
+			var currentUser;
+			var existingComments;
+		</script>
+	</head>
+	<body class="overflow-section">
+		<div class="page-shifter animate-row">
+
+			
+<header class="fnb-header">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			
+			<div class="navbar-header mobile-head mobile-flex">
+				<div class="mobile-head__left mobile-flex">
+					<i class="fa fa-bars sideMenu" aria-hidden="true"></i>
+					
+					<ul class="desk-hide">
+						<li>
+							<select class="form-control fnb-select white-select">
+								<option>--Change Resort--</option>
+								<option selected="">Casa Goa</option>
+								<option>Casa Amora</option>
+								<option>Casa Bella</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			
+			<div class="collapse navbar-collapse m-side-bar" id="bs-example-navbar-collapse-1">
+				<ul class="mobile-top mobile-flex">
+					<li>
+						<p class="mobile-top__text">Welcome!</p>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav city-select">
+					<li>
+						<img src="http://localhost:1313/goomo_2/img/goomo_logo.png" class="img-responsive mobile-hide m-t-5" width="100">
+					</li>
+					<li>
+						<select class="form-control fnb-select white-select mobile-hide">
+							<option>--Change Resort--</option>
+							<option selected="">Casa Goa</option>
+							<option>Casa Amora</option>
+							<option>Casa Bella</option>
+						</select>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right side-section">
+					
+
+					<li class="notification mobile-hide">
+						<a tabindex="0" role="button" data-toggle="popover" data-title="Notifications" data-trigger="focus" data-placement="bottom">
+							<i class="fa fa-bell" aria-hidden="true">
+								<span class="badge">3</span>
+							</i>
+						</a>
+						<div class="popoverContent hidden">
+							<ul>
+								<li class="flex-row space-between even">
+									<div>Notification 1</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+								<li class="flex-row space-between odd">
+									<div>Notification 2</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+								<li class="flex-row space-between even">
+									<div>Notification 3</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li class="mobile-hide">
+						<div class="dropdown login user-logged">
+							<i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+							<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="drop-trigger">
+								<span class="ellipsis userName">Krish Dsouza</span>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li>
+									<a href="/goomo_html/extranet/properties/">View Dashboard</a>
+								</li>
+							</ul>
+						</div>
+
+					</li>
+
+				</ul>
+
+				<div class="desk-hide">
+					
+
+
+
+<ul class="gs-steps" role="tablist">
+  <li class="active">
+    <a href="/goomo_html/dashboard/casa-goa/"><i class="fa fa-bars"></i> <span>Dashboard</span></a>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-bookingSubMenuMobile" role="button">
+      <i class="fa fa-calendar-check-o"></i> <span>Bookings</span></a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-bookingSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/bookings/all/casa-goa/">All Bookings</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/bookings/transactions/casa-goa/">Transactions</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle" data-toggle="collapse"  href="#property-ratesSubMenuMobile" role="button"><i class="fa fa-money"></i> <span>Rates &amp; Availability</span></a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-ratesSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/rates-availability/calendar/casa-goa/">Calendar</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/inventory/casa-goa/">Add Inventory</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rates/casa-goa/">Add Rates</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rate-plan/casa-goa/">Rate Plans</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/config/casa-goa/">Channel Configuration</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-offersSubMenuMobile" role="button">
+      <i class="fa fa-certificate"></i> <span>Offers</span>
+    </a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-offersSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/offers/add/casa-goa/">Add Offer</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/all/casa-goa/">All Offers</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal/casa-goa/">Add Secret Deal</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal-all/casa-goa/">All Secret Deal</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a href="/goomo_html/checklist/casa-goa/"><i class="fa fa-list"></i> <span>Property Checklist</span></a>
+  </li>
+  <li class="sub-menu ">
+    <a class=" " data-toggle="collapse" href="#property-detailsSubMenuMobile" id="" role="button"><i class="fa fa-file-text-o"></i> <span>Property Details</span> <span class="menu-arrow arrow_carrot-right"></span></a>
+    <ul class="gs-steps collapse in edit-mode sub-steps" id="property-detailsSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/details/amenities/casa-goa/">Amenities &amp; Services</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/address/casa-goa/">Address &amp; Contact</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/images/casa-goa/">Images</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/rooms/casa-goa/">Rooms</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/policies/casa-goa/">Policies</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/contract/casa-goa/">Contract &amp; Finance</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/users/casa-goa/">Users</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/cancel/casa-goa/">Cancellation Policy</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/commission/casa-goa/">Goomo Commission</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/audit/casa-goa/">Audit Logs</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+				</div>
+
+			</div>
+			
+		</div>
+		
+	</nav>
+</header>
+
+<div class="profile-stats breadcrums-row no-shadow">
+  <div class="container">
+	  <div class="row p-t-30 p-b-30 jobs-listing edit-mode preview-holder ">
+		  <div class="col-sm-8 flex-col">
+		  	<div class="desk-hide text-center">
+		  		
+
+
+
+<ul class="fnb-breadcrums flex-row">
+  <li class="fnb-breadcrums__section"><a href="http://localhost:1313/goomo_2/listing"><p class="fnb-breadcrums__title">Dashboard</p></a></li>
+  <li class="fnb-breadcrums__section">
+  	<p class="fnb-breadcrums__title">></p>
+  </li>
+
+  
+  
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Dashboard</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li class="breadcrump_active"><p class="fnb-breadcrums__title">Casa Goa</p></li>
+  	  
+
+      
+
+      
+
+  
+    
+      
+
+  
+</ul>
+
+
+		  		<h5 class="nno-m-t main-heading  white m-t-0 margin-btm">Dashboard</h5>
+		  		<a href="https://www.goomo.com/hotels/detail/Hotel-Windsor-Bay-389069?checkin_date=2017-09-28&checkout_date=2017-09-29&hotel_id=389069&locality_id&location_id=12550&place_name=Goa%2C%20India&rooms=%5B%7B%22adults_count%22%3A1%2C%22children_age%22%3A%5B%5D%7D%5D" target="_blank" class="preview-header__link white btn fnb-btn white-border mini"> View Property on Goomo.com</a>
+		  	</div>
+		  </div>
+		  <div class="col-sm-4 flex-col text-right mobile-hide">
+			  
+		  </div>
+	  </div>
+  </div>
+</div>
+
+
+			
+			<div class="container-fluid jobs-container commentable-container" id="commentable-area">
+					<div class="row">
+							<div class="col-xs-12 content-wrapper edit-mode ">
+
+									<div class="m-t-20 m-b-10">
+											<div class="row">
+													<div class="col-xs-12 col-sm-3 col-lg-2">
+
+														<div class="dsk-separator edit-summary-card mobile-hide">
+	<div class="summary-info">
+		
+			<div class="flex-row align-top">
+						<img src="http://localhost:1313/goomo_2/img/hotel_icon.png" class="img-responsive m-r-5" width="40">
+						<div>
+							<h6 class="m-b-5 bolder property-name m-t-5">
+								Casa Goa
+							</h6>
+							<p class="text-muted">Britona, Goa, India</p>
+						</div>
+					</div>
+			<div class="listing-status">
+					<div class="label">Property Status</div>
+					<div class="flex-row space-between status-msg">
+							<div class="statusMsg">Pending Review
+								
+							</div>
+							<a href="#" class="review-submit-link"><i class="fa fa-pencil"></i></a>
+					</div>
+			</div>
+	</div>
+</div>
+
+<div class="dsk-separator mobile-hide">
+
+	
+
+	
+
+
+<ul class="gs-steps" role="tablist">
+  <li class="active">
+    <a href="/goomo_html/dashboard/casa-goa/"><i class="fa fa-bars"></i> <span>Dashboard</span></a>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-bookingSubMenu" role="button">
+      <i class="fa fa-calendar-check-o"></i> <span>Bookings</span></a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-bookingSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/bookings/all/casa-goa/">All Bookings</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/bookings/transactions/casa-goa/">Transactions</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-ratesSubMenu" role="button">
+      <i class="fa fa-money"></i>
+      <span>Rates &amp; Availability</span>
+    </a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-ratesSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/rates-availability/calendar/casa-goa/">Calendar</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/inventory/casa-goa/">Add Inventory</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rates/casa-goa/">Add Rates</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rate-plan/casa-goa/">Rate Plans</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/config/casa-goa/">Channel Config</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-offersSubMenu" role="button">
+      <i class="fa fa-certificate"></i> <span>Offers</span>
+    </a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-offersSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/offers/add/casa-goa/">Add Offer</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/all/casa-goa/">All Offers</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal/casa-goa/">Add Secret Deal</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal-all/casa-goa/">All Secret Deals</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a href="/goomo_html/checklist/casa-goa/"><i class="fa fa-list"></i> <span>Property Checklist</span></a>
+  </li>
+
+  <li class="sub-menu ">
+    <a class=" form-toggle collapsed" data-toggle="collapse" href="#property-detailsSubMenu" id="" role="button"><i class="fa fa-file-text-o"></i> <span>Property Details</span> <span class="menu-arrow arrow_carrot-right"></span></a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-detailsSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/details/amenities/casa-goa/">Amenities &amp; Services</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/address/casa-goa/">Address &amp; Contact</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/images/casa-goa/">Images</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/rooms/casa-goa/">Rooms</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/policies/casa-goa/">Policies</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/contract/casa-goa/">Contract &amp; Finance</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/users/casa-goa/">Users</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/cancel/casa-goa/">Cancellation Policy</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/commission/casa-goa/">Goomo Commission</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/audit/casa-goa/">Audit Logs</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+</div>
+
+													</div>
+													<div class="col-xs-12 col-sm-9 col-lg-10">
+
+														<div class="">
+															<div class="">
+																<div class="preview-header text-color desk-hide"> Do you want to see a preview of your listing? <a href="" class="secondary-link preview-header__link">Preview</a>
+																</div>
+																<div class="gs-form tab-content p-t-0  ">
+
+																	<div class="flex-row space-between align-top mobile-hide">
+																		<div class="business-info tab-pane fade in active" id="">
+																			
+
+																			
+
+
+
+<ul class="fnb-breadcrums flex-row">
+  <li class="fnb-breadcrums__section"><a href="http://localhost:1313/goomo_2/listing"><p class="fnb-breadcrums__title">Dashboard</p></a></li>
+  <li class="fnb-breadcrums__section">
+  	<p class="fnb-breadcrums__title">></p>
+  </li>
+
+  
+  
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Dashboard</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li class="breadcrump_active"><p class="fnb-breadcrums__title">Casa Goa</p></li>
+  	  
+
+      
+
+      
+
+  
+    
+      
+
+  
+</ul>
+
+
+
+
+																			
+																			<h5 class="nno-m-t main-heading  white m-t-0 margin-btm">Dashboard</h5>
+																		</div>
+
+																		<a href="https://www.goomo.com/hotels/detail/Hotel-Windsor-Bay-389069?checkin_date=2017-09-28&checkout_date=2017-09-29&hotel_id=389069&locality_id&location_id=12550&place_name=Goa%2C%20India&rooms=%5B%7B%22adults_count%22%3A1%2C%22children_age%22%3A%5B%5D%7D%5D" class="preview-header__link white btn fnb-btn white-border mini mobile-hide" target="_blank"> View Property on Goomo.com</a>
+																	</div>
+
+																	<div class="commentable-section" data-section-id="1">
+																	
+	<div class="">
+
+		<div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/casa-goa/">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-sm-9">
+				<h6 class="m-b-0 bolder text-color">What should I be looking at?</h6>
+				<div class="m-t-20 p-b-20 p-t-20 p-r-20 p-l-20 boxshadow5">
+					<p class="bolder">Pending Re-confirm Bookings</p>
+
+					<div class="single-reconfirm flex-row space-between m-t-20">
+						<div class="flex-row">
+							<img src="http://localhost:1313/goomo_2/img/user_bg-brand.png" class="img-responsive m-r-10">
+							<div>
+								<div>ARK00000FB4O - Mr. Keerthy</div>
+								<div class="small text-muted">Check in: 2017-10-31 - Check out: 2017-11-01</div>
+							</div>
+						</div>
+						<div class="text-right m-t-10">
+							<a href="#" class="text-secondary text-decor">Re-confirm Booking</a>
+						</div>
+					</div>
+					<div class="single-reconfirm flex-row space-between m-t-20">
+						<div class="flex-row">
+							<img src="http://localhost:1313/goomo_2/img/user_bg-brand.png" class="img-responsive m-r-10">
+							<div>
+								<div>ARK00000FB42 - Mr. Sharma</div>
+								<div class="small text-muted">Check in: 2017-10-31 - Check out: 2017-11-01</div>
+							</div>
+						</div>
+						<div class="text-right m-t-10">
+							<a href="#" class="text-secondary text-decor">Re-confirm Booking</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="m-t-20 p-b-20 p-t-20 p-r-20 p-l-20 boxshadow5">
+					<p class="bolder">Low Alerts</p>
+					<div class="single-reconfirm flex-row space-between m-t-10">
+						<div class="flex-row">
+							<i class="fa fa-exclamation-circle text-danger m-r-10"></i>
+							<div>
+								<div>Low Inventory Alert! Casa Deluxe Room on 20 Nov 2017</div>
+							</div>
+						</div>
+						<div class="text-right">
+							<a href="/goomo_html/rates-availability/inventory/casa-goa/" class="text-secondary text-decor">Please update inventory</a>
+						</div>
+					</div>
+					<div class="single-reconfirm flex-row space-between m-t-10">
+						<div class="flex-row">
+							<i class="fa fa-exclamation-circle text-danger m-r-10"></i>
+							<div>
+								<div>Low Inventory Alert! Casa Deluxe Room on 21 Nov 2017</div>
+							</div>
+						</div>
+						<div class="text-right">
+							<a href="/goomo_html/rates-availability/inventory/casa-goa/" class="text-secondary text-decor">Please update inventory</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="alert alert-info m-t-30 p-b-20 p-t-20 p-r-20 p-l-20">
+					<div class="flex-row space-between">
+						<div class="flex-row">
+							<h3 class="m-r-15 m-t-5"><i class="fa fa-calendar bat-color"></i></h3>
+							<div>
+								<p class="bolder m-b-0 bat-color">Rates &amp; Availability</p>
+								<p class="text-muted m-b-0">Manage your Rates &amp; Inventory for the upcoming days.</p>
+							</div>
+						</div>
+
+						<a href="/goomo_html/rates-availability/calendar/casa-goa/" class="btn fnb-btn outline">Click Here</a>
+					</div>
+				</div>
+
+				<h6 class="m-t-50 bolder text-color">How have my bookings been?</h6>
+				<div>
+					
+					<ul class="nav nav-tabs nav-bottom-bor" role="tablist">
+					    <li role="presentation" class="active">
+					    	<a href="#day" aria-controls="day" role="tab" data-toggle="tab">Yesterday v/s <br>Last Week this day</a>
+					    </li>
+					    <li role="presentation">
+					    	<a href="#week" aria-controls="week" role="tab" data-toggle="tab">This Week v/s <br>Last Week</a>
+					    </li>
+					    <li role="presentation">
+					    	<a href="#month" aria-controls="month" role="tab" data-toggle="tab">This Month v/s <br>Last Month</a>
+					    </li>
+					</ul>
+
+					<div class="tab-content nav-bg-gray">
+						<div role="tabpanel" class="tab-pane fade in active" id="day">
+							<div style="overflow: auto">
+								<img src="http://localhost:1313/goomo_2/img/bookings_chart.png" class="img-responsive" style="min-width: 620px;">
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade text-center" id="week">
+							<h5 class="p-t-50 p-b-50 m-t-0">No Data</h5>
+						</div>
+						<div role="tabpanel" class="tab-pane fade text-center" id="month">
+							<h5 class="p-t-50 p-b-50 m-t-0">No Data</h5>
+						</div>
+					</div>
+				</div>
+
+				<h6 class="m-t-50 bolder text-color">How many Sold Outs / Unsold Rooms</h6>
+				<div style="overflow: auto">
+					
+
+					<div class="flex-row align-top flex-wrap">
+						<img src="http://localhost:1313/goomo_2/img/dash_calendar-only.png" class="img-responsive" style="">
+						<div style="flex-basis: 60%;" class="p-l-10">
+						  
+						  <ul class="nav nav-tabs nav-large-white flex-row" role="tablist">
+						    <li role="presentation" class="active">
+						    	<a href="#soldout" aria-controls="soldout" role="tab" data-toggle="tab">
+						    		Sold Out Rooms
+						    		<h5 class="bolder m-t-0 m-b-0 sold">10</h5>
+						    	</a>
+						    </li>
+						    <li role="presentation">
+						    	<a href="#unsold" aria-controls="unsold" role="tab" data-toggle="tab">
+						    		Unsold Rooms
+						    		<h5 class="bolder m-t-0 m-b-0 unsold">04</h5>
+						    	</a>
+						    </li>
+						  </ul>
+
+						  
+						  <div class="tab-content">
+						    <div role="tabpanel" class="tab-pane fade in active" id="soldout">
+						    	<div class="flex-row space-between p-t-30 p-l-15 p-r-20 p-b-15">
+						    		<label>Casa Room with <br>Pool View</label>
+						    		<div class="p-l-15 p-r-15" style="color:#fff; background-color: #f05d58; font-weight: 600;">05</div>
+						    	</div>
+						    	<hr style="border-style: dashed; border-color: #d9d9d9;" class="m-l-15 m-r-20 m-t-0 m-b-0">
+						    	<div class="flex-row space-between p-t-15 p-l-15 p-r-20 p-b-20">
+						    		<label>Casa Room with <br>Balcony</label>
+						    		<div class="p-l-15 p-r-15" style="color:#fff; background-color: #f05d58; font-weight: 600;">05</div>
+						    	</div>
+
+						    	<a href="/goomo_html/rates-availability/inventory/casa-goa/" class="dis-block m-t-10 text-secondary text-decor m-l-15">Update your inventory to avoid sold out</a>
+						    </div>
+						    <div role="tabpanel" class="tab-pane fade" id="unsold">
+						    	<div class="flex-row space-between p-t-30 p-l-15 p-r-20 p-b-15">
+						    		<label>Casa Room with <br>Sea View</label>
+						    		<div class="p-l-15 p-r-15" style="color:#fff; background-color: #008000; font-weight: 600;">03</div>
+						    	</div>
+						    	<hr style="border-style: dashed; border-color: #d9d9d9;" class="m-l-15 m-r-20 m-t-0 m-b-0">
+						    	<div class="flex-row space-between p-t-15 p-l-15 p-r-20 p-b-20">
+						    		<label>Casa Room with <br>Garden View</label>
+						    		<div class="p-l-15 p-r-15" style="color:#fff; background-color: #008000; font-weight: 600;">01</div>
+						    	</div>
+
+						    	<a href="/goomo_html/offers/add/casa-goa/" class="dis-block m-t-10 text-secondary text-decor m-l-15">Create offers to sell inventory</a>
+						    </div>
+						  </div>
+
+						</div>
+					</div>
+
+				</div>
+
+				<h6 class="m-t-50 bolder text-color">What's Happening</h6>
+				<div>
+					
+					<ul class="nav nav-tabs nav-bottom-bor-second" role="tablist">
+					    <li role="presentation">
+					    	<a href="#yest" aria-controls="yest" role="tab" data-toggle="tab">Yesterday</a>
+					    </li>
+					    <li role="presentation" class="active">
+					    	<a href="#today" aria-controls="today" role="tab" data-toggle="tab">Today</a>
+					    </li>
+					    <li role="presentation">
+					    	<a href="#tomm" aria-controls="tomm" role="tab" data-toggle="tab">Tomorrow</a>
+					    </li>
+					</ul>
+
+					<div class="tab-content ">
+						<div role="tabpanel" class="tab-pane fade" id="yest">
+							<div class="p-t-20 p-l-10" style="overflow: auto">
+								<table class="table">
+									<tr>
+										<td>
+											<div class="p-l-5 p-r-5 p-t-5 p-b-5 small dis-inline" style="color:#fff; background-color: #3d9490; font-weight: 600;">
+												19 NOV
+											</div>
+										</td>
+										<td>
+											<div class="bolder">
+												Khanna Raj
+											</div>
+										</td>
+										<td>
+											<div class="text-muted bolder">2 guests | 2 nights</div>
+										</td>
+										<td>
+											<div class="text-muted bolder">1 x Casa Favourite Room</div>
+										</td>
+										<td>
+											<a href="/goomo_html/bookings/booking-details/casa-goa/" class="text-secondary">
+												<i class="fa fa-arrow-right fa-lg"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="p-l-5 p-r-5 p-t-5 p-b-5 small dis-inline" style="color:#fff; background-color: #3d9490; font-weight: 600;">
+												19 NOV
+											</div>
+										</td>
+										<td>
+											<div class="bolder">
+												Stark Tony
+											</div>
+										</td>
+										<td>
+											<div class="text-muted bolder">1 guest | 15 nights</div>
+										</td>
+										<td>
+											<div class="text-muted bolder">1 x Casa Deluxe Room</div>
+										</td>
+										<td>
+											<a href="/goomo_html/bookings/booking-details/casa-goa/" class="text-secondary">
+												<i class="fa fa-arrow-right fa-lg"></i>
+											</a>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade in active " id="today">
+							<div class="p-t-20 p-l-10" style="overflow: auto">
+								<table class="table">
+									<tr>
+										<td>
+											<div class="p-l-5 p-r-5 p-t-5 p-b-5 small dis-inline" style="color:#fff; background-color: #3d9490; font-weight: 600;">
+												20 NOV
+											</div>
+										</td>
+										<td>
+											<div class="bolder">
+												Khanna Trisha
+											</div>
+										</td>
+										<td>
+											<div class="text-muted bolder">4 guests | 3 nights</div>
+										</td>
+										<td>
+											<div class="text-muted bolder">2 x Casa Favourite Room</div>
+										</td>
+										<td>
+											<a href="/goomo_html/bookings/booking-details/casa-goa/" class="text-secondary">
+												<i class="fa fa-arrow-right fa-lg"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="p-l-5 p-r-5 p-t-5 p-b-5 small dis-inline" style="color:#fff; background-color: #3d9490; font-weight: 600;">
+												20 NOV
+											</div>
+										</td>
+										<td>
+											<div class="bolder">
+												Mega Sharma
+											</div>
+										</td>
+										<td>
+											<div class="text-muted bolder">1 guest | 3 nights</div>
+										</td>
+										<td>
+											<div class="text-muted bolder">2 x Casa Deluxe Room</div>
+										</td>
+										<td>
+											<a href="/goomo_html/bookings/booking-details/casa-goa/" class="text-secondary">
+												<i class="fa fa-arrow-right fa-lg"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="p-l-5 p-r-5 p-t-5 p-b-5 small dis-inline" style="color:#fff; background-color: #3d9490; font-weight: 600;">
+												20 NOV
+											</div>
+										</td>
+										<td>
+											<div class="bolder">
+												Kapoor Rahul
+											</div>
+										</td>
+										<td>
+											<div class="text-muted bolder">2 guests | 2 nights</div>
+										</td>
+										<td>
+											<div class="text-muted bolder">2 x Casa Favourite Room</div>
+										</td>
+										<td>
+											<a href="/goomo_html/bookings/booking-details/casa-goa/" class="text-secondary">
+												<i class="fa fa-arrow-right fa-lg"></i>
+											</a>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="tomm">
+							<div class="p-t-20 p-l-10" style="overflow: auto">
+								<table class="table">
+									<tr>
+										<td>
+											<div class="p-l-5 p-r-5 p-t-5 p-b-5 small dis-inline" style="color:#fff; background-color: #3d9490; font-weight: 600;">
+												21 NOV
+											</div>
+										</td>
+										<td>
+											<div class="bolder">
+												Singh Pooja
+											</div>
+										</td>
+										<td>
+											<div class="text-muted bolder">5 guests | 3 nights</div>
+										</td>
+										<td>
+											<div class="text-muted bolder">2 x Casa Favourite Room</div>
+										</td>
+										<td>
+											<a href="/goomo_html/bookings/booking-details/casa-goa/" class="text-secondary">
+												<i class="fa fa-arrow-right fa-lg"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="p-l-5 p-r-5 p-t-5 p-b-5 small dis-inline" style="color:#fff; background-color: #3d9490; font-weight: 600;">
+												21 NOV
+											</div>
+										</td>
+										<td>
+											<div class="bolder">
+												Sharma Prem
+											</div>
+										</td>
+										<td>
+											<div class="text-muted bolder">5 guest | 2 nights</div>
+										</td>
+										<td>
+											<div class="text-muted bolder">3 x Casa Deluxe Room</div>
+										</td>
+										<td>
+											<a href="/goomo_html/bookings/booking-details/casa-goa/" class="text-secondary">
+												<i class="fa fa-arrow-right fa-lg"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="p-l-5 p-r-5 p-t-5 p-b-5 small dis-inline" style="color:#fff; background-color: #3d9490; font-weight: 600;">
+												21 NOV
+											</div>
+										</td>
+										<td>
+											<div class="bolder">
+												Singh Ashwin
+											</div>
+										</td>
+										<td>
+											<div class="text-muted bolder">4 guests | 6 nights</div>
+										</td>
+										<td>
+											<div class="text-muted bolder">2 x Casa Favourite Room</div>
+										</td>
+										<td>
+											<a href="/goomo_html/bookings/booking-details/casa-goa/" class="text-secondary">
+												<i class="fa fa-arrow-right fa-lg"></i>
+											</a>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="flex-row space-between m-t-50 flex-wrap">
+					<h6 class=" bolder text-color">Competitive Analysis (Lowest Rates)</h6>
+					<div class="flex-row">
+						<a href="#addCompetitor" data-toggle="modal" data-target="#addCompetitor" class="text-secondary flex-row m-r-10 bolder" style="white-space: nowrap;">+ Add Competitor</a>
+						<select class="form-control">
+							<option>Inventory of 7 days</option>
+							<option>Inventory of 14 days</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="m-t-10" style="overflow: auto;">
+					<img src="http://localhost:1313/goomo_2/img/compet_analysis.png" class="img-responsive" style="min-width: 685px;">
+				</div>
+			</div>
+
+
+
+
+			<div class="col-sm-3">
+				<div class="m-t-50">
+					<div class="market-manager-block">
+						<div class="market-manager-img">
+							<img src="http://localhost:1313/goomo_2/img/manager.jpg" class="img-responsive">
+						</div>
+						<div class="market-manager-name">
+							<div>Vikas Khanna</div>
+							<small>(Market Manager)</small>
+						</div>
+						<div class="market-manager-number">
+							<div><a href="tel:+919988446622" class="text-decor links-click">+91 9988446622</a></div>
+							<small><a href="mailto:vikaskhanna@goomo.com" class="text-decor links-click">vikaskhanna@goomo.com</a></small>
+						</div>
+						<div>
+							Goomo's Market Manager is your go-to person for any questions or concerns.
+						</div>
+					</div>
+				</div>
+
+				<div class="m-t-15">
+					<a href="/goomo_html/offers/secret-deal/casa-goa/">
+						<img src="http://localhost:1313/goomo_2/img/secret_deal_box.png" class="img-responsive">
+					</a>
+				</div>
+
+				<div class="m-t-20 p-b-15 p-t-15 p-r-15 p-l-15 boxshadow5">
+					<p class="bolder">Fulfillment Issues:</p>
+					<p class="bolder m-b-0">You have</p>
+					<h5 class="bolder m-t-0 "><a href="#" class="text-underline text-secondary">10 <small class="text-secondary">dishonoured bookings</small></a></h5>
+					<div>
+						as you did not <span class="bolder">Re-confirm</span> the bookings. We do not encourage dishonoured bookings, this will affect your ranking with us.
+					</div>
+				</div>
+
+				<div class="m-t-20 p-b-15 p-t-15 p-r-15 p-l-15 boxshadow5">
+					<img src="http://localhost:1313/goomo_2/img/cash_icon.png">
+					<h5 class="text-primary bolder"><i class="fa fa-inr"></i> 7,01,600</h5>
+					<p>Total Revenue through Goomo (Last 15 Days)</p>
+
+					<div class="flex-row">
+						<div class="m-r-25">
+							<small>Received</small>
+							<h6 class="bolder m-t-0"><i class="fa fa-inr"></i> 1,02,000</h6>
+						</div>
+						<div>
+							<small>Pending</small>
+							<h6 class="bolder text-danger m-t-0"><i class="fa fa-inr"></i> 12,000</h6>
+						</div>
+					</div>
+				</div>
+
+				<div class="m-t-20 p-b-15 p-t-15 p-r-15 p-l-15 boxshadow5">
+					<p class="bolder m-b-0">Your City Rank</p>
+					<div class="flex-row">
+						<h5 class="bolder m-r-5">676</h5><small class="m-t-10">out of 800 Hotels</small>
+					</div>
+					<i class="fa fa-arrow-up text-primary"></i> Rank up from 677 to 676
+
+					<div class="text-right m-t-10">
+						<a href="#improve" class="text-secondary text-decor">Improve your Rank</a>
+					</div>
+				</div>
+
+				<div class="content-score-block m-t-20">
+					<h6 class="bolder">Content Score 20%</h6>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+					    <span class="sr-only">20% Complete</span>
+					  </div>
+					</div>
+					<p class="text-muted bolder">
+						Getting more bookings is in your hands. Increasing your property page score to 100% can potentially lead to 18% more bookings.
+					</p>
+					<a href="/goomo_html/checklist/casa-goa/" class="text-secondary m-t-5 text-decor">Update your page</a>
+				</div>
+
+				<div class="m-t-20 p-b-15 p-t-15 p-r-15 p-l-15 boxshadow5">
+					<p class="bolder m-b-0">Upcoming important dates</p>
+					<div class="flex-row imp-date">
+						<div class="date-box">
+							<div class="month">OCT</div>
+							20
+						</div>
+						<div>
+							Diwali Season
+						</div>
+					</div>
+					<div class="flex-row imp-date">
+						<div class="date-box">
+							<div class="month">NOV</div>
+							14
+						</div>
+						<div>
+							Children's Day
+						</div>
+					</div>
+					<div class="text-right m-t-10">
+						<a href="#" class="text-secondary text-decor">View All</a>
+					</div>
+				</div>
+
+				<div class="m-t-20 p-b-15 p-t-15 p-r-15 p-l-15 boxshadow5">
+					<p class="bolder text-primary">What's new on Goomo</p>
+					<div class="flex-row">
+						<img src="http://localhost:1313/goomo_2/img/new_icon.png" class="img-responsive m-r-5">
+						<div class="bolder">Increase the commission to Goomo to rank higher</div>
+					</div>
+					<div class="text-right m-t-10">
+						<a href="#" class="text-secondary text-decor">Click Here</a>
+					</div>
+				</div>
+
+				<div class="content-score-block m-t-20">
+					<div class="flex-row space-between">
+						<div>
+							<h6 class="bolder">Goomo Review Score</h6>
+							<h6><a href="#" class="text-secondary text-decor">View Review Summary</a></h6>
+						</div>
+						<img src="http://localhost:1313/goomo_2/img/3.0.png" class="img-responsive m-l-20" width="50">
+					</div>
+				</div>
+
+				<div class="m-t-15">
+					<a href="#">
+						<img src="http://localhost:1313/goomo_2/img/google_play.png" class="img-responsive">
+					</a>
+				</div>
+
+				<div class="m-t-20 p-b-15 p-t-15 p-r-15 p-l-15 boxshadow5" id="improve">
+					<p class="bolder m-b-0">How to improve my performance?</p>
+					<div class="flex-row align-top m-t-10">
+						<img src="http://localhost:1313/goomo_2/img/star_icon.png" class="img-responsive m-r-5">
+						<div class="">Update your inventory to avoid sold outs</div>
+					</div>
+					<div class="flex-row align-top m-t-10">
+						<img src="http://localhost:1313/goomo_2/img/star_icon.png" class="img-responsive m-r-5">
+						<div class="">Create attractive offers to sell unsold rooms</div>
+					</div>
+					<div class="flex-row align-top m-t-10">
+						<img src="http://localhost:1313/goomo_2/img/star_icon.png" class="img-responsive m-r-5">
+						<div class="">Reduce Rates</div>
+					</div>
+					<div class="flex-row align-top m-t-10">
+						<img src="http://localhost:1313/goomo_2/img/star_icon.png" class="img-responsive m-r-5">
+						<div class="">Improve your content score by filling more details of your property</div>
+					</div>
+					<div class="flex-row align-top m-t-10">
+						<img src="http://localhost:1313/goomo_2/img/star_icon.png" class="img-responsive m-r-5">
+						<div class="">Give higher commission to Goomo and rank higher</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade fnb-modal" id="addCompetitor" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content text-center">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title text-left">Add Competitor</h4>
+		        <div class="text-left">
+		        	<small class="bolder"><span class="text-danger">Note:</span> Maximum of only 10 competitors are allowed</small>
+		        </div>
+		      </div>
+		      <hr>
+		      <div class="modal-body text-left">
+		      	<div class="input-group">
+		      	  	<span class="input-group-addon" id="basic-addon1" style="background: transparent;    border-top: 0;    border-left: 0;    border-radius: 0;">
+		      	  		<i class="fa fa-search"></i>
+		      	  	</span>
+		      		<input type="text" class="form-control fnb-input" placeholder="Search Hotels" name="">
+		      	</div>
+
+		      	<p class="bolder m-t-50">Select Hotels</p>
+		      	<div class="row mobile-flex">
+		      	  <div class="col-sm-6 col-xs-12">
+		      	      <div class="checkbox">
+		      	        <label>
+		      	            <input type="checkbox" value="" class="">
+		      	            Avion Hotel
+		      	          </label>
+		      	      </div>
+		      	  </div>
+		      	  <div class="col-sm-6 col-xs-12">
+		      	      <div class="checkbox">
+		      	        <label>
+		      	            <input type="checkbox" value="" class="">
+		      	            Avion Hotel
+		      	          </label>
+		      	      </div>
+		      	  </div>
+		      	</div>
+		      	<div class="row mobile-flex">
+		      	  <div class="col-sm-6 col-xs-12">
+		      	      <div class="checkbox">
+		      	        <label>
+		      	            <input type="checkbox" value="" class="">
+		      	            Ramee Guestline Hotel Juhu
+		      	          </label>
+		      	      </div>
+		      	  </div>
+		      	  <div class="col-sm-6 col-xs-12">
+		      	      <div class="checkbox">
+		      	        <label>
+		      	            <input type="checkbox" value="" class="">
+		      	            Ramee Guestline Hotel Juhu
+		      	          </label>
+		      	      </div>
+		      	  </div>
+		      	</div>
+		      	<div class="row mobile-flex">
+		      	  <div class="col-sm-6 col-xs-12">
+		      	      <div class="checkbox">
+		      	        <label>
+		      	            <input type="checkbox" value="" class="">
+		      	            The Orchid
+		      	          </label>
+		      	      </div>
+		      	  </div>
+		      	  <div class="col-sm-6 col-xs-12">
+		      	      <div class="checkbox">
+		      	        <label>
+		      	            <input type="checkbox" value="" class="">
+		      	            The Orchid
+		      	          </label>
+		      	      </div>
+		      	  </div>
+		      	</div>
+		      	<div class="row mobile-flex">
+		      	  <div class="col-sm-6 col-xs-12">
+		      	      <div class="checkbox">
+		      	        <label>
+		      	            <input type="checkbox" value="" class="">
+		      	            Hotel Royal Castle
+		      	          </label>
+		      	      </div>
+		      	  </div>
+		      	  <div class="col-sm-6 col-xs-12">
+		      	      <div class="checkbox">
+		      	        <label>
+		      	            <input type="checkbox" value="" class="">
+		      	            Hotel Royal Castle
+		      	          </label>
+		      	      </div>
+		      	  </div>
+		      	</div>
+		      	<div class="row mobile-flex">
+		      	  <div class="col-sm-6 col-xs-12">
+		      	      <div class="checkbox">
+		      	        <label>
+		      	            <input type="checkbox" value="" class="">
+		      	            Hotel Daisy Residency
+		      	          </label>
+		      	      </div>
+		      	  </div>
+		      	  <div class="col-sm-6 col-xs-12">
+		      	      <div class="checkbox">
+		      	        <label>
+		      	            <input type="checkbox" value="" class="">
+		      	            Hotel Daisy Residency
+		      	          </label>
+		      	      </div>
+		      	  </div>
+		      	</div>
+		      </div>
+		      <hr>
+		      <div class="modal-footer">
+		        <button type="button" class="btn fnb-btn outline" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn fnb-btn secondary-btn" data-dismiss="modal">Add</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		var existingComments = [
+			{
+				"sectionId": "1",
+				"comments": []
+			}
+		];
+	</script>
+
+
+																	</div>
+
+
+																</div>
+															</div>
+														</div>
+
+													</div>
+											</div>
+									</div>
+
+							</div>
+					</div>
+					<div class="site-overlay"></div>
+			</div>
+			
+
+		
+<div class="pos-fixed fly-out side-toggle">
+    <div class="mobile-back desk-hide mobile-flex">
+        <div class="left mobile-flex">
+            <i class="fa fa-arrow-left text-primary back-icon" aria-hidden="true"></i>
+            <p class="element-title heavier m-b-0">Back</p>
+        </div>
+        <div class="right">
+            
+        </div>
+    </div>
+    <div class="fly-out__content">
+        <div class="sidebar-updates page-sidebar">
+
+        
+
+            <div class="page-sidebar__header flex-row space-between mobile-hide">
+                <div class="backLink flex-row">
+                    <a href="" class="primary-link p-r-10 element-title article-back"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                    <div class="sub-title bolder">Back</div>
+                </div>
+            </div>
+            <div class="page-sidebar__body">
+                <div class="update-sec sidebar-article">
+                    <div class="update-sec__body update-space">
+                        <img src="http://localhost:1313/goomo_2/img/comment-pic.png" class="img-responsive center-block">
+                    </div>
+
+                    
+                        
+                        <div class="post-comment m-t-40">
+                            <div class="form-group m-b-30">
+                                <label class="label-size text-info">Comments by QC</label>
+                                <textarea class="form-control fnb-input" placeholder="Leave a comment"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn fnb-btn secondary-btn bold-btn full">Post</button>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+
+        
+
+        </div>
+    </div>
+</div>
+
+		
+<footer>
+	<div class="container">
+      <div class="goomoIcon">
+      <img src="http://localhost:1313/goomo_2/img/goomo_logo.png" class="img-responsive center-block m-t-10 m-b-20" width="">
+      </div>
+      <div class="footerText">
+        <p class="copyright">
+          Copyright ©
+          
+          2017
+          
+          Goomo Group. All rights reserved.
+          
+        </p>
+      </div>
+    </div>
+</footer>
+
+
+		</div>
+
+		<script type="text/javascript" src="/goomo_2/js/jquery.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/bootstrap.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/datatables.net/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/bootstrap-multiselect.js"></script>
+
+
+		<script type="text/javascript" src="/goomo_2/js/moment.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/flex-datalist/jquery.flexdatalist.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/readmore.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/side-comments.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/tooltipster.bundle.min.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/custom.js"></script>
+	</body>
+</html>

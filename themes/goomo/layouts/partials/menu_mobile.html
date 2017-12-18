@@ -1,0 +1,143 @@
+<!-- menu -->
+
+<!--<ul class="gs-steps" role="tablist">
+  {{ $currentPage := . }}
+  {{ range .Site.Menus.main }}
+  {{ if .HasChildren }}
+    <li class="sub-menu{{if $currentPage.HasMenuCurrent "main" . }} active{{end}}">
+      <a href="#{{ .Identifier }}SubMenuMobile" class=" form-toggle " id="" role="button" data-toggle="collapse">
+        {{ .Pre }}
+        <span>{{ .Name }}</span>
+        <span class="menu-arrow arrow_carrot-right"></span>
+      </a>
+      <ul class="gs-steps collapse in edit-mode sub-steps" role="tablist" id="{{ .Identifier }}SubMenuMobile">
+          {{ range .Children }}
+
+          <li{{if $currentPage.HasMenuCurrent "main" . }} class="active"{{end}}>
+            {{ if .HasChildren }}
+            	<a href="#{{ .Identifier }}SubMenuMobile" class="" id="" role="button" data-toggle="collapse"> {{ .Name }} </a>
+            {{ else }}
+            	<a href="{{.URL}}"> {{ .Name }} </a>
+            {{ end }}
+
+          	{{ if .HasChildren }}
+          		<ul class="sub-menu collapse in" id="{{ .Identifier }}SubMenuMobile">
+          			{{ range .Children }}
+          				<li><a href="{{.URL}}">- {{ .Name }}</a></li>
+          			{{ end }}
+          		</ul>
+          	{{ end }}
+          </li>
+          {{ end }}
+      </ul>
+  {{else}}
+    <li>
+      <a href="{{.URL}}">
+        {{ .Pre }}
+        <span>{{ .Name }}</span>
+      </a>
+    {{end}}
+    </li>
+  {{end}}
+</ul>-->
+
+<ul class="gs-steps" role="tablist">
+  <li class="{{ if $.Params.mainmenu.dashboard }}active{{end}}">
+    <a href="/goomo_html/dashboard/{{ $.Params.slug }}"><i class="fa fa-bars"></i> <span>Dashboard</span></a>
+  </li>
+
+  <li class="{{ if $.Params.mainmenu.bookings }}active{{end}}">
+    <a class=" form-toggle {{ if not $.Params.mainmenu.bookings }}collapsed{{end}}" data-toggle="collapse"  href="#property-bookingSubMenuMobile" role="button">
+      <i class="fa fa-calendar-check-o"></i> <span>Bookings</span></a>
+    <ul class="gs-steps collapse {{ if $.Params.mainmenu.bookings }}in{{end}} edit-mode sub-steps" id="property-bookingSubMenuMobile" role="tablist">
+      <li class="{{ if $.Params.mainmenu.all }}active{{end}}">
+        <a href="/goomo_html/bookings/all/{{ $.Params.slug }}">All Bookings</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.transactions }}active{{end}}">
+        <a href="/goomo_html/bookings/transactions/{{ $.Params.slug }}">Transactions</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="{{ if $.Params.mainmenu.ratesavail }}active{{end}}">
+    <a class=" form-toggle" data-toggle="collapse"  href="#property-ratesSubMenuMobile" role="button"><i class="fa fa-money"></i> <span>Rates &amp; Availability</span></a>
+    <ul class="gs-steps collapse {{ if $.Params.mainmenu.ratesavail }}in{{end}} edit-mode sub-steps" id="property-ratesSubMenuMobile" role="tablist">
+      <li class="{{ if $.Params.mainmenu.calendar }}active{{end}}">
+        <a href="/goomo_html/rates-availability/calendar/{{ $.Params.slug }}">Calendar</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.inventory }}active{{end}}">
+        <a href="/goomo_html/rates-availability/inventory/{{ $.Params.slug }}">Add Inventory</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.rates }}active{{end}}">
+        <a href="/goomo_html/rates-availability/rates/{{ $.Params.slug }}">Add Rates</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.rateplan }}active{{end}}">
+        <a href="/goomo_html/rates-availability/rate-plan/{{ $.Params.slug }}">Rate Plans</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.config }}active{{end}}">
+        <a href="/goomo_html/rates-availability/config/{{ $.Params.slug }}">Channel Configuration</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="{{ if $.Params.mainmenu.offers }}active{{end}}">
+    <a class=" form-toggle {{ if not $.Params.mainmenu.offers }}collapsed{{end}}" data-toggle="collapse"  href="#property-offersSubMenuMobile" role="button">
+      <i class="fa fa-certificate"></i> <span>Offers</span>
+    </a>
+    <ul class="gs-steps collapse {{ if $.Params.mainmenu.offers }}in{{end}} edit-mode sub-steps" id="property-offersSubMenuMobile" role="tablist">
+      <li class="{{ if $.Params.mainmenu.addoffer }}active{{end}}">
+        <a href="/goomo_html/offers/add/{{ $.Params.slug }}">Add Offer</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.alloffer }}active{{end}}">
+        <a href="/goomo_html/offers/all/{{ $.Params.slug }}">All Offers</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.secret }}active{{end}}">
+        <a href="/goomo_html/offers/secret-deal/{{ $.Params.slug }}">Add Secret Deal</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.secretall }}active{{end}}">
+        <a href="/goomo_html/offers/secret-deal-all/{{ $.Params.slug }}">All Secret Deal</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="{{ if $.Params.mainmenu.checklist }}active{{end}}">
+    <a href="/goomo_html/checklist/{{ $.Params.slug }}"><i class="fa fa-list"></i> <span>Property Checklist</span></a>
+  </li>
+  <li class="sub-menu {{ if $.Params.mainmenu.details }}active{{end}}">
+    <a class=" " data-toggle="collapse" href="#property-detailsSubMenuMobile" id="" role="button"><i class="fa fa-file-text-o"></i> <span>Property Details</span> <span class="menu-arrow arrow_carrot-right"></span></a>
+    <ul class="gs-steps collapse in edit-mode sub-steps" id="property-detailsSubMenuMobile" role="tablist">
+      <li class="{{ if $.Params.mainmenu.amenities }}active{{end}}">
+        <a href="/goomo_html/details/amenities/{{ $.Params.slug }}">Amenities &amp; Services</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.address }}active{{end}}">
+        <a href="/goomo_html/details/address/{{ $.Params.slug }}">Address &amp; Contact</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.images }}active{{end}}">
+        <a href="/goomo_html/details/images/{{ $.Params.slug }}">Images</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.rooms }}active{{end}}">
+        <a href="/goomo_html/details/rooms/{{ $.Params.slug }}">Rooms</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.policies }}active{{end}}">
+        <a href="/goomo_html/details/policies/{{ $.Params.slug }}">Policies</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.contract }}active{{end}}">
+        <a href="/goomo_html/details/contract/{{ $.Params.slug }}">Contract &amp; Finance</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.user }}active{{end}}">
+        <a href="/goomo_html/details/users/{{ $.Params.slug }}">Users</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.cancel }}active{{end}}">
+        <a href="/goomo_html/details/cancel/{{ $.Params.slug }}">Cancellation Policy</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.commission }}active{{end}}">
+        <a href="/goomo_html/details/commission/{{ $.Params.slug }}">Goomo Commission</a>
+      </li>
+      <li class="{{ if $.Params.mainmenu.audit }}active{{end}}">
+        <a href="/goomo_html/details/audit/{{ $.Params.slug }}">Audit Logs</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<!-- menu ends -->

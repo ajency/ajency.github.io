@@ -1,0 +1,46 @@
+<div class="modal fnb-modal edit-photos modal-center fade" id="edit-photos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" modal-type="email">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close g-close" data-dismiss="modal" aria-label="Close">&#10005;</button>
+            </div>
+            <div class="modal-body">
+                <div class="edit-gallery flex-row align-reset">
+                    <div class="tags">
+                        <div class="m-t-20">
+                            <h6 class="bolder">Tag this photo</h6>
+                            <span>Tell us what's in this photo by adding tags - tags helps us assist guest with their search &amp; connect them to your property.</span>
+                        </div>
+                        <button class="m-t-20 m-b-20 btn fnb-btn secondary-btn border-btn bold-btn m-t-10 flex-row space-between add-pic"><span><i class="fa fa-tag p-r-10" aria-hidden="true"></i> Swimming Pool</span> <span class="p-l-5">&#10005;</span></button>
+                     <!--    
+                        <button class="btn fnb-btn primary-btn border-btn bold-btn full m-t-10 flex-row add-pic"><i class="fa fa-tag p-r-10" aria-hidden="true"></i> Add Tags</button> -->
+
+                        <input type="text" class="form-control fnb-input payment-add flexdatalist" multiple="multiple" placeholder="+Add Tags" list="locations" value="Deluxe Room">
+                            <datalist id="locations">
+                                <option value="premier">Premier Room</option>
+                                <option value="deluxe">Deluxe Room</option>
+                            </datalist>
+
+                        <div class="m-t-20">
+                            <p class="label-size">Indicate if this is a Rooms photo:</p>
+                            <div class="radio-group m-t-15">
+                                <label for="yes" class="m-r-15">
+                                    <input value="" type="radio" class="fnb-radio" name="contract" id="yes"
+                                    checked="">
+                                    <span class="p-l-5 text-medium">Premier Room + BAR</span>
+                                </label>
+                                <label for="no" class="m-t-10">
+                                    <input value="" type="radio" class="fnb-radio" name="contract" id="no">
+                                    <span class="p-l-5 text-medium">Grand Deluxe Room</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-gal">
+                        <img src="{{"img/edit-gallery.png" | absURL}}" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

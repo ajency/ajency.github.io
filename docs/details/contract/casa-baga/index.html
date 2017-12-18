@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html lang="" class="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Contract &amp; Finance :: Goomo by Ajency</title>
+
+		
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,700" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="http://localhost:1313/goomo_2/css/font-awesome/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="http://localhost:1313/goomo_2/img/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/jquery.flexdatalist.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/js/bootstrap-daterangepicker/daterangepicker.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/side-comments.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/default-theme.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/tooltipster.bundle.css">
+		<link rel="stylesheet" href="http://localhost:1313/goomo_2/css/tooltipster-sideTip-borderless.min.css">
+		<link href="http://localhost:1313/goomo_2/css/main.css" rel="stylesheet">
+
+		<script type="text/javascript">
+			var currentUser;
+			var existingComments;
+		</script>
+	</head>
+	<body class="overflow-section">
+		<div class="page-shifter animate-row">
+
+			
+<header class="fnb-header">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			
+			<div class="navbar-header mobile-head mobile-flex">
+				<div class="mobile-head__left mobile-flex">
+					<i class="fa fa-bars sideMenu" aria-hidden="true"></i>
+					
+					<ul class="desk-hide">
+						<li>
+							<select class="form-control fnb-select white-select">
+								<option>--Change Resort--</option>
+								<option selected="">Casa Baga</option>
+								<option>Casa Amora</option>
+								<option>Casa Bella</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			
+			<div class="collapse navbar-collapse m-side-bar" id="bs-example-navbar-collapse-1">
+				<ul class="mobile-top mobile-flex">
+					<li>
+						<p class="mobile-top__text">Welcome!</p>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav city-select">
+					<li>
+						<img src="http://localhost:1313/goomo_2/img/goomo_logo.png" class="img-responsive mobile-hide m-t-5" width="100">
+					</li>
+					<li>
+						<select class="form-control fnb-select white-select mobile-hide">
+							<option>--Change Resort--</option>
+							<option selected="">Casa Baga</option>
+							<option>Casa Amora</option>
+							<option>Casa Bella</option>
+						</select>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right side-section">
+					
+
+					<li class="notification mobile-hide">
+						<a tabindex="0" role="button" data-toggle="popover" data-title="Notifications" data-trigger="focus" data-placement="bottom">
+							<i class="fa fa-bell" aria-hidden="true">
+								<span class="badge">3</span>
+							</i>
+						</a>
+						<div class="popoverContent hidden">
+							<ul>
+								<li class="flex-row space-between even">
+									<div>Notification 1</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+								<li class="flex-row space-between odd">
+									<div>Notification 2</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+								<li class="flex-row space-between even">
+									<div>Notification 3</div>
+									<a href="#" class="x-small">&#10005;</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li class="mobile-hide">
+						<div class="dropdown login user-logged">
+							<i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+							<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="drop-trigger">
+								<span class="ellipsis userName">Krish Dsouza</span>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li>
+									<a href="/goomo_html/extranet/properties/">View Dashboard</a>
+								</li>
+							</ul>
+						</div>
+
+					</li>
+
+				</ul>
+
+				<div class="desk-hide">
+					
+
+
+
+<ul class="gs-steps" role="tablist">
+  <li class="">
+    <a href="/goomo_html/dashboard/casa-baga/"><i class="fa fa-bars"></i> <span>Dashboard</span></a>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-bookingSubMenuMobile" role="button">
+      <i class="fa fa-calendar-check-o"></i> <span>Bookings</span></a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-bookingSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/bookings/all/casa-baga/">All Bookings</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/bookings/transactions/casa-baga/">Transactions</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle" data-toggle="collapse"  href="#property-ratesSubMenuMobile" role="button"><i class="fa fa-money"></i> <span>Rates &amp; Availability</span></a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-ratesSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/rates-availability/calendar/casa-baga/">Calendar</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/inventory/casa-baga/">Add Inventory</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rates/casa-baga/">Add Rates</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rate-plan/casa-baga/">Rate Plans</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/config/casa-baga/">Channel Configuration</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-offersSubMenuMobile" role="button">
+      <i class="fa fa-certificate"></i> <span>Offers</span>
+    </a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-offersSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/offers/add/casa-baga/">Add Offer</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/all/casa-baga/">All Offers</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal/casa-baga/">Add Secret Deal</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal-all/casa-baga/">All Secret Deal</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a href="/goomo_html/checklist/casa-baga/"><i class="fa fa-list"></i> <span>Property Checklist</span></a>
+  </li>
+  <li class="sub-menu active">
+    <a class=" " data-toggle="collapse" href="#property-detailsSubMenuMobile" id="" role="button"><i class="fa fa-file-text-o"></i> <span>Property Details</span> <span class="menu-arrow arrow_carrot-right"></span></a>
+    <ul class="gs-steps collapse in edit-mode sub-steps" id="property-detailsSubMenuMobile" role="tablist">
+      <li class="">
+        <a href="/goomo_html/details/amenities/casa-baga/">Amenities &amp; Services</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/address/casa-baga/">Address &amp; Contact</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/images/casa-baga/">Images</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/rooms/casa-baga/">Rooms</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/policies/casa-baga/">Policies</a>
+      </li>
+      <li class="active">
+        <a href="/goomo_html/details/contract/casa-baga/">Contract &amp; Finance</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/users/casa-baga/">Users</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/cancel/casa-baga/">Cancellation Policy</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/commission/casa-baga/">Goomo Commission</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/audit/casa-baga/">Audit Logs</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+				</div>
+
+			</div>
+			
+		</div>
+		
+	</nav>
+</header>
+
+<div class="profile-stats breadcrums-row no-shadow">
+  <div class="container">
+	  <div class="row p-t-30 p-b-30 jobs-listing edit-mode preview-holder ">
+		  <div class="col-sm-8 flex-col">
+		  	<div class="desk-hide text-center">
+		  		
+
+
+
+<ul class="fnb-breadcrums flex-row">
+  <li class="fnb-breadcrums__section"><a href="http://localhost:1313/goomo_2/listing"><p class="fnb-breadcrums__title">Dashboard</p></a></li>
+  <li class="fnb-breadcrums__section">
+  	<p class="fnb-breadcrums__title">></p>
+  </li>
+
+  
+  
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Details</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Contract</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li class="breadcrump_active"><p class="fnb-breadcrums__title">Casa Baga</p></li>
+  	  
+
+      
+
+      
+
+  
+    
+      
+
+  
+</ul>
+
+
+		  		<h5 class="nno-m-t main-heading  white m-t-0 margin-btm">Contract &amp; Finance</h5>
+		  		<a href="https://www.goomo.com/hotels/detail/Hotel-Windsor-Bay-389069?checkin_date=2017-09-28&checkout_date=2017-09-29&hotel_id=389069&locality_id&location_id=12550&place_name=Goa%2C%20India&rooms=%5B%7B%22adults_count%22%3A1%2C%22children_age%22%3A%5B%5D%7D%5D" target="_blank" class="preview-header__link white btn fnb-btn white-border mini"> View Property on Goomo.com</a>
+		  	</div>
+		  </div>
+		  <div class="col-sm-4 flex-col text-right mobile-hide">
+			  
+		  </div>
+	  </div>
+  </div>
+</div>
+
+
+			
+			<div class="container-fluid jobs-container commentable-container" id="commentable-area">
+					<div class="row">
+							<div class="col-xs-12 content-wrapper edit-mode ">
+
+									<div class="m-t-20 m-b-10">
+											<div class="row">
+													<div class="col-xs-12 col-sm-3 col-lg-2">
+
+														<div class="dsk-separator edit-summary-card mobile-hide">
+	<div class="summary-info">
+		
+			<div class="flex-row align-top">
+						<img src="http://localhost:1313/goomo_2/img/hotel_icon.png" class="img-responsive m-r-5" width="40">
+						<div>
+							<h6 class="m-b-5 bolder property-name m-t-5">
+								Casa Baga
+							</h6>
+							<p class="text-muted">Britona, Goa, India</p>
+						</div>
+					</div>
+			<div class="listing-status">
+					<div class="label">Property Status</div>
+					<div class="flex-row space-between status-msg">
+							<div class="statusMsg">In Process
+								
+							</div>
+							<a href="#" class="review-submit-link"><i class="fa fa-pencil"></i></a>
+					</div>
+			</div>
+	</div>
+</div>
+
+<div class="dsk-separator mobile-hide">
+
+	
+
+	
+
+
+<ul class="gs-steps" role="tablist">
+  <li class="">
+    <a href="/goomo_html/dashboard/casa-baga/"><i class="fa fa-bars"></i> <span>Dashboard</span></a>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-bookingSubMenu" role="button">
+      <i class="fa fa-calendar-check-o"></i> <span>Bookings</span></a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-bookingSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/bookings/all/casa-baga/">All Bookings</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/bookings/transactions/casa-baga/">Transactions</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-ratesSubMenu" role="button">
+      <i class="fa fa-money"></i>
+      <span>Rates &amp; Availability</span>
+    </a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-ratesSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/rates-availability/calendar/casa-baga/">Calendar</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/inventory/casa-baga/">Add Inventory</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rates/casa-baga/">Add Rates</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/rate-plan/casa-baga/">Rate Plans</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/rates-availability/config/casa-baga/">Channel Config</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a class=" form-toggle collapsed" data-toggle="collapse"  href="#property-offersSubMenu" role="button">
+      <i class="fa fa-certificate"></i> <span>Offers</span>
+    </a>
+    <ul class="gs-steps collapse  edit-mode sub-steps" id="property-offersSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/offers/add/casa-baga/">Add Offer</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/all/casa-baga/">All Offers</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal/casa-baga/">Add Secret Deal</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/offers/secret-deal-all/casa-baga/">All Secret Deals</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="">
+    <a href="/goomo_html/checklist/casa-baga/"><i class="fa fa-list"></i> <span>Property Checklist</span></a>
+  </li>
+
+  <li class="sub-menu active">
+    <a class=" form-toggle " data-toggle="collapse" href="#property-detailsSubMenu" id="" role="button"><i class="fa fa-file-text-o"></i> <span>Property Details</span> <span class="menu-arrow arrow_carrot-right"></span></a>
+    <ul class="gs-steps collapse in edit-mode sub-steps" id="property-detailsSubMenu" role="tablist">
+      <li class="">
+        <a href="/goomo_html/details/amenities/casa-baga/">Amenities &amp; Services</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/address/casa-baga/">Address &amp; Contact</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/images/casa-baga/">Images</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/rooms/casa-baga/">Rooms</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/policies/casa-baga/">Policies</a>
+      </li>
+      <li class="active">
+        <a href="/goomo_html/details/contract/casa-baga/">Contract &amp; Finance</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/users/casa-baga/">Users</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/cancel/casa-baga/">Cancellation Policy</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/commission/casa-baga/">Goomo Commission</a>
+      </li>
+      <li class="">
+        <a href="/goomo_html/details/audit/casa-baga/">Audit Logs</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+</div>
+
+													</div>
+													<div class="col-xs-12 col-sm-9 col-lg-10">
+
+														<div class="">
+															<div class="">
+																<div class="preview-header text-color desk-hide"> Do you want to see a preview of your listing? <a href="" class="secondary-link preview-header__link">Preview</a>
+																</div>
+																<div class="gs-form tab-content p-t-0  ">
+
+																	<div class="flex-row space-between align-top mobile-hide">
+																		<div class="business-info tab-pane fade in active" id="">
+																			
+
+																			
+
+
+
+<ul class="fnb-breadcrums flex-row">
+  <li class="fnb-breadcrums__section"><a href="http://localhost:1313/goomo_2/listing"><p class="fnb-breadcrums__title">Dashboard</p></a></li>
+  <li class="fnb-breadcrums__section">
+  	<p class="fnb-breadcrums__title">></p>
+  </li>
+
+  
+  
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Details</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li><a href='/goomo_html/property/summary/'><p class="fnb-breadcrums__title">Contract</p></a></li>
+      	<li class="fnb-breadcrums__section">
+  			<p class="fnb-breadcrums__title"> &nbsp;></p>
+  		</li>
+      
+
+      
+
+      
+
+  
+    
+      
+      
+
+      
+      	<li class="breadcrump_active"><p class="fnb-breadcrums__title">Casa Baga</p></li>
+  	  
+
+      
+
+      
+
+  
+    
+      
+
+  
+</ul>
+
+
+
+
+																			
+																			<h5 class="nno-m-t main-heading  white m-t-0 margin-btm">Contract &amp; Finance</h5>
+																		</div>
+
+																		<a href="https://www.goomo.com/hotels/detail/Hotel-Windsor-Bay-389069?checkin_date=2017-09-28&checkout_date=2017-09-29&hotel_id=389069&locality_id&location_id=12550&place_name=Goa%2C%20India&rooms=%5B%7B%22adults_count%22%3A1%2C%22children_age%22%3A%5B%5D%7D%5D" class="preview-header__link white btn fnb-btn white-border mini mobile-hide" target="_blank"> View Property on Goomo.com</a>
+																	</div>
+
+																	<div class="commentable-section" data-section-id="1">
+																	
+	<div class="">
+
+		<div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/casa-baga/">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div>
+
+		
+			<div class="flex-row property-status-box">
+				<div class="status-info flex-row">
+					<div>
+						All the required details have been filled in. Please review all the details entered and approve the contract. Once you approve the contract, your property will be submitted for review.
+					</div>
+				</div>
+				<div class="check-status">
+					Checklist Status:<br>
+					
+					<i class="fa fa-circle w-border m-t-15"></i>
+				</div>
+				<div class="qc-status">
+					QC Status:<br>
+					<h6 class="text-secondary">Info Needed</h6>
+					
+				</div>
+			</div>
+		
+
+
+		<div class="row">
+			<div class="col-sm-12">
+
+				<div class="finance-col financeCols m-t-40">
+					<h5 class="no-m-t fly-out-heading-size bat-color bolder m-b-20">Finance Inputs</h5>
+					<div class="row finance-inputs">
+						<div class="col-sm-3 target-col">
+							<label class="label-size m-b-0"><h6 class="dis-inline m-b-0">[INR]</h6> Indian Rupee</label>
+		                	<input type="text" class="form-control fnb-input" readonly="" placeholder="Currency">
+						</div>
+						<div class="col-sm-3 target-col">
+							<label class="label-size m-b-0"><h6 class="dis-inline m-b-0">30</h6> %</label>
+		                	<input type="text" class="form-control fnb-input" readonly="" placeholder="Commission">
+						</div>
+						<div class="col-sm-6">
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="bank-details financeCols m-t-40">
+					<div class="flex-row space-between">
+						<h5 class="no-m-t fly-out-heading-size bat-color bolder m-b-20">Bank details</h5>
+						<button class="btn fnb-btn s-outline bold-btn full m-t-10 form-toggle open-sidebar"><span>Add Bank Details</span></button>
+					</div>
+					<table id="listings-table" class="table table-striped dataTable listing-table" cellspacing="0" width="100%">
+			        	<thead>
+				            <tr>
+				            	<th style="min-width: 120px;" class="">Account No</th>
+				              	<th style="min-width: 120px;" class="">Holder name</th>
+				              	<th style="min-width: 120px;" class="">Bank Name</th>
+				              	<th style="min-width: 120px;" class="">IFSC Code</th>
+				              	<th style="min-width: 120px;" class="">PAN No</th>
+				              	<th style="min-width: 120px;" class="">GSTN</th>
+				              	<th style="min-width: 120px;" class="">Cancelled Cheque</th>
+				              	<th style="" class="">Status</th>
+				              	<th class="text-center">Action</th>
+				            </tr>
+			          	</thead>
+			         	<tbody>
+				            <tr>
+				              <td class=""><a href="#" class="text-info bolder">F********445</a></td>
+				              <td class="">Sujata Patil</td>
+				              <td class="">HDFC BANK</td>
+				              <td class="">HDFCC129399</td>
+				              <td class="">A*****234</td>
+				              <td class="">AWCET1234</td>
+				              <td class=""><a href="#" class="secondary-link"><i class="fa fa-download" aria-hidden="true"></i> Download</a></td>
+				              <td class=""><span class="text-info">Active</span></td>
+				              <td class="text-center"><a href="#" class="secondary-link"><i class="fa fa-pencil text-decor" aria-hidden="true"></i></a></td>
+				            </tr>
+			          	</tbody>
+		       		</table>
+				</div>
+
+				<div class="tax-rules financeCols m-t-40">
+					<div class="flex-row space-between">
+						<h5 class="no-m-t fly-out-heading-size bat-color bolder m-b-20">Tax Rules</h5>
+						
+					</div>
+
+					<table id="tax-table" class="table table-striped dataTable listing-table" cellspacing="0" width="100%">
+			        	<thead>
+				            <tr>
+				            	<th style="min-width: 120px;" class="">Start Date</th>
+				              	<th  style="min-width: 120px;" class="">End Date</th>
+				              	<th  style="min-width: 120px;" class="">Related To</th>
+				              	<th  style="min-width: 150px;" class="">Room(Rateplan)</th>
+				              	<th  style="min-width: 250px;" class="" style="width: 330px;">Rules</th>
+				              	
+				            </tr>
+			          	</thead>
+			         	<tbody>
+				            <tr>
+				              <td class=""><span class="text-color bolder">30 May 2017</span></td>
+				              <td class=""><span class="text-color bolder">31 May 2017</span></td>
+				              <td class=""><span class="text-color bolder">Hotel</span></td>
+				              <td class="">--</td>
+				              <td class=""><span class="text-color bolder">Other Tax on Rack Rat</span><br> Type: Percentage | Value: 10.0</td>
+				              
+				            </tr>
+			          	</tbody>
+		       		</table>
+
+   		       		<div class="well">
+   			       		<h6 class="bolder ">GST Info</h6>
+   			       		<table class="table table-condensed">
+			       			<thead>
+				       			<tr>
+				       				<th class="text-center">Min. Sell Rate ( <i class="fa fa-inr"></i> )</th>
+				       				<th class="text-center">Max. Sell Rate ( <i class="fa fa-inr"></i> )</th>
+				       				<th class="text-center">GST</th>
+				       				<th class="text-left">Info</th>
+				       			</tr>
+			       			</thead>
+			       			<tbody>
+				       			<tr class="text-center">
+				       				<td style="border-top: 1px solid #ddd;">0</td>
+				       				<td style="border-top: 1px solid #ddd;">1000</td>
+				       				<td style="border-top: 1px solid #ddd;">0</td>
+				       				<td class="text-left" style="border-top: 1px solid #ddd;">If the sell rate(INR) is greater than or equal to 0 and less than or equal to 1000, GST is 0%</td>
+				       			</tr>
+				       			<tr class="text-center">
+				       				<td style="border-top: 1px solid #ddd;">1001</td>
+				       				<td style="border-top: 1px solid #ddd;">2500</td>
+				       				<td style="border-top: 1px solid #ddd;">12%</td>
+				       				<td class="text-left" style="border-top: 1px solid #ddd;">If the sell rate(INR) is greater than or equal to 1001 and less than or equal to 2500, GST is 12%</td>
+				       			</tr>
+				       			<tr class="text-center">
+				       				<td style="border-top: 1px solid #ddd;">2501</td>
+				       				<td style="border-top: 1px solid #ddd;">7500</td>
+				       				<td style="border-top: 1px solid #ddd;">18%</td>
+				       				<td class="text-left" style="border-top: 1px solid #ddd;">If the sell rate(INR) is greater than or equal to 2501 and less than or equal to 7500, GST is 18%</td>
+				       			</tr>
+				       			<tr class="text-center">
+				       				<td style="border-top: 1px solid #ddd;">7501</td>
+				       				<td style="border-top: 1px solid #ddd;">-</td>
+				       				<td style="border-top: 1px solid #ddd;">28%</td>
+				       				<td class="text-left" style="border-top: 1px solid #ddd;">If the sell rate(INR) is greater than or equal to 7501, GST is 28%</td>
+				       			</tr>
+			       			</tbody>
+			       		</table>
+   		       		</div>
+				</div>
+
+				<div class="contract-col financeCols m-t-40">
+					<h5 class="no-m-t fly-out-heading-size bat-color bolder m-b-20">Contract</h5>
+
+					<label class="sub-title text-info m-t-20 m-b-10">Terms &amp; Conditions </label>
+					
+		            <p class="text-lighter captionStyle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit inventore ut autem et nostrum eius quae aspernatur doloremque nesciunt officia? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit inventore ut autem et nostrum eius quae aspernatur doloremque nesciunt officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit inventore ut autem et nostrum eius quae aspernatur doloremque nesciunt officia?</p>
+
+		            <div class="flex-row space-between">
+
+		            </div>
+		            <div class="row m-t-40">
+		            	<div class="col-sm-2">
+				    	<label class="sub-title text-info  m-b-10 signed-label ">Signed Contract</label><br>
+				            <div class="text-center dis-inline m-b-20">
+				            	<img src="http://localhost:1313/goomo_2/img/signed.png" class="img-responsive">
+								<a href="#" class="text-decor secondary-link">View</a>
+				            </div>
+		            	</div>
+		            	<div class="col-sm-10">
+		            		<div>
+
+		            		  
+		            		  <ul class="nav nav-tabs" role="tablist">
+		            		    <li role="presentation"><a href="#uploadContract" aria-controls="home" role="tab" data-toggle="tab">Upload</a></li>
+		            		    <li role="presentation" class="active"><a href="#history" aria-controls="profile" role="tab" data-toggle="tab">History</a></li>
+		            		  </ul>
+
+		            		  
+		            		  <div class="tab-content p-t-20">
+		            		    <div role="tabpanel" class="tab-pane " id="uploadContract">
+		            		    	<button class="btn btn-sm outline fnb-btn ">Upload Contract</button>
+		            		    </div>
+		            		    <div role="tabpanel" class="tab-pane active" id="history">
+		            				
+				            		<div class="history-wrap">
+				            			
+				            			<div class="flex-row flex-wrap">
+				            				<div class="m-r-40">
+				            					Uploaded on 29/08/2017
+				            				</div>
+				            				<div class="m-r-40" style="width:150px">
+				            					<label>initial_contract.pdf</label>
+				            				</div>
+				            				<div class="m-r-40">
+				            					<a href="#">View</a>
+				            				</div>
+				            				<div>
+				            					<a href="#">Download</a>
+				            				</div>
+				            			</div>
+				            		</div>
+		            		    </div>
+		            		  </div>
+
+		            		</div>
+
+		            	</div>
+		            </div>
+				</div>
+
+
+				<div class="declaration financeCols m-t-40">
+					<div class="declaration-row flex-row space-between">
+						<p class="m-b-0 sub-title text-info bolder">I hereby declare that the details furnished above are true and correct</p>
+						
+						<button class="btn fnb-btn secondary-btn bolder" data-target="#acceptmodal" data-toggle="modal">Accept</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+<div class="modal fade fnb-modal" id="acceptmodal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content text-center">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-secondary">Accept Contract</h4>
+      </div>
+      <hr>
+      <div class="modal-body">
+        <p class="p-t-0 bolder">
+        	Please read the terms mentioned below carefully before accepting.
+        </p>
+
+        <div class="contract-full">
+This Hotel Agreement (“Agreement”) including all schedules, annexures, exhibits, addendums (if any) attached hereto and made a part hereof is entered into on ____________2017 (“Effective Day”) by and between:
+
+1.        __________________________          ( hereinafter to be called “Hotel”)
+
+Registered Address:
+
+
+2.  Orbit Corporate & Leisure Travel (I) Private Limited, a company incorporated under the Companies Act, 1956 having its registered office at 103, Navyug Industrial Estate, T.J Road, Sewri West Mumbai 400015 India CIN U63040MH2006PTC165732 (hereinafter referred to as “Orbit”) and Goomo Holdings Services India Private Limited, a company incorporated under the Companies Act, 2013 having its registered office at 103, Navyug Industrial Estate, T.J Road, Sewri West Mumbai 400015 CIN U74999MH2016FTC287629 (hereinafter referred to as “Goomo”) and both Orbit and Goomo hereinafter shall be collectively referred to as "Company”, which expression shall include its executors, administrators, affiliates, subsidiaries, group companies, successors-in-interest/office and permitted assigns.
+
+            RECITAL
+
+WHEREAS, Company is engaged in the business of running its e-commerce portal under the brand name of “Goomo” on the URL-www.goomo.com (“website”).
+
+WHEREAS, Hotel is in the business of running and maintaining hotels.
+
+WHEREAS, Company is now desirous of entering into this Agreement for the purpose of setting out terms and conditions pertaining to the services proposed to be provided by the Hotel.
+
+NOW THEREFORE, in consideration of the foregoing and the mutual agreements set forth herein, and other valuable consideration, the Parties hereto, intending to be legally bound, hereby agree as follow:
+
+1.  Period of Contract
+This Agreement shall be deemed to have come into effect on and from the Effective Date and shall continue for a period of 1 (one) year post the Effective Date ("Term") unless terminated by Company by giving one month’s written notice to the Hotel ("Notice Period"). The Parties hereby agree that upon expiry of the Term, this Agreement shall automatically renew for a further term of 1 (one) year. Even after the termination of this Agreement, Hotel shall honour any bookings made by Company’s customers up till the effective date of termination or expiry of this Agreement. Further, the Company reserves the right to terminate this Agreement with immediate effect in the event of any material or other breach of the provision of this Agreement by Hotel including without limitation on the Hotel's inability to offer inventory, inventory and rate parity not being maintained by the Hotel, failure to issue invoices to company, bankruptcy or winding up proceedings against the Hotel, change of control of the Hotel or multiple escalations from customers against the Hotel i.e., customer satisfaction index. Hotel shall immediately intimate Company of any change of control.
+
+2.  Hotel information
+Information provided by Hotels for inclusion on Company’s distribution channel(s) shall include extensive information relating to the Hotel photos, amenities, services, write up and the rooms available for reservation, details of the rates (including all applicable taxes, levies, surcharges and fees) and availability, cancellation and no-show policies and other policies and restrictions.
+
+3.  Inventory and Price
+The Hotel has committed to the Company a specified amount of room allotment on daily basis.  The Hotel will be provided with a login and password for Company’s hotel Extranet to control the rates and inventory of the Hotel on the company website. All information contained in this agreement is strictly confidential and must not be disclosed to any third parties.
+
+4.  Access and Authorizations:
+The Hotel shall at all times to ensure that the user id’s log-in’s passwords, information about the extranet or any other log in authorization remain confidential. The user log-in’s, passwords shall only be used by authorized personnel’s. Any breach of this provision will entitle the Company to delete this Agreement in its entirety.
+
+5.  Payment Consideration/Fees Taxes
+The Company will pay Hotel the net room rates for all reservations. In the case of a customer dispute, discrepancy or audit by legal authorities, Hotel shall produce evidence of guest occupancy. The Company shall collect the payment for room charges from the customer at the time of booking and shall pass the booking amount on to the Hotel, prior to the guest check-out. All additional and miscellaneous services availed by the guest during the stay to be charged directly to the guest. In case of booking made within 48 hours of check in time hotel will give Company 3 (three) working days to process the payment.
+
+6.  Compliance with applicable laws
+The Hotel shall comply with the applicable state and central laws and regulations and to comply with municipal regulations applicable in respect of safety, health, hygiene, fire regulations etc., and to ensure their enforcement in respect of the relevant hotel facility.
+
+7.  Confidentiality
+The Hotel acknowledges and agrees that in connection with this Agreement, the Hotel will have access to information relating to the Company’s or its affiliate’s business affairs, operations, products, processes, methodologies, plans, projections, know-how, market opportunities, suppliers, customers, marketing activities, sales, software, computer and telecommunications systems, costs and prices, wage and records pertaining to finances and personnel (“Confidential Information”) and hereby agrees not to disclose any Confidential Information to any third party and not to use any such Confidential Information for any purpose other than as strictly required for the performance of this Agreement. All such Confidential Information is and shall remain the exclusive property of the Company and no license shall be implied to have been granted with respect to such Confidential Information by reason of Hotels access to such Confidential Information. Hotel undertakes to use all precautions required to enable it to comply with all the terms of this Agreement and to ensure similar compliance of the same by its employees/ personnel.
+
+8.  Disclaimers and Indemnity
+a)  The Company does not represent or warrant that, the extranet, or technical functionality   shall operate securely, be error free or without interruption. The Hotel acknowledges that they have not entered into this Agreement in reliance upon any warranty or representation except those specifically set forth herein. The Company shall have no direct, consequential, or, indirect, exemplary, punitive, or other liability under this Agreement.
+
+b) The Company shall not be responsible in any way for the correctness or accuracy any hotel feeds regarding the room rates, inventory and availability of hotel rooms made by the Hotel. The hotel be solely responsible for all the hotel data fed through the Company Hotel Extranet. The Company shall display the same on an “AS IS BASIS” received from
+
+.
+
+c) Both Parties shall indemnify, defend and hold harmless each other and their respective officers, directors, agents and employees harmless from and against all claims, damages, liabilities, costs, losses and expenses, including reasonable attorneys’ fees and expenses incurred for any claim against each other arising out of a breach by the breaching Party of the obligations (including any warranty) under this Agreement based resulting from services or performance of this Agreement.
+
+9.  Representations and Warranties of the Hotel
+The Hotel represents and warrants that a) it has the full corporate right, power and authority to enter into this Agreement and to perform the acts required of it hereunder, (b) its execution of this Agreement and performance of its obligations hereunder, do not and will not violate any law, rule, regulation or order applicable to them or violate or contravene the provisions of or constitute a material default under any documents, contracts, agreements or any other instruments to which they are a party or which are applicable to them, (c) when executed and delivered, this Agreement will constitute the legal, valid and binding obligation of the Hotel, enforceable against it in accordance with its terms, and (d) it owns and holds all material consents, registrations, licenses, permits and authorisations wherever necessary for the lawful conduct and operation of their respective business, and the same  are valid and subsisting and have not been terminated or have become void or terminable.
+
+10. Force Majeure
+Neither party shall be responsible to the other for failure to perform their respective obligations under this Agreement due to causes beyond its reasonable control. Such causes include but are not limited to an act of god, fire, strike, act of war, riot, and act of terrorism or governmental prohibition. If the force majeure condition continues for more than thirty (30) days, then, either party may terminate this Agreement by giving a notice of termination with immediate effect after completion of these thirty (30) days, to the other party in writing.
+
+11. Inability to Honor Reservations
+If the Hotel is unable to honor any of its reservations, it shall immediately notify the Company and also relocate the Company’s guest to a comparable Hotel or Resort or an upgraded Hotel in the same vicinity.  Any loss arising out of such arrangement will be borne by Hotel. It shall also prepay to such comparable Hotel or Resort the room charges for the nights in question, together with all the transportation costs of the guest to such alternative accommodation. The Hotel will also immediately deliver a written apology to the Company guest including an explanation absolving the Company of responsibility for supplier’s / hotel’s failure to honor the reservation.
+
+12. Relation
+This Agreement is on principal to principal basis and it shall not create any employer, employee relationship nor shall it be deemed to create any partnership, joint venture, agency between the Hotel/Accommodation and the Company.
+
+13. Notices
+All correspondence and notices under this Agreement shall be given in writing at the following address: In case of a change in address, each Party shall notify the other Party, in writing, about such change.
+
+If to the Company:
+
+10th Floor  Hallmark Business Park,Sant Dnyaneshwar Road, Bandra East, Mumbai -400051
+
+If to the Hotel: ______________________________________________________________
+
+___________________________________________________________________________
+
+
+14. Severability
+If any provision of this Agreement shall contravene or be illegal, invalid or unenforceable under the laws of any state in which this Agreement shall be performed or enforced, then such contravention, illegality, invalidity or unenforceability shall not invalidate the entire Agreement     and the Agreement shall be modified to the extent necessary to make it enforceable.
+
+15. Amendment
+Company reserves the right to modify the contents of this Agreement at any time. The Hotel can view the most current version of the Agreement on the website. www.goomo.com
+
+
+16. Assignment
+The Company may assign its rights under the Agreement to any other party including its affiliates, subsidiaries, group companies, successor, however, the assignee has to adhere to the terms and conditions of this Agreement. Hotel shall have no right to assign or transfer any rights or obligations or liabilities, if any, under this Agreement without the written consent of the Company.
+
+17. Governing Law
+This Agreement will be governed by and construed in accordance with the laws of the Republic of India and the courts of Mumbai shall have the exclusive jurisdiction over all disputes arising hereunder.
+
+
+IN WITNESS WHEREOF the parties hereto have duly executed this Agreement on the day and year first above written.
+
+
+
+Signed on behalf of the Company:                  Signed on behalf of Hotel:
+
+Name: ______________________                    Name: ______________________
+
+Title: _______________________        Title: _______________________
+
+Date: _______________________       Date: ________________________
+
+
+
+
+ANNEXURE A
+
+CANCELLATIONS, REFUNDS AND RETENTION POLICIES
+
+
+Every booking shall be made, amended or cancelled by informing the Company in writing. The Hotel undertakes that it shall ensure parity in respect of cancellation policy as well, across channels.
+The cancellation, retention and refund policies of the Hotel shall be uploaded/updated by the Hotel to Extranet and any modification thereto shall be intimated in writing to Company. Hotel hereby confirms that such change in policies shall not be made applicable retrospectively and shall be applicable to only such customers who make reservations/booking post the publication of such policies.
+If the Agreement stands terminated on account of breach of the terms of this Agreement and refunds pertaining to cancellations are owed to Company along with other dues, then such refunds shall be credited to Company’s account one week post such termination. In the event, this cancellation refund is not credited to Company’s account in the aforementioned time, then Company shall levy an interest at the rate of 24% per annum on such refund as penalty one week prior to termination of this Agreement
+
+
+
+ANNEXURE B
+
+RATE PARITY GUARANTEE AND INVENTORY DETAILS
+
+The Hotel guarantees to the Company that the sell price advertised to the Company corresponds to the best available price for an equivalent stay and that a better price cannot be ‘obtained by a guest on both desktop and mobile application (Mobile App) making a reservation with the Hotel directly or via another party or via another medium. Once Initial loading will be done, Hotel can manage these rates and inventory by using the Company Hotel Extranet.
+
+Rates and allocation Details
+
+
+Rate Type: SELL RATES                                 (RATES IN CURRENCY …………………..)
+
+
+Date
+Room Type
+Size In           SQ FEET
+Total rooms
+Allotment
+Sell Rate
+Extra Bed
+Max. No. of Adult / Child allowed
+SGL
+DBL
+From
+
+Commission
+B2C_______%   B2B_______%
+Cut Off period
+
+Meal Plan
+
+Tax
+Service Tax
+Luxury Tax
+
+Other Tax
+
+Child Age Policy
+Free up to _______________Age
+Child with bed rate
+
+Smoking
+Yes / No
+Airport Transfers free
+Yes / No
+Airport pickup
+Yes / No
+Airport Drop
+Yes / No
+Extra bed Type
+COT / Mattresses/ SofaCumBed
+Channel manager
+
+
+
+
+ANNEXURE C
+
+CANCELLATION POLICY:        Standard cancellation Policy
+
+If cancelled 24hrs before check-in 1-night retention
+If cancelled 48Hrs before check-in full refund
+No show: No refund
+
+Hotel Cancellation Policy:
+
+
+___________________________________
+___________________________________
+___________________________________
+
+
+
+Hotel Info & Contact Information
+
+
+Hotel Name:
+__________________________________________________________________________________
+
+Hotel Site Address: _________________________________________________________________
+
+
+
+Star
+category
+
+Total
+Inventory
+
+Total
+Floors
+
+No of
+Room Type
+
+Check In
+
+
+
+Check Out
+
+24 hours
+check in /out
+
+Built
+Year
+
+Hotel website:
+
+
+
+USP: E.g.: Location / Landmark/ Dinning/Shopping/ Hospital /Metro Station /Business Hub
+
+__________________________________________________________________________________
+
+__________________________________________________________________________________
+
+__________________________________________________________________________________
+Hotel Contact Details:(Please update us as and when any changes in contact information)
+
+
+General Manager /Sales and Marketing:
+
+
+Reservations:
+Name:
+
+
+Name:
+Title:
+
+
+Title:
+Email:
+
+
+Email:
+Phone:
+
+
+Phone:
+
+Revenue Manager Contact Information:
+
+
+Finance / Accounts:
+Name:
+
+
+Name:
+Title:
+
+
+Title:
+Email:
+
+
+Email:
+Phone:
+
+
+Phone:
+
+
+REQUIRED DOCUMENTS/ PAYMENT REMITTANCE DETAILS
+
+
+Accommodation Registration Documents:
+
+Certificate of incorporation, if company/ Partnership Deed, if Partnership firm or LLP;
+ Copy of Pan card;
+Lease Agreement, if any;
+ Bank details, along with cancelled cheque;
+ Copy of registration license;
+ Sales Tax, Service Tax, VAT registration copy.
+
+
+Account detail for Payment remittance via NEFT
+
+Payee Name
+
+
+Account Number
+
+
+Bank Name
+
+
+Branch Address
+
+
+
+
+
+IFSC:
+
+
+
+
+
+HOTEL AMENITIES
+Complimentary Services
+Complimentary Breakfast ( Limited with Set Menu)
+
+Complimentary Buffet Breakfast
+Complimentary Breakfast in Room with set menu(Limited)
+
+Complimentary Wifi Internet
+
+Complimentary Airport Drop
+Complimentary Airport Pickup
+Complimentary Airport Transfers
+
+Complimentary Airport Transfer on Shared Basis
+
+Complimentary Sauna
+
+Complimentary Steam
+
+Complimentary Health Club access
+
+Complimentary Jacuzzi
+
+Complimentary Ayurveda Massage
+
+Complimentary Access to Fitness center
+
+Complimentary access to swimming pool
+
+Complimentary Bottled water
+
+Complimentary Local Newspaper
+
+Free parking
+
+Recreation
+Beach access
+
+Badminton Court
+
+Beachfront
+
+Tennis Court
+
+Pool Table
+
+Ping-Pong
+
+Darts
+
+Racquetball
+
+Bowling
+
+Picnic Area
+Ground
+
+Outdoor Fireplace
+
+Golf Course (onsite)
+Squash courts
+
+Water Park(offsite)
+
+Water Park(onsite)
+
+Water Sports Facilities (on site)
+
+Water Sports Facilities (offsite)
+
+Windsurfing (Offsite)
+
+scuba Diving (offsite)
+
+Bicycle Available (free)
+
+Bicycle Available (surcharge)
+
+Canoeing
+
+Fishing
+
+Horseback Riding
+
+Cycling
+
+Hiking
+
+Rain dance
+
+Kids Zone
+
+Team building activity zone
+
+Jet Skiing
+
+Indoor Games
+
+Safari excursion(offsite)
+
+Bird Watching (offsite)
+
+Trekking
+
+Skiing
+
+Cookery classes
+
+
+
+
+
+
+   Food and Beverages
+Kid-friendly Buffet
+
+Coffee Shop
+Coffee Shop 24hours
+
+Restaurant
+
+Restaurant with Vegetarian food
+
+Bar
+
+Snack Bar
+
+Grocery Deliveries
+
+Packed Lunches
+
+BBQ Facilities
+
+Vending Machine (drinks)
+
+Vending Machine (snacks)
+
+Special Diet Meals (upon request)
+
+Jain Meals
+
+Halal Food
+
+24 Hours Room Service
+Limited Hours Room Service
+
+Breakfast in the Room
+
+Barbeque facility
+
+
+    Restaurant
+Name _____________________________________
+Cuisine     _____________________________________
+Timing
+ _____________________________________
+
+
+   Restaurant
+Name _____________________________________
+Cuisine     _____________________________________
+Timing
+ _____________________________________
+
+   Restaurant
+Name _____________________________________
+Cuisine     _____________________________________
+Timing
+ _____________________________________
+
+
+
+Fitness & Spa
+Pool and Spa
+Rooftop Pool
+Infinity Pool
+Swimming Pool
+Kids' Pool
+
+Pool side restaurant
+
+Waterslide
+
+Beach Chairs/Loungers
+
+Beach Umbrellas
+
+Salon
+
+Spa Facilities
+
+Steam Room
+
+Spa Lounge/Relaxation Area
+
+Foot Bath
+
+Spa/Wellness Packages
+
+Massage Chair
+
+Yoga Classes
+
+Fitness Classes
+
+Personal Trainer
+
+Fitness/Spa Locker Rooms
+
+Sauna
+
+Turkish/Steam Bath
+
+Hot Tub/Jacuzzi
+
+Fitness Center
+
+Solarium
+
+Hot Spring Bath (offsite)
+
+Massage
+
+Open-air Bath
+Terrace
+Sun Deck
+
+
+Conveniences
+Concierge Service
+
+Ticketing Service
+
+Travel Desk
+
+Currency Exchange
+
+ATM On Site
+
+Valet Parking
+
+Free Parking
+
+Secured Parking Area
+
+Baggage Storage
+
+Cleaning Services
+
+Dry Cleaning
+Shoeshine
+
+Ironing Service
+
+Laundry
+Daily Housekeeping
+
+
+Entertainment
+Board Games/Puzzles
+
+Books, DVDs, Music for Kids
+
+Indoor Play Area
+
+Kids' Outdoor Play Equipment
+
+Kids' TV Networks
+
+Evening Entertainment
+
+Casino
+
+Karaoke
+
+Entertainment Staff
+
+Kids' Club
+
+Playground
+Discotheque
+Nightclub/DJ
+
+
+Business Services
+Meeting/Banquet Facilities
+
+Business Center
+
+Fax/Photocopying
+
+Mobile phones on hire
+
+Laptops on hire
+
+Board Room
+Conference Room
+
+
+Miscellaneous
+Shops (on site)
+
+Convenience Store (on site)
+
+Hair/Beauty Salon
+
+Souvenir/Gift Shop
+
+All Spaces Non-Smoking (public and private)
+
+Designated Smoking Area
+
+Non-smoking Rooms
+
+Facilities for Disabled Guests
+
+Elevator
+
+Family Rooms
+
+Soundproof Rooms
+
+Honeymoon Suite
+
+VIP Room Facilities
+
+Air Conditioning
+
+Heating
+
+Smoking Area
+
+Security Guard
+
+Doorman
+
+Close Circuit Camera ( CC TV)
+
+Car/ bike Rental
+
+Airport Shuttle
+
+Front Desk Services
+
+24-Hours Front Desk
+
+Private Check-in/Check-out
+
+Express Check-in/Check-out
+
+Shared Kitchen
+
+Shared Lounge/TV Area
+
+Game Room
+
+Library
+
+Common Areas
+
+Chapel/Shrine
+
+
+
+
+
+
+ROOM AMENITIES
+Bath
+Bathrobe
+
+Bathtub
+
+Body soap
+
+Bidet
+
+Slippers
+
+A special chair/stool for showering is provided.
+
+Free toiletries
+
+Shampoo
+
+Guest bathroom
+
+Hairdryer
+
+Shared bathroom / Shared toilet
+
+Shower
+
+Conditioner
+
+Hot tub
+
+Shower cap
+
+Sauna
+
+Spa tub
+
+Toilet
+
+Toilet paper
+
+Toilet With Grab Rails
+
+Toothbrush
+
+Towels
+
+Wheelchair Accessible shower
+
+Towels/Sheets (extra fee)
+
+Entertainment
+Books, DVDs or music for children
+
+CD Player
+
+Blu-ray player
+
+Board games/puzzles
+
+Cable channels
+
+DVD Player
+
+Flat-screen TV
+
+TV
+
+Video games
+
+Cable channels
+
+Radio
+
+BED Room
+Fold-up bed
+
+Hardwood/Parquet floors
+
+High chair
+
+Kitchenware
+
+Mosquito net
+
+Outdoor furniture
+
+Wardrobe/Closet
+
+Sofa
+
+Sofa bed
+
+Tile/Marble floor
+
+Trash cans
+
+Soundproof
+
+Stovetop
+
+Child safety socket covers
+
+Children’s' cribs
+
+Clothes rack
+
+Desk
+
+Carpeted
+
+Dining table
+
+Drying rack for clothing
+Hypoallergenic  Pillows
+
+
+Room Design
+Rooftop Pool
+
+Plunge Pool
+
+Additional bathroom
+
+Balcony
+
+Dining area
+
+Executive Lounge Access
+
+Infinity Pool
+
+Interconnecting room(s) available
+
+Kitchen
+
+Kitchenette
+
+Outdoor dining area
+
+Patio
+
+Pool With a View
+
+Private entrance
+
+Private pool
+
+Handicapped accessible rooms
+
+Ground floor room
+
+Heated Pool
+
+Terrace
+
+Walk-in closet
+
+Walk-in Shower
+
+Window in the room
+
+No windows in the room
+
+Fire Place
+
+Sitting area
+
+Appliances
+iPad
+
+iPod dock
+
+Iron
+
+Ironing facilities
+
+Tea/Coffee maker
+
+Telephone
+
+Fan
+
+Electric kettle
+
+Electric blankets
+
+Dishwasher
+
+Dryer
+
+Coffee machine
+
+Toaster
+Laptop Safe
+
+Heating
+
+Microwave
+
+Washing machine
+
+Oven
+
+Minibar
+
+Refrigerator
+
+
+Room with a View
+Garden view
+
+Lake view
+
+Landmark view
+
+Mountain view
+
+Pool view
+
+River view
+
+Sea view
+
+City view
+
+
+
+
+Property Theme
+
+
+
+
+Adventure
+
+
+
+Beach
+
+
+
+Boutique
+
+
+
+Business
+
+
+
+Family friendly
+
+
+
+Historic
+Luxury
+
+
+
+Romantic
+
+
+
+Shopping
+
+
+
+Wellness
+
+
+
+Spa
+
+
+
+Nightlife
+
+
+
+Women Friendly
+
+
+
+Pet Friendly
+
+
+
+Attraction / Place of Interest
+
+
+Place of Interest
+
+Dist. From Hotel (KMS)
+
+        </div>
+
+        <div class="bank-deets">
+          <div class="well table-responsive">
+            <table id="" class="table table-striped dataTable listing-table no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="listings-table_info" style="width: 100%;">
+              <thead>
+                  <tr role="row">
+                    <th class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 149px;">Account No<span class="sort-icon"></span></th>
+                    <th class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 123px;">Holder name<span class="sort-icon"></span></th>
+                    <th class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 123px;">Bank Name<span class="sort-icon"></span></th>
+                    <th class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 146px;">IFSC Code<span class="sort-icon"></span></th>
+                    <th class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 124px;">PAN No<span class="sort-icon"></span></th>
+                    <th class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 124px;">GSTN<span class="sort-icon"></span></th>
+                  </tr>
+                </thead>
+              <tbody>
+
+                <tr role="row" class="odd">
+                    <td class=""><span class="text-info bolder">FC1123333445</span></td>
+                    <td class="">Sujata Patil</td>
+                    <td class="">HDFC BANK</td>
+                    <td class="">HDFCC129399</td>
+                    <td class="">AWCET1234</td>
+                    <td class="">AWCET1234</td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+          <label for="bankdeets" class="">
+            <input value="" type="checkbox" class="fnb-checkbox" name="bankdeets" id="bankdeets">
+            <span class=" default-size" style="position: relative; top: 10px;">I confirm that the bank details mentioned above are correct.</span>
+          </label>
+        </div>
+
+      </div>
+      <hr>
+      <div class="modal-footer flex-row justify-center">
+        <button type="button" class="btn fnb-btn outline" data-dismiss="modal">No</button>
+        <button type="button" class="btn fnb-btn primary-btn contract-accept" data-dismiss="modal" disabled="">Yes, I Accept</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<script type="text/javascript">
+		var existingComments = [
+		  {
+		    "sectionId": "1",
+		    "comments": [
+		      {
+		        "comment": "<p>The view for this page will be different  for Goomo Team and Property Owner</p>"
+		      },
+		      {
+		        "comment": "<p>Goomo Team View:</p> Finance Inputs<br>  <ul><li>Can view and edit Currency, Commission and NAV Vendor Code</li></ul> Bank Details<br> <ul><li>Can view and edit Bank Details</li></ul> Tax Rules<br> <ul><li>Can only view tax rules as it is at platform level</li><li>Tax rules can be created by Goomo team from the backend</li></ul> Contract<br><ul><li>Can view, generate and upload contract</li></ul>"
+		      },
+		      {
+		        "comment": "<p>Property Owner View:</p> Finance Inputs<br>  <ul><li>Can only view Currency, Commission</li></ul> Bank Details<br> <ul><li>Can view and edit Bank Details</li></ul> Tax Rules<br> <ul><li>Can only view tax rules as it is at platform level</li></ul> Contract<br><ul><li>Can view, generate and upload contract</li></ul>"
+		      }
+		    ]
+		  }
+		];
+	</script>
+
+
+
+																	</div>
+
+
+																</div>
+															</div>
+														</div>
+
+													</div>
+											</div>
+									</div>
+
+							</div>
+					</div>
+					<div class="site-overlay"></div>
+			</div>
+			
+
+		
+<div class="pos-fixed fly-out side-toggle">
+    <div class="mobile-back desk-hide mobile-flex">
+        <div class="left mobile-flex">
+            <i class="fa fa-arrow-left text-primary back-icon" aria-hidden="true"></i>
+            <p class="element-title heavier m-b-0">Back</p>
+        </div>
+        <div class="right">
+            
+        </div>
+    </div>
+    <div class="fly-out__content">
+        <div class="sidebar-updates page-sidebar">
+
+        
+
+            <div class="page-sidebar__header flex-row space-between mobile-hide">
+                <div class="backLink flex-row">
+                    <a href="" class="primary-link p-r-10 element-title article-back"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                    <div class="sub-title bolder">Add Bank Details</div>
+                </div>
+            </div>
+
+            <div class="page-sidebar__body">
+                <div class="update-sec sidebar-article user-overflow">
+                   <label class="bolder m-t-35 prop-title">Account Number</label>
+                   <div class="form-group">
+                     <input type="text" class="form-control fnb-input" placeholder="Eg: HDCAR9874563210" name="">
+                   </div>
+
+                   <label class="bolder m-t-5 prop-title">Re-Enter Account Number</label>
+                   <div class="form-group">
+                     <input type="password" class="form-control fnb-input" placeholder="Type your a/c number again" name="">
+                   </div>
+
+                   <label class="bolder m-t-5 prop-title">Holder Name</label>
+                   <div class="form-group">
+                     <input type="text" class="form-control fnb-input" placeholder="Enter a/c holder name" name="">
+                   </div>
+
+                   <label class="bolder m-t-5 prop-title">Bank Name</label>
+                   <div class="form-group">
+                     <input type="text" class="form-control fnb-input" placeholder="Enter bank name" name="">
+                   </div>
+
+                   <label class="bolder m-t-5 prop-title">IFSC Code</label>
+                   <div class="form-group">
+                     <input type="text" class="form-control fnb-input" placeholder="Enter IFSC code" name="">
+                   </div>
+
+                   <label class="bolder m-t-5 prop-title">PAN No</label>
+                   <div class="form-group">
+                     <input type="text" class="form-control fnb-input" placeholder="Enter PAN no" name="">
+                   </div>
+
+                   <label class="bolder m-t-5 prop-title">GSTN</label>
+                   <div class="form-group">
+                     <input type="text" class="form-control fnb-input" placeholder="Enter GSTN" name="">
+                   </div>
+
+                   <label class="bolder m-t-5 prop-title">Cancelled Cheque</label>
+                   <div class="form-group">
+                     <button type="button" class="btn fnb-btn outline mini">Upload</button>
+                   </div>
+
+                   <label class="bolder m-t-5 prop-title">Status</label>
+                   <div class="form-group">
+                     <select class="fnb-select form-control select-variant">
+                         <option>Active</option>
+                         <option>Inactive</option>
+                     </select>
+                   </div>
+
+                   <button type="button" class="btn fnb-btn secondary-btn mini m-t-30" data-dismiss="modal">Add</button>
+                </div>
+            </div>
+
+        
+
+        </div>
+    </div>
+</div>
+
+		
+<footer>
+	<div class="container">
+      <div class="goomoIcon">
+      <img src="http://localhost:1313/goomo_2/img/goomo_logo.png" class="img-responsive center-block m-t-10 m-b-20" width="">
+      </div>
+      <div class="footerText">
+        <p class="copyright">
+          Copyright ©
+          
+          2017
+          
+          Goomo Group. All rights reserved.
+          
+        </p>
+      </div>
+    </div>
+</footer>
+
+
+		</div>
+
+		<script type="text/javascript" src="/goomo_2/js/jquery.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/bootstrap.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/datatables.net/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/bootstrap-multiselect.js"></script>
+
+
+		<script type="text/javascript" src="/goomo_2/js/moment.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/flex-datalist/jquery.flexdatalist.min.js"></script>
+
+		
+		<script type="text/javascript" src="/goomo_2/js/readmore.min.js"></script>
+		<script type="text/javascript" src="/goomo_2/js/side-comments.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/tooltipster.bundle.min.js"></script>
+
+		<script type="text/javascript" src="/goomo_2/js/custom.js"></script>
+	</body>
+</html>

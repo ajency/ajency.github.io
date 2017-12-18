@@ -1,0 +1,1091 @@
+{{ define "main" }}
+	<div class="">
+
+	<!-- 	<div class="flex-row desk-hide">
+			<div class="back-btn">
+				<a href="/goomo_html/checklist/{{ $.Params.slug }}">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="back-title m-l-10 h4 bolder">
+				Back to Property Checklist
+			</div>
+		</div> -->
+
+		<div class="row">
+			<div class="col-sm-2 col-xs-4">
+				<p class="text-info bolder">From date:</p>
+				<input type="text" class="from-date form-control fnb-input m-r-10 sub-dates" placeholder="From Date">
+			</div>
+			<div class="col-sm-2 col-xs-4">
+				<p class="text-info bolder">To date:</p>
+				<input type="text" class="to-date form-control fnb-input m-r-10 sub-dates" placeholder="To Date">
+			</div>
+			<div class="col-sm-2 col-xs-4">
+				<button class="btn fnb-btn outline m-t-30 m-b-15">Set Period</button>
+			</div>
+			<div class="col-sm-4"></div>
+			<div class="col-sm-2 col-xs-12">
+				<div class="text-center">
+					Showing 15 days result
+					<button class="btn fnb-btn outline m-r-5 m-l-5"><</button>
+					<button class="btn fnb-btn outline m-r-5 m-l-5">></button>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+
+		<div class="flex-row space-between flex-wrap">
+			<div class="flex-row">
+				<div class="m-r-30">
+					<div class="text-info">Occupancy:</div>
+					<select class="form-control fnb-select border-bottom">
+						<option>Single</option>
+						<option selected="">Double</option>
+						<option>Triple</option>
+						<option>Extra Adult</option>
+						<option>Extra Child</option>
+					</select>
+				</div>
+
+				<div>
+					<div class="text-info">Channel:</div>
+					<select class="form-control fnb-select border-bottom">
+						<option>Mobile</option>
+						<option selected="">Web</option>
+						<option>B2B</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="flex-row flex-wrap m-t-20">
+				<div class="calender-legend m-b-10">
+					<div class="flex-row small">
+						<div class="m-r-15">
+							<i class="fa fa-circle text-success"></i> Available
+						</div>
+						<div class="m-r-15">
+							<i class="fa fa-circle text-warning"></i> Low Alert/Sold
+						</div>
+						<div class="m-r-15">
+							<i class="fa fa-circle text-danger"></i> Blocked
+						</div>
+						<div class="m-r-15">
+							<i class="fa fa-circle text-restrict"></i> Restriction
+						</div>
+						<div class="m-r-15">
+							<i class="fa fa-circle text-blackout"></i> Blackout
+						</div>
+					</div>
+				</div>
+				<a href="/goomo_html/rates-availability/rates/{{ $.Params.slug }}" class="btn fnb-btn secondary-btn">Manage Rates</a>
+			</div>
+		</div>
+
+		<div class="tooltip_templates">
+		    <span id="tooltip_content">
+		    	<div class="flex-row space-between m-b-10 m-t-5">
+			    	<div>
+			    		Rate Type: Sell Rate
+			    	</div>
+			    	<a href="#" class="text-secondary"><i class="fa fa-pencil"></i> Edit</a>
+		    	</div>
+		        <img src="{{"img/rate_table.png" | absURL}}">
+		    </span>
+
+		    <span id="inventory_content">
+		        <img src="{{"img/inventory_table.png" | absURL}}">
+		    	<div class="text-center m-t-5">
+			    	<a href="#" class="text-secondary"><i class="fa fa-pencil"></i> Edit</a>
+		    	</div>
+		    </span>
+		</div>
+
+		<div class="calendar-holder m-t-30 flex-row">
+			<div class="cal-left-col">
+				<div class="left-header">
+					<h6 class="room-name">Premier Room</h6>
+				</div>
+				<div class="inventory-header">
+					<h6>Inventory</h6>
+					<small>Below rate plans are based on double occupancy</small>
+				</div>
+				<div class="plan-name">
+					Breakfast Plan
+				</div>
+				<div class="plan-name">
+					All Meals
+				</div>
+			</div>
+			<div class="cal-right-col flex-row">
+				<div class="single-day">
+					<div class="sd-header">
+						Oct 2017
+						<div class="sd-day">THU</div>
+						<div class="sd-date">05</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							09<span class="text-danger plan-restrict"><i class="fa fa-circle" aria-hidden="true"></i></span>
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">FRI</div>
+						<div class="sd-date">06</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count low tooltipster" data-tooltip-content="#inventory_content">
+							02
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">SAT</div>
+						<div class="sd-date">07</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							09
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">SUN</div>
+						<div class="sd-date">08</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							09
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">MON</div>
+						<div class="sd-date">09</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							09
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+				</div>
+				<div class="single-day block">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">TUE</div>
+						<div class="sd-date">10</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							09
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name="" checked=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">WED</div>
+						<div class="sd-date">11</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							09
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">THU</div>
+						<div class="sd-date">12</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							09
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">FRI</div>
+						<div class="sd-date">13</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							09
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster blackout" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">SAT</div>
+						<div class="sd-date">14</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							09
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster blackout" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">SUN</div>
+						<div class="sd-date">15</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							09
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster blackout" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">MON</div>
+						<div class="sd-date">16</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							09
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster blackout" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">TUE</div>
+						<div class="sd-date">17</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							09
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">WED</div>
+						<div class="sd-date">18</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							09
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">THU</div>
+						<div class="sd-date">19</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							09
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 3400
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">FRI</div>
+						<div class="sd-date">20</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day block">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">SAT</div>
+						<div class="sd-date">21</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name="" checked=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">SUN</div>
+						<div class="sd-date">22</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">MON</div>
+						<div class="sd-date">23</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">TUE</div>
+						<div class="sd-date">24</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">WED</div>
+						<div class="sd-date">25</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">THU</div>
+						<div class="sd-date">26</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+			</div>
+			<!-- <img src="{{"img/premier.png" | absURL}}" class="img-responsive"> -->
+		</div>
+
+		<div class="calendar-holder m-t-50 flex-row">
+			<div class="cal-left-col">
+				<div class="left-header">
+					<h6 class="room-name">Grand Deluxe Room</h6>
+				</div>
+				<div class="inventory-header">
+					<h6>Inventory</h6>
+					<small>Below rate plans are based on double occupancy</small>
+				</div>
+				<div class="plan-name">
+					Breakfast Plan
+				</div>
+				<div class="plan-name">
+					All Meals
+				</div>
+			</div>
+			<div class="cal-right-col flex-row">
+				<div class="single-day">
+					<div class="sd-header">
+						Oct 2017
+						<div class="sd-day">THU</div>
+						<div class="sd-date">05</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							09
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day block">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">FRI</div>
+						<div class="sd-date">06</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							02
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name="" checked=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">SAT</div>
+						<div class="sd-date">07</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">SUN</div>
+						<div class="sd-date">08</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count low tooltipster" data-tooltip-content="#inventory_content">
+							01
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster blackout" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">MON</div>
+						<div class="sd-date">09</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count low tooltipster" data-tooltip-content="#inventory_content">
+							02
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster blackout" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day ">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">TUE</div>
+						<div class="sd-date">10</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							05
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">WED</div>
+						<div class="sd-date">11</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day block">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">THU</div>
+						<div class="sd-date">12</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							04
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name="" checked=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">FRI</div>
+						<div class="sd-date">13</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day block">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">SAT</div>
+						<div class="sd-date">14</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name="" checked=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">SUN</div>
+						<div class="sd-date">15</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">MON</div>
+						<div class="sd-date">16</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">TUE</div>
+						<div class="sd-date">17</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">WED</div>
+						<div class="sd-date">18</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">THU</div>
+						<div class="sd-date">19</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">FRI</div>
+						<div class="sd-date">20</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day block">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">SAT</div>
+						<div class="sd-date">21</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name="" checked=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header weekend">
+						Oct 2017
+						<div class="sd-day">SUN</div>
+						<div class="sd-date">22</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">MON</div>
+						<div class="sd-date">23</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">TUE</div>
+						<div class="sd-date">24</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">WED</div>
+						<div class="sd-date">25</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+				<div class="single-day">
+					<div class="sd-header ">
+						Oct 2017
+						<div class="sd-day">THU</div>
+						<div class="sd-date">26</div>
+					</div>
+					<div class="sd-inventory">
+						<div class="sd-inventory_count tooltipster" data-tooltip-content="#inventory_content">
+							06
+						</div>
+						<label class="sd-block">
+							<input type="checkbox" name=""> Block
+						</label>
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+					<div class="sd-rate tooltipster" data-tooltip-content="#tooltip_content">
+						<i class="fa fa-inr"></i> 4500
+					</div>
+				</div>
+			</div>
+			<!-- <img src="{{"img/premier.png" | absURL}}" class="img-responsive"> -->
+		</div>
+
+		<p class="small m-t-50">
+			Please note that Goomo.com is a technology platform provider and only facilitates transactions between hotels who list their inventory and customers desirous of making a hotel booking. Goomo charges commission from hotels on their inventory sold via www.goomo.com, and is not responsible for actual provision of hotel services to the customers.
+		</p>
+
+	</div>
+
+	<script type="text/javascript">
+		var existingComments = [
+		  {
+		    "sectionId": "1",
+		    "comments": [
+		      {
+		        "comment": "<ul><li>Calendar view to display the inventory and the rates</li><li>Available rooms will be displayed on green</li><li>In case of low inventory there will be a yellow alert</li><li>Rooms can be blocked on unblocked </li><li>Restriction(red dot) indicates if there is some Minimum Length of Stay(MLOS) or Cut Off Period restriction applied to the room</li><li>The inventory or rates can be edited by hovering on the cell and clicked edit in the tooltip</li><li>The tool tip on inventory shows the number of rooms sold, MLOS and cutoff period details</li><li>The tooltip for rates shows the Sell Rates for all combinations of channel and occupancy if set.</li><li>Manage Rates action will take the user to bulk update the rates</li></ul>"
+		      }
+		    ]
+		  }
+		];
+
+
+	</script>
+{{ end }}

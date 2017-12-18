@@ -1,0 +1,415 @@
+<div class="tabular m-t-30 checklist-table">
+
+  {{ if $.Params.qc.submit }}
+  <div class="qc-overlay">
+    <a href="#" class="text-primary bolder">Submit for Review</a>
+  </div>
+  {{ end }}
+
+  <div class="tabular__header flex-row hidden-xs">
+    <div class="tabular__cell cell-2"></div>
+    <div class="tabular__cell cell-full t-product"></div>
+    <div class="tabular__cell cell-6 t-listing text-center">Checklist</div>
+    <div class="tabular__cell cell-6 t-seller text-center">QC Status</div>
+  </div>
+
+  <div class="checklist-section">
+    <div class="tabular__row flex-row ch-head-row">
+      <div class="tabular__cell cell-2">
+        {{ if $.Params.propertyinfo.done }}
+          <img src="{{"img/green-check-circle.png" | absURL}}" class="img-responsive" width="">
+        {{ else }}
+          <i class="fa fa-circle w-border text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell cell-full t-product">
+        <h5 class="m-t-0 m-b-0">Property Information</h5>
+      </div>
+      <div class="tabular__cell cell-6 t-listing text-center"></div>
+      <div class="tabular__cell cell-6 t-seller text-center"></div>
+    </div>
+    <div class="tabular__row flex-row">
+      <div class="tabular__cell cell-2">
+      </div>
+      <div class="tabular__cell cell-full t-product">
+        <a href="/goomo_html/details/address/{{ $.Params.slug }}">
+          <h6 class="text-muted m-t-0 m-b-5">Address &amp; Contact</h6>
+        </a>
+        <p class="{{ if $.Params.address.pending }} text-danger {{ else }} text-primary {{ end }} m-b-0">
+          {{ $.Params.address.pendingtext }}
+        </p>
+      </div>
+      <div class="tabular__cell cell-6 t-listing text-center ">
+        {{ if $.Params.address.checklist }}
+          <img src="{{"img/green-check.png" | absURL}}" class="img-responsive center-block" width="">
+        {{ else }}
+          <i class="fa fa-circle text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell cell-6 t-seller text-center mobile-qc">
+        <!-- <span class="desk-hide">QC Status: </span> {{ .Params.address.qc }} -->
+      </div>
+    </div>
+    <div class="tabular__row flex-row">
+      <div class="tabular__cell cell-2">
+      </div>
+      <div class="tabular__cell cell-full t-product">
+        <a href="{{ $.Params.amenities.url }}">
+          <h6 class="text-muted m-t-0 m-b-5">
+            Amenities &amp; Services
+            {{ if $.Params.amenities.hasedits }}
+              <i class="fa fa-exclamation-circle text-secondary"></i>
+            {{ end }}
+          </h6>
+        </a>
+        <p class="{{ if $.Params.amenities.pending }} text-danger {{ else }} text-primary {{ end }} m-b-0">
+          {{ $.Params.amenities.pendingtext }}
+        </p>
+      </div>
+      <div class="tabular__cell cell-6 t-listing text-center ">
+        {{ if $.Params.amenities.checklist }}
+          <img src="{{"img/green-check.png" | absURL}}" class="img-responsive center-block" width="">
+        {{ else }}
+          <i class="fa fa-circle text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell cell-6 t-seller text-center mobile-qc {{ if $.Params.amenities.qcorange }}text-secondary{{ end }}">
+        <!-- <span class="desk-hide">QC Status: </span> {{ .Params.amenities.qc }} -->
+      </div>
+    </div>
+    <div class="tabular__row flex-row">
+      <div class="tabular__cell cell-2">
+      </div>
+      <div class="tabular__cell cell-full t-product">
+        <a href="{{ $.Params.images.url }}">
+          <h6 class="text-muted m-t-0 m-b-5">
+            Images
+            {{ if $.Params.images.hasedits }}
+              <i class="fa fa-exclamation-circle text-secondary"></i>
+            {{ end }}
+          </h6>
+        </a>
+        <p class="{{ if $.Params.images.pending }} text-danger {{ else }} text-primary {{ end }} m-b-0">
+          {{ $.Params.images.pendingtext }}
+        </p>
+      </div>
+      <div class="tabular__cell cell-6 t-listing text-center ">
+        {{ if $.Params.images.checklist }}
+          <img src="{{"img/green-check.png" | absURL}}" class="img-responsive center-block" width="">
+        {{ else }}
+          <i class="fa fa-circle text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell cell-6 t-seller text-center mobile-qc {{ if $.Params.images.qcorange }}text-secondary{{ end }}">
+        <span class="desk-hide">QC Status: </span> {{ .Params.images.qc }}
+      </div>
+    </div>
+    <div class="tabular__row flex-row">
+      <div class="tabular__cell cell-2">
+      </div>
+      <div class="tabular__cell cell-full t-product">
+        <a href="/goomo_html/details/policies/{{ $.Params.slug }}">
+          <h6 class="text-muted m-t-0 m-b-5">Policies</h6>
+        </a>
+        <p class="{{ if $.Params.policies.pending }} text-danger {{ else }} text-primary {{ end }} m-b-0">
+          {{ $.Params.policies.pendingtext }}
+        </p>
+      </div>
+      <div class="tabular__cell cell-6 t-listing text-center ">
+        {{ if $.Params.policies.checklist }}
+          <img src="{{"img/green-check.png" | absURL}}" class="img-responsive center-block" width="">
+        {{ else }}
+          <i class="fa fa-circle text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell cell-6 t-seller text-center mobile-qc">
+        <!-- <span class="desk-hide">QC Status: </span> {{ .Params.policies.qc }} -->
+      </div>
+    </div>
+    <div class="tabular__row flex-row {{ if $.Params.desc.disabled }} disabled {{ end }}">
+      <div class="tabular__cell cell-2">
+      </div>
+      <div class="tabular__cell cell-full t-product">
+        <a href="#" class="form-toggle open-sidebar">
+          <h6 class="text-muted m-t-0 m-b-5">Description</h6>
+        </a>
+        <p class="{{ if $.Params.desc.pending }} text-danger {{ else }} text-primary {{ end }} m-b-0">
+          {{ $.Params.desc.pendingtext }}
+        </p>
+      </div>
+      <div class="tabular__cell cell-6 t-listing text-center ">
+        {{ if $.Params.desc.checklist }}
+          <img src="{{"img/green-check.png" | absURL}}" class="img-responsive center-block" width="">
+        {{ else }}
+          <i class="fa fa-circle text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell cell-6 t-seller text-center mobile-qc">
+        <!-- <span class="desk-hide">QC Status: </span> {{ .Params.desc.qc }} -->
+      </div>
+    </div>
+  </div>
+
+  <hr class="mobile-hide">
+
+  <div class="checklist-section">
+    <div class="tabular__row flex-row ch-head-row">
+      <div class="tabular__cell cell-2">
+        {{ if $.Params.rooms.done }}
+          <img src="{{"img/green-check-circle.png" | absURL}}" class="img-responsive" width="">
+        {{ else }}
+          <i class="fa fa-circle w-border text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell cell-full t-product">
+        <a href="/goomo_html/details/rooms/{{ $.Params.slug }}" class="dark-link"><h5 class="m-t-0 m-b-0">Rooms</h5></a>
+        <p class="{{ if $.Params.rooms.pending }} text-danger {{ else }} text-primary {{ end }} m-b-0">
+          {{ $.Params.rooms.pendingtext }}
+        </p>
+      </div>
+      <div class="tabular__cell cell-6 t-listing text-center">
+        {{ if $.Params.rooms.checklist }}
+          <img src="{{"img/green-check.png" | absURL}}" class="img-responsive center-block" width="">
+        {{ else }}
+          <i class="fa fa-circle text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell t-product desk-hide">
+        <label class="m-t-5 text-muted">Checklist Status</label>
+      </div>
+      <div class="tabular__cell cell-6 t-seller text-center mobile-qc">
+        <!-- <span class="desk-hide">QC Status: </span> {{ .Params.rooms.qc }} -->
+      </div>
+    </div>
+  </div>
+
+  <hr class="mobile-hide">
+
+  <div class="checklist-section">
+    <div class="tabular__row flex-row ch-head-row">
+      <div class="tabular__cell cell-2">
+        {{ if $.Params.rate.done }}
+          <img src="{{"img/green-check-circle.png" | absURL}}" class="img-responsive" width="">
+        {{ else }}
+          <i class="fa fa-circle w-border text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell cell-full  t-product">
+        <a href="/goomo_html/rates-availability/rate-plan/{{ $.Params.slug }}" class="dark-link"><h5 class="m-t-0 m-b-0">Rate Plan</h5></a>
+        <p class="{{ if $.Params.rate.pending }} text-danger {{ else }} text-primary {{ end }} m-b-0">
+          {{ $.Params.rate.pendingtext }}
+        </p>
+      </div>
+      <div class="tabular__cell cell-6 t-listing text-center ">
+        {{ if $.Params.rate.checklist }}
+          <img src="{{"img/green-check.png" | absURL}}" class="img-responsive center-block" width="">
+        {{ else }}
+          <i class="fa fa-circle text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell t-product desk-hide">
+        <label class="m-t-5 text-muted">Checklist Status</label>
+      </div>
+      <div class="tabular__cell cell-6 t-seller text-center mobile-qc">
+        <!-- <span class="desk-hide">QC Status: </span> {{ .Params.rate.qc }} -->
+      </div>
+    </div>
+  </div>
+
+  <hr class="mobile-hide">
+
+  <div class="checklist-section">
+    <div class="tabular__row flex-row ch-head-row">
+      <div class="tabular__cell cell-2 ">
+        {{ if $.Params.cancel.done }}
+          <img src="{{"img/green-check-circle.png" | absURL}}" class="img-responsive" width="">
+        {{ else }}
+          <i class="fa fa-circle w-border text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell cell-full t-product">
+        <a href="/goomo_html/details/cancel/{{ $.Params.slug }}" class="dark-link"><h5 class="m-t-0 m-b-0">Cancellation Policy</h5></a>
+        <p class="{{ if $.Params.cancel.pending }} text-danger {{ else }} text-primary {{ end }} m-b-0">
+          {{ $.Params.cancel.pendingtext }}
+        </p>
+      </div>
+      <div class="tabular__cell cell-6 t-listing text-center">
+        {{ if $.Params.cancel.checklist }}
+          <img src="{{"img/green-check.png" | absURL}}" class="img-responsive center-block m-t-5" width="">
+        {{ else }}
+          <i class="fa fa-circle text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell t-product desk-hide">
+        <label class="m-t-5 text-muted">Checklist Status</label>
+      </div>
+      <div class="tabular__cell cell-6 t-seller text-center mobile-qc">
+        <span class="desk-hide">QC Status: </span> {{ .Params.cancel.qc }}
+      </div>
+    </div>
+  </div>
+
+  <hr class="mobile-hide">
+
+  <div class="checklist-section">
+    <div class="tabular__row flex-row align-top ch-head-row">
+      <div class="tabular__cell cell-2">
+        {{ if $.Params.users.done }}
+          <img src="{{"img/green-check-circle.png" | absURL}}" class="img-responsive" width="">
+        {{ else }}
+          <i class="fa fa-circle w-border text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell cell-full t-product">
+        <a href="/goomo_html/details/users/{{ $.Params.slug }}" class="dark-link"><h5 class="m-t-0 m-b-0">Users</h5></a>
+        <p class="{{ if $.Params.users.pending }} text-danger {{ else }} text-primary {{ end }} m-b-0">
+          {{ $.Params.users.pendingtext }}
+        </p>
+        <p class="text-muted">If you are the owner, confirm your account and claim this listing.</p>
+      </div>
+      <div class="tabular__cell cell-6 t-listing text-center">
+        {{ if $.Params.users.checklist }}
+          <img src="{{"img/green-check.png" | absURL}}" class="img-responsive center-block" width="">
+        {{ else }}
+          <i class="fa fa-circle text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell t-product desk-hide">
+        <label class="m-t-5 text-muted">Checklist Status</label>
+      </div>
+      <div class="tabular__cell cell-6 t-seller text-center mobile-qc">
+        <!-- <span class="desk-hide">QC Status: </span> {{ .Params.users.qc }} -->
+      </div>
+    </div>
+  </div>
+
+  <hr class="mobile-hide">
+
+  <div class="checklist-section">
+    <div class="tabular__row flex-row align-top ch-head-row">
+      <div class="tabular__cell cell-2 ">
+        {{ if $.Params.ratesavail.done }}
+          <img src="{{"img/green-check-circle.png" | absURL}}" class="img-responsive" width="">
+        {{ else }}
+          <i class="fa fa-circle w-border text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell cell-full t-product">
+        <a href="/goomo_html/rates-availability/calendar/{{ $.Params.slug }}" class="dark-link"><h5 class="m-t-0 m-b-0">Rates and Availability</h5></a>
+        <p class="{{ if $.Params.ratesavail.pending }} text-danger {{ else }} text-primary {{ end }} m-b-0">
+          {{ $.Params.ratesavail.pendingtext }}
+        </p>
+      </div>
+      <div class="tabular__cell cell-6 t-listing text-center">
+        {{ if $.Params.ratesavail.checklist }}
+          <img src="{{"img/green-check.png" | absURL}}" class="img-responsive center-block" width="">
+        {{ else }}
+          <i class="fa fa-circle text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell t-product desk-hide">
+        <label class="m-t-5 text-muted">Checklist Status</label>
+      </div>
+      <div class="tabular__cell cell-6 t-seller text-center mobile-qc">
+        <!-- <span class="desk-hide">QC Status: </span> {{ .Params.ratesavail.qc }} -->
+      </div>
+    </div>
+  </div>
+
+  <hr class="mobile-hide">
+
+  <div class="checklist-section">
+    <div class="tabular__row flex-row ch-head-row">
+      <div class="tabular__cell cell-2">
+        {{ if $.Params.contract.done }}
+          <img src="{{"img/green-check-circle.png" | absURL}}" class="img-responsive" width="">
+        {{ else }}
+          <i class="fa fa-circle w-border text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell cell-full t-product">
+        <h5 class="m-t-0 m-b-0">Contract &amp; Finance</h5>
+      </div>
+      <div class="tabular__cell cell-6 t-listing text-center"></div>
+      <div class="tabular__cell cell-6 t-seller text-center"></div>
+    </div>
+    <div class="tabular__row flex-row">
+      <div class="tabular__cell cell-2">
+      </div>
+      <div class="tabular__cell cell-full t-product">
+        <a href="/goomo_html/details/contract/{{ $.Params.slug }}">
+          <h6 class="text-muted m-t-0 m-b-0">
+            Bank Details
+            {{ if $.Params.bank.hasedits }}
+              <i class="fa fa-exclamation-circle text-secondary"></i>
+            {{ end }}
+          </h6>
+        </a>
+        <p class="{{ if $.Params.bank.pending }} text-danger {{ else }} text-primary {{ end }} m-b-0">
+          {{ $.Params.bank.pendingtext }}
+        </p>
+      </div>
+      <div class="tabular__cell cell-6 t-listing text-center ">
+        {{ if $.Params.bank.checklist }}
+          <img src="{{"img/green-check.png" | absURL}}" class="img-responsive center-block" width="">
+        {{ else }}
+          <i class="fa fa-circle text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell cell-6 t-seller text-center mobile-qc {{ if $.Params.bank.qcorange }}text-secondary{{ end }}">
+        <span class="desk-hide">QC Status: </span> {{ .Params.bank.qc }}
+      </div>
+    </div>
+    <div class="tabular__row flex-row">
+      <div class="tabular__cell cell-2">
+      </div>
+      <div class="tabular__cell cell-full t-product">
+        <a href="/goomo_html/details/contract/{{ $.Params.slug }}">
+          <h6 class="text-muted m-t-0 m-b-5">Taxes</h6>
+        </a>
+        <p class="{{ if $.Params.tax.pending }} text-danger {{ else }} text-primary {{ end }} m-b-0">
+          {{ $.Params.tax.pendingtext }}
+        </p>
+      </div>
+      <div class="tabular__cell cell-6 t-listing text-center ">
+        {{ if $.Params.tax.checklist }}
+          <img src="{{"img/green-check.png" | absURL}}" class="img-responsive center-block" width="">
+        {{ else }}
+          <i class="fa fa-circle text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell cell-6 t-seller text-center mobile-qc">
+        <span class="desk-hide">QC Status: </span> {{ .Params.tax.qc }}
+      </div>
+    </div>
+    <div class="tabular__row flex-row {{ if $.Params.digital.disabled }} disabled {{ end }}">
+      <div class="tabular__cell cell-2">
+      </div>
+      <div class="tabular__cell cell-full t-product">
+        <a href="/goomo_html/details/contract/{{ $.Params.slug }}">
+          <h6 class="text-muted m-t-0 m-b-5">
+            Approve Digital Contract
+          </h6>
+        </a>
+        {{ if $.Params.digital.haslink }}
+          <a href="#">Assign to Property (General Manager)</a>
+        {{ end }}
+        <p class="{{ if $.Params.digital.pending }} text-danger {{ else }} text-primary {{ end }} m-b-0">
+          {{ $.Params.digital.pendingtext }}
+        </p>
+      </div>
+      <div class="tabular__cell cell-6 t-listing text-center ">
+        {{ if $.Params.digital.checklist }}
+          <img src="{{"img/green-check.png" | absURL}}" class="img-responsive center-block" width="">
+        {{ else }}
+          <i class="fa fa-circle text-muted"></i>
+        {{ end }}
+      </div>
+      <div class="tabular__cell cell-6 t-seller text-center mobile-qc">
+        <span class="desk-hide">QC Status: </span> {{ .Params.digital.qc }}
+      </div>
+    </div>
+  </div>
+
+
+</div>
