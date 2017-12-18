@@ -11684,6 +11684,25 @@ i.w-border {
     margin-bottom: 1.5em;
   }
 }
+.mail-bg {
+  background-color: #eee;
+  margin: 0 auto;
+}
+.mail-section__body {
+  background-color: #fff;
+  padding: 2.5em;
+}
+.mail-section__body .user-profile {
+  padding: 0 4.5em;
+}
+.mail-section__body .user-profile b {
+  font-size: 3em;
+  color: #d0d0d0;
+}
+.mail-section .activate .fnb-btn {
+  width: 60%;
+  padding: 0.75em 2.5em;
+}
 .profile-stats {
   color: #fff;
   background: #ff8400;
@@ -12235,6 +12254,27 @@ dl dd {
 .change-password .checkbox {
   margin-top: 0;
   margin-right: 5px;
+}
+.login-card {
+  position: relative;
+  overflow: hidden;
+}
+.forget-password {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  background-color: #fff;
+  -webkit-transition: all 0.6s cubic-bezier(0.44, -0.25, 0.75, 1);
+          transition: all 0.6s cubic-bezier(0.44, -0.25, 0.75, 1);
+  -webkit-transform: translate3d(500px, 0, 0);
+          transform: translate3d(500px, 0, 0);
+  padding: 2em;
+}
+.forget-password.active {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 @media screen and (min-width: 769px) {
   .nf-wrapper {

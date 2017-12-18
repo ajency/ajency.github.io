@@ -452,6 +452,15 @@ $(document).ready(function () {
 	  }
 	});
 
+	$('.forget-link').click(function(){
+		event.preventDefault();
+		$('.forget-password').addClass('active');
+	});
+
+	$('.back-login').click(function(){
+		$('.forget-password').removeClass('active');
+	});
+
 
 	// value checking floating label
 
