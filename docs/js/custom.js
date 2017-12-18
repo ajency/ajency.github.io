@@ -368,22 +368,22 @@ $(document).ready(function() {
 	});
 
 
-	  var SideComments = require('side-comments');
-	  window.sideComments = new SideComments('#commentable-area', currentUser, existingComments);
-	  window.sideComments.on('commentPosted', function( comment ) {
-	    comment.id = parseInt(Math.random() * (100000 - 1) + 1);
-	    sideComments.insertComment(comment);
-	  });
-	  window.sideComments.on('commentDeleted', function( comment ) {
-	    sideComments.removeComment(comment.sectionId, comment.id);
-	  });
+	  // var SideComments = require('side-comments');
+	  // window.sideComments = new SideComments('#commentable-area', currentUser, existingComments);
+	  // window.sideComments.on('commentPosted', function( comment ) {
+	  //   comment.id = parseInt(Math.random() * (100000 - 1) + 1);
+	  //   sideComments.insertComment(comment);
+	  // });
+	  // window.sideComments.on('commentDeleted', function( comment ) {
+	  //   sideComments.removeComment(comment.sectionId, comment.id);
+	  // });
 
-	$('.tooltipster').tooltipster({
-		theme: 'tooltipster-borderless',
-		contentCloning: true,
-		side: 'bottom',
-		interactive: true
-	});
+	// $('.tooltipster').tooltipster({
+	// 	theme: 'tooltipster-borderless',
+	// 	contentCloning: true,
+	// 	side: 'bottom',
+	// 	interactive: true
+	// });
 
 });
 
@@ -419,6 +419,65 @@ $(document).ready(function () {
             $('.free_nights').removeClass('hidden')
         }
     });
+
+
+
+
+
+
+// Floating label
+
+
+	$(document).on('focus', '.float-input', function() {
+	  $(this).siblings('.float-label').addClass('filled focused');
+	});
+
+	$(document).on('blur', '.float-input', function() {
+	  $(this).siblings('.float-label').removeClass('focused');
+
+	  if (this.value === '') {
+	    $(this).siblings('.float-label').removeClass('filled')
+	  }
+	});
+
+	$('.floatInput').on('focus', function() {
+	  $(this).parent().closest('.form-group').find('.float-label').addClass('filled focused');
+	});
+
+	$('.floatInput').on('blur', function() {
+	  $(this).parent().closest('.form-group').find('.float-label').removeClass('focused');
+
+	  if (this.value === '') {
+	    $(this).parent().closest('.form-group').find('.float-label').removeClass('filled')
+	  }
+	});
+
+
+	// value checking floating label
+
+	function checkForInput(element) {
+	  // element is passed to the function ^
+
+	  const $label = $(element).siblings('label');
+
+	  if ($(element).val().length > 0) {
+	    $label.addClass('filled lab-color');
+	  } else {
+	    $label.removeClass('filled lab-color');
+	  }
+	}
+
+	// The lines below are executed on page load
+	$('.float-input').each(function() {
+	  checkForInput(this);
+	});
+
+
+
+
+
+
+    
 });
 
 $("#error-manual").hide();
@@ -454,3 +513,15 @@ $('.page-sidebar').on('click', '.add-blackout', function(e) {
   blackout_group_clone.insertBefore(blackout_group);
 
 });
+
+
+
+
+
+
+
+
+
+
+
+

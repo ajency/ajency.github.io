@@ -71,16 +71,10 @@
 	}
 	.login{
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		padding-top: 0;
 		.user-icon{
-			padding-top: 4px;
 			font-size: 2em;
-			margin-bottom: -4px;
-			color: white;
-			&:hover{
-				color: lighten(@text-darker,25%);
-			}
 		}
 		&__title{
 			padding-top: 2px;
@@ -114,6 +108,17 @@
 }
 
 
+
+.side-section{
+	&.navbar-nav{
+		li{
+			a{
+				padding: 10px 15px;
+				font-weight: 600;
+			}
+		}
+	}
+}
 
 
 @media screen and (max-width: @mobile){
